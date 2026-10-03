@@ -10,22 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://docs.git.eocc.top/dev/writing/">
       
+      
+        <link rel="prev" href="../start/">
+      
+      
+        <link rel="next" href="../contribute/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>EOCC 文档库</title>
+        <title>Markdown 写作规范 - EOCC 文档库</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -44,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="/css/eocc-brand.css">
+      <link rel="stylesheet" href="../../css/eocc-brand.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#markdown" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,7 +84,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="EOCC 文档库" class="md-header__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
+    <a href="../.." title="EOCC 文档库" class="md-header__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -93,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Markdown 写作规范
             
           </span>
         </div>
@@ -168,7 +179,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -187,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/release/" class="md-tabs__link">
+      <a href="../../release/" class="md-tabs__link">
         
   
   
@@ -204,11 +215,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/dev/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -226,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
   
@@ -261,7 +274,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="EOCC 文档库" class="md-nav__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
+    <a href="../.." title="EOCC 文档库" class="md-nav__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -279,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -306,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/release/" class="md-nav__link">
+      <a href="../../release/" class="md-nav__link">
         
   
   
@@ -330,26 +343,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -367,7 +385,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -385,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dev/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -413,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dev/start/" class="md-nav__link">
+      <a href="../start/" class="md-nav__link">
         
   
   
@@ -438,10 +456,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/dev/writing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown 写作规范
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -457,6 +502,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标题层级
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        段落与列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        表格
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图片
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码块
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        提醒与注意
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命名与用词
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -469,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dev/contribute/" class="md-nav__link">
+      <a href="../contribute/" class="md-nav__link">
         
   
   
@@ -497,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dev/nav-config/" class="md-nav__link">
+      <a href="../nav-config/" class="md-nav__link">
         
   
   
@@ -532,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -569,6 +722,104 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标题层级
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        段落与列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        表格
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图片
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码块
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        提醒与注意
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命名与用词
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -581,8 +832,97 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="markdown">Markdown 写作规范</h1>
+<p>为保证全站风格统一，撰写文档请遵循以下规范。所有规则与本站现有页面（如首页、关于本站）保持一致。</p>
+<h2 id="_1">标题层级</h2>
+<ul>
+<li>每页<strong>只有一个</strong> <code>#</code>（一级标题），即页面主题</li>
+<li>章节用 <code>##</code>，小节用 <code>###</code>，不要跳级（<code>#</code> 后直接用 <code>###</code>）</li>
+<li>标题文字简短明确，避免"一些说明"这类模糊表述</li>
+</ul>
+<pre><code class="language-markdown"># 页面主题
+## 第一章节
+### 小节
+</code></pre>
+<h2 id="_2">段落与列表</h2>
+<ul>
+<li>段落之间空一行；不要用空格缩进段首</li>
+<li>并列内容用无序列表 <code>-</code>；有步骤先后关系用有序列表 <code>1. 2. 3.</code></li>
+<li>列表项保持在两行以内，过长内容拆成小节</li>
+</ul>
+<h2 id="_3">表格</h2>
+<p>表格用于结构化对照信息（如功能说明、错误码），表头加粗由渲染器自动处理：</p>
+<pre><code class="language-markdown">| 功能 | 说明 |
+|---|---|
+| 全站搜索 | MkDocs 内置搜索 |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全站搜索</td>
+<td>MkDocs 内置搜索</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">图片</h2>
+<ul>
+<li>图片统一放在 <code>docs/img/</code> 目录，文件名用英文小写加连字符</li>
+<li>用相对路径引用，并写清替代文字：</li>
+</ul>
+<pre><code class="language-markdown">![预览图说明](img/my-screenshot.png)
+</code></pre>
+<h2 id="_5">链接</h2>
+<ul>
+<li>站内链接用相对路径：<code>[关于本站](../about.md)</code></li>
+<li>站外链接写完整 URL，必要处加 <code>target</code> 说明</li>
+<li>链接文字要能说明去向，避免"点这里"</li>
+</ul>
+<h2 id="_6">代码块</h2>
+<p>命令、配置、代码一律用代码块并标注语言：</p>
+<pre><code class="language-markdown">```bash
+mkdocs serve
+```
+</code></pre>
+<h2 id="_7">提醒与注意</h2>
+<p>重要提示用 Material 的 admonition 语法：</p>
+<pre><code class="language-markdown">!!! note &quot;提示&quot;
+    这里是一段提示内容
+
+!!! warning &quot;注意&quot;
+    请勿删除 docs/CNAME 文件
+</code></pre>
+<p>!!! note "提示"
+    这里是一段提示内容</p>
+<h2 id="_8">命名与用词</h2>
+<ul>
+<li>社区全称统一写 <strong>Everyone Create Community（每个人创作社区）</strong>，不要使用旧称或自造缩写</li>
+<li>文档名用英文小写加连字符（如 <code>getting-started.md</code>），页面内首行标题可用中文</li>
+<li>中英文之间加一个空格，如「使用 MkDocs 构建」</li>
+</ul>
+<p>写完之后，请按 <a href="../contribute/">提交与上线流程</a> 提交你的改动。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -625,10 +965,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

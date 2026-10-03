@@ -1,0 +1,9 @@
+/* 社区名称渐变文字 —— 仅作用于 .eocc-brand，不影响其他样式 */
+.eocc-brand {
+  background: linear-gradient(120deg, #5b8def 0%, #7f6fe0 45%, #c76fb8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #5b8def; /* 不支持 background-clip:text 时的回退色 */
+  font-weight: 700;
+}
