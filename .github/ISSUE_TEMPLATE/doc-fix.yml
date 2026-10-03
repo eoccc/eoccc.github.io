@@ -1,0 +1,64 @@
+name: 文档错误修正
+description: 报告文档中的错别字、失效链接、表述不清或与事实不符之处
+title: "[文档] "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢帮忙修正文档！提交前建议先读
+        [Markdown 写作规范](https://docs.git.eocc.top/dev/writing/)。
+
+        > 若你想直接动手改，欢迎按
+        > [提交与上线流程](https://docs.git.eocc.top/dev/contribute/) 发起 Pull Request。
+
+  - type: input
+    id: page
+    attributes:
+      label: 问题页面
+      description: 出问题的页面地址或页面标题
+      placeholder: 例如 https://docs.git.eocc.top/dev/start/ 或「环境搭建」
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 错别字 / 标点
+        - 表述不清或歧义
+        - 内容与事实不符
+        - 链接失效或指向错误
+        - 图片 / 示意图异常
+        - 代码示例有误
+        - 格式或排版问题
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 现状
+      description: 当前页面写的是什么（可直接粘贴原文）
+      placeholder: 粘贴存在问题的原文或描述当前表现
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 建议改为
+      description: 你认为正确或更清楚的写法
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 截图、出处、相关页面等（可选）
+    validations:
+      required: false

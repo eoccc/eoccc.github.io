@@ -1,0 +1,2469 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Everyone Create Community">
+      
+      
+      
+        <link rel="canonical" href="https://docs.git.eocc.top/faq/">
+      
+      
+        <link rel="prev" href="../dev/github-release-flow/">
+      
+      
+        <link rel="next" href="basics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>全部问题 - EOCC 文档库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/eocc-brand.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="EOCC 文档库" class="md-header__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EOCC 文档库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              全部问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../release/" class="md-tabs__link">
+          
+  
+  
+  版本更新日志
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dev/" class="md-tabs__link">
+          
+  
+  
+  开发者文档
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  常见问题
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../rules/" class="md-tabs__link">
+          
+  
+  
+  社区公约
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EOCC 文档库" class="md-nav__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EOCC 文档库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本更新日志
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    版本更新日志
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更新日志总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    完整日志列表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发者文档
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    开发者文档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档共建
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文档共建
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/writing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown 写作规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    提交与上线流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/nav-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导航与站点配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/svg-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG 图标绘制与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/flowchart-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程图开发与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/github-release-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 开发与软件包发布流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见问题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    常见问题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部问题
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基础问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#everyone-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关于 Everyone Create 共创社区
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加入与参与
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        资源与服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        社区资源
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="社区资源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        镜像资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        服务器
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        资源与模组
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        账号与权限
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        报错与解决
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        社区规范
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        社区活动
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区资源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    服务器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资源与模组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    账号与权限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    报错与解决
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区活动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区公约
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    社区公约
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公约正文
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基础问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#everyone-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关于 Everyone Create 共创社区
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加入与参与
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        资源与服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        社区资源
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="社区资源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        镜像资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        服务器
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        资源与模组
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        账号与权限
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        报错与解决
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        社区规范
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        社区活动
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>全部问题</h1>
+
+<blockquote>
+<p>欢迎来到 EOC 共创社区。这份文档汇总了<strong>加入方式、服务器联机、资源下载、账号权限、报错排查</strong>等方面的常见问题，并持续更新。</p>
+<p><strong>最后修订日期</strong>：2026-05-29 18:01</p>
+</blockquote>
+<hr />
+<h2 id="_1">基础问题</h2>
+<h3 id="everyone-create">关于 Everyone Create 共创社区</h3>
+<details>
+<summary><strong>什么是共创社区？</strong></summary>
+
+共创社区是一个**开放、透明、人人都能参与**的协作与创造空间。我们相信好想法不应该被埋没，每个人心中的创意、设计、工具与项目，都能在这里被看见、被实现。
+
+在这里，你可以通过共创把心中所想变成现实：
+
+- **学习交流** —— 与同好一起探讨、互相启发
+- **完善文档** —— 让后来者少走弯路
+- **开发功能** —— 把想法写成可运行的代码
+- **优化体验** —— 让工具更好用
+- **共建生态** —— 共同搭建一个真正属于大家的平台
+
+每一份付出都会被尊重，每一个人都能成为社区的**共建者与受益者**。我们以开放、平等、互助为初心，一起学习、一起成长、一起做出有价值、能落地、可长久运行的事情。
+
+</details>
+
+<details>
+<summary><strong>共创社区是做什么的？</strong></summary>
+
+共创社区，是把**有想法、有热情、愿意动手**的人聚在一起，把空想变成真实成果的地方。
+
+我们不只聊天交流，更在一起做实事：完善文档、开发工具、搭建系统、沉淀经验、打造属于我们自己的平台与生态。无论你擅长技术、设计、写作还是思考，都能在这里找到自己的位置。
+
+社区同时为大家提供**稳定的游戏资源镜像、资源包镜像分发**等基础服务，并开放**公共高配服务器**供成员免费使用。
+
+> 我们所做的一切本质上都是**纯公益行为**：不收取任何费用、不设置任何付费门槛，社区运营仅接受成员自愿赞助，所有资源与服务都面向成员免费、公平开放。
+
+**简单说**：这里不生产「**孤独的想法**」，只诞生「**一起做成的事**」。
+
+</details>
+
+<details>
+<summary><strong>我们的初心是什么？</strong></summary>
+
+我们的初心，始于一份简单而纯粹的热爱 —— 想为所有心怀创意、渴望创造、却常常独自前行的人，搭建一个真正**平等、开放、有温度**的共同家园。
+
+我们相信，每个人心中都有值得被实现的想法，每个人都不该因为缺少资源、缺少平台、缺少伙伴而让创意搁浅。于是我们选择以**共创**为核心，让每一个人都能在这里被听见、被支持、被看见。
+
+我们坚持做纯公益的社区：
+
+- 提供公共高配服务器
+- 提供稳定的游戏资源镜像与资源包镜像分发服务
+- 所有功能完全免费开放，不设任何付费门槛
+- 不谋取任何商业利益，仅接受自愿赞助
+
+> 不为流量，不为名利，只为守住最初的那份热爱与真诚：
+> **让创造不再孤单，让公益成为常态，让每一个努力发光的人，都能在这里拥有属于自己的舞台。**
+
+**这**，就是我们出发的原因，也是我们一直坚守的初心。
+
+</details>
+
+<details>
+<summary><strong>未来的发展方向大概围绕什么为主？</strong></summary>
+
+社区未来的发展，将始终以**「共创」为核心**、以**「公益免费」为底线**、以**「成员真实需求」为方向**，稳步、健康、长久地走下去。
+
+我们会继续深耕游戏资源与内容生态，不断完善资源镜像、资源包分发、公共高配服务器等免费公益服务，让成员用到更稳定、更高速、更安全的公共资源。
+
+同时，我们会持续开放更多能力与工具，降低创造门槛，让每一位成员都能轻松参与进来 —— 无论是开发、设计、写作、策划，都可以通过共创，把自己的想法变成社区的一部分。
+
+未来我们不追求商业化、不设置收费壁垒，依旧坚持**纯公益、基础功能全免费、自愿赞助**的模式，把重心放在体验优化、资源丰富、生态开放、长期稳定上，一步步把社区打造成一个：
+
+> **人人可参与、人人可创造、人人可受益**的长期稳定公共平台。
+
+**简单说**：以共创为魂，以公益为本，以成员为中心，长期、稳健、踏实地走下去。
+
+</details>
+
+<h3 id="_2">加入与参与</h3>
+<details>
+<summary><strong>我是一个什么都不会的普通人，可以加入吗？怎么加入？</strong></summary>
+
+**当然可以！** 共创社区没有任何门槛，不看技术背景，不看能力高低，只看你是否愿意参与、愿意分享。哪怕你觉得自己「什么都不会」，也完全可以加入 —— 因为在这里，你的存在本身就是一种价值。
+
+#### 一、普通人也能参与的方式（完全不用技术基础）
+
+你不需要会写代码、会设计，也能为社区做贡献：
+
+- [ ] 用你的视角，帮我们找 Bug、提建议（比如觉得哪里不好用、哪里体验差）
+- [ ] 帮我们完善文档、整理资料、翻译内容
+- [ ] 参与社区讨论，分享你的想法、体验和反馈
+- [ ] 做一名「测试员」，帮我们试用新功能、新资源
+- [ ] 哪怕只是活跃在社区里，和大家交流、互相鼓励，也是在给社区注入活力
+
+> 共创的核心不是「**你有多厉害**」，而是「**你愿意一起参与**」。
+
+#### 二、加入方式
+
+目前加入的方式非常简单，全程无过分审核、无套路：
+
+1. 直接进入我们的社区渠道（群聊 / 论坛 / 平台），自我介绍一句即可
+2. 可以先从潜水、看别人讨论开始，慢慢熟悉社区节奏
+3. 遇到感兴趣的话题，随时可以发言、提问、分享想法
+4. 想参与贡献时，随时可以和社区成员沟通，我们会给你提供指引和帮助
+
+我们没有任何形式的收费、门槛或考核，所有成员都是平等的，你可以按自己的节奏参与，不用有任何压力。
+
+**最后想说**：社区从不是「**大佬的专属地**」，而是所有人的「**共创场**」。我们相信，哪怕是一个普通的想法、一次真诚的反馈，都能让社区变得更好。
+
+</details>
+
+<details>
+<summary><strong>你们有年龄限制吗？</strong></summary>
+
+加入社区**没有任何年龄门槛**。
+
+无论你是学生、上班族，还是已经工作多年的爱好者，只要你有热情、愿意交流、认可共创理念，我们都欢迎加入。我们看重的是你的态度、想法和参与感，而不是你的年龄。社区里也有很多和你一样的学生开发者，大家互相学习、一起进步，氛围非常友好。
+
+只要你能遵守社区规则、认真参与，多大年纪都可以来，都可以一起共创。
+
+#### 未成年人特别说明
+
+> 加入无年龄门槛，**不等于**未成年人加入后不受特殊保护。
+>
+> 依据《EOCC 共创社区公约》1.2.5 与 3.8 条，不满 18 周岁的成员在社区内享有特殊保护：
+>
+> - 处理未成年人违规时**优先考虑教育、警示**方式，原则上不得对其适用永久拉黑
+> - 管理组视情节暂缓或减轻处置，并及时通知其监护人或平台未成年人保护渠道
+> - 禁止任何成员诱导未成年人提供个人隐私、诱导消费打赏、索要其私密照片或敏感信息
+> - 禁止利用未成年人身份实施欺骗、胁迫，或传播未成年人不良信息
+>
+> 详见公约 3.8 未成年人保护类违规。
+
+</details>
+
+<details>
+<summary><strong>社区的组成成分是怎样的？有「听君一席话」那种价值吗？</strong></summary>
+
+#### 一、共创社区的组成成分
+
+我们的社区没有森严的等级，也没有居高临下的管理者，整体更像一个**平等协作的公益团队**，主要由这几类人构成：
+
+| 角色 | 职责 |
+| --- | --- |
+| 社区运营与维护者 | 负责服务器、资源镜像、平台稳定、规则维护，保证所有免费服务能长期跑下去 |
+| 技术 / 内容贡献者 | 开发工具、制作资源包、完善文档、搭建生态、分享经验 |
+| 普通参与者 / 爱好者 | 提建议、做测试、聊想法、交流心得、互相帮助——社区最基础也最重要的一部分 |
+| 自愿支持者 | 通过自愿赞助、传播推广、帮忙维护秩序，让社区走得更稳更远 |
+
+所有人身份平等、目标一致：**一起做实事，一起把想法变成现实**。
+
+#### 二、我们存在的价值是什么？
+
+**非常有**，而且这正是我们社区最值钱的地方。
+
+你可能什么都不会、没有技术、没有经验，但只要在这里交流、提问、看大家讨论、跟着项目走一圈，就能获得：
+
+- 别人多年踩坑总结出来的**经验**
+- 真正落地可用的**思路、方案、逻辑**
+- 做项目、做工具、做社区的**完整思维方式**
+- 很多外面要花钱、报课才能学到的**实战认知**
+
+很多东西不是书本知识，而是真正做过事的人，用结果换来的一句话。你可能只是随口问一个问题，得到的一句回答、一个思路、一个方向，就能少走几个月甚至几年的弯路。
+
+> 在我们这里：**交流产生价值，共创改变认知**，一句话就可能值远超「付费圈子」的东西。
+> 但我们依然坚持：**免费、开放、公益**。
+
+</details>
+
+<details>
+<summary><strong>我已经有自己的产品了，还可以加入吗？</strong></summary>
+
+**非常欢迎**，而且我们特别支持独立开发者。
+
+但前提是：
+
+- 你尊重社区规则
+- 你尊重他人的劳动成果，不盗用、不恶意搬运
+- 不把社区当成免费劳动力，不要求无条件帮你写代码、改 Bug、按你私人需求定制
+
+你带产品进来，我们支持你：
+
+- 交流思路
+- 获得真实反馈
+- 互相借鉴、互相提升
+- 合理合规地展示你的成果
+- 享用社区公共的公益服务（服务器、镜像等）
+
+但我们**不提供「保姆式服务」**：
+
+- 不代表你拿了代码用不了，别人就必须帮你改到满意
+- 不代表你提任何需求，别人都要围着你转
+- 不代表公益 = 无底线付出
+
+> 共创的本质是**平等、尊重、互相成就**，而不是单方面索取、白嫖、绑架他人劳动。
+
+</details>
+
+<h3 id="_3">资源与服务</h3>
+<details>
+<summary><strong>社区提供哪些资源与服务？</strong></summary>
+
+我们以**公益免费**、**稳定可靠**、**长期可用**为原则，为成员提供以下公共基础服务：
+
+1. **游戏资源与资源包镜像分发**
+   社区维护并提供稳定、高速的资源镜像服务，包含各类游戏资源、整合包、依赖文件等，方便大家安全下载、快速使用，避免失效链接与不良资源。
+2. **公共高配服务器免费使用**
+   我们运营高性能公益服务器，开放给成员用于学习、测试、项目运行、社区协作等**非商业**用途，不收取租金、不设置隐性门槛，让没有设备条件的成员也能拥有优质环境。
+3. **开源项目、文档与经验共享**
+   社区内所有公开的代码、文档、教程、经验总结，都可供成员学习、参考、合理使用，帮助大家少走弯路、提升能力。
+4. **协作共创平台与交流环境**
+   提供稳定的交流、反馈、协作渠道，让有想法的人能找到伙伴，让有技术的人能找到项目，让普通人也能参与创造、提出建议。
+
+> 所有服务本质均为公益行为，面向社区成员免费开放，不收取任何费用，仅接受自愿赞助维持运行。
+
+</details>
+
+<details>
+<summary><strong>公益的边界是什么？</strong></summary>
+
+我们做的是**公益**，不是慈善，更不是无条件的「保姆式服务」。公益有温度，但也有清晰、不可突破的边界。
+
+1. **公益 = 免费提供公共基础服务**
+   我们免费提供：公共高配服务器、游戏资源与资源包镜像分发、公开项目、文档、交流环境等。这是我们自愿承担的社区责任，也是我们坚持的初心。
+2. **公益 ≠ 无限满足个人需求**
+   公益不代表：
+   - 必须按你的私人想法、私人需求去定制功能
+   - 必须帮你解决所有个人使用问题、调试代码、做到你满意为止
+   - 必须为你个人的项目、产品、服务器无条件投入人力物力
+
+   这些已超出社区公益的合理范围，属于**私人定制服务**，不在社区义务内。
+3. **公益 ≠ 纵容无底线白嫖与道德绑架**
+   社区欢迎所有人学习、使用、参与，但不欢迎伸手党、白嫖党、道德绑架：
+
+   > - 「东西是公益的，你就该给我弄好」
+   > - 「我用不了，你必须帮我改到能用」
+   > - 「反正你是公益，多付出一点怎么了」
+
+   这类逻辑我们**不接受、不妥协、不纵容**。
+4. **公益的底线：互相尊重，等价善意**
+   社区为你提供稳定、免费的公共服务；你尊重社区规则、尊重他人劳动、理性交流、不恶意消耗。这就是公益最健康、也最能长久维持的边界。
+
+**简单说**：我们愿意为公共利益全力以赴，但不会为无底线的个人索取买单。
+
+</details>
+
+<details>
+<summary><strong>公益服务和付费服务的边界是什么？</strong></summary>
+
+为了让社区能长期、健康、稳定地运行，我们清晰划分**公益协助**与**付费协助**的边界，既保护贡献者，也避免误解与道德绑架。
+
+#### 一、公益协助（社区内免费支持）
+
+属于公共层面、通用问题、基础帮助，我们鼓励并免费提供：
+
+- 解答通用、公开、文档已有的使用问题
+- 修复公共服务、服务器、资源镜像本身的故障
+- 提供通用教程、基础思路、简单使用指引
+- 社区成员之间自愿、友好、自发的互相帮助
+
+这部分是社区公益的一部分，**完全免费，不收取任何费用**。
+
+#### 二、付费协助（不属于公益范围）
+
+属于个人定制、私人需求、专属服务，已超出公益边界：
+
+- 按你个人要求定制代码、修改逻辑、专属功能开发
+- 帮你单独调试、部署、排错个人项目 / 产品
+- 针对你私人使用场景的一对一长期指导、维护
+- 超出公共服务范围的专属技术支持
+
+这类属于私人定制服务，不在社区公益义务内。如需此类帮助，需与相关开发者**私下协商、自愿付费**。
+
+#### 三、一句话分清边界
+
+| 类型 | 解决的问题 |
+| --- | --- |
+| **公益协助** | 解决「大家都能用得上」的公共问题 |
+| **付费协助** | 解决「只给你一个人用」的私人需求 |
+
+> 我们支持公益，也尊重每一位开发者的劳动价值 —— **不道德绑架、不白嫖、不把别人的时间与技术当成理所当然**。
+
+</details>
+
+<details>
+<summary><strong>如何判断自己需要的是公益协助还是付费协助？</strong></summary>
+
+你可以用三个**最简单**的标准，快速判断自己的需求属于哪一类：
+
+#### 1. 看问题是否「公共通用」
+
+- **属于公益协助**：你的问题是大多数人都会遇到的
+  - 社区公共服务器怎么用？
+  - 资源镜像下载不了、打不开怎么办？
+  - 文档里看不懂、公共服务异常。
+  → 这是社区公共服务问题，**我们免费处理**。
+- **属于付费协助**：问题只针对你个人、你的项目、你的设备
+  - 你的私人代码跑不起来
+  - 你的产品要按你的想法改
+  - 你的环境、你的需求很特殊
+  → 这是私人定制问题，**不在公益范围内**。
+
+#### 2. 看是否需要「专属时间帮你搞定」
+
+- **公益协助**：我们给通用答案、指引、文档、思路，你可以自己照着做。
+- **付费协助**：你需要别人专门花时间、一对一帮你调试、帮你改、帮你做。
+
+> **专属人力服务 = 付费协助。**
+
+#### 3. 看是「使用」还是「定制」
+
+- **公益协助**：你在使用社区已有的东西 —— 服务器、镜像、文档、公开代码。
+- **付费协助**：你要求在现有基础上额外定制 —— 加功能、改逻辑、按你的习惯重做、专属优化。
+
+#### 超简单一句话判断
+
+- 问公共问题、用现成服务、看通用答案 → **公益协助（免费）**
+- 要私人定制、要专人帮你做、要按你的需求改 → **付费协助**
+
+> 我们愿意为公共服务负责到底，也请理解：**开发者的时间和劳动，不是免费资源**。
+
+</details>
+
+<details>
+<summary><strong>付费服务的收费标准是什么？</strong></summary>
+
+社区内的付费协助属于**成员个人之间的自愿交易**，相关说明如下：
+
+- 付费服务的价格由提供服务的开发者**自行制定**，社区不统一定价、不指定价格标准、不参与议价。
+- 需求方与开发者应在服务开始前，自行沟通清楚**需求、价格、交付方式与售后范围**，达成一致后再进行交易。
+- 社区仅提供交流与协作环境，**不介入、不担保**任何成员间的私人交易，不为任何交易纠纷、退款、服务质量、违约等问题承担责任。
+- 所有付费行为均属于双方自愿、私下达成的民事约定，请大家**谨慎交易、注意风险、自行甄别**。
+
+</details>
+
+<hr />
+<h2 id="_4">社区资源</h2>
+<p>社区资源统一在 <strong><a href="/zh/download/index.html">社区资源下载页</a></strong> 获取。</p>
+<h3 id="_5">镜像资源</h3>
+<table>
+<thead>
+<tr>
+<th>资源类型</th>
+<th>说明</th>
+<th>获取方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mindustry 资源镜像</td>
+<td>游戏本体、依赖文件、整合包</td>
+<td><a href="https://mdt.download.66131466.xyz">资源镜像站</a></td>
+</tr>
+<tr>
+<td>社区资源包</td>
+<td>地图、模组、精选内容</td>
+<td><a href="/zh/download/index.html">社区资源页</a></td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary><strong>支持哪些系统？</strong></summary>
+
+- [x] Android
+- [ ] iOS（暂不支持，请前往 App Store）
+- [x] Linux
+- [x] Windows
+- [x] Mac OS
+
+</details>
+
+<details>
+<summary><strong>下载很慢怎么办？</strong></summary>
+
+**若使用社区[资源镜像](https://mdt.download.66131466.xyz)：**
+
+1. 请检查个人的网络环境
+2. 检查您的带宽是否受到了阻挡
+3. 检查您的设备与路由器之间是否有金属阻挡物或隔房间
+4. 删除原下载任务，重新下载
+
+> 注：本站选择的第三方云盘均为**不限速**类型。
+
+**若使用官方原链接：**
+
+1. 检查你与外部互联网的连接是否通畅
+2. 部分官方原链接需**特殊网络环境**
+3. 使用 ADM Pro 或其他多链路下载器提高下载速度
+
+</details>
+
+<details>
+<summary><strong>下载链接失效怎么办？</strong></summary>
+
+首先，我们需要**郑重地向您道歉** —— 这项基础服务我们并没有做好。您可以通过以下任一方式反馈，我们会尽快修复：
+
+- 前往 [问题反馈](https://issue.66131466.xyz) 提交该问题
+- 凭下载失效页面 / URL 链接的截图或文本信息，在任意聊天群 @ 管理员
+- 凭对应下载链接失效的 URL 文本，在 [GitHub 仓库](https://github.com/KevinCN2010/Everyone-Create) 反馈 Bug
+- 凭对应下载链接失效的 URL 文本和具体信息、图片等，前往 [Bilibili 账号](https://bilibili.66131466.xyz) 视频下留言反馈
+
+</details>
+
+<hr />
+<h2 id="_6">服务器</h2>
+<blockquote>
+<p>目前状态下，社区的大部分服务器资源均采用<strong>低成本路线</strong>运营。</p>
+</blockquote>
+<details>
+<summary><strong>怎么加入服务器？</strong></summary>
+
+1. 打开客户端
+2. 选择**多人游戏**
+3. 输入服务器 IP / 直接从列表加入
+4. 等待验证进入
+
+</details>
+
+<details>
+<summary><strong>服务器 IP 是多少？</strong></summary>
+
+请前往[官网首页](/zh/index.html)查看最新的服务器地址列表。
+
+</details>
+
+<details>
+<summary><strong>服务器版本是什么？</strong></summary>
+
+建议直接输入 IP 尝试连接服务器，根据提示即可判断：
+
+| 提示 | 含义 |
+| --- | --- |
+| 成功进入 | 版本匹配，无需担心此问题 |
+| 「客户端版本过低」 | 你的版本**低于**服务器版本 |
+| 「服务端版本过低」 | 你的版本**高于**服务器版本 |
+
+> **注意**：不建议使用 MindustryBE 连接多人游戏，大多数情况下会因版本不匹配而无法连接。
+
+</details>
+
+<details>
+<summary><strong>服务器会不会关服？</strong></summary>
+
+1. 服务器有一定的维护周期，或因特殊原因临时关闭，**群内会及时通知**有关信息。
+2. 营造一个高性能的服务器联机平台是社区的核心之一。若非某些强制的、不可抗的原因，服务器和共创社区**仍会正常运行**。
+
+</details>
+
+<hr />
+<h2 id="_7">资源与模组</h2>
+<details>
+<summary><strong>可以用模组吗？</strong></summary>
+
+社区对模组（Mod）使用采取**「分类管理、白名单优先」**机制：
+
+| 类别 | 说明 |
+| --- | --- |
+| **允许** | 纯客户端美化、UI 调整、画质优化等不影响联机平衡与服务器运行的本地模组，原则上允许使用 |
+| **白名单** | 社区服务器联机对局采用模组白名单，仅白名单内模组可在联机对局中加载；白名单由管理组公示并定期更新 |
+| **禁止** | 任何改变游戏核心机制、获取不正当竞技优势、干扰服务器运行的模组（如自动辅助、内存修改、协议注入、多开协同等） |
+
+> 禁止类模组一经查实，按《EOCC 共创社区公约》3.4.8 作弊条款或 3.7.3 炸服条款处理。
+> 模组使用如与社区服务器联机相关，以**管理组最新公示口径**为准；对具体模组是否可联机存疑的，可在群内询问管理员确认。
+
+</details>
+
+<details>
+<summary><strong>资源包怎么安装？</strong></summary>
+
+1. 下载资源包
+2. 放入 **mod 文件夹**（手机、电脑操作不同，不会的可以在社区内询问）
+3. 在客户端启用
+
+</details>
+
+<details>
+<summary><strong>存档可以导出吗？</strong></summary>
+
+#### 战役数据导出步骤
+
+1. 打开游戏，点击**设置**
+2. 点击「**游戏数据**」
+3. 点击「**导出战役数据**」
+4. 选择你要导出的文件夹
+5. 导出为 `.zip` 格式文件
+
+#### 单个地图游玩数据导出
+
+1. 确保你处于**游戏内**
+2. 按下 **ESC** 或返回键呼出菜单
+3. 点击**保存**，并为你的存档命名
+
+> 后续可在游戏开始页面点击「存档管理」查看你的存档。
+
+</details>
+
+<hr />
+<h2 id="_8">账号与权限</h2>
+<details>
+<summary><strong>需要注册吗？</strong></summary>
+
+共创社区**不会主动索取用户个人信息**用于登录。
+
+> 例外：若未来出于过滤恶意攻击者的目的而引入账户制度，则另行公示。
+
+</details>
+
+<details>
+<summary><strong>为什么我进不去 / 被封禁？</strong></summary>
+
+**可能原因：**
+
+- 违反规范
+- 重复账号
+- 异常行为
+
+**申诉方式：**
+
+被处理成员如有异议，可向管理员申诉，由管理团队复核处理：
+
+| 环节 | 时限 |
+| --- | --- |
+| 申诉提出 | 收到处理结果通知之日起 **7 日内**，逾期（除有正当理由外）不再受理 |
+| 复核完成 | 收到申诉之日起 **7 日内**，并告知申诉人 |
+| 暂缓执行决定 | 管理组应在 **3 日内**决定并告知 |
+
+- 申诉期间**不中止**原处理措施的执行，但管理组认为有必要的，可暂缓执行
+- 被处理成员可在申诉时一并**书面申请**暂缓执行
+- 对移出群聊、永久拉黑等**重大措施**，管理组应主动评估是否暂缓
+- 复核应由**未参与原处理决定**的管理人员主持，必要时由管理团队集体复核
+
+> 复核结论为最终处理结果，必要时可调整原处理。不存在回避条件时的补充程序依公约 5.2.1 办理。
+> 详见《EOCC 共创社区公约》第 5.2 条。
+
+</details>
+
+<details>
+<summary><strong>如何获得更高权限？</strong></summary>
+
+- **参与社区建设**：长期为社区生态创造正向价值的成员，可纳入贡献者名单（认定机制依公约 2.2，采用**事实认定**，不设固化量化门槛，核心评判标准为具有**持续性、建设性**的有效贡献）
+- **良好行为**：无依公约 4.1.3 认定属较重及以上情节的违规记录
+- **申请渠道**：整理对应贡献记录或权限申请理由，私信社区管理组核验
+
+> 认定结果以管理组公示为准。
+
+</details>
+
+<hr />
+<h2 id="_9">报错与解决</h2>
+<details>
+<summary><strong>报错了怎么办？</strong></summary>
+
+**解决步骤：**
+
+1. 收集报错时的截图、各类崩溃日志等
+2. 在社区反馈（微信群、QQ 群等）
+3. 注意你的言行 —— **你是有求于别人帮你解决问题，别人不是你的佣人**
+
+</details>
+
+<details>
+<summary><strong>闪退怎么办？</strong></summary>
+
+- 检查**版本匹配**
+- 清除缓存
+- 重新安装
+
+</details>
+
+<details>
+<summary><strong>无法连接服务器？</strong></summary>
+
+- 检查网络
+- 检查服务器是否开启
+- 检查版本是否一致
+- 在终端输入以下命令，检查能否连通：
+
+
+<pre><code class="language-bash">ping 服务器IP地址
+</code></pre>
+
+
+</details>
+
+<hr />
+<h2 id="_10">社区规范</h2>
+<details>
+<summary><strong>什么行为会被封禁？</strong></summary>
+
+- 辱骂他人，挑拨离间
+- 各种作弊行为
+- 传播违规内容
+- 私下收费、诈骗
+- 恶意炸服，干扰服务器的正常运行
+
+</details>
+
+<details>
+<summary><strong>管理员会索要钱财吗？</strong></summary>
+
+**不会！**
+
+任何以维护、捐献、充值名义要钱的都是**骗子**。我们的宗旨是营造一个公共的、免费的共创社区，方便大家交流，打造一个高性能的联机平台。
+
+> 任何贡献都以**自愿**为原则，我们不会对你暗示任何有关钱财的问题。
+
+</details>
+
+<hr />
+<h2 id="_11">社区活动</h2>
+<ol>
+<li><strong>创作 Mindustry 地图</strong> —— 有机会选入服务器 <code>maps</code> 列表并获得小奖品！</li>
+<li><strong>测试你的地图</strong> —— 欢迎在服务期内测试属于你自己的地图，让它在不断测试中修改、进步！</li>
+<li><strong>自研 PVP 地图创作活动</strong> —— 预计 2026 暑假开启！你对平衡性、地形、玩法的任何一个合理、优质的建议都会被采纳！</li>
+</ol>
+<hr />
+<h2 id="_12">其他问题</h2>
+<details>
+<summary><strong>这里没有我的问题怎么办？</strong></summary>
+
+- 加群反馈（留意[官网首页](/zh/index.html)，下划有链接）
+- 论坛发帖
+- 前往 [GitHub 仓库](https://github.com/KevinCN2010/Everyone-Create) 发表 Question
+- 前往 [问题反馈](https://issue.66131466.xyz)
+- 联系管理员
+
+</details>
+
+<details>
+<summary><strong>如何贡献文档？</strong></summary>
+
+1. 前往 [GitHub 仓库](https://github.com/KevinCN2010/Everyone-Create) 贡献 `FAQ.md`
+2. 在任意聊天群频道，把你的想法和具体修改点跟管理员说明
+
+</details>
+
+<hr />
+<blockquote>
+<p>本文档由社区共同维护。若发现内容有误或已过期，欢迎通过上述任一渠道反馈，我们会及时修订。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Everyone Create Community（EOCC共创社区）
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

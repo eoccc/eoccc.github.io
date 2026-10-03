@@ -1,0 +1,78 @@
+name: 站点功能异常
+description: 报告文档站本身的功能问题，如搜索失效、导航异常、页面报错
+title: "[站点] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本站是纯静态站点（MkDocs 构建产物 + GitHub Pages），没有后端服务。
+        提交前请先确认：
+
+        - 强制刷新（Ctrl+F5）后问题是否仍存在
+        - 换个浏览器或禁用扩展后是否仍复现
+
+  - type: input
+    id: url
+    attributes:
+      label: 问题页面地址
+      placeholder: https://docs.git.eocc.top/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及功能
+      options:
+        - 全站搜索
+        - 顶部标签栏 / 侧边栏导航
+        - 深浅色模式切换
+        - 版本更新日志页（/release/update/）
+        - 图片 / SVG 显示
+        - 页内目录（右侧 TOC）
+        - 移动端显示
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 按顺序写清如何复现，越具体越好
+      placeholder: |
+        1. 打开 …
+        2. 点击 …
+        3. 观察到 …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+      placeholder: 你期望看到什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境信息
+      description: 浏览器与系统版本；若与版本更新提醒相关，请注明是否已清 Cookie
+      placeholder: |
+        浏览器：Chrome 130 / Safari 18 / 微信内置浏览器 …
+        系统：Windows 11 / Android 14 / iOS 18 …
+        Cookie：未清理 / 已清理
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图或录屏
+      description: 直接拖拽图片到此处即可上传（可选）
+    validations:
+      required: false
