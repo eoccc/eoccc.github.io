@@ -4,7 +4,7 @@
     "note": "文档站版本信息。version 随结构性调整递增；updated 取本站最近一次提交日期（建议在 PR 提交前更新）。"
   },
   "site": {
-    "version": "v1.0.1",
+    "version": "v1.0.2",
     "updated": "2026-10-04"
   }
 }

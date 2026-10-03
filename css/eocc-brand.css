@@ -67,14 +67,19 @@ body.md-zoom-locked{overflow:hidden}
 
 /* ===== 侧边栏标题下方的站点元信息（版本号 / GitHub 仓库）=====
    仅作用于 .md-sidebar-meta，取色来自 Material 主题变量；
+   版本号灰色显示、单独一行，GitHub 图标链接置于其下一行；
    版本号由 js/eocc-version-check.js 依据 data/site-info.json 回填 */
 .md-sidebar-meta{display:block;font-size:.64rem;font-weight:400;line-height:1.5;
-  margin-top:.15rem;color:var(--md-default-fg-color--light)}
-.md-sidebar-meta a{color:var(--md-default-fg-color--light);text-decoration:none}
-.md-sidebar-meta a:hover{color:var(--md-accent-fg-color);text-decoration:underline}
-.md-sidebar-meta__ver{margin-right:.5em}
-.md-sidebar-meta__ver-num{font-family:var(--md-code-font,monospace)}
-.md-sidebar-meta__repo{word-break:break-all}
+  margin-top:.15rem}
+.md-sidebar-meta__ver{display:block;color:var(--md-default-fg-color--lighter);
+  font-family:var(--md-code-font,monospace)}
+.md-sidebar-meta__repo{display:inline-flex;align-items:center;margin-top:.15rem;
+  color:var(--md-default-fg-color--light);text-decoration:none;
+  opacity:.7;transition:.15s}
+.md-sidebar-meta__repo:hover{opacity:1;color:var(--md-accent-fg-color)}
+.md-sidebar-meta__repo img{display:block;width:1rem;height:1rem;
+  filter:grayscale(1);transition:.15s}
+.md-sidebar-meta__repo:hover img{filter:none}
 
 /* ===== 站点版本变更提醒（非全屏、右下角浮层）=====
    仅作用于 .md-version-banner，取色来自 Material 主题变量；

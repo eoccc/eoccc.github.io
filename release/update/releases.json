@@ -6,7 +6,7 @@
   },
   "releases": [
     {
-      "version": "",
+      "version": "v1.24-2247",
       "title": "功能更新",
       "summary": "删除了五个内容\r\n添加了两个内容",
       "type": "release",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "version": "",
+      "version": "v1.24-2248",
       "title": "问题修复",
       "summary": "修复了主页服务器显示状态和图片加载概率性异常,以及卡顿的问题",
       "type": "bugfix",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "version": "",
+      "version": "v1.24-2249",
       "title": "问题修复",
       "summary": "本次更新修复了二个问题，一项规则迎来了修改",
       "type": "bugfix",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "version": "",
+      "version": "v1.24-2251",
       "title": "数据更新-功能修复",
       "summary": "资源镜像收录编辑完成-修复资源镜像页搜索异常问题",
       "type": "update",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "version": "",
+      "version": "v1.24-2251",
       "title": "细节优化-功能修复",
       "summary": "调整页面布局并优化更新日志展示顺序，新增前端分页功能，保留原有懒加载逻辑，提升浏览体验。",
       "type": "update",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "version": "",
+      "version": "v8-156.2",
       "title": "Mindustry-官方更新v8-Beta-156.2",
       "summary": "《Mindustry》v8 Beta 版本更新日志 中文汉化",
       "type": "notice",
@@ -118,7 +118,7 @@
       }
     },
     {
-      "version": "",
+      "version": "v1.24-2253",
       "title": "功能更新-问题修复2026/04/02 23:55",
       "summary": "修复已知问题并做出优化改进",
       "type": "update",

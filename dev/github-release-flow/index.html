@@ -307,8 +307,10 @@
     </a>
     EOCC 文档库
     <span class="md-sidebar-meta">
-      <a class="md-sidebar-meta__ver" href="../../data/site-info.json" title="站点版本信息（data/site-info.json）"><span class="md-sidebar-meta__ver-num">v1.0.1</span></a>
-      <a class="md-sidebar-meta__repo" href="https://github.com/eoccc/eoccc.github.io" target="_blank" rel="noopener" title="GitHub 仓库">github.com/eoccc/eoccc.github.io</a>
+      <span class="md-sidebar-meta__ver" title="文档站版本">v1.0.2</span>
+      <a class="md-sidebar-meta__repo" href="https://github.com/eoccc/eoccc.github.io" target="_blank" rel="noopener" title="GitHub 仓库" aria-label="GitHub 仓库">
+        <img src="../../ext/svg/github.svg" alt="GitHub" width="16" height="16">
+      </a>
     </span>
   </label>
   
@@ -2088,6 +2090,8 @@ git push origin v1.0.0
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <!-- 图片放大：示意图点击可放大预览 -->
+      <script src="../../js/eocc-image-zoom.js" defer></script>
       <!-- 站点版本检测：写入版本 Cookie，版本变化时右下角提示 -->
       <script src="../../js/eocc-version-check.js" defer data-src="../../data/site-info.json"></script>
       
