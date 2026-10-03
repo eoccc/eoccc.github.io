@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 350" width="960" height="350" role="img"
+     aria-label="开发者文档支持的多种开发方式：文档与站点、应用与后端、插件与扩展、静态资源">
+  <title>开发者文档支持的多种开发方式</title>
+  <desc>开发者文档以中心枢纽连接四类开发方向，GitHub 开发与软件包发布流程是其中贯穿始终的协作方式。</desc>
+
+  <defs>
+    <linearGradient id="devHub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5b8def"/>
+      <stop offset="45%" stop-color="#7f6fe0"/>
+      <stop offset="100%" stop-color="#c76fb8"/>
+    </linearGradient>
+    <marker id="devArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 中心枢纽 -->
+  <rect x="30" y="115" width="200" height="120" rx="12" fill="url(#devHub)"/>
+  <text x="130" y="160" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#ffffff">开发者文档</text>
+  <text x="130" y="188" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">多种开发方式</text>
+  <text x="130" y="210" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">按场景自由选择</text>
+
+  <!-- 四类开发方向 -->
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif">
+    <rect x="520" y="20" width="410" height="62" rx="10" fill="#5b8def"/>
+    <text x="546" y="46" font-size="14" font-weight="700" fill="#ffffff">文档与站点开发</text>
+    <text x="546" y="68" font-size="12" fill="#eef2ff">Markdown 写作 · MkDocs 构建 · 导航与主题配置</text>
+
+    <rect x="520" y="100" width="410" height="62" rx="10" fill="#7f6fe0"/>
+    <text x="546" y="126" font-size="14" font-weight="700" fill="#ffffff">应用与后端开发</text>
+    <text x="546" y="148" font-size="12" fill="#eef2ff">Python / FastAPI 服务 · 接口规范 · 测试与校验</text>
+
+    <rect x="520" y="180" width="410" height="62" rx="10" fill="#9a6fd0"/>
+    <text x="546" y="206" font-size="14" font-weight="700" fill="#ffffff">插件与扩展开发</text>
+    <text x="546" y="228" font-size="12" fill="#eef2ff">注册表与清单规范 · 运行时加载 · 能力边界</text>
+
+    <rect x="520" y="260" width="410" height="62" rx="10" fill="#c76fb8"/>
+    <text x="546" y="286" font-size="14" font-weight="700" fill="#ffffff">静态资源开发</text>
+    <text x="546" y="308" font-size="12" fill="#eef2ff">SVG 示意图与图标 · 图片素材 · 样式资源</text>
+  </g>
+
+  <!-- 连接线 -->
+  <line x1="234" y1="175" x2="266" y2="175" stroke="#8892a6" stroke-width="2"/>
+  <line x1="266" y1="51" x2="266" y2="291" stroke="#8892a6" stroke-width="2"/>
+  <line x1="266" y1="51" x2="514" y2="51" stroke="#8892a6" stroke-width="2" marker-end="url(#devArrow)"/>
+  <line x1="266" y1="131" x2="514" y2="131" stroke="#8892a6" stroke-width="2" marker-end="url(#devArrow)"/>
+  <line x1="266" y1="211" x2="514" y2="211" stroke="#8892a6" stroke-width="2" marker-end="url(#devArrow)"/>
+  <line x1="266" y1="291" x2="514" y2="291" stroke="#8892a6" stroke-width="2" marker-end="url(#devArrow)"/>
+</svg>
