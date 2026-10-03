@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EOC 共创社区 · 版本更新日志</title>
+<style>
+:root{
+  --bg:#0f1115; --card:#171a21; --card2:#1d212b; --text:#e6e9ef; --muted:#9aa3b2;
+  --accent:#4f8cff; --accent2:#7aa5ff; --border:#2a2f3a;
+  --release:#3fb96f; --update:#4f8cff; --bugfix:#e5a13c; --notice:#b06ee0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;line-height:1.7}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+header.site{padding:40px 0 24px;text-align:center}
+header.site h1{font-size:1.9rem;font-weight:700;letter-spacing:.5px}
+header.site p{color:var(--muted);margin-top:8px}
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
+.filters button{background:var(--card);color:var(--muted);border:1px solid var(--border);
+  padding:6px 16px;border-radius:20px;cursor:pointer;font-size:.9rem;transition:.15s}
+.filters button:hover{color:var(--text)}
+.filters button.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.log{background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:20px 22px;margin-bottom:18px}
+.log-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.log-head h2{font-size:1.15rem;font-weight:600;flex:1;min-width:200px}
+.badge{font-size:.72rem;padding:2px 10px;border-radius:10px;color:#fff;white-space:nowrap}
+.badge.release{background:var(--release)}.badge.update{background:var(--update)}
+.badge.bugfix{background:var(--bugfix)}.badge.notice{background:var(--notice)}
+.badge.pin{background:#d64545}.badge.hot{background:#e05555}
+.log-meta{color:var(--muted);font-size:.85rem;margin-top:4px}
+.log-summary{margin-top:10px;color:#c6ccd8}
+.log-actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:7px 18px;border-radius:8px;font-size:.9rem;
+  border:1px solid var(--border);background:var(--card2);color:var(--text);cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent2);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent2);color:#fff}
+.log-body{margin-top:16px;border-top:1px dashed var(--border);padding-top:16px;display:none}
+.log.open .log-body{display:block}
+.log-body img{max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)}
+.log-body h1,.log-body h2,.log-body h3{margin:14px 0 8px;font-size:1.05rem}
+.log-body p,.log-body li{margin:6px 0;color:#c9cfda}
+.log-body ul,.log-body ol{padding-left:22px}
+.log-body table{border-collapse:collapse;margin:10px 0;width:100%}
+.log-body th,.log-body td{border:1px solid var(--border);padding:6px 10px;font-size:.9rem}
+.log-body code{background:var(--card2);padding:1px 6px;border-radius:4px;font-size:.88em}
+.log-body details{margin:8px 0;border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.log-body summary{cursor:pointer;color:var(--muted)}
+footer{color:var(--muted);text-align:center;font-size:.85rem;padding:30px 0;border-top:1px solid var(--border)}
+footer a{color:var(--accent2)}
+@media(max-width:600px){header.site h1{font-size:1.4rem}.log{padding:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <h1>EOC 共创社区 · 版本更新日志</h1>
+    <p>Everyone Create Co-Creation Community — Release Notes</p>
+  </header>
+  <div class="filters" id="filters">
+    <button data-f="all" class="active">全部</button>
+    <button data-f="release">正式发布</button>
+    <button data-f="update">功能更新</button>
+    <button data-f="bugfix">问题修复</button>
+    <button data-f="notice">公告</button>
+  </div>
+  <main id="logs">加载中…</main>
+  <footer>
+    内容采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 许可发布 ·
+    © EveryOne Create Co-Creation Community（EOCCC） ·
+    <a href="/">返回文档站首页</a>
+  </footer>
+</div>
+<script src="./js/marked.min.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

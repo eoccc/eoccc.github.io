@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "updated_at": "2026-05-12 10:35:14",
+    "note": "下载按钮统一指向官方下载页；GitHub Releases 入口供依赖包获取"
+  },
+  "releases": [
+    {
+      "version": "",
+      "title": "功能更新",
+      "summary": "删除了五个内容\r\n添加了两个内容",
+      "type": "release",
+      "author": "Kevin",
+      "publish_time": "2026-03-19 12:55:21",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260320102643",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "问题修复",
+      "summary": "修复了主页服务器显示状态和图片加载概率性异常,以及卡顿的问题",
+      "type": "bugfix",
+      "author": "Kevin",
+      "publish_time": "2026-03-21 10:55:29",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260320225524",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "问题修复",
+      "summary": "本次更新修复了二个问题，一项规则迎来了修改",
+      "type": "bugfix",
+      "author": "Kevin",
+      "publish_time": "2026-03-21 11:18:38",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260320232302",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2250",
+      "title": "功能完善-v1.24-2250-[beta]",
+      "summary": "- 修复 MD 渲染在国内网络无法加载的问题，优化后台操作体验。",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-03-21 12:04:55",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260321001105",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "数据更新-功能修复",
+      "summary": "资源镜像收录编辑完成-修复资源镜像页搜索异常问题",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-03-25 23:23:23",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260325112345",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "细节优化-功能修复",
+      "summary": "调整页面布局并优化更新日志展示顺序，新增前端分页功能，保留原有懒加载逻辑，提升浏览体验。",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-03-25 23:34:16",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260327220334",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "Mindustry-官方更新v8-Beta-156.2",
+      "summary": "《Mindustry》v8 Beta 版本更新日志 中文汉化",
+      "type": "notice",
+      "author": "Kevin",
+      "publish_time": "2026-03-28 09:01:16",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260327210848",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "功能更新-问题修复2026/04/02 23:55",
+      "summary": "修复已知问题并做出优化改进",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-04-02 23:55:03",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260402115524",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2254",
+      "title": "v1.24-2254-beta | 全站体验升级",
+      "summary": "统一全站导航、新增 2048 游戏、上线访问统计、完善镜像源与问题修复",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-04-05 18:21:39",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260406112658",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2254.1",
+      "title": "v1.24-2254.1-Beta | Mindustry资源镜像更新-v8-157.0-Beta",
+      "summary": "官方预计此版本为v8测试版中的最后一个版本，已完成资源镜像",
+      "type": "notice",
+      "author": "Kevin",
+      "publish_time": "2026-04-09 23:10:02",
+      "pin": 0,
+      "hot": 1,
+      "md_file": "20260409111428",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2255",
+      "title": "v1.24-2255-Beta · 全站体验与稳定性升级",
+      "summary": "本次更新聚焦体验优化与细节修复，完善访问验证自动回跳功能，升级系统安全策略，并同步域名、权限与未来规划公告",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-04-12 22:03:29",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260412100940",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2255.1",
+      "title": "v1.24-2255.1-Beta · Mindustry-X端资源镜像更新",
+      "summary": "例行资源镜像更新-原作者WayZer",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-04-13 21:51:56",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260413095218",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2255.2",
+      "title": "v1.24-2255.2镜像更新v8-正式版-157.1",
+      "summary": "Mindustry v8 Build 157.1 正式发布：全面重做战役地图、优化单位操控、新增数据补丁系统与多项体验优化，修复多项BUG，v9将推进新质内容开发。",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-04-15 22:49:25",
+      "pin": 1,
+      "hot": 1,
+      "md_file": "20260415104959",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2256",
+      "title": "v1.24-2256-Beta · 全站功能与体验升级",
+      "summary": "本次 v1.24-2256-Beta 版本重点修复 Markdown 渲染异常，新增网页游戏与UI优化，升级 Mindustry 服务器及底层环境，强化后台安全风控，全面提升社区平台稳定性与使用体验。",
+      "type": "release",
+      "author": "Kevin",
+      "publish_time": "2026-04-18 18:22:59",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260424053555",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "© Everyone Create 共创社区 · 第三方资源站侵权风险声明",
+      "summary": "第三方资源站盗用EOC资源、甩锅风险、独享声誉，我方已发法律警告，逾期将采取技术封禁与平台投诉。",
+      "type": "notice",
+      "author": "Kevin",
+      "publish_time": "2026-04-20 21:26:06",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260420092629",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "坚守自研节奏，不跟风不对标，以学业为先稳守生态本心",
+      "summary": "面对同业Mod可视化工具出圈与圈内舆论问询，EOC共创社区选择尊重同行贡献、拒绝跟风内卷，以学业和现实生活为优先，坚持自有技术路线与自研生态布局，不参与无交集同业合作，按自身步调稳步发展。",
+      "type": "notice",
+      "author": "Kevin",
+      "publish_time": "2026-05-07 22:11:01",
+      "pin": 1,
+      "hot": 1,
+      "md_file": "20260507101134",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "v1.24-2257",
+      "title": "v1.24-2257-Beta 全维度综合迭代更新",
+      "summary": "围绕页面架构、前端稳定性、网络基建、后台安全、兼容适配、社区生态多维度完成综合性升级，新增公共CDN服务、域名集群布局与实用工具能力，修缮隐性Bug并统一视觉与交互规范，为后续长期迭代筑牢底层基础。",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-05-12 22:34:51",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20260512103514",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    }
+  ]
+}
