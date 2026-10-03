@@ -1,6 +1,6 @@
 ## 账号与权限
 
-<details>
+<details markdown='1'>
 <summary><strong>需要注册吗？</strong></summary>
 
 共创社区**不会主动索取用户个人信息**用于登录。
@@ -9,7 +9,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>为什么我进不去 / 被封禁？</strong></summary>
 
 **可能原因：**
@@ -38,7 +38,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>如何获得更高权限？</strong></summary>
 
 - **参与社区建设**：长期为社区生态创造正向价值的成员，可纳入贡献者名单（认定机制依公约 2.2，采用**事实认定**，不设固化量化门槛，核心评判标准为具有**持续性、建设性**的有效贡献）

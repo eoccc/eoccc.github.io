@@ -1,6 +1,6 @@
 ## 社区规范
 
-<details>
+<details markdown='1'>
 <summary><strong>什么行为会被封禁？</strong></summary>
 
 - 辱骂他人，挑拨离间
@@ -11,7 +11,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>管理员会索要钱财吗？</strong></summary>
 
 **不会！**

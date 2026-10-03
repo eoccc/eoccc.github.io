@@ -1,6 +1,6 @@
 ## 其他问题
 
-<details>
+<details markdown='1'>
 <summary><strong>这里没有我的问题怎么办？</strong></summary>
 
 - 加群反馈（留意[官网首页](/zh/index.html)，下划有链接）
@@ -11,7 +11,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>如何贡献文档？</strong></summary>
 
 1. 前往 [GitHub 仓库](https://github.com/KevinCN2010/Everyone-Create) 贡献 `FAQ.md`

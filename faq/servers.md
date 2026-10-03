@@ -2,7 +2,7 @@
 
 > 目前状态下，社区的大部分服务器资源均采用**低成本路线**运营。
 
-<details>
+<details markdown='1'>
 <summary><strong>怎么加入服务器？</strong></summary>
 
 1. 打开客户端
@@ -12,14 +12,14 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>服务器 IP 是多少？</strong></summary>
 
 请前往[官网首页](/zh/index.html)查看最新的服务器地址列表。
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>服务器版本是什么？</strong></summary>
 
 建议直接输入 IP 尝试连接服务器，根据提示即可判断：
@@ -34,7 +34,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>服务器会不会关服？</strong></summary>
 
 1. 服务器有一定的维护周期，或因特殊原因临时关闭，**群内会及时通知**有关信息。

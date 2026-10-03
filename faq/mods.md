@@ -1,6 +1,6 @@
 ## 资源与模组
 
-<details>
+<details markdown='1'>
 <summary><strong>可以用模组吗？</strong></summary>
 
 社区对模组（Mod）使用采取**「分类管理、白名单优先」**机制：
@@ -16,7 +16,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>资源包怎么安装？</strong></summary>
 
 1. 下载资源包
@@ -25,7 +25,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>存档可以导出吗？</strong></summary>
 
 #### 战役数据导出步骤

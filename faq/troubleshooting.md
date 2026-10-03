@@ -1,6 +1,6 @@
 ## 报错与解决
 
-<details>
+<details markdown='1'>
 <summary><strong>报错了怎么办？</strong></summary>
 
 **解决步骤：**
@@ -11,7 +11,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>闪退怎么办？</strong></summary>
 
 - 检查**版本匹配**
@@ -20,7 +20,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>无法连接服务器？</strong></summary>
 
 - 检查网络

@@ -8,7 +8,7 @@
 
 ### 关于 Everyone Create 共创社区
 
-<details>
+<details markdown='1'>
 <summary><strong>什么是共创社区？</strong></summary>
 
 共创社区是一个**开放、透明、人人都能参与**的协作与创造空间。我们相信好想法不应该被埋没，每个人心中的创意、设计、工具与项目，都能在这里被看见、被实现。
@@ -25,7 +25,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>共创社区是做什么的？</strong></summary>
 
 共创社区，是把**有想法、有热情、愿意动手**的人聚在一起，把空想变成真实成果的地方。
@@ -40,7 +40,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>我们的初心是什么？</strong></summary>
 
 我们的初心，始于一份简单而纯粹的热爱 —— 想为所有心怀创意、渴望创造、却常常独自前行的人，搭建一个真正**平等、开放、有温度**的共同家园。
@@ -61,7 +61,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>未来的发展方向大概围绕什么为主？</strong></summary>
 
 社区未来的发展，将始终以**「共创」为核心**、以**「公益免费」为底线**、以**「成员真实需求」为方向**，稳步、健康、长久地走下去。
@@ -80,7 +80,7 @@
 
 ### 加入与参与
 
-<details>
+<details markdown='1'>
 <summary><strong>我是一个什么都不会的普通人，可以加入吗？怎么加入？</strong></summary>
 
 **当然可以！** 共创社区没有任何门槛，不看技术背景，不看能力高低，只看你是否愿意参与、愿意分享。哪怕你觉得自己「什么都不会」，也完全可以加入 —— 因为在这里，你的存在本身就是一种价值。
@@ -112,7 +112,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>你们有年龄限制吗？</strong></summary>
 
 加入社区**没有任何年龄门槛**。
@@ -136,7 +136,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>社区的组成成分是怎样的？有「听君一席话」那种价值吗？</strong></summary>
 
 #### 一、共创社区的组成成分
@@ -170,7 +170,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>我已经有自己的产品了，还可以加入吗？</strong></summary>
 
 **非常欢迎**，而且我们特别支持独立开发者。
@@ -201,7 +201,7 @@
 
 ### 资源与服务
 
-<details>
+<details markdown='1'>
 <summary><strong>社区提供哪些资源与服务？</strong></summary>
 
 我们以**公益免费**、**稳定可靠**、**长期可用**为原则，为成员提供以下公共基础服务：
@@ -219,7 +219,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>公益的边界是什么？</strong></summary>
 
 我们做的是**公益**，不是慈善，更不是无条件的「保姆式服务」。公益有温度，但也有清晰、不可突破的边界。
@@ -248,7 +248,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>公益服务和付费服务的边界是什么？</strong></summary>
 
 为了让社区能长期、健康、稳定地运行，我们清晰划分**公益协助**与**付费协助**的边界，既保护贡献者，也避免误解与道德绑架。
@@ -286,7 +286,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>如何判断自己需要的是公益协助还是付费协助？</strong></summary>
 
 你可以用三个**最简单**的标准，快速判断自己的需求属于哪一类：
@@ -325,7 +325,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>付费服务的收费标准是什么？</strong></summary>
 
 社区内的付费协助属于**成员个人之间的自愿交易**，相关说明如下：
@@ -350,7 +350,7 @@
 | Mindustry 资源镜像 | 游戏本体、依赖文件、整合包 | [资源镜像站](https://mdt.download.66131466.xyz) |
 | 社区资源包 | 地图、模组、精选内容 | [社区资源页](/zh/download/index.html) |
 
-<details>
+<details markdown='1'>
 <summary><strong>支持哪些系统？</strong></summary>
 
 - [x] Android
@@ -361,7 +361,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>下载很慢怎么办？</strong></summary>
 
 **若使用社区[资源镜像](https://mdt.download.66131466.xyz)：**
@@ -381,7 +381,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>下载链接失效怎么办？</strong></summary>
 
 首先，我们需要**郑重地向您道歉** —— 这项基础服务我们并没有做好。您可以通过以下任一方式反馈，我们会尽快修复：
@@ -399,7 +399,7 @@
 
 > 目前状态下，社区的大部分服务器资源均采用**低成本路线**运营。
 
-<details>
+<details markdown='1'>
 <summary><strong>怎么加入服务器？</strong></summary>
 
 1. 打开客户端
@@ -409,14 +409,14 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>服务器 IP 是多少？</strong></summary>
 
 请前往[官网首页](/zh/index.html)查看最新的服务器地址列表。
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>服务器版本是什么？</strong></summary>
 
 建议直接输入 IP 尝试连接服务器，根据提示即可判断：
@@ -431,7 +431,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>服务器会不会关服？</strong></summary>
 
 1. 服务器有一定的维护周期，或因特殊原因临时关闭，**群内会及时通知**有关信息。
@@ -443,7 +443,7 @@
 
 ## 资源与模组
 
-<details>
+<details markdown='1'>
 <summary><strong>可以用模组吗？</strong></summary>
 
 社区对模组（Mod）使用采取**「分类管理、白名单优先」**机制：
@@ -459,7 +459,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>资源包怎么安装？</strong></summary>
 
 1. 下载资源包
@@ -468,7 +468,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>存档可以导出吗？</strong></summary>
 
 #### 战役数据导出步骤
@@ -493,7 +493,7 @@
 
 ## 账号与权限
 
-<details>
+<details markdown='1'>
 <summary><strong>需要注册吗？</strong></summary>
 
 共创社区**不会主动索取用户个人信息**用于登录。
@@ -502,7 +502,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>为什么我进不去 / 被封禁？</strong></summary>
 
 **可能原因：**
@@ -531,7 +531,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>如何获得更高权限？</strong></summary>
 
 - **参与社区建设**：长期为社区生态创造正向价值的成员，可纳入贡献者名单（认定机制依公约 2.2，采用**事实认定**，不设固化量化门槛，核心评判标准为具有**持续性、建设性**的有效贡献）
@@ -546,7 +546,7 @@
 
 ## 报错与解决
 
-<details>
+<details markdown='1'>
 <summary><strong>报错了怎么办？</strong></summary>
 
 **解决步骤：**
@@ -557,7 +557,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>闪退怎么办？</strong></summary>
 
 - 检查**版本匹配**
@@ -566,7 +566,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>无法连接服务器？</strong></summary>
 
 - 检查网络
@@ -584,7 +584,7 @@ ping 服务器IP地址
 
 ## 社区规范
 
-<details>
+<details markdown='1'>
 <summary><strong>什么行为会被封禁？</strong></summary>
 
 - 辱骂他人，挑拨离间
@@ -595,7 +595,7 @@ ping 服务器IP地址
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>管理员会索要钱财吗？</strong></summary>
 
 **不会！**
@@ -618,7 +618,7 @@ ping 服务器IP地址
 
 ## 其他问题
 
-<details>
+<details markdown='1'>
 <summary><strong>这里没有我的问题怎么办？</strong></summary>
 
 - 加群反馈（留意[官网首页](/zh/index.html)，下划有链接）
@@ -629,7 +629,7 @@ ping 服务器IP地址
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>如何贡献文档？</strong></summary>
 
 1. 前往 [GitHub 仓库](https://github.com/KevinCN2010/Everyone-Create) 贡献 `FAQ.md`

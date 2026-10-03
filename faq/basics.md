@@ -2,7 +2,7 @@
 
 ### 关于 Everyone Create 共创社区
 
-<details>
+<details markdown='1'>
 <summary><strong>什么是共创社区？</strong></summary>
 
 共创社区是一个**开放、透明、人人都能参与**的协作与创造空间。我们相信好想法不应该被埋没，每个人心中的创意、设计、工具与项目，都能在这里被看见、被实现。
@@ -19,7 +19,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>共创社区是做什么的？</strong></summary>
 
 共创社区，是把**有想法、有热情、愿意动手**的人聚在一起，把空想变成真实成果的地方。
@@ -34,7 +34,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>我们的初心是什么？</strong></summary>
 
 我们的初心，始于一份简单而纯粹的热爱 —— 想为所有心怀创意、渴望创造、却常常独自前行的人，搭建一个真正**平等、开放、有温度**的共同家园。
@@ -55,7 +55,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>未来的发展方向大概围绕什么为主？</strong></summary>
 
 社区未来的发展，将始终以**「共创」为核心**、以**「公益免费」为底线**、以**「成员真实需求」为方向**，稳步、健康、长久地走下去。
@@ -74,7 +74,7 @@
 
 ### 加入与参与
 
-<details>
+<details markdown='1'>
 <summary><strong>我是一个什么都不会的普通人，可以加入吗？怎么加入？</strong></summary>
 
 **当然可以！** 共创社区没有任何门槛，不看技术背景，不看能力高低，只看你是否愿意参与、愿意分享。哪怕你觉得自己「什么都不会」，也完全可以加入 —— 因为在这里，你的存在本身就是一种价值。
@@ -106,7 +106,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>你们有年龄限制吗？</strong></summary>
 
 加入社区**没有任何年龄门槛**。
@@ -130,7 +130,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>社区的组成成分是怎样的？有「听君一席话」那种价值吗？</strong></summary>
 
 #### 一、共创社区的组成成分
@@ -164,7 +164,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>我已经有自己的产品了，还可以加入吗？</strong></summary>
 
 **非常欢迎**，而且我们特别支持独立开发者。
@@ -195,7 +195,7 @@
 
 ### 资源与服务
 
-<details>
+<details markdown='1'>
 <summary><strong>社区提供哪些资源与服务？</strong></summary>
 
 我们以**公益免费**、**稳定可靠**、**长期可用**为原则，为成员提供以下公共基础服务：
@@ -213,7 +213,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>公益的边界是什么？</strong></summary>
 
 我们做的是**公益**，不是慈善，更不是无条件的「保姆式服务」。公益有温度，但也有清晰、不可突破的边界。
@@ -242,7 +242,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>公益服务和付费服务的边界是什么？</strong></summary>
 
 为了让社区能长期、健康、稳定地运行，我们清晰划分**公益协助**与**付费协助**的边界，既保护贡献者，也避免误解与道德绑架。
@@ -280,7 +280,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>如何判断自己需要的是公益协助还是付费协助？</strong></summary>
 
 你可以用三个**最简单**的标准，快速判断自己的需求属于哪一类：
@@ -319,7 +319,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>付费服务的收费标准是什么？</strong></summary>
 
 社区内的付费协助属于**成员个人之间的自愿交易**，相关说明如下：

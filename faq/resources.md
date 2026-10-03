@@ -9,7 +9,7 @@
 | Mindustry 资源镜像 | 游戏本体、依赖文件、整合包 | [资源镜像站](https://mdt.download.66131466.xyz) |
 | 社区资源包 | 地图、模组、精选内容 | [社区资源页](/zh/download/index.html) |
 
-<details>
+<details markdown='1'>
 <summary><strong>支持哪些系统？</strong></summary>
 
 - [x] Android
@@ -20,7 +20,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>下载很慢怎么办？</strong></summary>
 
 **若使用社区[资源镜像](https://mdt.download.66131466.xyz)：**
@@ -40,7 +40,7 @@
 
 </details>
 
-<details>
+<details markdown='1'>
 <summary><strong>下载链接失效怎么办？</strong></summary>
 
 首先，我们需要**郑重地向您道歉** —— 这项基础服务我们并没有做好。您可以通过以下任一方式反馈，我们会尽快修复：
