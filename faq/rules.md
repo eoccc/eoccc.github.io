@@ -1,4 +1,4 @@
-## 社区规范
+# 社区规范
 
 <details markdown='1'>
 <summary><strong>什么行为会被封禁？</strong></summary>

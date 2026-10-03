@@ -1,4 +1,4 @@
-## 报错与解决
+# 报错与解决
 
 <details markdown='1'>
 <summary><strong>报错了怎么办？</strong></summary>

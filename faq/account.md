@@ -1,4 +1,4 @@
-## 账号与权限
+# 账号与权限
 
 <details markdown='1'>
 <summary><strong>需要注册吗？</strong></summary>

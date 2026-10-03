@@ -1,4 +1,4 @@
-## 资源与模组
+# 资源与模组
 
 <details markdown='1'>
 <summary><strong>可以用模组吗？</strong></summary>

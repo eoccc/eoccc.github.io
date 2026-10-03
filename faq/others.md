@@ -1,4 +1,4 @@
-## 其他问题
+# 其他问题
 
 <details markdown='1'>
 <summary><strong>这里没有我的问题怎么办？</strong></summary>
