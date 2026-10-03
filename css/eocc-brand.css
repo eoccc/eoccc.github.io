@@ -7,3 +7,39 @@
   color: #5b8def; /* 不支持 background-clip:text 时的回退色 */
   font-weight: 700;
 }
+
+/* ===== 版本更新日志页（/release/update/）组件样式 =====
+   仅作用于 #logs / #filters 范围，取色全部来自 Material 主题变量，不覆盖全局基础样式 */
+#filters{display:flex;gap:.4rem;flex-wrap:wrap;margin:1.2em 0}
+#filters button{cursor:pointer;font-size:.7rem;padding:.4em 1.1em;border-radius:.2rem;
+  border:1px solid var(--md-default-fg-color--lightest);
+  background:var(--md-default-bg-color);color:var(--md-default-fg-color--light);transition:.15s}
+#filters button:hover{color:var(--md-accent-fg-color);border-color:var(--md-accent-fg-color)}
+#filters button.active{background:var(--md-primary-fg-color);
+  border-color:var(--md-primary-fg-color);color:var(--md-primary-bg-color,#fff)}
+#logs .log{border:1px solid var(--md-default-fg-color--lightest);border-radius:.4rem;
+  padding:1em 1.3em;margin:1.2em 0;box-shadow:0 .1rem .2rem rgba(0,0,0,.05)}
+#logs .log-head{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+#logs .log-head h2{margin:0;border-bottom:0;padding-bottom:0;flex:1;min-width:220px;font-size:1.1rem}
+#logs .badge{display:inline-block;font-size:.64rem;padding:.15em .7em;border-radius:1em;
+  color:var(--md-primary-bg-color,#fff);white-space:nowrap;font-weight:500}
+#logs .badge.release{background:#2e7d52}
+#logs .badge.update{background:var(--md-primary-fg-color)}
+#logs .badge.bugfix{background:#b26a00}
+#logs .badge.notice{background:#8b4fb8}
+#logs .badge.pin{background:#c62828}
+#logs .badge.hot{background:#d84a3f}
+#logs .log-meta{color:var(--md-default-fg-color--light);font-size:.8rem;margin-top:.35em}
+#logs .log-summary{margin-top:.6em}
+#logs .log-actions{margin-top:1em;display:flex;gap:.5rem;flex-wrap:wrap}
+#logs .btn{display:inline-block;padding:.4em 1.1em;border-radius:.2rem;font-size:.7rem;
+  border:1px solid var(--md-default-fg-color--lightest);
+  background:var(--md-default-bg-color);color:var(--md-default-fg-color--light);cursor:pointer;transition:.15s}
+#logs .btn:hover{border-color:var(--md-accent-fg-color);color:var(--md-accent-fg-color);text-decoration:none}
+#logs .btn.primary{background:var(--md-primary-fg-color);border-color:var(--md-primary-fg-color);
+  color:var(--md-primary-bg-color,#fff)}
+#logs .btn.primary:hover{background:var(--md-accent-fg-color);border-color:var(--md-accent-fg-color)}
+#logs .log-body{margin-top:1em;border-top:1px solid var(--md-default-fg-color--lightest);
+  padding-top:1em;display:none}
+#logs .log.open .log-body{display:block}
+#logs .log-body img{border:1px solid var(--md-default-fg-color--lightest);border-radius:.3rem;margin:.6em 0}

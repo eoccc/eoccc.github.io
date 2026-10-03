@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "updated_at": "2026-05-12 10:35:14",
+    "updated_at": "2026-10-03 21:18:56",
     "note": "下载按钮统一指向官方下载页；GitHub Releases 入口供依赖包获取"
   },
   "releases": [
@@ -271,6 +271,22 @@
       "pin": 0,
       "hot": 0,
       "md_file": "20260512103514",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/Kevincn2010/"
+      }
+    },
+    {
+      "version": "",
+      "title": "GitHub Pages 文档站 UI 与文档体系改造",
+      "summary": "完成文档站向 GitHub Pages 静态站迁移落地，统一首页与版本更新日志页视觉风格，清理仓库托管展示字样，新增开发者教程与导航配置文档，并保持 ?log= 日志加载、图片与链接功能正常。",
+      "type": "update",
+      "author": "Kevin",
+      "publish_time": "2026-10-03 21:18:56",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20261003211856",
       "links": {
         "download_page": "https://66131466.xyz/zh/download/index.html",
         "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
