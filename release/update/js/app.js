@@ -115,8 +115,29 @@
         return a.publish_time < b.publish_time ? 1 : -1;
       });
       render();
+      openFromQuery();
     })
     .catch(function (err) {
       logsEl.innerHTML = '<p style="color:#e07070">数据加载失败：' + esc(err.message) + "</p>";
     });
+
+  // 支持 ?log=<md_file> 直达：自动展开对应日志并滚动定位
+  function openFromQuery() {
+    var q = new URLSearchParams(location.search).get("log");
+    if (!q) return;
+    var target = null;
+    logsEl.querySelectorAll(".log").forEach(function (article) {
+      var idx = Array.prototype.indexOf.call(logsEl.children, article);
+      var r = releases.filter(function (x) {
+        return currentFilter === "all" || x.type === currentFilter;
+      })[idx];
+      if (r && r.md_file === q) target = { article: article, r: r };
+    });
+    if (!target) return;
+    target.article.classList.add("open");
+    var btn = target.article.querySelector("[data-act=toggle]");
+    if (btn) btn.textContent = "收起详情";
+    loadBody(target.article, target.r);
+    target.article.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 })();
