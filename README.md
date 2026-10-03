@@ -1,2 +1,2 @@
-# eoccc.gthub.io
+# eoccc.github.io
 EveryOne Create Co-Creation Community
