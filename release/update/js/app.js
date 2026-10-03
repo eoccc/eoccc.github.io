@@ -30,6 +30,7 @@
       '<p class="log-summary">' + esc(r.summary) + "</p>" +
       '<div class="log-actions">' +
       '<button class="btn primary" data-act="toggle">展开详情</button>' +
+      '<span class="log-links">' +
       (r.links && r.links.download_page
         ? '<a class="btn" target="_blank" rel="noopener" href="' + esc(r.links.download_page) + '">下载页面</a>'
         : "") +
@@ -39,8 +40,9 @@
       (r.links && r.links.github
         ? '<a class="btn" target="_blank" rel="noopener" href="' + esc(r.links.github) + '">GitHub</a>'
         : "") +
+      "</span>" +
       "</div>" +
-      '<div class="log-body">加载中…</div>' +
+      '<div class="log-body"><span class="md-log-loading">加载中…</span></div>' +
       "</article>";
     return html;
   }
@@ -52,12 +54,20 @@
     logsEl.innerHTML = list.length
       ? list.map(card).join("")
       : '<p style="text-align:center;color:var(--muted);padding:40px 0">该分类下暂无日志</p>';
+    // 默认展开的卡片（置顶）立即加载正文，避免"加载中"常驻
+    logsEl.querySelectorAll(".log.open").forEach(function (article) {
+      var idx = Array.prototype.indexOf.call(logsEl.children, article);
+      var r = list[idx];
+      if (r) loadBody(article, r);
+    });
   }
 
   function loadBody(article, r) {
     var body = article.querySelector(".log-body");
     if (body.dataset.loaded) return;
     var url = "./md/" + encodeURIComponent(r.md_file) + ".md";
+    // 请求阶段临时占位，成功/失败后均移除，禁止常驻
+    body.innerHTML = '<span class="md-log-loading">加载中…</span>';
     fetch(url)
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status + " @ " + url);
@@ -70,6 +80,7 @@
       })
       .catch(function (err) {
         body.innerHTML = '<p style="color:#e07070">加载失败：' + esc(err.message) + "</p>";
+        body.dataset.loaded = "1";
       });
   }
 

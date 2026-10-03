@@ -43,3 +43,8 @@
   padding-top:1em;display:none}
 #logs .log.open .log-body{display:block}
 #logs .log-body img{border:1px solid var(--md-default-fg-color--lightest);border-radius:.3rem;margin:.6em 0}
+
+/* 卡片收起态：详情操作按钮（下载页面/应用下载/GitHub）仅展开后可见 */
+#logs .log:not(.open) .btn:not(.primary){display:none}
+/* 详情加载占位：仅在请求阶段显示，内容渲染后由 JS 移除 */
+#logs .log-body .md-log-loading{color:var(--md-default-fg-color--light)}
