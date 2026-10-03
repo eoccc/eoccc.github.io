@@ -65,6 +65,17 @@
   font-size:.68rem;color:var(--md-default-fg-color--light)}
 body.md-zoom-locked{overflow:hidden}
 
+/* ===== 侧边栏标题下方的站点元信息（版本号 / GitHub 仓库）=====
+   仅作用于 .md-sidebar-meta，取色来自 Material 主题变量；
+   版本号由 js/eocc-version-check.js 依据 data/site-info.json 回填 */
+.md-sidebar-meta{display:block;font-size:.64rem;font-weight:400;line-height:1.5;
+  margin-top:.15rem;color:var(--md-default-fg-color--light)}
+.md-sidebar-meta a{color:var(--md-default-fg-color--light);text-decoration:none}
+.md-sidebar-meta a:hover{color:var(--md-accent-fg-color);text-decoration:underline}
+.md-sidebar-meta__ver{margin-right:.5em}
+.md-sidebar-meta__ver-num{font-family:var(--md-code-font,monospace)}
+.md-sidebar-meta__repo{word-break:break-all}
+
 /* ===== 站点版本变更提醒（非全屏、右下角浮层）=====
    仅作用于 .md-version-banner，取色来自 Material 主题变量；
    交互由 js/eocc-version-check.js 提供，不阻塞页面渲染 */

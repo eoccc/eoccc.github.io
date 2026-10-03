@@ -51,6 +51,13 @@
     return "/data/site-info.json";
   }
 
+  /* ---------- 侧边栏版本号回填 ---------- */
+
+  function fillSidebarVersion(curr) {
+    var nodes = document.querySelectorAll(".md-sidebar-meta__ver-num");
+    for (var i = 0; i < nodes.length; i++) nodes[i].textContent = curr;
+  }
+
   /* ---------- 提醒条（非全屏、右下角浮层，可关闭） ---------- */
 
   function showBanner(prev, curr, updated) {
@@ -127,6 +134,8 @@
         var prev = readCookie(COOKIE_NAME);
         // 版本变化：仅在确实记录过旧版本、且与当前不一致时提示
         if (prev && prev !== curr) showBanner(prev, curr, site.updated);
+        // 回填侧边栏标题下方的版本号（各页保留的静态值仅作无 JS 时的兜底）
+        fillSidebarVersion(curr);
         // 始终把当前版本写入 Cookie，作为「上次访问版本」
         writeCookie(COOKIE_NAME, curr, COOKIE_DAYS);
       })
