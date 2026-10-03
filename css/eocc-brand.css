@@ -64,3 +64,29 @@
 .md-zoom-hint{position:fixed;right:1.2rem;bottom:1.2rem;z-index:101;
   font-size:.68rem;color:var(--md-default-fg-color--light)}
 body.md-zoom-locked{overflow:hidden}
+
+/* ===== 站点版本变更提醒（非全屏、右下角浮层）=====
+   仅作用于 .md-version-banner，取色来自 Material 主题变量；
+   交互由 js/eocc-version-check.js 提供，不阻塞页面渲染 */
+.md-version-banner{position:fixed;right:1rem;bottom:1rem;z-index:99;max-width:22rem;
+  padding:.9rem 1rem;border-radius:.4rem;box-sizing:border-box;
+  background:var(--md-default-bg-color);
+  border:1px solid var(--md-default-fg-color--lightest);
+  box-shadow:0 .4rem 1.4rem rgba(0,0,0,.22)}
+.md-version-banner__title{margin:0 0 .35em;font-size:.82rem;font-weight:700;
+  color:var(--md-default-fg-color)}
+.md-version-banner__desc{margin:0;font-size:.72rem;line-height:1.5;
+  color:var(--md-default-fg-color--light)}
+.md-version-banner__arrow{color:var(--md-primary-fg-color);font-weight:700}
+.md-version-banner__time{color:var(--md-default-fg-color--lighter)}
+.md-version-banner__actions{margin-top:.75em;display:flex;gap:.5rem;align-items:center}
+.md-version-banner__link{font-size:.7rem;color:var(--md-typeset-a-color)}
+.md-version-banner__close{cursor:pointer;font-size:.68rem;padding:.3em .9em;border-radius:.2rem;
+  border:1px solid var(--md-default-fg-color--lightest);
+  background:var(--md-primary-fg-color);color:var(--md-primary-bg-color,#fff);
+  transition:.15s}
+.md-version-banner__close:hover{background:var(--md-accent-fg-color);
+  border-color:var(--md-accent-fg-color)}
+@media screen and (max-width:44.9375em){
+  .md-version-banner{right:.5rem;left:.5rem;bottom:.5rem;max-width:none}
+}
