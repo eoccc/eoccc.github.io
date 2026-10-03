@@ -65,6 +65,28 @@
   font-size:.68rem;color:var(--md-default-fg-color--light)}
 body.md-zoom-locked{overflow:hidden}
 
+/* ===== 顶栏图标对齐 =====
+   现象：左侧 LOGO 与搜索放大镜、深浅色切换图标不在同一视觉基线上。
+   原因：Material 对 LOGO 用 height:1.2rem;width:auto（按比例撑开），
+         而 .md-icon svg 固定 height/width 均为 1.2rem，两者盒子不同高。
+   处理：统一顶栏内所有按钮图标为同一正方形盒子 + 同一垂直对齐，
+         仅作用于 .md-header 范围，不影响页面其他位置的 .md-icon */
+.md-header .md-header__button,
+.md-header .md-header__button.md-logo,
+.md-header .md-search__icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  box-sizing:content-box;
+}
+.md-header .md-header__button.md-logo svg,
+.md-header .md-header__button.md-icon svg,
+.md-header .md-search__icon svg{
+  display:block;height:1.2rem;width:1.2rem;flex:0 0 auto;
+}
+/* 顶栏内的按钮统一外边距，避免各自 margin 造成横向错位 */
+.md-header .md-header__button{margin:.2rem;padding:.4rem;line-height:0}
+/* 深浅色切换所在的表单容器与相邻按钮对齐 */
+.md-header .md-header__option{display:flex;align-items:center;line-height:0}
+
 /* ===== 侧边栏标题下方的站点元信息（版本号 / GitHub 仓库）=====
    仅作用于 .md-sidebar-meta，取色来自 Material 主题变量；
    版本号灰色显示、单独一行，GitHub 图标链接置于其下一行；

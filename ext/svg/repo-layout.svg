@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img"
+     aria-label="文档仓库根目录结构示意图，其中 CNAME 为自定义域名配置，请勿删除">
+  <title>文档仓库根目录结构</title>
+  <desc>仓库根目录包含 MkDocs 构建产物（index.html、about/、dev/、release/）、主题资源（assets/、css/）、站点自定义脚本与数据（js/、data/）、资源目录（img/user/、ext/）、CNAME 域名配置与搜索索引（search/）。</desc>
+
+  <defs>
+    <linearGradient id="startDir" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b8def"/>
+      <stop offset="100%" stop-color="#7f6fe0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 仓库根 -->
+  <rect x="16" y="16" width="380" height="56" rx="8" fill="url(#startDir)"/>
+  <text x="36" y="42" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="15" font-weight="700" fill="#ffffff">eoccc.github.io/</text>
+  <text x="36" y="61" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">仓库根目录</text>
+
+  <!-- 构建产物 -->
+  <rect x="16" y="96" width="380" height="112" rx="8" fill="none" stroke="#8892a6" stroke-width="1.5"/>
+  <text x="36" y="120" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#5b8def">页面产物（勿手工改结构）</text>
+  <text x="36" y="145" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">index.html</text>
+  <text x="36" y="166" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">about/ · dev/ · release/</text>
+  <text x="36" y="187" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">search/search_index.json</text>
+
+  <!-- 可维护资源 -->
+  <rect x="16" y="224" width="380" height="112" rx="8" fill="none" stroke="#8892a6" stroke-width="1.5"/>
+  <text x="36" y="248" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#7f6fe0">可维护资源</text>
+  <text x="36" y="273" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">css/eocc-brand.css · js/ · data/site-info.json</text>
+  <text x="36" y="294" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">img/user/（头像） · ext/svg/（示意图）</text>
+  <text x="36" y="315" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">assets/（主题自带，随构建更新）</text>
+
+  <!-- CNAME 高亮 -->
+  <rect x="436" y="96" width="508" height="176" rx="10" fill="#c76fb8"/>
+  <text x="460" y="130" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="16" font-weight="700" fill="#ffffff">CNAME　请勿删除</text>
+  <text x="460" y="160" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#fdeef8">内容仅一行：docs.git.eocc.top</text>
+  <text x="460" y="186" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#fdeef8">作用：GitHub Pages 据此把访问地址指向社区域名</text>
+  <text x="460" y="212" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#fdeef8">删除或改错 → 自定义域名失效，域名解析随即失效</text>
+  <text x="460" y="238" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#fdeef8">注意：只影响线上地址，不影响 mkdocs serve 本地预览</text>
+  <text x="460" y="262" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#f8d7ee">由维护者管理，普通贡献请勿改动</text>
+
+  <!-- 连接线 -->
+  <line x1="396" y1="152" x2="432" y2="152" stroke="#8892a6" stroke-width="2"/>
+  <line x1="396" y1="280" x2="432" y2="280" stroke="#8892a6" stroke-width="2"/>
+</svg>

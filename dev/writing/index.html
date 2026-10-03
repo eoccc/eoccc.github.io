@@ -32,7 +32,9 @@
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
-      <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -62,7 +64,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,12 +121,6 @@
       </div>
     </div>
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
       
         <form class="md-header__option" data-md-component="palette">
   
@@ -142,7 +145,16 @@
     
   
 </form>
-      <label class="md-header__button md-icon" for="__search">
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
@@ -306,12 +318,6 @@
 
     </a>
     EOCC 文档库
-    <span class="md-sidebar-meta">
-      <span class="md-sidebar-meta__ver" title="文档站版本">v1.0.2</span>
-      <a class="md-sidebar-meta__repo" href="https://github.com/eoccc/eoccc.github.io" target="_blank" rel="noopener" title="GitHub 仓库" aria-label="GitHub 仓库">
-        <img src="../../ext/svg/github.svg" alt="GitHub" width="16" height="16">
-      </a>
-    </span>
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1151,10 +1157,12 @@
 <p>每页<strong>只有一个</strong> <code>#</code>（一级标题），即页面主题
 章节用 <code>##</code>，小节用 <code>###</code>，不要跳级（<code>#</code> 后直接用 <code>###</code>）
 标题文字简短明确，避免"一些说明"这类模糊表述</p>
+<p><img src="../../ext/svg/heading-levels.svg" alt="Markdown 标题层级对照：左侧为逐级正确写法，右侧为跳级与缺失一级标题的错误写法" width="880"></p>
 <pre><code class="language-markdown"># 页面主题
 ## 第一章节
 ### 小节
 </code></pre>
+<p>跳级或缺少一级标题不仅影响观感，还会让页内目录与全站搜索索引的层级失真。</p>
 <h2 id="_2">段落与列表</h2>
 <p>段落之间空一行；不要用空格缩进段首
 并列内容用无序列表 <code>-</code>；有步骤先后关系用有序列表 <code>1. 2. 3.</code>
@@ -1274,8 +1282,6 @@ mkdocs serve
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
-      <!-- 站点版本检测：写入版本 Cookie，版本变化时右下角提示 -->
-      <script src="../../js/eocc-version-check.js" defer data-src="../../data/site-info.json"></script>
       
     
   </body>

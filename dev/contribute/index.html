@@ -32,7 +32,9 @@
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
-      <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -62,7 +64,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,12 +121,6 @@
       </div>
     </div>
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
       
         <form class="md-header__option" data-md-component="palette">
   
@@ -142,7 +145,16 @@
     
   
 </form>
-      <label class="md-header__button md-icon" for="__search">
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
@@ -306,12 +318,6 @@
 
     </a>
     EOCC 文档库
-    <span class="md-sidebar-meta">
-      <span class="md-sidebar-meta__ver" title="文档站版本">v1.0.2</span>
-      <a class="md-sidebar-meta__repo" href="https://github.com/eoccc/eoccc.github.io" target="_blank" rel="noopener" title="GitHub 仓库" aria-label="GitHub 仓库">
-        <img src="../../ext/svg/github.svg" alt="GitHub" width="16" height="16">
-      </a>
-    </span>
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1182,7 +1188,9 @@
 <h1 id="_1">提交与上线流程</h1>
 <p>本教程说明文档从本地修改到正式上线的完整链路。撰写规范见 <a href="../writing/">Markdown 写作规范</a>，环境问题见 <a href="../start/">环境搭建</a>。</p>
 <h2 id="_2">流程总览</h2>
-<p>修改内容 → 本地预览 → 提交分支 → Pull Request → 审核合并 → 构建上线</p>
+<p>从改动到上线共六个阶段，后一步依赖前一步的产物：</p>
+<p><img src="../../ext/svg/contribute-pipeline.svg" alt="文档提交与上线流程：修改内容 → 本地预览 → 提交分支 → Pull Request → 审核合并 → 构建上线" width="880"></p>
+<p>其中前三步在本地完成，第 4 步起进入 GitHub 协作，最后由维护者构建发布。</p>
 <h2 id="1">1. 修改内容</h2>
 <p>按<a href="../start/">环境搭建</a>准备好本地环境后，在仓库中编辑或新增页面。新增页面需要在站点配置的 <code>nav</code> 中登记才会出现在导航里（写法见<a href="../nav-config/">导航与站点配置</a>）。</p>
 <h2 id="2">2. 本地预览</h2>
@@ -1338,8 +1346,6 @@ git commit -m &quot;docs: 更新站点版本信息&quot;
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
-      <!-- 站点版本检测：写入版本 Cookie，版本变化时右下角提示 -->
-      <script src="../../js/eocc-version-check.js" defer data-src="../../data/site-info.json"></script>
       
     
   </body>

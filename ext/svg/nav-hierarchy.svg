@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img"
+     aria-label="MkDocs 导航层级示意：一级分组可折叠，其下缩进登记二级页面">
+  <title>MkDocs 导航层级示意</title>
+  <desc>左侧为 nav 配置的缩进写法，右侧为对应的侧边栏呈现：一级分组「版本更新日志」「开发者文档」可折叠，其下二级页面逐级缩进。</desc>
+
+  <!-- 左：配置写法 -->
+  <text x="16" y="28" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#5b8def">mkdocs.yml 写法</text>
+  <rect x="16" y="42" width="420" height="228" rx="8" fill="none" stroke="#8892a6" stroke-width="1.5"/>
+  <g font-family="Roboto Mono, 'Courier New', monospace" font-size="12">
+    <text x="34" y="70" fill="#8892a6">nav:</text>
+    <text x="50" y="92" fill="#5b8def">- 首页: index.md</text>
+    <text x="50" y="115" fill="#5b8def">- 版本更新日志:　　　　　# 一级分组</text>
+    <text x="76" y="138" fill="#7f6fe0">- 更新日志总览: release.md</text>
+    <text x="76" y="161" fill="#7f6fe0">- 完整日志列表: release/update.md</text>
+    <text x="50" y="188" fill="#5b8def">- 开发者文档:　　　　　　# 一级分组</text>
+    <text x="76" y="211" fill="#7f6fe0">- 总览: dev/index.md</text>
+    <text x="76" y="234" fill="#7f6fe0">- 文档共建:　　　　　　# 二级分组</text>
+    <text x="102" y="257" fill="#c76fb8">- 环境搭建: dev/start.md　# 二级页面</text>
+  </g>
+
+  <!-- 右：侧边栏呈现 -->
+  <text x="500" y="28" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#7f6fe0">渲染后的侧边栏</text>
+  <rect x="500" y="42" width="444" height="228" rx="8" fill="none" stroke="#8892a6" stroke-width="1.5"/>
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="12">
+    <text x="520" y="72" fill="#8892a6">首页</text>
+    <text x="520" y="100" fill="#5b8def" font-weight="700">版本更新日志　▾ 可折叠</text>
+    <text x="544" y="123" fill="#7f6fe0">更新日志总览</text>
+    <text x="544" y="146" fill="#7f6fe0">完整日志列表</text>
+    <text x="520" y="177" fill="#5b8def" font-weight="700">开发者文档　▾ 可折叠</text>
+    <text x="544" y="200" fill="#7f6fe0">总览</text>
+    <text x="544" y="223" fill="#7f6fe0">文档共建　▾</text>
+    <text x="568" y="246" fill="#c76fb8">环境搭建</text>
+  </g>
+</svg>
