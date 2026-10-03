@@ -50,8 +50,8 @@ mkdocs serve   # 本地实时预览 http://127.0.0.1:8000
 | `index.html`、`about/`、`dev/`、`release/` | MkDocs 构建产物（页面 HTML） | 由 MkDocs 构建生成，勿手工改动结构 |
 | `assets/` | Material 主题自带资源（样式、脚本、搜索 worker） | 随构建更新，勿手动改动 |
 | `css/eocc-brand.css` | 站点自定义样式（社区名称渐变等） | 可维护 |
-| `img/user/` | **用户头像**等图片资源（预留） | 本地存放、相对路径引用，禁止外链头像；约定见 [`img/user/README.md`](img/user/README.md) |
-| `ext/` | **扩展静态资源**（预留），如 `ext/svg/` 示意图 | 本地存放、相对路径引用，禁止外链；约定见 [`ext/README.md`](ext/README.md) |
+| `img/user/` | **用户头像**等图片资源（预留） | 推荐本地存放、相对路径引用；也支持外部链接；约定见 [`img/user/README.md`](img/user/README.md) |
+| `ext/` | **扩展静态资源**（预留），如 `ext/svg/` 示意图 | 推荐本地存放、相对路径引用；也支持外部链接；约定见 [`ext/README.md`](ext/README.md) |
 | `js/` | 站点自定义脚本（版本检测、图片放大） | 可维护，随功能调整 |
 | `data/` | 站点数据文件，如 `site-info.json`（版本号与最后更新） | 提交 PR 前按规范更新 |
 | `release/update/` | 版本更新日志子站（含 `releases.json` 与详情 MD） | 独立生成流程，由维护者管理 |

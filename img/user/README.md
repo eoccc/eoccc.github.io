@@ -5,13 +5,20 @@
 ## 约定
 
 - 一个用户一个文件，文件名用「英文小写 + 连字符」，例如 `kevin-station.png`
-- **禁止**通过外链（`https://` 头像接口、Gravatar 等）加载头像：所有头像必须落在本目录内，以相对路径引用
+- **推荐**把头像存放在本目录内，以相对路径引用；这样不依赖外部服务，图片长期可用、加载稳定
+- 也**支持外部头像链接**（如各类 `https://` 头像接口、Gravatar 等），此时直接写完整 URL 即可
 - 推荐 SVG 或体积较小的 PNG / WebP；尺寸建议 128 × 128 或 256 × 256
-- 引用示例（`dev/github-release-flow/index.html` 内）：
+- 引用示例：
 
   ```html
+  <!-- 本地头像（推荐） -->
   <img src="../../img/user/kevin-station.png" alt="Kevin Station" width="48" height="48">
+
+  <!-- 外部头像链接（同样受支持） -->
+  <img src="https://example.com/avatar.png" alt="某成员" width="48" height="48">
   ```
+
+> **提示**：外部链接的可用性取决于对方服务，可能因对方限制防盗链、改版或下线而失效；对长期展示的头像，优先使用本地文件。
 
 ## 现有资源
 

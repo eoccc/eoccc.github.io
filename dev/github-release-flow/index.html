@@ -2479,7 +2479,8 @@ git push origin v1.0.0
 </table>
 <h3 id="_16">头像</h3>
 <ul>
-<li>头像必须是仓库内的本地文件，<strong>禁止</strong>调用 Gravatar 等外部头像接口</li>
+<li>推荐把头像作为仓库内的本地文件引用；也支持直接使用外部头像链接（如各类头像接口、Gravatar 等）</li>
+<li>使用外部链接时，可用性取决于对方服务，可能因防盗链、改版或下线而失效；长期展示的头像优先用本地文件</li>
 <li>文件名用「英文小写 + 连字符」，与成员一一对应</li>
 <li>引用时写清替代文字：</li>
 </ul>
@@ -2495,7 +2496,7 @@ git push origin v1.0.0
 <pre><code class="language-html">&lt;img src=&quot;../../ext/svg/github-release-flow.svg&quot; alt=&quot;发布流程示意图&quot; width=&quot;880&quot;&gt;
 </code></pre>
 <blockquote>
-<p><strong>注意</strong>：站外图片、站外 SVG 与外部头像接口在本站一律不使用；确需新增资源时，请放入 <code>img/user/</code> 或 <code>ext/</code> 并在<a href="../nav-config/">导航与站点配置</a>中确认引用路径。</p>
+<p><strong>注意</strong>：站外资源可用性取决于对方服务，可能因防盗链、改版或下线而失效；长期展示的资源优先放入 <code>img/user/</code> 或 <code>ext/</code>，并在<a href="../nav-config/">导航与站点配置</a>中确认引用路径。</p>
 </blockquote>
 <h2 id="_17">相关阅读</h2>
 <ul>
