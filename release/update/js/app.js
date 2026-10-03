@@ -18,13 +18,17 @@
     return esc(s) + "（北京时间）";
   }
 
-  function card(r) {
+  function card(r, idx) {
     var badges = '<span class="badge ' + esc(r.type) + '">' + esc(typeLabel(r.type)) + "</span>";
     if (r.pin) badges += '<span class="badge pin">置顶</span>';
     if (r.hot) badges += '<span class="badge hot">热门</span>';
     var ver = r.version ? esc(r.version) + " · " : "";
+    // 注意：卡片一律以「收起」状态渲染。
+    // 置顶仅用角标表示，不再初始带 open 类——否则被置顶的历史日志会被自动展开，
+    // 用户未点击却在页面加载时就加载了它的正文，表现为「其他分支被异常展开」。
+    // data-idx 记录该卡片在当前筛选列表中的序号，供点击/深链时取回数据，避免依赖 DOM 顺序假设。
     var html =
-      '<article class="log' + (r.pin ? " open" : "") + '" data-type="' + esc(r.type) + '">' +
+      '<article class="log" data-idx="' + idx + '" data-type="' + esc(r.type) + '">' +
       '<div class="log-head"><h2>' + ver + esc(r.title) + "</h2>" + badges + "</div>" +
       '<div class="log-meta">发布：' + fmtTime(r.publish_time) + " · 作者：" + esc(r.author) + "</div>" +
       '<p class="log-summary">' + esc(r.summary) + "</p>" +
@@ -54,12 +58,22 @@
     logsEl.innerHTML = list.length
       ? list.map(card).join("")
       : '<p style="text-align:center;color:var(--muted);padding:40px 0">该分类下暂无日志</p>';
-    // 默认展开的卡片（置顶）立即加载正文，避免"加载中"常驻
-    logsEl.querySelectorAll(".log.open").forEach(function (article) {
-      var idx = Array.prototype.indexOf.call(logsEl.children, article);
-      var r = list[idx];
-      if (r) loadBody(article, r);
+    updateToggleLabels();
+  }
+
+  // 统一的「展开/收起」按钮文案同步
+  function updateToggleLabels() {
+    logsEl.querySelectorAll(".log").forEach(function (article) {
+      var btn = article.querySelector("[data-act=toggle]");
+      if (btn) btn.textContent = article.classList.contains("open") ? "收起详情" : "展开详情";
     });
+  }
+
+  // 由卡片元素取回对应的日志数据（不依赖 children 下标，避免顺序假设出错）
+  function dataOf(article) {
+    return releases.filter(function (x) {
+      return currentFilter === "all" || x.type === currentFilter;
+    })[article.dataset.idx];
   }
 
   function loadBody(article, r) {
@@ -87,10 +101,7 @@
   logsEl.addEventListener("click", function (e) {
     var article = e.target.closest(".log");
     if (!article) return;
-    var idx = Array.prototype.indexOf.call(logsEl.children, article);
-    var r = releases.filter(function (x) {
-      return currentFilter === "all" || x.type === currentFilter;
-    })[idx];
+    var r = dataOf(article);
     if (!r) return;
     if (e.target.matches("[data-act=toggle]")) {
       article.classList.toggle("open");
@@ -138,10 +149,7 @@
     if (!q) return;
     var target = null;
     logsEl.querySelectorAll(".log").forEach(function (article) {
-      var idx = Array.prototype.indexOf.call(logsEl.children, article);
-      var r = releases.filter(function (x) {
-        return currentFilter === "all" || x.type === currentFilter;
-      })[idx];
+      var r = dataOf(article);
       if (r && r.md_file === q) target = { article: article, r: r };
     });
     if (!target) return;

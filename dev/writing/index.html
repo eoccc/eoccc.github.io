@@ -226,7 +226,7 @@
           
   
   
-  开发者教程
+  开发者文档
 
         </a>
       </li>
@@ -463,7 +463,7 @@
   <span class="md-ellipsis">
     
   
-    开发者教程
+    开发者文档
   
 
     
@@ -479,7 +479,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    开发者教程
+    开发者文档
   
 
           </label>
@@ -499,7 +499,7 @@
   <span class="md-ellipsis">
     
   
-    开发者教程 · 总览
+    总览
   
 
     
@@ -512,6 +512,63 @@
   
 
               
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档共建
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文档共建
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -677,17 +734,6 @@
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        提醒与注意
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         命名与用词
       
     </span>
@@ -766,6 +812,96 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../svg-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG 图标绘制与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
   
     <li class="md-nav__item">
       <a href="../github-release-flow/" class="md-nav__link">
@@ -784,6 +920,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -919,17 +1063,6 @@
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        提醒与注意
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         命名与用词
       
     </span>
@@ -957,21 +1090,17 @@
 <h1 id="markdown">Markdown 写作规范</h1>
 <p>为保证全站风格统一，撰写文档请遵循以下规范。所有规则与本站现有页面（如首页、关于本站）保持一致。</p>
 <h2 id="_1">标题层级</h2>
-<ul>
-<li>每页<strong>只有一个</strong> <code>#</code>（一级标题），即页面主题</li>
-<li>章节用 <code>##</code>，小节用 <code>###</code>，不要跳级（<code>#</code> 后直接用 <code>###</code>）</li>
-<li>标题文字简短明确，避免"一些说明"这类模糊表述</li>
-</ul>
+<p>每页<strong>只有一个</strong> <code>#</code>（一级标题），即页面主题
+章节用 <code>##</code>，小节用 <code>###</code>，不要跳级（<code>#</code> 后直接用 <code>###</code>）
+标题文字简短明确，避免"一些说明"这类模糊表述</p>
 <pre><code class="language-markdown"># 页面主题
 ## 第一章节
 ### 小节
 </code></pre>
 <h2 id="_2">段落与列表</h2>
-<ul>
-<li>段落之间空一行；不要用空格缩进段首</li>
-<li>并列内容用无序列表 <code>-</code>；有步骤先后关系用有序列表 <code>1. 2. 3.</code></li>
-<li>列表项保持在两行以内，过长内容拆成小节</li>
-</ul>
+<p>段落之间空一行；不要用空格缩进段首
+并列内容用无序列表 <code>-</code>；有步骤先后关系用有序列表 <code>1. 2. 3.</code>
+列表项保持在两行以内，过长内容拆成小节</p>
 <h2 id="_3">表格</h2>
 <p>表格用于结构化对照信息（如功能说明、错误码），表头加粗由渲染器自动处理：</p>
 <pre><code class="language-markdown">| 功能 | 说明 |
@@ -993,40 +1122,36 @@
 </tbody>
 </table>
 <h2 id="_4">图片</h2>
-<ul>
-<li>图片统一放在 <code>docs/img/</code> 目录，文件名用英文小写加连字符</li>
-<li>用相对路径引用，并写清替代文字：</li>
-</ul>
+<p>图片统一放在 <code>img/user/</code> 或 <code>ext/</code> 等约定目录，文件名用英文小写加连字符
+用相对路径引用，并写清替代文字：</p>
 <pre><code class="language-markdown">![预览图说明](img/my-screenshot.png)
 </code></pre>
 <h2 id="_5">链接</h2>
-<ul>
-<li>站内链接用相对路径：<code>[关于本站](../about.md)</code></li>
-<li>站外链接写完整 URL，必要处加 <code>target</code> 说明</li>
-<li>链接文字要能说明去向，避免"点这里"</li>
-</ul>
+<p>站内链接用相对路径：<code>[关于本站](../about.md)</code>
+站外链接写完整 URL，必要处加 <code>target</code> 说明
+链接文字要能说明去向，避免"点这里"</p>
 <h2 id="_6">代码块</h2>
 <p>命令、配置、代码一律用代码块并标注语言：</p>
 <pre><code class="language-markdown">```bash
 mkdocs serve
-```
 </code></pre>
-<h2 id="_7">提醒与注意</h2>
-<p>重要提示用 Material 的 admonition 语法：</p>
-<pre><code class="language-markdown">!!! note &quot;提示&quot;
-    这里是一段提示内容
+<pre><code>
+## 提醒与注意
 
-!!! warning &quot;注意&quot;
-    请勿删除 docs/CNAME 文件
+重要提示用引用块突出显示，并在开头点明类型：
+
+```markdown
+&gt; **提示**：这里是一段提示内容
+
+&gt; **注意**：请勿删除仓库根目录的 CNAME 文件
 </code></pre>
-<p>!!! note "提示"
-    这里是一段提示内容</p>
-<h2 id="_8">命名与用词</h2>
-<ul>
-<li>社区全称统一写 <strong>Everyone Create Community（每个人创作社区）</strong>，不要使用旧称或自造缩写</li>
-<li>文档名用英文小写加连字符（如 <code>getting-started.md</code>），页面内首行标题可用中文</li>
-<li>中英文之间加一个空格，如「使用 MkDocs 构建」</li>
-</ul>
+<blockquote>
+<p><strong>提示</strong>：本站未启用 admonition 扩展，请使用上面的引用块写法，不要直接写 <code>!!!</code> 语法。</p>
+</blockquote>
+<h2 id="_7">命名与用词</h2>
+<p>社区全称统一写 <strong>Everyone Create Community（每个人创作社区）</strong>，不要使用旧称或自造缩写
+文档名用英文小写加连字符（如 <code>getting-started.md</code>），页面内首行标题可用中文
+中英文之间加一个空格，如「使用 MkDocs 构建」</p>
 <p>写完之后，请按 <a href="../contribute/">提交与上线流程</a> 提交你的改动。</p>
 
 

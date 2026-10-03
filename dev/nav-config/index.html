@@ -16,7 +16,7 @@
         <link rel="prev" href="../contribute/">
       
       
-        <link rel="next" href="../github-release-flow/">
+        <link rel="next" href="../svg-guide/">
       
       
         
@@ -226,7 +226,7 @@
           
   
   
-  开发者教程
+  开发者文档
 
         </a>
       </li>
@@ -463,7 +463,7 @@
   <span class="md-ellipsis">
     
   
-    开发者教程
+    开发者文档
   
 
     
@@ -479,7 +479,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    开发者教程
+    开发者文档
   
 
           </label>
@@ -499,7 +499,7 @@
   <span class="md-ellipsis">
     
   
-    开发者教程 · 总览
+    总览
   
 
     
@@ -512,6 +512,63 @@
   
 
               
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档共建
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文档共建
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -744,6 +801,96 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../svg-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG 图标绘制与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
   
     <li class="md-nav__item">
       <a href="../github-release-flow/" class="md-nav__link">
@@ -762,6 +909,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -913,36 +1068,32 @@
 <h1 id="_1">导航与站点配置</h1>
 <p>本教程面向参与站点结构维护的成员，说明 <code>mkdocs.yml</code> 的核心配置：导航折叠菜单与站点元信息。</p>
 <h2 id="_2">配置文件位置</h2>
-<p>站点全部配置集中在仓库 <code>mkdocs/mkdocs.yml</code>（构建源）中，改动后本地 <code>mkdocs serve</code> 即时可见效果。</p>
+<p>站点全部配置集中在一个 <code>mkdocs.yml</code> 中，改动后本地 <code>mkdocs serve</code> 即时可见效果。</p>
 <h2 id="nav">nav：导航与折叠菜单</h2>
 <p><code>nav</code> 决定侧边栏结构。用缩进即可创建<strong>可折叠的多级分组</strong>，Material 主题自动渲染折叠交互（三条横线菜单点击展开子分支），无需额外样式：</p>
 <pre><code class="language-yaml">nav:
   - 首页: index.md
   - 版本更新日志: release.md
-  - 开发者教程:                # 一级分组（可折叠）
-      - 开发者教程 · 总览: dev/index.md
+  - 开发者文档:                # 一级分组（可折叠）
+      - 开发者文档 · 总览: dev/index.md
       - 环境搭建: dev/start.md     # 二级页面
       - Markdown 写作规范: dev/writing.md
   - 关于: about.md
 </code></pre>
 <p>要点：</p>
-<ul>
-<li><strong>缩进必须用空格</strong>（不能用 Tab），同一层级缩进量一致</li>
-<li>分组标题后是冒号，其下每行 <code>页面名: 路径</code></li>
-<li>分组可嵌套到三级，但建议不超过两级，避免侧边栏过深</li>
-<li>页面文件如果没在 <code>nav</code> 登记，仍会被构建，但不会出现在导航中</li>
-</ul>
+<p><strong>缩进必须用空格</strong>（不能用 Tab），同一层级缩进量一致
+分组标题后是冒号，其下每行 <code>页面名: 路径</code>
+分组可嵌套到三级，但建议不超过两级，避免侧边栏过深
+页面文件如果没在 <code>nav</code> 登记，仍会被构建，但不会出现在导航中</p>
 <h2 id="_3">站点元信息</h2>
 <pre><code class="language-yaml">site_name: EOCC 文档库                    # 站点名称（浏览器标题、左上角展示）
 site_url: https://docs.git.eocc.top/     # 生成站内链接、搜索索引与 sitemap 的基础
 site_description: Everyone Create Community
 </code></pre>
 <p>规则：</p>
-<ul>
-<li><code>site_url</code> 必须是最终访问域名，不要填 github.io 地址</li>
-<li>页面 UI 上不展示 github.io 域名；仓库链接需要时用文字 <code>github.com/eoccc</code></li>
-<li><code>site_name</code> 改动会影响所有页面的标题与左上角文字</li>
-</ul>
+<p><code>site_url</code> 必须是最终访问域名，不要填 github.io 地址
+页面 UI 上不展示 github.io 域名；仓库链接需要时用文字 <code>github.com/eoccc</code>
+<code>site_name</code> 改动会影响所有页面的标题与左上角文字</p>
 <h2 id="_4">主题配置</h2>
 <pre><code class="language-yaml">theme:
   name: material
@@ -956,7 +1107,7 @@ site_description: Everyone Create Community
 </code></pre>
 <p>这些 feature 由 Material 主题提供，保持默认即可；不要自行引入新的前端样式覆盖。</p>
 <h2 id="_5">自定义样式</h2>
-<p>如需微调样式，把 CSS 放入 <code>docs/css/</code>，并在 <code>mkdocs.yml</code> 注册：</p>
+<p>如需微调样式，把 CSS 放入 <code>css/</code> 目录，并在 <code>mkdocs.yml</code> 注册：</p>
 <pre><code class="language-yaml">extra_css:
   - css/eocc-brand.css
 </code></pre>

@@ -48,3 +48,19 @@
 #logs .log:not(.open) .btn:not(.primary){display:none}
 /* 详情加载占位：仅在请求阶段显示，内容渲染后由 JS 移除 */
 #logs .log-body .md-log-loading{color:var(--md-default-fg-color--light)}
+
+/* ===== 图片放大（示意图/流程图）=====
+   仅作用于带 .md-zoomable 的图片，取色来自 Material 主题变量，不覆盖全局基础样式。
+   用法：<img class="md-zoomable" src="..." alt="...">，交互由 js/eocc-image-zoom.js 提供 */
+.md-typeset .md-zoomable{cursor:zoom-in}
+.md-zoom-mask{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  padding:3vmin;background:var(--md-default-fg-color--lightest);box-sizing:border-box}
+.md-zoom-mask.is-open{display:flex}
+.md-zoom-mask img{max-width:96vw;max-height:92vh;width:auto;height:auto;
+  background:var(--md-default-bg-color);border:1px solid var(--md-default-fg-color--lightest);
+  border-radius:.4rem;box-shadow:0 .6rem 2rem rgba(0,0,0,.28);cursor:zoom-out}
+.md-zoom-caption{position:absolute;left:0;right:0;bottom:1.2rem;text-align:center;
+  font-size:.72rem;color:var(--md-default-fg-color--light);padding:0 1rem}
+.md-zoom-hint{position:fixed;right:1.2rem;bottom:1.2rem;z-index:101;
+  font-size:.68rem;color:var(--md-default-fg-color--light)}
+body.md-zoom-locked{overflow:hidden}

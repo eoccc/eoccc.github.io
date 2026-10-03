@@ -226,7 +226,7 @@
           
   
   
-  开发者教程
+  开发者文档
 
         </a>
       </li>
@@ -463,7 +463,7 @@
   <span class="md-ellipsis">
     
   
-    开发者教程
+    开发者文档
   
 
     
@@ -479,7 +479,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    开发者教程
+    开发者文档
   
 
           </label>
@@ -499,7 +499,7 @@
   <span class="md-ellipsis">
     
   
-    开发者教程 · 总览
+    总览
   
 
     
@@ -512,6 +512,63 @@
   
 
               
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档共建
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文档共建
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -650,7 +707,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 修改文档
+        1. 修改内容
       
     </span>
   </a>
@@ -755,6 +812,96 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../svg-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG 图标绘制与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
   
     <li class="md-nav__item">
       <a href="../github-release-flow/" class="md-nav__link">
@@ -773,6 +920,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -853,7 +1008,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 修改文档
+        1. 修改内容
       
     </span>
   </a>
@@ -935,21 +1090,20 @@
 <h1 id="_1">提交与上线流程</h1>
 <p>本教程说明文档从本地修改到正式上线的完整链路。撰写规范见 <a href="../writing/">Markdown 写作规范</a>，环境问题见 <a href="../start/">环境搭建</a>。</p>
 <h2 id="_2">流程总览</h2>
-<pre><code class="language-text">修改文档 → 本地预览 → 提交分支 → Pull Request → 审核合并 → 构建上线
-</code></pre>
-<h2 id="1">1. 修改文档</h2>
-<p>在 <code>docs/</code> 目录中编辑或新增 <code>.md</code> 文件。新页面必须在 <code>mkdocs.yml</code> 的 <code>nav</code> 中登记才会出现在导航里（写法见<a href="../nav-config/">导航与站点配置</a>）。</p>
+<p>修改内容 → 本地预览 → 提交分支 → Pull Request → 审核合并 → 构建上线</p>
+<h2 id="1">1. 修改内容</h2>
+<p>按<a href="../start/">环境搭建</a>准备好本地环境后，在仓库中编辑或新增页面。新增页面需要在站点配置的 <code>nav</code> 中登记才会出现在导航里（写法见<a href="../nav-config/">导航与站点配置</a>）。</p>
 <h2 id="2">2. 本地预览</h2>
 <pre><code class="language-bash">mkdocs serve
 </code></pre>
-<p>浏览器打开 <code>http://127.0.0.1:8000</code>，确认：</p>
+<p>浏览器打开 <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>，确认：</p>
 <ul>
 <li>标题层级、表格、列表渲染正常</li>
 <li>图片能显示、站内外链接可跳转</li>
 <li>搜索能搜到你新增的关键词</li>
 </ul>
 <h2 id="3">3. 提交分支</h2>
-<pre><code class="language-bash">git checkout -b docs/my-edit        # 新建分支，起一个见名知意的名字
+<pre><code class="language-bash">git checkout -b docs/my-edit   # 新建分支，起一个见名知意的名字
 git add .
 git commit -m &quot;docs: 简要说明本次改动&quot;
 git push origin docs/my-edit
@@ -960,15 +1114,17 @@ git push origin docs/my-edit
 <ul>
 <li>标题一句话概括改动</li>
 <li>正文写明：改了哪些页面、为什么改、截图（涉及排版时）</li>
-<li>提交后等待审核</li>
 </ul>
+<p>提交后等待审核。</p>
 <p>不装本地环境也可以：在 GitHub 网页上打开要改的文件，点铅笔图标直接编辑，保存时选择「新建分支并发起 PR」，效果相同。</p>
 <h2 id="5">5. 审核合并与上线</h2>
 <p>维护者审核通过后合并入 <code>main</code>，随后构建静态产物推送发布，GitHub Pages 自动更新，通常 1 分钟内生效。</p>
 <p>合并后看不到变化？多为浏览器缓存，强制刷新（Ctrl+F5）即可。</p>
 <h2 id="_3">注意事项</h2>
-<p>!!! warning "注意"
-    <code>docs/CNAME</code> 与仓库根目录 <code>release/update/</code> 子站由维护者管理，普通贡献请勿改动。</p>
+<blockquote>
+<p><strong>注意</strong>：仓库根目录的 <code>CNAME</code>（自定义域名配置）与 <code>release/update/</code> 子站由维护者管理，普通贡献请勿改动。</p>
+</blockquote>
+<p>遇到其他问题，可在 <a href="https://github.com/eoccc/eoccc.github.io/issues">GitHub 仓库</a>提交 Issue。相关阅读：<a href="../github-release-flow/">GitHub 开发与软件包发布流程</a>。</p>
 
 
 

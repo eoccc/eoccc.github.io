@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.git.eocc.top/dev/start/">
+        <link rel="canonical" href="https://docs.git.eocc.top/dev/svg-guide/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../nav-config/">
       
       
-        <link rel="next" href="../writing/">
+        <link rel="next" href="../github-release-flow/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>环境搭建 - EOCC 文档库</title>
+        <title>SVG 图标绘制与创作 - EOCC 文档库</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#svg" class="md-skip">
           跳转至
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              环境搭建
+              SVG 图标绘制与创作
             
           </span>
         </div>
@@ -574,37 +574,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    环境搭建
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../start/" class="md-nav__link">
         
   
   
@@ -620,81 +593,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 安装 Python
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 安装 MkDocs 与主题
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 克隆文档仓库
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 启动本地预览
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        常见问题
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -788,10 +686,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../svg-guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG 图标绘制与创作
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -807,6 +732,147 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#svg_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么用 SVG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小可用示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viewBox：坐标系的基石
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用图形元素
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        路径指令速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        颜色与填充
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可访问性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在文档中引用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优化与检查
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -972,10 +1038,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-python" class="md-nav__link">
+  <a href="#svg_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 安装 Python
+        为什么用 SVG
       
     </span>
   </a>
@@ -983,10 +1049,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-mkdocs" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 安装 MkDocs 与主题
+        最小可用示例
       
     </span>
   </a>
@@ -994,21 +1060,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#viewbox" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 克隆文档仓库
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 启动本地预览
+        viewBox：坐标系的基石
       
     </span>
   </a>
@@ -1019,7 +1074,84 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        常见问题
+        常用图形元素
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        路径指令速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        颜色与填充
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可访问性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在文档中引用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优化与检查
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相关阅读
       
     </span>
   </a>
@@ -1043,61 +1175,303 @@
 
 
 
-<h1 id="_1">环境搭建</h1>
-<p>本教程带你从零开始，把 EOCC 文档库跑在本地，为后续写作和预览做准备。</p>
-<h2 id="1-python">1. 安装 Python</h2>
-<p>MkDocs 基于 Python 运行：</p>
-<p>Windows / macOS：到 <a href="https://www.python.org/downloads/">python.org</a> 下载安装包，安装时勾选 <strong>Add Python to PATH</strong>
-Linux：<code>sudo apt install python3 python3-pip</code></p>
-<p>安装后验证：</p>
-<pre><code class="language-bash">python3 --version
-pip3 --version
-</code></pre>
-<h2 id="2-mkdocs">2. 安装 MkDocs 与主题</h2>
-<pre><code class="language-bash">pip3 install mkdocs mkdocs-material
-</code></pre>
-<p>如果系统提示 <code>externally-managed-environment</code>（PEP 668 保护），推荐用虚拟环境：</p>
-<pre><code class="language-bash">python3 -m venv ~/docs-venv
-~/docs-venv/bin/pip install mkdocs mkdocs-material
-# 之后把 mkdocs 替换为 ~/docs-venv/bin/mkdocs 即可
-</code></pre>
-<h2 id="3">3. 克隆文档仓库</h2>
-<pre><code class="language-bash">git clone https://github.com/eoccc/eoccc.github.io.git
-cd eoccc.github.io
-</code></pre>
-<p>没有命令行经验？也可以先跳过克隆，用 GitHub 网页端编辑（见<a href="../contribute/">提交与上线流程</a>）。</p>
-<h2 id="4">4. 启动本地预览</h2>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>看到 <code>Serving on http://127.0.0.1:8000/</code> 即成功，浏览器打开该地址。此后修改任何页面内容并保存，页面自动刷新。</p>
-<h2 id="_2">常见问题</h2>
+<h1 id="svg">SVG 图标绘制与创作</h1>
+<p>本教程面向参与本站文档配图的成员，说明如何从零绘制一个 SVG 图标或示意图，并按照社区约定接入文档。</p>
+<p>SVG 是矢量格式，放大不失真、体积小、可直接用文本编辑，非常适合示意图、流程图与图标。本站的 SVG 一律<strong>存放在仓库本地目录、以相对路径引用</strong>，不使用站外链接。</p>
+<h2 id="svg_1">为什么用 SVG</h2>
 <table>
 <thead>
 <tr>
-<th>现象</th>
-<th>原因与解决</th>
+<th>优势</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>mkdocs: command not found</td>
-<td>Python Scripts 目录不在 PATH，或用了虚拟环境却没带全路径</td>
+<td>矢量清晰</td>
+<td>任意缩放不失真，高分屏与打印同样清晰</td>
 </tr>
 <tr>
-<td>pip install 报权限错误</td>
-<td>加 --user 参数，或改用虚拟环境</td>
+<td>体积小</td>
+<td>纯文本描述图形，通常只有几百字节到几 KB</td>
 </tr>
 <tr>
-<td>端口 8000 被占用</td>
-<td>mkdocs serve -a 127.0.0.1:8888 换端口</td>
+<td>可编辑</td>
+<td>用文本编辑器即可修改颜色、尺寸与结构</td>
 </tr>
 <tr>
-<td>预览正常但字体/图标缺失</td>
-<td>检查是否安装了 mkdocs-material 而不是仅有 mkdocs</td>
+<td>可访问</td>
+<td>可通过 <code>role</code>、<code>aria-label</code> 等属性描述图形含义</td>
+</tr>
+<tr>
+<td>可复用</td>
+<td>同一份文件可在多处引用，改一处即全部生效</td>
 </tr>
 </tbody>
 </table>
-<p>环境就绪后，请继续阅读 <a href="../writing/">Markdown 写作规范</a>。</p>
+<h2 id="_1">最小可用示例</h2>
+<p>一个 SVG 从 <code>&lt;svg&gt;</code> 根元素开始，用 <code>viewBox</code> 定义坐标系，再放入图形元素：</p>
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot; role=&quot;img&quot; aria-label=&quot;心形图标&quot;&gt;
+  &lt;path d=&quot;M12 21s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5C19 16.65 12 21 12 21z&quot; fill=&quot;#5b8def&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+<p>要点：</p>
+<ul>
+<li>必须带 <code>xmlns="http://www.w3.org/2000/svg"</code>，否则作为独立文件打开时无法渲染</li>
+<li><code>viewBox="0 0 minX minY 宽 高"</code> 决定坐标系，是缩放的关键</li>
+<li><code>width</code> / <code>height</code> 是默认显示尺寸，可被引用处的属性覆盖</li>
+</ul>
+<h2 id="viewbox">viewBox：坐标系的基石</h2>
+<p><code>viewBox</code> 的四个数字依次是<strong>原点 x、原点 y、宽度、高度</strong>。它定义「画布逻辑坐标」，与实际显示像素无关：</p>
+<pre><code class="language-xml">&lt;!-- 坐标范围 0..24：适合图标 --&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;…&lt;/svg&gt;
+
+&lt;!-- 坐标范围 0..960 × 0..320：适合宽幅示意图 --&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 960 320&quot;&gt;…&lt;/svg&gt;
+</code></pre>
+<p>只要 <code>viewBox</code> 不变，图形内容就固定；引用时改 <code>width</code>，图形会等比缩放。</p>
+<blockquote>
+<p><strong>提示</strong>：绘制前先定 <code>viewBox</code>，后续所有坐标都基于它计算，可避免元素「跑偏」或被裁掉。</p>
+</blockquote>
+<h2 id="_2">常用图形元素</h2>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>用途</th>
+<th>关键属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;rect&gt;</code></td>
+<td>矩形、卡片、按钮底色</td>
+<td><code>x</code> <code>y</code> <code>width</code> <code>height</code> <code>rx</code>（圆角）</td>
+</tr>
+<tr>
+<td><code>&lt;circle&gt;</code></td>
+<td>圆形、头像底、节点</td>
+<td><code>cx</code> <code>cy</code> <code>r</code></td>
+</tr>
+<tr>
+<td><code>&lt;ellipse&gt;</code></td>
+<td>椭圆</td>
+<td><code>cx</code> <code>cy</code> <code>rx</code> <code>ry</code></td>
+</tr>
+<tr>
+<td><code>&lt;line&gt;</code></td>
+<td>直线、连接线</td>
+<td><code>x1</code> <code>y1</code> <code>x2</code> <code>y2</code></td>
+</tr>
+<tr>
+<td><code>&lt;polyline&gt;</code> / <code>&lt;polygon&gt;</code></td>
+<td>折线 / 多边形箭头</td>
+<td><code>points</code></td>
+</tr>
+<tr>
+<td><code>&lt;path&gt;</code></td>
+<td>任意形状、图标轮廓</td>
+<td><code>d</code>（路径指令）</td>
+</tr>
+<tr>
+<td><code>&lt;text&gt;</code></td>
+<td>图上文字</td>
+<td><code>x</code> <code>y</code> <code>font-size</code> <code>text-anchor</code></td>
+</tr>
+</tbody>
+</table>
+<p>一个包含多种元素的示例：</p>
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 240 120&quot; role=&quot;img&quot; aria-label=&quot;流程节点示意&quot;&gt;
+  &lt;!-- 卡片 --&gt;
+  &lt;rect x=&quot;10&quot; y=&quot;30&quot; width=&quot;90&quot; height=&quot;60&quot; rx=&quot;8&quot; fill=&quot;#5b8def&quot;/&gt;
+  &lt;!-- 箭头连线 --&gt;
+  &lt;line x1=&quot;105&quot; y1=&quot;60&quot; x2=&quot;135&quot; y2=&quot;60&quot; stroke=&quot;#8892a6&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;polygon points=&quot;135,55 145,60 135,65&quot; fill=&quot;#8892a6&quot;/&gt;
+  &lt;!-- 终点 --&gt;
+  &lt;circle cx=&quot;175&quot; cy=&quot;60&quot; r=&quot;20&quot; fill=&quot;#7f6fe0&quot;/&gt;
+  &lt;!-- 标注 --&gt;
+  &lt;text x=&quot;55&quot; y=&quot;65&quot; text-anchor=&quot;middle&quot; font-size=&quot;13&quot; fill=&quot;#ffffff&quot;&gt;开始&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<h2 id="_3">路径指令速查</h2>
+<p><code>&lt;path&gt;</code> 的 <code>d</code> 由指令与坐标组成，掌握几个常用指令即可画大多数图标：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M x y</code></td>
+<td>移动到（起点）</td>
+<td><code>M12 3</code></td>
+</tr>
+<tr>
+<td><code>L x y</code></td>
+<td>画直线到</td>
+<td><code>L20 15</code></td>
+</tr>
+<tr>
+<td><code>H x</code> / <code>V y</code></td>
+<td>水平 / 垂直线</td>
+<td><code>H24</code> / <code>V10</code></td>
+</tr>
+<tr>
+<td><code>C</code> / <code>Q</code></td>
+<td>三次 / 二次贝塞尔曲线</td>
+<td><code>C4 4 8 4 8 8</code></td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>圆弧</td>
+<td><code>A5 5 0 0 1 20 20</code></td>
+</tr>
+<tr>
+<td><code>Z</code></td>
+<td>闭合路径</td>
+<td><code>Z</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>提示</strong>：先用设计工具（如 Inkscape、Figma）画好再导出 SVG，然后手工清理导出的冗余属性，是最快的方式。</p>
+</blockquote>
+<h2 id="_4">颜色与填充</h2>
+<p>社区品牌色如下，绘制示意图时请优先使用，以保持全站视觉统一：</p>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>色值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主色</td>
+<td><code>#5b8def</code></td>
+<td>起始节点、主要区块</td>
+</tr>
+<tr>
+<td>辅色</td>
+<td><code>#7f6fe0</code></td>
+<td>过渡节点、次级区块</td>
+</tr>
+<tr>
+<td>强调色</td>
+<td><code>#c76fb8</code></td>
+<td>终点、需要强调的元素</td>
+</tr>
+<tr>
+<td>中性色</td>
+<td><code>#8892a6</code></td>
+<td>连线、箭头、说明文字</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-xml">&lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;40&quot; height=&quot;40&quot; fill=&quot;#5b8def&quot;/&gt;
+&lt;rect x=&quot;50&quot; y=&quot;0&quot; width=&quot;40&quot; height=&quot;40&quot; fill=&quot;#7f6fe0&quot; stroke=&quot;#c76fb8&quot; stroke-width=&quot;2&quot;/&gt;
+</code></pre>
+<p>渐变色用 <code>&lt;defs&gt;</code> 定义、再通过 <code>url(#id)</code> 引用：</p>
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 120 40&quot; role=&quot;img&quot; aria-label=&quot;渐变示意&quot;&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;demoGrad&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#5b8def&quot;/&gt;
+      &lt;stop offset=&quot;100%&quot; stop-color=&quot;#c76fb8&quot;/&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;120&quot; height=&quot;40&quot; rx=&quot;8&quot; fill=&quot;url(#demoGrad)&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+<blockquote>
+<p><strong>注意</strong>：<code>&lt;defs&gt;</code> 中 <code>id</code> 需在<strong>同一文件内唯一</strong>。若同一页面引入多个 SVG，请给 <code>id</code> 加前缀（如 <code>flowArrow</code>、<code>devArrow</code>），避免互相覆盖。</p>
+</blockquote>
+<h2 id="_5">可访问性</h2>
+<p>图形不是装饰时，必须让屏幕阅读器能理解它：</p>
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;
+     role=&quot;img&quot; aria-label=&quot;下载图标&quot;&gt;
+  &lt;title&gt;下载图标&lt;/title&gt;
+  &lt;desc&gt;向下的箭头，用于表示下载操作&lt;/desc&gt;
+  &lt;path d=&quot;M12 3v12m0 0l-4-4m4 4l4-4M4 19h16&quot; fill=&quot;none&quot; stroke=&quot;#5b8def&quot; stroke-width=&quot;2&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+<ul>
+<li><code>role="img"</code>：声明这是一张图，而非一组可交互元素</li>
+<li><code>aria-label</code>：供屏幕阅读器朗读的简短名称</li>
+<li><code>&lt;title&gt;</code> / <code>&lt;desc&gt;</code>：更完整的标题与描述，鼠标悬停也会显示 <code>&lt;title&gt;</code></li>
+</ul>
+<p>装饰性图形应加 <code>aria-hidden="true"</code>，避免朗读噪音。</p>
+<h2 id="_6">在文档中引用</h2>
+<p>把绘制好的 SVG 存入本地目录，再用<strong>内联 <code>&lt;img&gt;</code></strong> 引用：</p>
+<pre><code class="language-html">&lt;img src=&quot;../../ext/svg/github-release-flow.svg&quot; alt=&quot;发布流程示意图&quot; width=&quot;880&quot;&gt;
+</code></pre>
+<p>本站的目录约定：</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ext/svg/</code></td>
+<td>示意图、流程图、概念图（本教程相关资源）</td>
+</tr>
+<tr>
+<td><code>img/user/</code></td>
+<td>用户头像</td>
+</tr>
+</tbody>
+</table>
+<p>约定要点：</p>
+<ul>
+<li>文件名用「英文小写 + 连字符」，例如 <code>github-release-flow.svg</code></li>
+<li>必须写 <code>alt</code>，内容说明图形含义（不要写「图片」两字）</li>
+<li>一律本地相对路径，<strong>禁止</strong>引用站外 SVG 或外部图片接口</li>
+<li>图形自带配色，不依赖页面 CSS 变量，以兼容站点明暗两种主题</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：正文中的本地 SVG 请用内联 <code>&lt;img&gt;</code> 标签。若用 Markdown 的 <code>![](路径)</code> 语法，MkDocs 会把它当作需校验的文档链接，触发「目标不在文档文件之中」的构建警告。</p>
+</blockquote>
+<h2 id="_7">优化与检查</h2>
+<p>绘制完成后，按下面几步自查：</p>
+<ol>
+<li><strong>精简</strong>：删除设计工具导出的冗余属性（编辑器元数据、空的 <code>&lt;g&gt;</code>、未使用的 <code>&lt;defs&gt;</code>）</li>
+<li><strong>坐标</strong>：确认所有元素都在 <code>viewBox</code> 范围内，未被裁切</li>
+<li><strong>配色</strong>：优先使用上文品牌色，避免引入体系外的高饱和色</li>
+<li><strong>可访问</strong>：<code>role</code> / <code>aria-label</code> / <code>&lt;title&gt;</code> 齐备</li>
+<li><strong>体积</strong>：单文件建议控制在 10 KB 以内，必要时用工具压缩路径精度</li>
+</ol>
+<pre><code class="language-bash"># 若安装了 svgo，可自动压缩（可选，非必须）
+npx svgo ext/svg/your-icon.svg
+</code></pre>
+<h2 id="_8">完整实例</h2>
+<p>下面是一个可直接复用的节点卡片图标，含渐变、圆角与文字：</p>
+<p><img src="../../ext/svg/svg-tutorial-sample.svg" alt="SVG 绘制示例：渐变圆角卡片" width="320"></p>
+<p>对应的源码结构：</p>
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 320 120&quot; role=&quot;img&quot; aria-label=&quot;渐变圆角卡片示例&quot;&gt;
+  &lt;title&gt;渐变圆角卡片示例&lt;/title&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;cardGrad&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#5b8def&quot;/&gt;
+      &lt;stop offset=&quot;100%&quot; stop-color=&quot;#7f6fe0&quot;/&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;rect x=&quot;16&quot; y=&quot;24&quot; width=&quot;288&quot; height=&quot;72&quot; rx=&quot;12&quot; fill=&quot;url(#cardGrad)&quot;/&gt;
+  &lt;text x=&quot;160&quot; y=&quot;66&quot; text-anchor=&quot;middle&quot; font-size=&quot;16&quot; font-weight=&quot;700&quot;
+        font-family=&quot;Roboto, 'Segoe UI', Arial, sans-serif&quot; fill=&quot;#ffffff&quot;&gt;SVG 示例卡片&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<h2 id="_9">相关阅读</h2>
+<ul>
+<li><a href="../writing/">Markdown 写作规范</a>：文档撰写与资源引用写法</li>
+<li><a href="../contribute/">提交与上线流程</a>：改动从提交到上线的链路</li>
+<li><a href="../github-release-flow/">GitHub 开发与软件包发布流程</a>：资源与素材规范的完整约定</li>
+</ul>
 
 
 
