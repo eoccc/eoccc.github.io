@@ -49895,7 +49895,7 @@
 <td>consumesPower</td>
 <td>boolean</td>
 <td>true</td>
-<td>Used by certain power blocks (nodes) to flag as non-consuming of power. True by default, even if this block has no power.</td>
+<td>供某些电力方块（节点）用于标记为不耗电。默认为 true，即使该方块没有电力。</td>
 </tr>
 <tr>
 <td>outputsPower</td>
@@ -49937,7 +49937,7 @@
 <td>acceptsItems</td>
 <td>boolean</td>
 <td>false</td>
-<td>Visual flag use for blending of certain transportation blocks.</td>
+<td>用于某些运输方块混合的视觉标记。</td>
 </tr>
 <tr>
 <td>alwaysAllowDeposit</td>
@@ -49967,19 +49967,19 @@
 <td>itemCapacity</td>
 <td>int</td>
 <td>10</td>
-<td>maximum items this block can carry (usually, this is per-type of item)</td>
+<td>该方块可携带的最大物品数（通常按物品种类计算）</td>
 </tr>
 <tr>
 <td>liquidCapacity</td>
 <td>float</td>
 <td>-1.0</td>
-<td>maximum total liquids this block can carry if hasLiquids = true. Default value is 10, scales with max liquid consumption in ConsumeLiquid</td>
+<td>若 hasLiquids = true，该方块可携带的最大液体总量。默认值为 10，随 ConsumeLiquid 中的最大液体消耗量缩放</td>
 </tr>
 <tr>
 <td>liquidPressure</td>
 <td>float</td>
 <td>1.0</td>
-<td>higher numbers increase liquid output speed; TODO remove and replace with better liquids system</td>
+<td>数值越高，液体输出速度越快；TODO 移除并替换为更好的液体系统</td>
 </tr>
 <tr>
 <td>outputFacing</td>
@@ -49991,79 +49991,79 @@
 <td>noSideBlend</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block does not accept input from the sides (used for armored conveyors)</td>
+<td>若为 true，该方块不接受来自侧面的输入（用于装甲传送带）</td>
 </tr>
 <tr>
 <td>displayFlow</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to display flow rate</td>
+<td>是否显示流量</td>
 </tr>
 <tr>
 <td>inEditor</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether this block is visible in the editor</td>
+<td>该方块在编辑器中是否可见</td>
 </tr>
 <tr>
 <td>editorConfigurable</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, {@link #buildEditorConfig(Table)} will be called for configuring this block in the editor.</td>
+<td>若为 true，在编辑器中配置该方块时会调用 {@link #buildEditorConfig(Table)}。</td>
 </tr>
 <tr>
 <td>lastConfig</td>
 <td>Object</td>
 <td>null</td>
-<td>the last configuration value applied to this block.</td>
+<td>应用于该方块的最后一个配置值。</td>
 </tr>
 <tr>
 <td>saveConfig</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether to save the last config and apply it to newly placed blocks</td>
+<td>是否保存最后的配置并应用到新放置的方块</td>
 </tr>
 <tr>
 <td>copyConfig</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to allow copying the config through middle click</td>
+<td>是否允许通过中键复制配置</td>
 </tr>
 <tr>
 <td>clearOnDoubleTap</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, double-tapping this configurable block clears configuration.</td>
+<td>若为 true，双击该可配置方块会清除配置。</td>
 </tr>
 <tr>
 <td>update</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block has a tile entity that updates</td>
+<td>该方块是否有会更新的 tile entity</td>
 </tr>
 <tr>
 <td>destructible</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block has health and can be destroyed. note that setting this to false does nothing if update = true!</td>
+<td>该方块是否有生命值且可被摧毁。注意：若 update = true，则将其设为 false 不起作用！</td>
 </tr>
 <tr>
 <td>unloadable</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether unloaders work on this block</td>
+<td>卸载器是否对该方块生效</td>
 </tr>
 <tr>
 <td>isDuct</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block acts a duct and will connect to armored ducts from the side.</td>
+<td>若为 true，该方块相当于管道，会从侧面连接装甲管道。</td>
 </tr>
 <tr>
 <td>allowResupply</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether units can resupply by taking items from this block</td>
+<td>单位是否可以通过从该方块取用物品来补给</td>
 </tr>
 <tr>
 <td>solid</td>
@@ -50075,19 +50075,19 @@
 <td>solidifes</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block CAN be solid.</td>
+<td>该方块<em>是否能够</em>成为实心。</td>
 </tr>
 <tr>
 <td>teamPassable</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this counts as a non-solid block to this team.</td>
+<td>若为 true，对该队伍而言它算作非实心方块。</td>
 </tr>
 <tr>
 <td>underBullets</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block cannot be hit by bullets unless explicitly targeted.</td>
+<td>若为 true，除非被显式指定为目标，否则该方块不会被弹药击中。</td>
 </tr>
 <tr>
 <td>rotate</td>
@@ -50099,163 +50099,163 @@
 <td>rotateDraw</td>
 <td>boolean</td>
 <td>true</td>
-<td>if rotate is true and this is false, the region won't rotate when drawing</td>
+<td>若 rotate 为 true 且此项为 false，绘制时区域不会旋转</td>
 </tr>
 <tr>
 <td>rotateDrawEditor</td>
 <td>boolean</td>
 <td>true</td>
-<td>if rotate is true and this is false, the region won't rotate when drawing in the editor</td>
+<td>若 rotate 为 true 且此项为 false，则在编辑器中绘制时区域不会旋转</td>
 </tr>
 <tr>
 <td>visualRotationOffset</td>
 <td>float</td>
 <td>0.0</td>
-<td>visual rotation offset used in broken plan rendering</td>
+<td>用于破损平面渲染的视觉旋转偏移</td>
 </tr>
 <tr>
 <td>lockRotation</td>
 <td>boolean</td>
 <td>true</td>
-<td>if rotate = false and this is true, rotation will be locked at 0 when placing (default); advanced use only</td>
+<td>若 rotate = false 且此项为 true，放置时旋转将锁定为 0（默认）；仅供高级用法</td>
 </tr>
 <tr>
 <td>ignoreLineRotation</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block won't face the line drag direction</td>
+<td>若为 true，该方块不会朝向线拖拽方向</td>
 </tr>
 <tr>
 <td>invertFlip</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, schematic flips with this block are inverted.</td>
+<td>若为 true，含该方块的蓝图翻转会被反转。</td>
 </tr>
 <tr>
 <td>variants</td>
 <td>int</td>
 <td>0</td>
-<td>number of different variant regions to use</td>
+<td>要使用的不同变体区域数量</td>
 </tr>
 <tr>
 <td>drawArrow</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to draw a rotation arrow - this does not apply to lines of blocks</td>
+<td>是否绘制旋转箭头——这不适用于方块线</td>
 </tr>
 <tr>
 <td>drawTeamOverlay</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to draw the team corner by default</td>
+<td>是否默认绘制队伍角标</td>
 </tr>
 <tr>
 <td>saveData</td>
 <td>boolean</td>
 <td>false</td>
-<td>for static blocks only: if true, tile data() is saved in world data.</td>
+<td>仅适用于静态方块：若为 true，则 tile data() 会保存在世界数据中。</td>
 </tr>
 <tr>
 <td>breakable</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether you can break this with rightclick</td>
+<td>你是否可以用右键破坏它</td>
 </tr>
 <tr>
 <td>unitMoveBreakable</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block will be broken by certain units stepping/moving over it</td>
+<td>若为 true，该方块会被某些单位踩踏/移动时破坏</td>
 </tr>
 <tr>
 <td>rebuildable</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to add this block to brokenblocks</td>
+<td>是否将该方块加入 brokenblocks</td>
 </tr>
 <tr>
 <td>privileged</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this logic-related block can only be used with privileged processors (or is one itself)</td>
+<td>若为 true，该逻辑相关方块只能与特权处理器一起使用（或它本身就是特权处理器）</td>
 </tr>
 <tr>
 <td>requiresWater</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block can only be placed on water</td>
+<td>该方块是否只能放置在水上</td>
 </tr>
 <tr>
 <td>placeableLiquid</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block can be placed on any liquids, anywhere</td>
+<td>该方块是否可以放置在任意液体上的任意位置</td>
 </tr>
 <tr>
 <td>placeablePlayer</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether this block can be placed directly by the player via PlacementFragment</td>
+<td>该方块是否可以由玩家通过 PlacementFragment 直接放置</td>
 </tr>
 <tr>
 <td>placeableOn</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether this floor can be placed on.</td>
+<td>该地板是否可被放置。</td>
 </tr>
 <tr>
 <td>insulated</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block has insulating properties.</td>
+<td>该方块是否具有绝缘属性。</td>
 </tr>
 <tr>
 <td>squareSprite</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether the sprite is a full square.</td>
+<td>该贴图是否为完整正方形。</td>
 </tr>
 <tr>
 <td>absorbLasers</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this block absorbs laser attacks.</td>
+<td>该方块是否吸收激光攻击。</td>
 </tr>
 <tr>
 <td>enableDrawStatus</td>
 <td>boolean</td>
 <td>true</td>
-<td>if false, the status is never drawn</td>
+<td>若为 false，该状态永不绘制</td>
 </tr>
 <tr>
 <td>drawDisabled</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to draw disabled status</td>
+<td>是否绘制禁用状态</td>
 </tr>
 <tr>
 <td>autoResetEnabled</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to automatically reset enabled status after a logic block has not interacted for a while.</td>
+<td>是否在逻辑方块一段时间未交互后自动重置启用状态。</td>
 </tr>
 <tr>
 <td>noUpdateDisabled</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, the block stops updating when disabled</td>
+<td>若为 true，该方块在禁用时停止更新</td>
 </tr>
 <tr>
 <td>updateInUnits</td>
 <td>boolean</td>
 <td>true</td>
-<td>if true, this block updates when it's a payload in a unit.</td>
+<td>若为 true，当该方块是单位中的载荷时也会更新。</td>
 </tr>
 <tr>
 <td>alwaysUpdateInUnits</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block updates in payloads in units regardless of the experimental game rule</td>
+<td>若为 true，无论实验性游戏规则如何，该方块都会在单位中的载荷内更新</td>
 </tr>
 <tr>
 <td>canPickup</td>
@@ -50267,25 +50267,25 @@
 <td>deconstructDropAllLiquid</td>
 <td>boolean</td>
 <td>false</td>
-<td>if false, only incinerable liquids are dropped when deconstructing; otherwise, all liquids are dropped.</td>
+<td>若为 false，拆除时只掉落可燃尽液体；否则掉落所有液体。</td>
 </tr>
 <tr>
 <td>useColor</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether to use this block's color in the minimap. Only used for overlays.</td>
+<td>是否在小地图中使用该方块的颜色。仅用于覆盖层。</td>
 </tr>
 <tr>
 <td>itemDrop</td>
 <td>Item</td>
 <td>null</td>
-<td>item that drops from this block, used for drills</td>
+<td>该方块掉落的物品，用于钻头</td>
 </tr>
 <tr>
 <td>playerUnmineable</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, this block cannot be mined by players. useful for annoying things like sand.</td>
+<td>若为 true，该方块不能被玩家开采。对沙子之类烦人的东西很有用。</td>
 </tr>
 <tr>
 <td>attributes</td>
@@ -50327,7 +50327,7 @@
 <td>quickRotate</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether you can rotate this block after it is placed.</td>
+<td>放置后是否可以旋转该方块。</td>
 </tr>
 <tr>
 <td>allowDerelictRepair</td>
@@ -50411,13 +50411,13 @@
 <td>regionRotated1</td>
 <td>int</td>
 <td>-1</td>
-<td>Regions indexes from icons() that are rotated. If either of these is not -1, other regions won't be rotated in ConstructBlocks.</td>
+<td>来自 icons() 的、会被旋转的区域索引。如果其中任一不为 -1，其他区域在 ConstructBlocks 中不会被旋转。</td>
 </tr>
 <tr>
 <td>regionRotated2</td>
 <td>int</td>
 <td>-1</td>
-<td>Regions indexes from icons() that are rotated. If either of these is not -1, other regions won't be rotated in ConstructBlocks.</td>
+<td>来自 icons() 的、会被旋转的区域索引。如果其中任一不为 -1，其他区域在 ConstructBlocks 中不会被旋转。</td>
 </tr>
 <tr>
 <td>region</td>

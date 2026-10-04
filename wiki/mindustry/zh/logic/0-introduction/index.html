@@ -49899,71 +49899,71 @@
 
 
 <h1 id="_1">简介</h1>
-<p><strong>Welcome to the official, although incomplete, Mindustry Logic manual.</strong></p>
-<p>This is both a guide and a reference for Mindustry Logic. It contains both basic and advanced information relating to the language. This manual is designed to be comprehensive to all levels of programming, and we're trying to make it understood by people who don't even know what code is.</p>
+<p><strong>欢迎阅读官方的、尽管尚不完整的 Mindustry Logic 手册。</strong></p>
+<p>这既是 Mindustry Logic 的指南，也是它的参考手册。其中包含与该语言相关的基础与高级信息。本手册旨在对所有编程水平的人都足够全面，我们也在努力让完全不懂代码的人也能看懂。</p>
 <h2 id="mindustry">什么是 Mindustry 逻辑？</h2>
-<p>Mindustry Logic <em>(mlog)</em> is a scripting language added in v6 for the purpose of introducing more advanced automation and strategy into the game. It is heavily inspired by Assembly languages, where there is only one instruction or operation at a time. This is quite unlike more popular languages such as Python, Java, or C++, where you have convenient ways to create one-liners, functions, conditional statements, loops, and classes.</p>
-<p>The current capabilities of the language are:</p>
+<p>Mindustry Logic <em>（mlog）</em> 是 v6 中加入的一种脚本语言，目的是为游戏引入更高级的自动化与策略。它深受汇编语言的启发——同一时间只有一条指令或操作。这与 Python、Java 或 C++ 等更流行的语言很不相同：那些语言有便捷的方式编写单行语句、函数、条件语句、循环和类。</p>
+<p>该语言目前具备的能力有：</p>
 <ul>
 <li>
-<p>Getting information about blocks and units, including the player</p>
+<p>获取关于方块和单位（包括玩家）的信息</p>
 </li>
 <li>
 <p>Controlling buildings and turrets</p>
 </li>
 <li>
-<p>Controlling and writing/reading information to/from units</p>
+<p>控制单位以及读写单位中的信息</p>
 </li>
 <li>
-<p>Displaying shapes and colors in displays</p>
+<p>在显示屏中显示形状与颜色</p>
 </li>
 <li>
-<p>Outputting text through message blocks</p>
+<p>通过消息方块输出文本</p>
 </li>
 <li>
-<p>Reading and writing information to and from memory cells</p>
+<p>读写存储单元中的信息</p>
 </li>
 <li>
-<p>Reading player input through switch blocks</p>
+<p>通过开关方块读取玩家输入</p>
 </li>
 <li>
-<p>Mathematical operations, both unary and binary</p>
+<p>数学运算，包括一元和二元</p>
 </li>
 <li>
 <p>And much more!</p>
 </li>
 </ul>
 <h2 id="mindustry_1">入门 Mindustry 逻辑前需要准备什么？</h2>
-<p>A good thing to have beforehand is some programming experience, at least in regards to concepts and theory. This can help with understanding some of the techniques and concepts of this language. But most importantly, you need <em>patience and an open mind</em>, since a lot can change between updates and many things may seem daunting and complex until you try them out.</p>
-<p>You might also want to have Google on hand if you don't understand specific programming terms used here.</p>
+<p>事先具备一些编程经验（至少在概念和理论上）是件好事。这有助于理解本语言的某些技巧与概念。但最重要的是，你需要<em>耐心和开放的心态</em>，因为各版本之间可能变化很大，很多事情在你亲自尝试之前可能显得令人生畏且复杂。</p>
+<p>如果你不理解这里使用的特定编程术语，可能也需要随手备好 Google。</p>
 <h2 id="discord-logic">为什么 Discord 的 #logic 频道里大家都这么冲？</h2>
-<p>Most of the time it's just because the answer to your question is in very close reach, and all you need is to install this manual or read it better. All if not most of the time, all you need to do is RTFM (read this fabulous manual) thoroughly, and you will find your answer. If you're absolutely sure it isn't covered here, you are welcome to ask a question in #logic.</p>
-<p>How to ask an effective question:</p>
+<p>大多数时候，这只是因为你的问题答案就在眼前，你只需要安装本手册或更仔细地阅读它。几乎所有时候，你要做的只是彻底 RTFM（读这本绝妙的手册），然后你就会找到答案。如果你确信这里没有涉及，欢迎在 #logic 中提问。</p>
+<p>如何提出一个有效的问题：</p>
 <ul>
 <li>
-<p>First, try to figure it out with the help of this manual or <strong>Google</strong>. <em>Include what you've tried and already know.</em></p>
+<p>首先，试着借助本手册或 <strong>Google</strong> 自己弄明白。<em>说明你已经尝试过什么、已经知道什么。</em></p>
 </li>
 <li>
-<p>Please <strong>DO NOT</strong> post extremely frequently asked questions such as "how do I control turret" or "how to make unit move". Again, you can find your answers here.</p>
+<p>请<strong>不要</strong>发布极其常见的提问，例如“我怎么控制炮塔”或“怎么让单位移动”。再说一次，你可以在本手册中找到答案。</p>
 </li>
 <li>
-<p>Ask in <strong>detail</strong> so anybody who helps you has all the context they need to do so effectively.</p>
+<p>提问要<strong>详细</strong>，这样帮助你的人才能掌握有效回答所需的全部背景。</p>
 </li>
 </ul>
-<p>We try our best not to be rude or impolite, but questions that don't go by those standards can test our patience, especially if the solution is simple and covered by the manual. <strong>It's a waste of someone's time to ask them about a question that's already written clearly in the manual.</strong></p>
-<p>Examples of acceptable question structure and spirit:</p>
+<p>我们尽量做到不粗鲁、不无礼，但不符合这些标准的问题会考验我们的耐心，尤其是当解决方案很简单且手册中已有说明时。<strong>拿手册里已经写清楚的问题去问别人，是在浪费别人的时间。</strong></p>
+<p>可接受的问题结构与态度的示例：</p>
 <ul>
 <li>
-<p>"Hey after reading the manual, I can't understand what exactly a double is. Can't I just use an int?"</p>
+<p>“嗨，读完手册后，我还是不太明白 double 到底是什么。我就不能用 int 吗？”</p>
 </li>
 <li>
-<p>"I'm having trouble with radar. It doesn't detect my player even though I'm in range of the turret. Here is my code:"</p>
+<p>“我在雷达上遇到了麻烦。即使我在炮塔射程内，它也检测不到我的玩家。这是我的代码：”</p>
 </li>
 <li>
-<p>"Why can't I print a string and a variable properly in the same print instruction?"</p>
+<p>“为什么我不能在同一条 print 指令中正确地打印字符串和变量？”</p>
 </li>
 </ul>
-<p>It's inevitable that not everybody can do that all of the time, so try your best to make your question presentable at the very least, and follow at least one of these guidelines.</p>
+<p>并非每个人时时刻刻都能做到这一点，所以至少尽力让你的问题像样一些，并遵循以下准则中的至少一条。</p>
 
 
 

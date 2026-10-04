@@ -49877,13 +49877,13 @@
 <td>envEnabled</td>
 <td>int</td>
 <td>1</td>
-<td>The environment flags that this unit can function in. If the env matches any of these, it will be enabled.</td>
+<td>该单位可以运作的环境标记。如果环境匹配其中任意一项，它就会被启用。</td>
 </tr>
 <tr>
 <td>envDisabled</td>
 <td>int</td>
 <td>16</td>
-<td>The environment flags that this unit <em>cannot</em> function in. If the env matches any of these, it will explode or be disabled.</td>
+<td>该单位<em>无法</em>运作的环境标记。如果环境匹配其中任意一项，它就会爆炸或被禁用。</td>
 </tr>
 <tr>
 <td>speed</td>
@@ -49895,25 +49895,25 @@
 <td>boostMultiplier</td>
 <td>float</td>
 <td>1.0</td>
-<td>multiplier for speed when boosting</td>
+<td>加速时速度的倍率</td>
 </tr>
 <tr>
 <td>floorMultiplier</td>
 <td>float</td>
 <td>1.0</td>
-<td>how affected this unit is by terrain</td>
+<td>该单位受地形影响的程度</td>
 </tr>
 <tr>
 <td>rotateSpeed</td>
 <td>float</td>
 <td>5.0</td>
-<td>body rotation speed in degrees/t</td>
+<td>身体旋转速度，单位为度/刻</td>
 </tr>
 <tr>
 <td>baseRotateSpeed</td>
 <td>float</td>
 <td>5.0</td>
-<td>mech base rotation speed in degrees/t</td>
+<td>机甲基础旋转速度，单位为度/刻</td>
 </tr>
 <tr>
 <td>drag</td>
@@ -49925,13 +49925,13 @@
 <td>accel</td>
 <td>float</td>
 <td>0.5</td>
-<td>acceleration as fraction of speed</td>
+<td>加速度（作为速度的比例）</td>
 </tr>
 <tr>
 <td>hitSize</td>
 <td>float</td>
 <td>6.0</td>
-<td>size of one side of the hitbox square</td>
+<td>碰撞箱正方形一边的尺寸</td>
 </tr>
 <tr>
 <td>deathShake</td>
@@ -49943,37 +49943,37 @@
 <td>stepShake</td>
 <td>float</td>
 <td>-1.0</td>
-<td>shake on each step for leg/mech units</td>
+<td>腿/机甲单位每步的震动</td>
 </tr>
 <tr>
 <td>rippleScale</td>
 <td>float</td>
 <td>1.0</td>
-<td>ripple / dust size for legged units</td>
+<td>有腿单位的涟漪/尘埃尺寸</td>
 </tr>
 <tr>
 <td>riseSpeed</td>
 <td>float</td>
 <td>0.08</td>
-<td>boosting rise speed as fraction</td>
+<td>加速上升速度（作为比例）</td>
 </tr>
 <tr>
 <td>descentSpeed</td>
 <td>float</td>
 <td>0.08</td>
-<td>boosting descent speed as fraction</td>
+<td>加速下降速度（作为比例）</td>
 </tr>
 <tr>
 <td>fallSpeed</td>
 <td>float</td>
 <td>0.018</td>
-<td>how fast this unit falls upon death</td>
+<td>该单位死亡时下落的速度</td>
 </tr>
 <tr>
 <td>missileAccelTime</td>
 <td>float</td>
 <td>0.0</td>
-<td>how many ticks it takes this missile to accelerate to full speed</td>
+<td>该导弹加速到全速需要多少刻</td>
 </tr>
 <tr>
 <td>health</td>
@@ -49985,97 +49985,97 @@
 <td>armor</td>
 <td>float</td>
 <td>0.0</td>
-<td>incoming damage is reduced by this amount</td>
+<td>受到的伤害按此数值减少</td>
 </tr>
 <tr>
 <td>range</td>
 <td>float</td>
 <td>-1.0</td>
-<td>minimum range of any weapon; used for approaching targets. can be overridden by setting a value &gt; 0.</td>
+<td>任意武器的最小射程；用于接近目标。可通过设置大于 0 的值来覆盖。</td>
 </tr>
 <tr>
 <td>maxRange</td>
 <td>float</td>
 <td>-1.0</td>
-<td>maximum range of any weapon</td>
+<td>任意武器的最大射程</td>
 </tr>
 <tr>
 <td>mineRange</td>
 <td>float</td>
 <td>70.0</td>
-<td>range at which this unit can mine ores</td>
+<td>该单位可以开采矿石的射程</td>
 </tr>
 <tr>
 <td>buildRange</td>
 <td>float</td>
 <td>220.0</td>
-<td>range at which this unit can build</td>
+<td>该单位可以建造的射程</td>
 </tr>
 <tr>
 <td>circleTargetRadius</td>
 <td>float</td>
 <td>80.0</td>
-<td>radius for circleTarget, if true</td>
+<td>若为 true，circleTarget 的半径</td>
 </tr>
 <tr>
 <td>crashDamageMultiplier</td>
 <td>float</td>
 <td>1.0</td>
-<td>multiplier for damage this (flying) unit deals when crashing on enemy things</td>
+<td>该（飞行）单位撞击敌方物体时造成伤害的倍率</td>
 </tr>
 <tr>
 <td>wreckHealthMultiplier</td>
 <td>float</td>
 <td>0.25</td>
-<td>multiplier for health that this flying unit has for its wreck, based on its max health.</td>
+<td>该飞行单位残骸的生命值倍率，基于其最大生命值。</td>
 </tr>
 <tr>
 <td>dpsEstimate</td>
 <td>float</td>
 <td>-1.0</td>
-<td>a VERY ROUGH estimate of unit DPS; initialized in init()</td>
+<td>对单位 DPS 的非常粗略的估计；在 init() 中初始化</td>
 </tr>
 <tr>
 <td>clipSize</td>
 <td>float</td>
 <td>-1.0</td>
-<td>graphics clipping size;  0, this is the scale for how far away legs are from the body horizontally</td>
+<td>图形裁剪尺寸；0，这是腿在水平方向上离身体多远的缩放</td>
 </tr>
 <tr>
 <td>legMaxLength</td>
 <td>float</td>
 <td>1.75</td>
-<td>maximum length of an individual leg as fraction of real length</td>
+<td>单条腿的最大长度（作为真实长度的比例）</td>
 </tr>
 <tr>
 <td>legMinLength</td>
 <td>float</td>
 <td>0.0</td>
-<td>minimum length of an individual leg as fraction of real length</td>
+<td>单条腿的最小长度（作为真实长度的比例）</td>
 </tr>
 <tr>
 <td>legSplashDamage</td>
 <td>float</td>
 <td>0.0</td>
-<td>splash damage dealt when a leg touches the ground</td>
+<td>腿触地时造成的溅射伤害</td>
 </tr>
 <tr>
 <td>legSplashRange</td>
 <td>float</td>
 <td>5.0</td>
-<td>splash damage radius of legs</td>
+<td>腿的溅射伤害半径</td>
 </tr>
 <tr>
 <td>baseLegStraightness</td>
 <td>float</td>
 <td>0.0</td>
-<td>how straight the leg base/origin is (0 = circular, 1 = line)</td>
+<td>腿的基部/原点有多直（0 = 圆形，1 = 直线）</td>
 </tr>
 <tr>
 <td>legStraightness</td>
 <td>float</td>
 <td>0.0</td>
-<td>how straight the leg outward angles are (0 = circular, 1 = horizontal line)</td>
+<td>腿向外角度的直线程度（0 = 圆形，1 = 水平线）</td>
 </tr>
 <tr>
 <td>legBaseUnder</td>
@@ -50087,43 +50087,43 @@
 <td>lockLegBase</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, legs are locked to the base of the unit instead of being on an implicit rotating "mount".</td>
+<td>若为 true，腿被锁定在单位基部，而不是位于隐式旋转的“挂架”上。</td>
 </tr>
 <tr>
 <td>legContinuousMove</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, legs always try to move around even when the unit is not moving (leads to more natural behavior)</td>
+<td>若为 true，即使单位未移动，腿也总是尝试移动（行为更自然）</td>
 </tr>
 <tr>
 <td>flipBackLegs</td>
 <td>boolean</td>
 <td>true</td>
-<td>TODO neither of these appear to do much</td>
+<td>TODO 这两项似乎都没有太大作用</td>
 </tr>
 <tr>
 <td>flipLegSide</td>
 <td>boolean</td>
 <td>false</td>
-<td>TODO neither of these appear to do much</td>
+<td>TODO 这两项似乎都没有太大作用</td>
 </tr>
 <tr>
 <td>emitWalkSound</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether to emit a splashing noise in water.</td>
+<td>是否在水中发出溅水声。</td>
 </tr>
 <tr>
 <td>emitWalkEffect</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether to emit a splashing effect in water (fasle implies emitWalkSound false).</td>
+<td>是否在水中发出溅水效果（fasle 意味着 emitWalkSound 为 false）。</td>
 </tr>
 <tr>
 <td>mechLandShake</td>
 <td>float</td>
 <td>0.0</td>
-<td>screen shake amount for when this mech lands after boosting</td>
+<td>该机甲加速后着陆时的屏幕震动幅度</td>
 </tr>
 <tr>
 <td>mechSideSway</td>
@@ -50147,37 +50147,37 @@
 <td>mechStepParticles</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether particles are created when this mech takes a step</td>
+<td>该机甲迈步时是否产生粒子</td>
 </tr>
 <tr>
 <td>mechLegColor</td>
 <td>Color</td>
 <td>6e7080ff</td>
-<td>color that legs change to when moving, to simulate depth</td>
+<td>腿在移动时变换成的颜色，用于模拟纵深感</td>
 </tr>
 <tr>
 <td>treadRects</td>
 <td>Rect[]</td>
 <td>[]</td>
-<td>list of treads as rectangles in IMAGE COORDINATES, relative to the center. these are mirrored.</td>
+<td>履带列表，以图像坐标中的矩形表示，相对于中心。这些会被镜像。</td>
 </tr>
 <tr>
 <td>treadFrames</td>
 <td>int</td>
 <td>18</td>
-<td>number of frames of movement in a tread</td>
+<td>履带中移动的帧数</td>
 </tr>
 <tr>
 <td>treadPullOffset</td>
 <td>int</td>
 <td>0</td>
-<td>how much of a top part of a tread sprite is "cut off" relative to the pattern; this is corrected for</td>
+<td>履带贴图顶部有多少被“切掉”（相对于图案而言）；此值会被校正</td>
 </tr>
 <tr>
 <td>crushFragile</td>
 <td>boolean</td>
 <td>false</td>
-<td>if true, 'fragile' blocks will instantly be crushed in a 1x1 area around the tank</td>
+<td>若为 true，“脆弱”方块会在坦克周围 1x1 区域内被立即碾碎</td>
 </tr>
 <tr>
 <td>segments</td>
@@ -50189,85 +50189,85 @@
 <td>segmentUnits</td>
 <td>int</td>
 <td>1</td>
-<td>TODO wave support - for multi-unit segmented units, this is the number of independent units that are spawned</td>
+<td>TODO 波浪支持——对于多单位分段单位，这是所生成的独立单位数量</td>
 </tr>
 <tr>
 <td>segmentUnit</td>
 <td>UnitType</td>
 <td>null</td>
-<td>unit spawned in segments; if null, the same unit is used</td>
+<td>以分段方式生成单位；若为 null，则使用同一单位</td>
 </tr>
 <tr>
 <td>segmentEndUnit</td>
 <td>UnitType</td>
 <td>null</td>
-<td>unit spawned at the end; if null, the segment unit is used</td>
+<td>末端生成的单位；若为 null，则使用该分段的单位</td>
 </tr>
 <tr>
 <td>segmentLayerOrder</td>
 <td>boolean</td>
 <td>true</td>
-<td>true - parent segments are on higher layers; false - parent segments are on lower layers than head</td>
+<td>true——父段在更高层；false——父段比头部在更低层</td>
 </tr>
 <tr>
 <td>segmentMag</td>
 <td>float</td>
 <td>2.0</td>
-<td>magnitude of sine offset between segments</td>
+<td>各段之间正弦偏移的幅度</td>
 </tr>
 <tr>
 <td>segmentScl</td>
 <td>float</td>
 <td>4.0</td>
-<td>scale of sine offset between segments</td>
+<td>各段之间正弦偏移的缩放</td>
 </tr>
 <tr>
 <td>segmentPhase</td>
 <td>float</td>
 <td>5.0</td>
-<td>index multiplier of sine offset between segments</td>
+<td>各段之间正弦偏移的索引倍率</td>
 </tr>
 <tr>
 <td>segmentRotSpeed</td>
 <td>float</td>
 <td>1.0</td>
-<td>how fast each segment moves towards the next one</td>
+<td>每个段向下一个段移动的速度</td>
 </tr>
 <tr>
 <td>segmentMaxRot</td>
 <td>float</td>
 <td>30.0</td>
-<td>maximum difference between segment angles</td>
+<td>各段角度之间的最大差值</td>
 </tr>
 <tr>
 <td>segmentSpacing</td>
 <td>float</td>
 <td>-1.0</td>
-<td>spacing between separate unit segments (only used for multi-unit worms)</td>
+<td>单位各段之间的间距（仅用于多单位蠕虫）</td>
 </tr>
 <tr>
 <td>segmentRotationRange</td>
 <td>float</td>
 <td>80.0</td>
-<td>rotation between segments is clamped to this range</td>
+<td>各段之间的旋转被限制在此范围内</td>
 </tr>
 <tr>
 <td>crawlSlowdown</td>
 <td>float</td>
 <td>0.5</td>
-<td>speed multiplier this unit will have when crawlSlowdownFrac is met.</td>
+<td>达到 crawlSlowdownFrac 时该单位将具有的速度倍率。</td>
 </tr>
 <tr>
 <td>crushDamage</td>
 <td>float</td>
 <td>0.0</td>
-<td>damage dealt to blocks under this tank/crawler every frame.</td>
+<td>该坦克/爬行者每帧对其下方方块造成的伤害。</td>
 </tr>
 <tr>
 <td>crawlSlowdownFrac</td>
 <td>float</td>
 <td>0.55</td>
-<td>the fraction of solids under this block necessary for it to reach crawlSlowdown.</td>
+<td>该方块下方达到 crawlSlowdown 所需的固体比例。</td>
 </tr>
 <tr>
 <td>lifetime</td>
@@ -50279,7 +50279,7 @@
 <td>homingDelay</td>
 <td>float</td>
 <td>10.0</td>
-<td>ticks that must pass before this missile starts homing.</td>
+<td>该导弹开始追踪前必须经过的刻数。</td>
 </tr>
 <tr>
 <td>baseRegion</td>

@@ -50121,52 +50121,52 @@
 
 
 <h1 id="_1">术语表</h1>
-<p>This glossary provides more detailed explanations on many terms used in this manual.</p>
+<p>本术语表对本手册中使用的许多术语提供了更详细的解释。</p>
 <h2 id="_2">数据类型</h2>
-<p>There are two main datatypes in Mindustry; numbers and Objects.</p>
+<p>Mindustry 中有两种主要数据类型：number 与 Object。</p>
 <h3 id="number">number</h3>
-<p>A decimal number. Can be negative or positive, and can represent true (anything not equal to 0) or false (0) values. Null is also represented as 0.</p>
-<p>Some instructions can only accept whole numbers, so it is indicated accordingly in this manual.</p>
-<p>Internally, numbers are stored as 64-bit floating point values (<code>double</code>), and operated upon as 64-bit signed integers (<code>long</code>) when bitshifting is involved.</p>
+<p>一个小数。可以为负或正，并能表示真（任何不等于 0 的值）或假（0）。Null 也表示为 0。</p>
+<p>某些指令只接受整数，因此本手册中会相应标明。</p>
+<p>在内部，数字以 64 位浮点值（<code>double</code>）存储，而在涉及位移运算时，则按 64 位有符号整数（<code>long</code>）运算。</p>
 <h3 id="string">String</h3>
-<p>An Object that represents text enclosed in quotes, e.g. <code>"hello mindustry"</code></p>
+<p>一个表示引号内文本的 Object，例如 <code>"hello mindustry"</code>。</p>
 <h3 id="building">Building</h3>
-<p>An Object that represents a physical Building in a world.</p>
-<p><strong>This is different from a Block</strong>; a Block is simply a type of Building, but a Building is a tangible Block - as in, it has health, interacts with power and items, etc.</p>
-<p>Essentially, <strong>a Building is a Block that physically exists in a world.</strong></p>
-<p>For example, the <code>getlink</code> instruction will return a <em>Building</em> Object, which you can get information about using <code>sensor</code>.</p>
+<p>一个表示世界中实体建筑的 Object。</p>
+<p>**这与 Block 不同；Block 只是 Building 的一种类型，而 Building 是实体的方块——也就是说，它有生命值、会与电力和物品交互等。</p>
+<p>本质上，<strong>建筑是世界中实际存在的方块。</strong></p>
+<p>例如，<code>getlink</code> 指令会返回一个 <em>Building</em> 对象，你可以用 <code>sensor</code> 获取它的信息。</p>
 <h3 id="unit">Unit</h3>
-<p>An Object that represents a Unit in a world, including the player.</p>
-<p>For example, the <code>ubind</code> instruction will set a processor variable <code>@unit</code> to a Unit Object representing a bound unit.</p>
+<p>一个表示世界中某个单位（包括玩家）的 Object。</p>
+<p>例如，<code>ubind</code> 指令会把处理器变量 <code>@unit</code> 设置为一个表示已绑定单位的 Unit 对象。</p>
 <h2 id="_3">参数类型</h2>
-<p>These are like data types, but only work as parameters for instructions, and are not returned by any instruction.</p>
+<p>这些类似数据类型，但只能作为指令的参数使用，且不会被任何指令返回。</p>
 <h3 id="buildingtype-content">BuildingType <code>content</code></h3>
-<p>A type of Building. Starts with <code>@</code>.</p>
-<p>Within the game's code, this is better referred to as "Block". However, for the sake of readability in this manual, we will call it BuildingType. <em>See [###Building] for an explanation on Building vs. Block.</em></p>
-<p>Unlike Items and Liquids, you cannot use this in <code>sensor</code>. However, you can use <code>@type</code> in <code>sensor</code>, and compare against it with <code>jump</code>.</p>
+<p>一种 Building 类型。以 <code>@</code> 开头。</p>
+<p>在游戏代码中，这更适合称为 “Block”。不过，为便于本手册阅读，我们称它为 BuildingType。<em>关于 Building 与 Block 的区别，见 [###Building]。</em></p>
+<p>与 Item 和 Liquid 不同，你不能在 <code>sensor</code> 中使用它。不过，你可以在 <code>sensor</code> 中使用 <code>@type</code>，并用 <code>jump</code> 与之比较。</p>
 <p>Example: <code>@scatter</code></p>
 <h3 id="unittype-content">UnitType <code>content</code></h3>
-<p>A type of Unit. Starts with <code>@</code>.</p>
+<p>一种 Unit 类型。以 <code>@</code> 开头。</p>
 <p>Example: <code>@toxopid</code></p>
-<p><em>A full list is shown under the pencil button in the "Unit Bind" instruction block.</em></p>
+<p><em>完整列表显示在“Unit Bind”指令块的铅笔按钮下。</em></p>
 <p><img src="../../../../../ext/img/mindustry/misc/logic-glossary-unitType-unitBind.png" alt=""></p>
 <h3 id="senseable">Senseable</h3>
-<p>An Item, Liquid, or Building or Unit property that can be "sensed" by <code>sensor</code>. Starts with <code>@</code>.</p>
+<p>一种可被 <code>sensor</code> “感知”的 Item、Liquid、Building 或 Unit 属性。以 <code>@</code> 开头。</p>
 <p>Examples: <code>@scrap</code>, <code>@slag</code>, <code>@totalAmmo</code></p>
-<p><em>A full list is shown under the pencil button in the "Sensor" instruction block.</em></p>
+<p><em>完整列表显示在“Sensor”指令块的铅笔按钮下。</em></p>
 <p><img src="../../../../../ext/img/mindustry/misc/logic-glossary-senseable-sensor.png" alt=""></p>
 <h3 id="target">Target</h3>
-<p>A trait to filter a unit or block target by. Primarily used in <code>radar</code>, <code>uradar</code>, and <code>ulocate</code>. <code>radar</code> and <code>uradar</code> have the same Targets, but <code>ulocate</code> is diferent, since it looks for Buildings.</p>
-<p><em>A full list is shown by pressing parameters after "target" in <code>radar</code> and <code>uradar</code>, or "find" and "type" in <code>uradar</code>.</em></p>
+<p>用于筛选单位或方块目标的特征。主要用于 <code>radar</code>、<code>uradar</code> 和 <code>ulocate</code>。<code>radar</code> 与 <code>uradar</code> 的 Targets 相同，但 <code>ulocate</code> 不同，因为它查找的是建筑。</p>
+<p><em>完整列表可通过在 <code>radar</code> 与 <code>uradar</code> 中点击 “target” 后的参数，或在 <code>uradar</code> 中点击 “find” 与 “type” 后显示。</em></p>
 <p><img src="../../../../../ext/img/mindustry/misc/logic-glossary-target-radar.png" alt=""></p>
 <h3 id="op">Op</h3>
-<p>A mathematical operation. <em>This is different from the <code>op</code> instruction.</em></p>
-<p><em>A full list is shown under the "+" button in the "Operation" instruction block.</em></p>
+<p>一种数学运算。<em>这与 <code>op</code> 指令不同。</em></p>
+<p><em>完整列表显示在“Operation”指令块的“+”按钮下。</em></p>
 <p><img src="../../../../../ext/img/mindustry/misc/logic-glossary-op-operation.png" alt=""></p>
-<p>For the more complex ones, you can Google " Java math".</p>
+<p>对于更复杂的部分，你可以搜索“Java math”。</p>
 <h3 id="comp">Comp</h3>
-<p>A comparison. Primarily used in the <code>jump</code> instruction when comparing two values. <code>always</code> will return true no matter what, so it will always cause a jump.</p>
-<p><em>A full list is shown under the comparison button in the "Jump" instruction block.</em></p>
+<p>一种比较。主要用于 <code>jump</code> 指令中比较两个值。<code>always</code> 无论如何都返回真，因此总会触发跳转。</p>
+<p><em>完整列表显示在“Jump”指令块的比较按钮下。</em></p>
 <p><img src="../../../../../ext/img/mindustry/misc/logic-glossary-comp-jump.png" alt=""></p>
 
 

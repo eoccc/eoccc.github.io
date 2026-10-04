@@ -50088,7 +50088,7 @@
 <h2 id="_2">该系统的设计初衷</h2>
 <p>过去服务器只能使用 <code>Call.menu</code>，它仅支持一个普通的按钮网格，别无其他。</p>
 <p>UI 构建器提供了一种在服务器端创建动态、可序列化 UI 树的方式，并支持每个对话框返回多个值。</p>
-<p><em>Note: This system is only available in build 160+.</em></p>
+<p><em>注意：该系统仅在 build 160+ 中可用。</em></p>
 <h2 id="_3">对话框示例</h2>
 <pre><code>static int voteId; //ID of vote menu
 
@@ -50260,7 +50260,7 @@ button{
 <p>这会打开一个文件选择窗口。选中你的 <code>.msui</code> 文件后，游戏内对话框会自动显示你正在编辑的布局文件，并在文件变化时实时重载。</p>
 <h2 id="_4">条件布局（竖屏与横屏）</h2>
 <p>节点接受 <code>condition</code> 字符串。若其求值为假，该节点会被完全跳过（而非仅仅隐藏）。该判断在客户端构建时进行，因此会自然适配每位玩家各自的屏幕形状。</p>
-<p>Supported conditions: <code>"portrait"</code>, <code>"landscape"</code>, or <code>"  "</code> where <code>op</code> is one of <code>&gt;=</code>, <code>&gt;</code>, `</p>
+<p>支持的判断条件：<code>"portrait"</code>、<code>"landscape"</code>，或 <code>"  "</code>，其中 <code>op</code> 为 <code>&gt;=</code>、<code>&gt;</code>、`</p>
 <pre><code>table{
   condition: &quot;landscape&quot;
   row
@@ -50279,8 +50279,8 @@ table{
 <p>由于该判断在构建树时按客户端执行，因此同一条由服务器下发的 DSL 字符串，会让每位玩家看到适配自身窗口的布局。</p>
 <h2 id="_5">更多示例</h2>
 <h3 id="builder-api">可搜索的玩家列表（builder API）</h3>
-<p>Shows a list of players, filtered by a search box, with the filtered list rebuilt in place when you hit search. The menu handler is registered once in a static block.</p>
-<p><code>update(player, "list")</code> replaces a single element by id, not the whole dialog. The update builds the <code>pane{ id: list }</code> node with its rows and sends that, while the initial <code>show</code> call builds the full dialog (search bar included). That's why <code>buildList</code> is split out into its own method instead of being in <code>buildRoot</code>.</p>
+<p>显示玩家列表，可通过搜索框筛选；点击搜索时在原位置重建筛选后的列表。菜单处理器在静态块中注册一次。</p>
+<p><code>update(player, "list")</code> 按 id 替换单个元素，而不是整个对话框。该更新会构建带行的 <code>pane{ id: list }</code> 节点并发送，而初始的 <code>show</code> 调用会构建完整对话框（含搜索栏）。这就是 <code>buildList</code> 被拆分为独立方法、而非放在 <code>buildRoot</code> 中的原因。</p>
 <pre><code>//replace with real player names
 static String[] players = {&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;, &quot;Dave&quot;, &quot;Eve&quot;, &quot;Frank&quot;, &quot;Grace&quot;, &quot;Heidi&quot;, &quot;Ivan&quot;, &quot;Judy&quot;};
 static int listId;
@@ -50327,7 +50327,7 @@ private static PaneBuilder buildList(String query){
     return pane().id(&quot;list&quot;).add(rows);
 }
 </code></pre>
-<p>The target player's name is baked directly into the <code>clicked</code> result string (<code>"kick:" + name</code>) since a plain button has nothing else to attach an id-backed value to. <code>hideOnClick(false)</code> is set on the initial <code>show</code> so the dialog stays open after hitting search or kicking someone, since both are meant to update the list in place rather than close the menu.</p>
+<p>目标玩家的名字被直接写进 <code>clicked</code> 结果字符串（<code>"kick:" + name</code>），因为普通按钮没有其他可挂载带 id 值的地方。初始 <code>show</code> 时设置了 <code>hideOnClick(false)</code>，因此点击搜索或踢人后对话框仍保持打开，因为这两者都意在原地更新列表，而不是关闭菜单。</p>
 <h3 id="_6">带滑条阈值的投票踢人确认框</h3>
 <pre><code>defaults{
   pad: 6
@@ -50355,7 +50355,7 @@ button{
   height: 50
 }
 </code></pre>
-<p>The server reads <code>result.getFloat("threshold")</code> when <code>startVote</code> is returned.</p>
+<p>当返回 <code>startVote</code> 时，服务器会读取 <code>result.getFloat("threshold")</code>。</p>
 <h3 id="_7">含复选框与分组按钮的服务器设置面板</h3>
 <pre><code>defaults{
   pad: 8
@@ -50407,9 +50407,9 @@ button: &quot;Save&quot;{
   height: 50
 }
 </code></pre>
-<p><code>group: difficulty</code> makes the three difficulty buttons mutually exclusive (a <code>ButtonGroup</code>), and their <code>checked</code> state comes back in <code>values</code> for any id'd checkable element, so the server can read which one is currently selected when 'save' is pressed.</p>
+<p><code>group: difficulty</code> 让三个难度按钮互斥（一个 <code>ButtonGroup</code>），其 <code>checked</code> 状态会在 <code>values</code> 中返回给任何带 id 的可勾选元素，因此服务器在按下 “save” 时能读取当前选中的是哪一个。</p>
 <h2 id="_8">单元格属性</h2>
-<p>These apply to the <em>cell</em> a node occupies in its parent table, mirroring <code>scene2d</code> table layout. Boolean properties take no value on the builder API (just call the method); in the DSL they're written as <code>key: true</code> or <code>key: false</code>.</p>
+<p>这些作用于节点在其父表格中所占的<em>单元格</em>，对应 <code>scene2d</code> 表格布局。布尔属性在构建器 API 中不取值（直接调用方法即可）；在 DSL 中写作 <code>key: true</code> 或 <code>key: false</code>。</p>
 <table>
 <thead>
 <tr>
@@ -50422,7 +50422,7 @@ button: &quot;Save&quot;{
 <tr>
 <td><code>grow</code></td>
 <td>bool</td>
-<td>Expand and fill in both directions.</td>
+<td>在两个方向上扩展并填充。</td>
 </tr>
 <tr>
 <td><code>growX</code></td>
@@ -50437,7 +50437,7 @@ button: &quot;Save&quot;{
 <tr>
 <td><code>fill</code></td>
 <td>bool</td>
-<td>Fill the cell in both directions (without expanding).</td>
+<td>在两个方向上填充单元格（不扩展）。</td>
 </tr>
 <tr>
 <td><code>fillX</code></td>
@@ -50452,32 +50452,32 @@ button: &quot;Save&quot;{
 <tr>
 <td><code>expand</code></td>
 <td>bool</td>
-<td>Take up extra available space in both directions.</td>
+<td>在两个方向上占用额外的可用空间。</td>
 </tr>
 <tr>
 <td><code>expandX</code></td>
 <td>bool</td>
-<td>Take up extra available horizontal space.</td>
+<td>占用额外的可用水平空间。</td>
 </tr>
 <tr>
 <td><code>expandY</code></td>
 <td>bool</td>
-<td>Take up extra available vertical space.</td>
+<td>占用额外的可用垂直空间。</td>
 </tr>
 <tr>
 <td><code>uniform</code></td>
 <td>bool</td>
-<td>Force this cell's size to match other uniform cells in both directions.</td>
+<td>强制该单元格在两个方向上与其他 uniform 单元格尺寸一致。</td>
 </tr>
 <tr>
 <td><code>uniformX</code></td>
 <td>bool</td>
-<td>Force uniform width with other uniform cells.</td>
+<td>强制与其他 uniform 单元格宽度一致。</td>
 </tr>
 <tr>
 <td><code>uniformY</code></td>
 <td>bool</td>
-<td>Force uniform height with other uniform cells.</td>
+<td>强制与其他 uniform 单元格高度一致。</td>
 </tr>
 <tr>
 <td><code>width</code></td>
@@ -50492,7 +50492,7 @@ button: &quot;Save&quot;{
 <tr>
 <td><code>size</code></td>
 <td>float</td>
-<td>Fixed width and height at once.</td>
+<td>同时固定宽度与高度。</td>
 </tr>
 <tr>
 <td><code>minWidth</code></td>
@@ -50547,17 +50547,17 @@ button: &quot;Save&quot;{
 <tr>
 <td><code>colspan</code></td>
 <td>int</td>
-<td>Number of columns this cell spans.</td>
+<td>该单元格跨越的列数。</td>
 </tr>
 <tr>
 <td><code>color</code></td>
 <td>string</td>
-<td>Tint color for the cell (hex string or color name, e.g. <code>"white"</code> or <code>"ffaa00"</code>). Applies to any node's cell regardless of type.</td>
+<td>单元格的着色（十六进制字符串或颜色名，例如 <code>"white"</code> 或 <code>"ffaa00"</code>）。无论节点类型如何，都作用于其单元格。</td>
 </tr>
 </tbody>
 </table>
-<p>Note: <code>defaults{}</code> blocks apply cell properties to every sibling node added after them within the same table body, but don't reach into nested <code>table{}</code>/<code>pane{}</code> blocks.</p>
-<p>Note: <code>disabled</code> (bool) is also applied at the cell level, but only has an effect on elements implementing <code>Disableable</code> — <code>button</code>, <code>imageButton</code>, <code>field</code>, <code>check</code>, <code>slider</code>, and <code>buttonTable</code>. It sets the element's initial disabled state.</p>
+<p>注意：<code>defaults{}</code> 块会把单元格属性应用到同一表格主体内其后添加的每个同级节点，但不会进入嵌套的 <code>table{}</code>/<code>pane{}</code> 块。</p>
+<p>注意：<code>disabled</code>（bool）也会作用于单元格层级，但仅对实现了 <code>Disableable</code> 的元素有效——<code>button</code>、<code>imageButton</code>、<code>field</code>、<code>check</code>、<code>slider</code> 与 <code>buttonTable</code>。它设置元素的初始禁用状态。</p>
 <h2 id="_9">元素</h2>
 <table>
 <thead>
@@ -50640,9 +50640,9 @@ button: &quot;Save&quot;{
 </tr>
 </tbody>
 </table>
-<p>Any node with an <code>id</code> set has its element registered by that id. For interactive elements (<code>field</code>, <code>slider</code>, <code>check</code>, checkable <code>button</code>/<code>buttonTable</code>), that id is what shows up as a key in <code>MenuResult.values</code> when any button with a <code>clicked</code> result fires.</p>
+<p>任何设置了 <code>id</code> 的节点，其元素都会以该 id 注册。对于交互元素（<code>field</code>、<code>slider</code>、<code>check</code>、可勾选的 <code>button</code>/<code>buttonTable</code>），当任何带 <code>clicked</code> 结果的按钮触发时，该 id 会作为键出现在 <code>MenuResult.values</code> 中。</p>
 <h1 id="button-styles">Button Styles</h1>
-<p>Reference for the style names available on <code>Styles</code>, usable via <code>style: "name"</code> on <code>button</code>/<code>buttonTable</code> (<code>TextButtonStyle</code>) and <code>imageButton</code> (<code>ImageButtonStyle</code>) nodes.</p>
+<p><code>Styles</code> 上可用样式名的参考；可通过 <code>button</code>/<code>buttonTable</code>（<code>TextButtonStyle</code>）与 <code>imageButton</code>（<code>ImageButtonStyle</code>）节点上的 <code>style: "name"</code> 使用。</p>
 <h2 id="button">文本按钮样式（button 元素）</h2>
 <table>
 <thead>
@@ -50654,7 +50654,7 @@ button: &quot;Save&quot;{
 <tbody>
 <tr>
 <td><code>defaultt</code></td>
-<td>Default text button style, gray corners at 45 degrees.</td>
+<td>默认文本按钮样式，45 度灰色切角。</td>
 </tr>
 <tr>
 <td><code>flatt</code></td>
@@ -50674,19 +50674,19 @@ button: &quot;Save&quot;{
 </tr>
 <tr>
 <td><code>nonet</code></td>
-<td>No background whatsoever, only text.</td>
+<td>完全无背景，只有文字。</td>
 </tr>
 <tr>
 <td><code>logicTogglet</code></td>
-<td>Similar to <code>flatToggle</code>, but slightly tweaked for logic.</td>
+<td>与 <code>flatToggle</code> 类似，但为逻辑做了小幅调整。</td>
 </tr>
 <tr>
 <td><code>flatToggleMenut</code></td>
-<td>Similar to <code>flatToggle</code>, but with a transparent base background.</td>
+<td>与 <code>flatToggle</code> 类似，但基础背景为透明。</td>
 </tr>
 <tr>
 <td><code>togglet</code></td>
-<td>Toggle variant of the default style.</td>
+<td>默认样式的切换变体。</td>
 </tr>
 <tr>
 <td><code>cleart</code></td>
@@ -50694,11 +50694,11 @@ button: &quot;Save&quot;{
 </tr>
 <tr>
 <td><code>clearTogglet</code></td>
-<td>Clear, square, orange border, toggleable.</td>
+<td>透明、方形、橙色边框，可切换。</td>
 </tr>
 <tr>
 <td><code>fullTogglet</code></td>
-<td>Similar to <code>flatToggle</code>, but without a darker border.</td>
+<td>与 <code>flatToggle</code> 类似，但没有更深的边框。</td>
 </tr>
 <tr>
 <td><code>squareTogglet</code></td>
@@ -50706,7 +50706,7 @@ button: &quot;Save&quot;{
 </tr>
 <tr>
 <td><code>logict</code></td>
-<td>Special square button for logic dialogs.</td>
+<td>用于逻辑对话框的特殊方形按钮。</td>
 </tr>
 </tbody>
 </table>
@@ -50721,15 +50721,15 @@ button: &quot;Save&quot;{
 <tbody>
 <tr>
 <td><code>defaulti</code></td>
-<td>Default image button style, gray corners at 45 degrees.</td>
+<td>默认图片按钮样式，45 度灰色切角。</td>
 </tr>
 <tr>
 <td><code>nodei</code></td>
-<td>Used for research nodes in the tech tree.</td>
+<td>用于科技树中的研究节点。</td>
 </tr>
 <tr>
 <td><code>emptyi</code></td>
-<td>No background, tints the image itself when hovered.</td>
+<td>无背景，悬停时给图片本身着色。</td>
 </tr>
 <tr>
 <td><code>emptyTogglei</code></td>
@@ -50737,15 +50737,15 @@ button: &quot;Save&quot;{
 </tr>
 <tr>
 <td><code>selecti</code></td>
-<td>Displays a border around the image when selected, used in the placement fragment.</td>
+<td>选中时在图片周围显示边框，用于放置片段。</td>
 </tr>
 <tr>
 <td><code>logici</code></td>
-<td>Pure black version of <code>emptyi</code>, used for the logic toolbar.</td>
+<td><code>emptyi</code> 的纯黑版本，用于逻辑工具栏。</td>
 </tr>
 <tr>
 <td><code>geni</code></td>
-<td>Used for the toolbar in map generation filters.</td>
+<td>用于地图生成筛选器的工具栏。</td>
 </tr>
 <tr>
 <td><code>grayi</code></td>
@@ -50753,7 +50753,7 @@ button: &quot;Save&quot;{
 </tr>
 <tr>
 <td><code>graySquarei</code></td>
-<td>Gray square background, standard behavior. Equivalent to <code>grayt</code>.</td>
+<td>灰色方形背景，标准行为。等同于 <code>grayt</code>。</td>
 </tr>
 <tr>
 <td><code>flati</code></td>
@@ -50773,7 +50773,7 @@ button: &quot;Save&quot;{
 </tr>
 <tr>
 <td><code>clearNonei</code></td>
-<td>No background unless focused, no border.</td>
+<td>除聚焦外无背景，无边框。</td>
 </tr>
 <tr>
 <td><code>cleari</code></td>
@@ -50789,7 +50789,7 @@ button: &quot;Save&quot;{
 </tr>
 </tbody>
 </table>
-<p><em>Note: buttonTable elements can use any of these button styles.</em></p>
+<p><em>注意：buttonTable 元素可以使用这些按钮样式中的任意一种。</em></p>
 
 
 

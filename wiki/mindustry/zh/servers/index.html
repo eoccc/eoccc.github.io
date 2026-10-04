@@ -50008,32 +50008,32 @@
 </ul>
 <p>除非你已启用端口映射，否则专用服务器只能被局域网内的客户端连接。若想让服务器对外网开放，请继续阅读下文。</p>
 <h3 id="ip-ip">什么是 IP？如何查看自己的 IP？</h3>
-<p>In simplified terms, an IP address is a number that identifies your computer on the internet. You can connect to someone's Mindustry server if you know their IP address. There are two types; a <strong>public</strong> and a <strong>local</strong> address.</p>
+<p>简单来说，IP 地址是标识你计算机在互联网上位置的一串数字。只要知道对方的 IP 地址，你就能连接到他的 Mindustry 服务器。地址分为两种：<strong>公网</strong>地址与<strong>本地</strong>地址。</p>
 <ul>
 <li>
-<p>For a <strong>local IP</strong>, when for example you would like to play with a friend on the same network as yours, each device has its own way of showing it. You can Google how to do it for your device, e.g. "find local ip on Mac".</p>
+<p>对于<strong>本地 IP</strong>，比如你想和与自己同一网络的朋友联机时，每台设备显示它的方式都不一样。你可以搜索自己设备的做法，例如“在 Mac 上查找本地 IP”。</p>
 </li>
 <li>
 <p>若需要<strong>公网 IP</strong>，直接搜索「what is my ip」即可。</p>
 </li>
 </ul>
 <h3 id="_3">在家中运行专用服务器</h3>
-<p>Most of the time, this is what you should remember; <strong>never share your public IP with the public if you're hosting from your home, unless you acknowledge the implications of doing so!</strong> Your public IP is tied to your household, and if it falls into the wrong hands, and when put into the wrong hands, can open up your network to vulnerabilities and dangers. <strong>Exercise caution, do your research, and use a VPN or webhost if possible.</strong></p>
-<p>It is also recommended and that you use a domain name or DNS service to mask your IP for public servers for ease of use, or even better, use a cloud service e.g. Amazon AWS or a dedicated server/VM from a hosting provider such as Linode or DigitalOcean, which is much safer. <strong>Do your research</strong>, and determine which option best fits your needs.</p>
+<p>大多数时候，这是你应该记住的：<strong>如果你在家里开服，永远不要把公网 IP 分享给公众，除非你明白这样做的后果！</strong> 你的公网 IP 与你的家庭绑定，一旦落入他人之手，就可能为你的网络带来漏洞与危险。<strong>务必谨慎、做好调研，并尽可能使用 VPN 或虚拟主机。</strong></p>
+<p>也建议你为公共服务器使用域名或 DNS 服务来掩盖 IP，以便于使用；或者更好的是，使用云服务（如 Amazon AWS），或来自 Linode、DigitalOcean 等主机商的专用服务器/虚拟机，那样安全得多。<strong>做好调研</strong>，并确定哪种方案最符合你的需求。</p>
 <ul>
 <li>
 <p>找到你路由器的品牌与型号，通常印在路由器底部或背面的标签上。</p>
 </li>
 <li>
-<p>Use your favorite search engine to search "port forward ASUS RT-ACRH17" and use the guide to foward <strong>port 6567 TCP and UDP</strong>. These instructions are different for every router, so be sure to read your guide thoroughly!</p>
+<p>用你常用的搜索引擎搜索“port forward ASUS RT-ACRH17”，并参照指南转发 <strong>6567 端口的 TCP 与 UDP</strong>。每台路由器的操作都不同，所以务必仔细阅读你的指南！</p>
 </li>
 <li>
-<p>You can use a service such as <a href="https://www.yougetsignal.com/tools/open-ports/">You Get Signal</a> to check if you have done your portforwarding correctly.</p>
+<p>你可以使用诸如 <a href="https://www.yougetsignal.com/tools/open-ports/">You Get Signal</a> 之类的服务，来检查你的端口转发是否设置正确。</p>
 </li>
 </ul>
 <h2 id="steam">局域网与 Steam 服务器</h2>
-<p>A local LAN or Steam server is a server that is built into the game, and can be started using the "Host Multiplayer Game" button in the in-game menu. It is meant to be simple and straightforward, for sessions between a few players under a LAN network (aka in your household's WiFi network). It is not really meant for several players, as it takes more and more resources from your device to be able to use it that way; for that you will need a dedicated server mentioned above. It can only run when the game is open, and is immediately terminated when it is closed.</p>
-<p>You can connect to one using the "Join Game" button under the "Play" menu. Unlike dedicated servers, your device will automatically find the host device and it will ususally appear in the server list without you having to enter the host's IP address in.</p>
+<p>本地局域网或 Steam 服务器是内置于游戏中的服务器，可通过游戏内菜单的“主持多人游戏”按钮启动。它设计得简单直接，适用于局域网网络（即你家里的 WiFi 网络）中少数几名玩家之间的对局。它并不真正适合多名玩家，因为那样会占用设备越来越多的资源；那种场景你需要上面提到的专用服务器。它只能在游戏打开时运行，游戏关闭时会立即终止。</p>
+<p>你可以用“游玩”菜单下的“加入游戏”按钮连接到它。与专用服务器不同，你的设备会自动找到主机设备，通常无需手动输入主机的 IP 地址就会出现在服务器列表中。</p>
 <h2 id="_4">专用服务器命令</h2>
 <ul>
 <li>
@@ -50049,16 +50049,16 @@
 <p><code>stop</code>: <em>Stop hosting the server.</em></p>
 </li>
 <li>
-<p><code>host [mapname] [mode]</code>: <em>Open the server. Will default to survival and a random map if not specified.</em></p>
+<p><code>host [mapname] [mode]</code>：<em>打开服务器。未指定时默认为生存模式与随机地图。</em></p>
 </li>
 <li>
-<p><code>maps [all/custom/default]</code>: <em>Display available maps. Displays only custom maps by default.</em></p>
+<p><code>maps [all/custom/default]</code>：<em>显示可用地图。默认仅显示自定义地图。</em></p>
 </li>
 <li>
-<p><code>reloadassets</code>: <em>Reload all content/patch asset files from disk.</em></p>
+<p><code>reloadassets</code>：<em>从磁盘重新加载所有内容/补丁素材文件。</em></p>
 </li>
 <li>
-<p><code>reloadmaps</code>: <em>Reload all maps from disk.</em></p>
+<p><code>reloadmaps</code>：<em>从磁盘重新加载所有地图。</em></p>
 </li>
 <li>
 <p><code>status</code>: <em>Display server status.</em></p>
@@ -50067,46 +50067,46 @@
 <p><code>mods</code>: <em>Display all loaded mods.</em></p>
 </li>
 <li>
-<p><code>mod</code>: <em>Display information about a loaded plugin.</em></p>
+<p><code>mod</code>：<em>显示已加载插件的信息。</em></p>
 </li>
 <li>
 <p><code>js</code>: <em>Run arbitrary Javascript.</em></p>
 </li>
 <li>
-<p><code>say</code>: <em>Send a message to all players.</em></p>
+<p><code>say</code>：<em>向所有玩家发送一条消息。</em></p>
 </li>
 <li>
-<p><code>pause</code>: <em>Pause or unpause the game.</em></p>
+<p><code>pause</code>：<em>暂停或取消暂停游戏。</em></p>
 </li>
 <li>
-<p><code>rules [remove/add] [name] [value...]</code>: <em>List, remove or add global rules. These will apply regardless of map.</em></p>
+<p><code>rules [remove/add] [name] [value...]</code>：<em>列出、移除或添加全局规则。无论地图如何都会生效。</em></p>
 </li>
 <li>
-<p><code>dumpsettings</code>: <em>Print every settings value. Useful for debugging.</em></p>
+<p><code>dumpsettings</code>：<em>打印每一项设置值。便于调试。</em></p>
 </li>
 <li>
-<p><code>fillitems [team]</code>: <em>Fill the core with items.</em></p>
+<p><code>fillitems [team]</code>：<em>用物品填充核心。</em></p>
 </li>
 <li>
-<p><code>playerlimit [off/somenumber]</code>: <em>Set the server player limit.</em></p>
+<p><code>playerlimit [off/somenumber]</code>：<em>设置服务器玩家上限。</em></p>
 </li>
 <li>
 <p><code>config [name] [value...]</code>: <em>Configure server settings.</em></p>
 </li>
 <li>
-<p><code>subnet-ban [add/remove] [address]</code>: <em>Ban a subnet. This simply rejects all connections with IPs starting with some string.</em></p>
+<p><code>subnet-ban [add/remove] [address]</code>：<em>封禁一个子网。这只是拒绝所有以某字符串开头的 IP 的连接。</em></p>
 </li>
 <li>
-<p><code>name-ban [add/remove/clear] [regex]</code>: <em>Ban a name by case-insensitive regex.</em></p>
+<p><code>name-ban [add/remove/clear] [regex]</code>：<em>按不区分大小写的正则封禁名称。</em></p>
 </li>
 <li>
-<p><code>whitelist [add/remove] [ID]</code>: <em>Add/remove players from the whitelist using their ID.</em></p>
+<p><code>whitelist [add/remove] [ID]</code>：<em>使用玩家 ID 将其加入或移出白名单。</em></p>
 </li>
 <li>
 <p><code>shuffle [none/all/custom/builtin]</code>: <em>Set map shuffling mode.</em></p>
 </li>
 <li>
-<p><code>nextmap</code>: <em>Set the next map to be played after a game-over. Overrides shuffling.</em></p>
+<p><code>nextmap</code>：<em>设置游戏结束后要游玩的下一个地图。会覆盖随机切换。</em></p>
 </li>
 <li>
 <p><code>kick</code>: <em>Kick a person by name.</em></p>
@@ -50115,160 +50115,160 @@
 <p><code>ban</code>: <em>Ban a person.</em></p>
 </li>
 <li>
-<p><code>bans</code>: <em>List all banned IPs and IDs.</em></p>
+<p><code>bans</code>：<em>列出所有被封禁的 IP 与 ID。</em></p>
 </li>
 <li>
-<p><code>unban</code>: <em>Completely unban a person by IP or ID.</em></p>
+<p><code>unban</code>：<em>按 IP 或 ID 完全解封某人。</em></p>
 </li>
 <li>
-<p><code>pardon</code>: <em>Pardons a votekicked player by ID and allows them to join again.</em></p>
+<p><code>pardon</code>：<em>按 ID 赦免被投票踢出的玩家，并允许其重新加入。</em></p>
 </li>
 <li>
-<p><code>admin</code>: <em>Make an online user admin</em></p>
+<p><code>admin</code>：<em>将一名在线用户设为管理员</em></p>
 </li>
 <li>
 <p><code>admins</code>: <em>List all admins.</em></p>
 </li>
 <li>
-<p><code>players</code>: <em>List all players currently in game.</em></p>
+<p><code>players</code>：<em>列出当前在游戏中的所有玩家。</em></p>
 </li>
 <li>
 <p><code>runwave</code>: <em>Trigger the next wave.</em></p>
 </li>
 <li>
-<p><code>loadautosave</code>: <em>Loads the last auto-save.</em></p>
+<p><code>loadautosave</code>：<em>加载上一次自动存档。</em></p>
 </li>
 <li>
 <p><code>load</code>: <em>Load a save from a slot.</em></p>
 </li>
 <li>
-<p><code>save  [embedAssets]</code>: <em>Save game state to a slot.</em></p>
+<p><code>save  [embedAssets]</code>：<em>将游戏状态保存到某个存档槽。</em></p>
 </li>
 <li>
-<p><code>saves</code>: <em>List all saves in the save directory.</em></p>
+<p><code>saves</code>：<em>列出存档目录中的所有存档。</em></p>
 </li>
 <li>
 <p><code>gameover</code>: <em>Force a game over.</em></p>
 </li>
 <li>
-<p><code>info</code>: <em>Find player info(s). Can optionally check for all names or IPs a player has had.</em></p>
+<p><code>info</code>：<em>查找玩家信息。可选地检查某玩家使用过的所有名称或 IP。</em></p>
 </li>
 <li>
-<p><code>search</code>: <em>Search players who have used part of a name.</em></p>
+<p><code>search</code>：<em>搜索使用过某段名字的玩家。</em></p>
 </li>
 <li>
-<p><code>gc</code>: <em>Trigger a garbage collection. Testing only.</em></p>
+<p><code>gc</code>：<em>触发一次垃圾回收。仅用于测试。</em></p>
 </li>
 <li>
-<p><code>yes</code>: <em>Run the last suggested incorrect command.</em></p>
+<p><code>yes</code>：<em>运行上一条建议的错误命令。</em></p>
 </li>
 <li>
-<p><code>dos-ban [add/remove] [ip]</code>: <em>Add or remove a DOS ban.</em></p>
+<p><code>dos-ban [add/remove] [ip]</code>：<em>添加或移除一个 DOS 封禁。</em></p>
 </li>
 </ul>
 <h2 id="_5">专用服务器配置项</h2>
 <ul>
 <li>
-<p><code>name</code>: <em>The server name as displayed on clients.</em></p>
+<p><code>name</code>：<em>客户端上显示的服务器名称。</em></p>
 </li>
 <li>
-<p><code>desc</code>: <em>The server description, displayed under the name. Max 100 characters.</em></p>
+<p><code>desc</code>：<em>服务器描述，显示在名称下方。最多 100 个字符。</em></p>
 </li>
 <li>
-<p><code>port</code>: <em>The port to host on.</em></p>
+<p><code>port</code>：<em>用于托管服务的端口。</em></p>
 </li>
 <li>
-<p><code>autoUpdate</code>: <em>Whether to auto-update and exit when a new bleeding-edge update arrives.</em></p>
+<p><code>autoUpdate</code>：<em>是否在有新的前沿更新时自动更新并退出。</em></p>
 </li>
 <li>
-<p><code>showConnectMessages</code>: <em>Whether to display connect/disconnect messages.</em></p>
+<p><code>showConnectMessages</code>：<em>是否显示连接/断开连接的消息。</em></p>
 </li>
 <li>
 <p><code>enableVotekick</code>: <em>Whether votekick is enabled.</em></p>
 </li>
 <li>
-<p><code>startCommands</code>: <em>Commands run at startup. This should be a comma-separated list.</em></p>
+<p><code>startCommands</code>：<em>启动时运行的命令。这应该是一个以逗号分隔的列表。</em></p>
 </li>
 <li>
-<p><code>logging</code>: <em>Whether to log everything to files.</em></p>
+<p><code>logging</code>：<em>是否把所有内容记录到文件。</em></p>
 </li>
 <li>
-<p><code>strict</code>: <em>Whether strict mode is on - corrects positions and prevents duplicate UUIDs.</em></p>
+<p><code>strict</code>：<em>是否开启严格模式——修正位置并阻止重复 UUID。</em></p>
 </li>
 <li>
-<p><code>antiSpam</code>: <em>Whether spammers are automatically kicked and rate-limited.</em></p>
+<p><code>antiSpam</code>：<em>是否自动踢出并限流刷屏者。</em></p>
 </li>
 <li>
-<p><code>interactRateWindow</code>: <em>Block interaction rate limit window, in seconds.</em></p>
+<p><code>interactRateWindow</code>：<em>方块交互速率限制窗口，单位为秒。</em></p>
 </li>
 <li>
 <p><code>interactRateLimit</code>: <em>Block interaction rate limit.</em></p>
 </li>
 <li>
-<p><code>interactRateKick</code>: <em>How many times a player must interact inside the window to get kicked.</em></p>
+<p><code>interactRateKick</code>：<em>玩家在窗口期内必须交互多少次才会被踢出。</em></p>
 </li>
 <li>
-<p><code>messageRateLimit</code>: <em>Message rate limit in seconds. 0 to disable.</em></p>
+<p><code>messageRateLimit</code>：<em>消息速率限制，单位为秒。0 表示禁用。</em></p>
 </li>
 <li>
-<p><code>messageSpamKick</code>: <em>How many times a player must send a message before the cooldown to get kicked. 0 to disable.</em></p>
+<p><code>messageSpamKick</code>：<em>玩家在冷却前必须发送多少条消息才会被踢出。0 表示禁用。</em></p>
 </li>
 <li>
-<p><code>packetSpamLimit</code>: <em>Limit for packet count sent within 3sec that will lead to a blacklist + kick.</em></p>
+<p><code>packetSpamLimit</code>：<em>3 秒内发送的数据包数量上限，超过将被拉黑并踢出。</em></p>
 </li>
 <li>
-<p><code>uuidChangeLimit</code>: <em>Limit for how many UUID changes an IP can send in the time frame specified by uuidChangeTimePeriod before it gets banned.</em></p>
+<p><code>uuidChangeLimit</code>：<em>在 uuidChangeTimePeriod 指定的时间范围内，一个 IP 在被封禁前可发送的 UUID 变更次数上限。</em></p>
 </li>
 <li>
-<p><code>uuidChangeTimePeriod</code>: <em>Time window for the uuidChangeLimit config, in hours.</em></p>
+<p><code>uuidChangeTimePeriod</code>：<em>uuidChangeLimit 配置的时间窗口，单位为小时。</em></p>
 </li>
 <li>
-<p><code>chatSpamLimit</code>: <em>Limit for chat packet count sent within 2sec that will lead to a blacklist + kick. Not the same as a rate limit.</em></p>
+<p><code>chatSpamLimit</code>：<em>2 秒内发送的聊天数据包数量上限，超过将被拉黑并踢出。与速率限制不同。</em></p>
 </li>
 <li>
-<p><code>socketInput</code>: <em>Allows a local application to control this server through a local TCP socket.</em></p>
+<p><code>socketInput</code>：<em>允许本地应用通过本地 TCP 套接字控制此服务器。</em></p>
 </li>
 <li>
-<p><code>socketInputPort</code>: <em>The port for socket input.</em></p>
+<p><code>socketInputPort</code>：<em>套接字输入的端口。</em></p>
 </li>
 <li>
-<p><code>socketInputAddress</code>: <em>The bind address for socket input.</em></p>
+<p><code>socketInputAddress</code>：<em>套接字输入的绑定地址。</em></p>
 </li>
 <li>
-<p><code>allowCustomClients</code>: <em>Whether custom clients are allowed to connect.</em></p>
+<p><code>allowCustomClients</code>：<em>是否允许自定义客户端连接。</em></p>
 </li>
 <li>
-<p><code>whitelist</code>: <em>Whether the whitelist is used.</em></p>
+<p><code>whitelist</code>：<em>是否启用白名单。</em></p>
 </li>
 <li>
-<p><code>motd</code>: <em>The message displayed to people on connection.</em></p>
+<p><code>motd</code>：<em>连接时向玩家显示的消息。</em></p>
 </li>
 <li>
-<p><code>autosave</code>: <em>Whether the periodically save the map when playing.</em></p>
+<p><code>autosave</code>：<em>游玩时是否定期保存地图。</em></p>
 </li>
 <li>
-<p><code>autosaveAmount</code>: <em>The maximum amount of autosaves. Older ones get replaced.</em></p>
+<p><code>autosaveAmount</code>：<em>自动存档的最大数量。较旧的会被替换。</em></p>
 </li>
 <li>
-<p><code>autosaveSpacing</code>: <em>Spacing between autosaves in seconds.</em></p>
+<p><code>autosaveSpacing</code>：<em>自动存档之间的间隔（秒）。</em></p>
 </li>
 <li>
 <p><code>debug</code>: <em>Enable debug logging.</em></p>
 </li>
 <li>
-<p><code>snapshotInterval</code>: <em>Client entity snapshot interval in ms.</em></p>
+<p><code>snapshotInterval</code>：<em>客户端实体快照间隔，单位为毫秒。</em></p>
 </li>
 <li>
-<p><code>autoPause</code>: <em>Whether the game should pause when nobody is online.</em></p>
+<p><code>autoPause</code>：<em>无人在线时游戏是否应暂停。</em></p>
 </li>
 <li>
-<p><code>roundExtraTime</code>: <em>Time before loading a new map after the gameover, in seconds.</em></p>
+<p><code>roundExtraTime</code>：<em>游戏结束后加载新地图前的等待时间，单位为秒。</em></p>
 </li>
 <li>
-<p><code>maxLogLength</code>: <em>The Maximum log file size, in bytes.</em></p>
+<p><code>maxLogLength</code>：<em>日志文件的最大大小，单位为字节。</em></p>
 </li>
 <li>
-<p><code>logCommands</code>: <em>Whether player commands should be logged.</em></p>
+<p><code>logCommands</code>：<em>是否记录玩家命令。</em></p>
 </li>
 </ul>
 

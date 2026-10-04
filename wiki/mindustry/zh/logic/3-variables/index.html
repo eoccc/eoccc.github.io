@@ -50333,21 +50333,21 @@
 
 
 <h1 id="_1">变量与常量</h1>
-<p>Variables and constants are essentially "containers" of values. Each one has a name and value. Mindustry has variables which can be set by the user and their code, and constants which are set only by the processor and cannot be changed by the user.</p>
-<p><em>To find out the possible data or parameter types of a variable or constant, see the Glossary.</em></p>
+<p>变量和常量本质上是值的“容器”。每个都有名称和值。Mindustry 有可由用户及其代码设置的变量，以及仅由处理器设置、用户无法更改的常量。</p>
+<p><em>要了解变量或常量可能的数据或参数类型，请参阅术语表。</em></p>
 <h2 id="_2">变量</h2>
 <h3 id="_3">变量的创建与修改</h3>
-<p>Variables are what their name suggests; a value that can be changed.</p>
-<p>For example, in this code: <code>set myVariable 3</code>, the <code>set</code> instruction will create a variable named <code>myVariable</code>, and give it a value of <code>3</code>.</p>
-<p>Later on, this can change its value to <code>9</code>: <code>set myVariable 9</code>.</p>
-<p>Notice how we used the same instruction for both creating and changing variables. This is because <strong>if a variable that it's changing does not already exist, an instruction will create it first.</strong> If you know Python, you'll probably have realized that it works in the same way.</p>
-<p>Another example is using <code>sensor</code>: <code>sensor playerX playerUnit @x</code> (or Sensor playerX = @x in playerUnit for the visual editor).</p>
-<p>Assuming that the player's position is <code>141, 20</code>, a variable named <code>playerX</code> will be created first, then assigned a value of <code>141</code>.</p>
-<p>However, we have another variable in the example called <code>playerUnit</code>. That variable is a <strong>parameter</strong>. A parameter is an input value to an instruction. In this case, we probably got <code>playerUnit</code> from the <code>radar</code> instruction. If a parameter is not provided or is invalid, the instruction will not execute.</p>
+<p>变量顾名思义，就是可以更改的值。</p>
+<p>例如，在代码 <code>set myVariable 3</code> 中，<code>set</code> 指令会创建一个名为 <code>myVariable</code> 的变量，并赋予它值 <code>3</code>。</p>
+<p>之后，可以这样把它的值改为 <code>9</code>：<code>set myVariable 9</code>。</p>
+<p>注意我们对创建和修改变量使用了同一条指令。这是因为<strong>如果某条指令要修改的变量尚不存在，它会先创建该变量。</strong> 如果你了解 Python，大概已经意识到它的工作方式与此相同。</p>
+<p>另一个例子是使用 <code>sensor</code>：<code>sensor playerX playerUnit @x</code>（在可视化编辑器中则为 Sensor playerX = @x in playerUnit）。</p>
+<p>假设玩家位置是 <code>141, 20</code>，那么会先创建一个名为 <code>playerX</code> 的变量，然后赋予它值 <code>141</code>。</p>
+<p>不过，示例中还有另一个变量 <code>playerUnit</code>。该变量是一个<strong>参数</strong>。参数是指令的输入值。在本例中，我们大概是从 <code>radar</code> 指令得到了 <code>playerUnit</code>。如果未提供参数或参数无效，该指令将不会执行。</p>
 <h3 id="_4">数据类型与隐式转换</h3>
-<p>The values in variables, of course, have different types that are specific to different sources and purposes, such as <code>Unit</code> for Units, <code>number</code> for any number, etc. You can find a list of all of them in the Glossary.</p>
-<p>Mindustry Logic also has this thing with variables called <strong>Implicit Conversion</strong>. That means that, if needed, it will convert a variable's value from one type to another.</p>
-<p>If an instruction is given a <code>number</code>, but it needs an <code>Object</code>, it will be converted to <code>null</code>. If an instruction needs a <code>number</code>, but is given an <code>Object</code>, it will be converted to 1 if the object isn't <code>null</code>, otherwise 0.</p>
+<p>当然，变量中的值有不同的类型，具体取决于来源与用途，例如单位的 <code>Unit</code>、任意数字的 <code>number</code> 等。你可以在术语表中找到它们的完整列表。</p>
+<p>Mindustry Logic 在变量上还有一个叫<strong>隐式转换</strong>的特性。也就是说，在需要时，它会把变量的值从一种类型转换为另一种类型。</p>
+<p>如果某条指令需要 <code>Object</code> 却被给了 <code>number</code>，它会被转换为 <code>null</code>；如果需要 <code>number</code> 却被给了 <code>Object</code>，则当该对象不为 <code>null</code> 时转换为 1，否则转换为 0。</p>
 <p>Examples:</p>
 <ul>
 <li>
@@ -50360,24 +50360,24 @@
 <p><code>Object</code> which is a Silicon Crucible -&gt; 1</p>
 </li>
 </ul>
-<p>The <code>print</code> instruction is the only instruction that requires a <code>String</code> as an input, so its rules are stated in its own part of the manual.</p>
+<p><code>print</code> 指令是唯一一条需要以 <code>String</code> 作为输入的指令，因此它的规则在本手册中单独说明。</p>
 <h3 id="_5">变量命名</h3>
-<p>Naming variables properly is an important skill to have when programming in general. It helps to make code easier to read and understand. Thus, that can make it easier for people to learn from or fix your code.</p>
-<p>Variable names can contain any typeable character. However, they cannot be purely numbers, since it will instead use the actual number.</p>
-<p>The usual naming convention among the majority of mlog code is camelCase, an example of which is itself. Examples of variables named using camelCase are: <code>playerX</code>, <code>coreFound</code>, <code>vertexAngle</code>.</p>
-<p><strong>When naming variables, make sure they are descriptive yet short.</strong> They must describe the value they hold or their purpose. At the same time, they shouldn't be complete sentences or span the entire page, or be too short that they get confusing. You can use abbreviations, acronyms, or shorter terms to make them more concise.</p>
-<p>Everybody has their own specific styles and preferences, but try to learn from good examples of code in mlog and other languages, while at the same time staying close to the common style.</p>
+<p>恰当命名变量是编程中一项重要的通用技能。它有助于让代码更易读、易懂，从而让别人更容易学习或修复你的代码。</p>
+<p>变量名可以包含任何可输入字符。不过，它们不能是纯数字，因为那样会直接使用实际数字。</p>
+<p>mlog 代码中最常见的命名约定是 camelCase（小驼峰），它本身就是一个例子。用 camelCase 命名的变量示例有：<code>playerX</code>、<code>coreFound</code>、<code>vertexAngle</code>。</p>
+<p><strong>命名变量时，要确保它们既描述清楚又简短。</strong>它们必须描述所保存的值或其用途。同时，它们不应是完整句子或占满整页，也不应短到令人困惑。你可以使用缩写、首字母缩略词或更短的词来让它们更简洁。</p>
+<p>每个人都有自己的风格和偏好，但尽量从 mlog 和其他语言的优秀代码示例中学习，同时保持贴近通用风格。</p>
 <h2 id="_6">处理器的变量与常量</h2>
-<p>Constants also hold values, but cannot be changed. Each processor has these constants and variables built-in:</p>
+<p>常量也保存值，但不可更改。每个处理器都内置了这些常量与变量：</p>
 <h3 id="_7">处理器</h3>
 <h4 id="this-constant-building">@this <code>constant</code> <code>Building</code></h4>
-<p>A <code>Building</code> Object that represents the processor itself. You can use this with <code>sensor</code> to find various properties about the processor.</p>
+<p>一个表示处理器自身的 <code>Building</code> 对象。你可以配合 <code>sensor</code> 用它查询处理器的各种属性。</p>
 <h4 id="thisx-constant-number">@thisx <code>constant</code> <code>number</code></h4>
-<p>The x coordinate of the processor.</p>
+<p>处理器的 y 坐标。</p>
 <h4 id="thisy-constant-number">@thisy <code>constant</code> <code>number</code></h4>
-<p>The y coordinate of the processor.</p>
+<p>处理器的 y 坐标。</p>
 <h4 id="ipt-constant-number">@ipt <code>constant</code> <code>number</code></h4>
-<p>The number of instructions executed per tick (60 ticks/second).</p>
+<p>每刻执行的指令数（每秒 60 刻）。</p>
 <ul>
 <li>
 <p>Micro Processor -&gt; 2</p>
@@ -50390,8 +50390,8 @@
 </li>
 </ul>
 <h4 id="counter-variable-number">@counter <code>variable</code> <code>number</code></h4>
-<p>A variable that represents the next line the processor will read code from, equivalent to <code>%IP</code> in x86. It can be changed like any other variable as another way to perform jumps.</p>
-<p>An (advanced) example of setting <code>@counter</code> to jump to a function, then jump back to the caller:</p>
+<p>一个表示处理器接下来将从哪一行读取代码的变量，相当于 x86 中的 <code>%IP</code>。它可以像其他变量一样被修改，作为执行跳转的另一种方式。</p>
+<p>一个（高级）示例：设置 <code>@counter</code> 跳转到一个函数，然后再跳回调用方：</p>
 <pre><code>op add retAddr @counter 1 # Save where we will continue after the function returns by adding 1 to the counter
 set @counter myFunc       # Jump to the line representing myFunc
 ...
@@ -50399,46 +50399,46 @@ set @counter retAddr      # Return to the line set earlier after the function is
 </code></pre>
 <h3 id="_8">相关链接</h3>
 <h4 id="links-constant-number">@links <code>constant</code> <code>number</code></h4>
-<p>A constant that equals the number of buildings linked to the processor. It is changed by the processor when blocks are linked or unlinked.</p>
-<p>You can use this along with <code>getlink</code> to loop through all linked buildings, like so:</p>
+<p>一个等于链接到处理器的建筑数量的常量。当方块被链接或取消链接时，由处理器更改它。</p>
+<p>你可以配合 <code>getlink</code> 遍历所有已链接的建筑，像这样：</p>
 <pre><code>set linkIter 0                  # Create iterator variable
 getlink block linkIter          # Get Building Object of the &quot;linkIter&quot;th linked building.
 # Do what you want with the building here
 jump 1 lessThan linkIter @links # Loop
 </code></pre>
 <h4 id="constant-building"><code>constant</code> <code>Building</code></h4>
-<p>This is really multiple constants, one for each building linked to the processor. They are removed or added whenever a building is unlinked or linked to the processor.</p>
-<p><code>buildingName</code> represents the building's <strong>internal name</strong>, which you can find in the rest of the Wiki.</p>
-<p><code>n</code> starts at 1 and increases with each building of that type that are linked. It's sort of like the <code>n</code>th building of a type.</p>
-<p>This can be a little hard to understand, so here are some examples:</p>
+<p>这实际上是多个常量，每个都对应一个链接到处理器的建筑。每当建筑被链接或取消链接到处理器时，它们会被添加或移除。</p>
+<p><code>buildingName</code> 表示建筑的<strong>内部名称</strong>，你可以在 Wiki 的其余部分找到它。</p>
+<p><code>n</code> 从 1 开始，每链接一个该类型的建筑就递增。它有点像是某类型建筑中的第 <code>n</code> 个。</p>
+<p>这可能有点难以理解，所以这里举几个例子：</p>
 <ul>
 <li>
-<p>The first Scatter linked to a processor: <code>scatter1</code></p>
+<p>链接到处理器的第一个散射炮：<code>scatter1</code></p>
 </li>
 <li>
 <p>The third Ripple linked: <code>ripple3</code></p>
 </li>
 <li>
-<p>The second Laser Drill linked: <code>drill2</code></p>
+<p>第二个链接的激光钻头：<code>drill2</code></p>
 </li>
 <li>
-<p>The eleventh Spore Press linked: <code>press11</code></p>
+<p>第十一个链接的孢子压榨机：<code>press11</code></p>
 </li>
 </ul>
-<p>You can also view each linked building's "constant name" over them when the processor is selected.</p>
+<p>选中处理器时，你还可以在每个已链接建筑上方看到它的“常量名”。</p>
 <p><img src="../../../../../ext/img/mindustry/misc/logic-variables-constants-links-linkedBuilding.png" alt=""></p>
 <h3 id="_9">杂项</h3>
 <h4 id="unit-constant-unit">@unit <code>constant</code> <code>Unit</code></h4>
-<p>A constant that represents the current bound unit. It only changes when the processor unbinds a unit, or binds another one. It can be accessed using Unit instructions such as <code>ucontrol</code>, <code>ulocate</code>, and <code>uradar</code>. Since it's a Unit Object, you can also use it with <code>sensor</code>.</p>
-<p>This presents a core part of unit control in mlog; <strong>only one unit can be bound at a time.</strong> However, you can reference this in a variable, like <code>set unitReference @unit</code>. That variable, though, can not be used to control the referenced unit. It can only be used to check against other units or to get information about it. Therefore, you can think of it as a "unit identity".</p>
+<p>一个表示当前已绑定单位的常量。只有当处理器解绑单位或绑定另一个单位时它才会变化。可以通过 <code>ucontrol</code>、<code>ulocate</code>、<code>uradar</code> 等单位指令访问它。由于它是 Unit 对象，你也可以配合 <code>sensor</code> 使用。</p>
+<p>这体现了 mlog 中单位控制的核心部分：<strong>同一时间只能绑定一个单位。</strong> 不过，你可以在变量中引用它，例如 <code>set unitReference @unit</code>。但该变量不能用来控制所引用的单位，只能用来与其他单位比较或获取它的信息。因此，你可以把它看作一个“单位身份标识”。</p>
 <h4 id="time-constant-number">@time <code>constant</code> <code>number</code></h4>
-<p>Represents the current UNIX timestamp <em>in milliseconds</em>.</p>
+<p>表示当前的 UNIX 时间戳<em>（以毫秒为单位）</em>。</p>
 <h4 id="tick-constant-float">@tick <code>constant</code> <code>float</code></h4>
-<p>Represents the amount of ticks (60 ticks/second) since the map began.</p>
+<p>表示自地图开始以来经过的刻数（每秒 60 刻）。</p>
 <h4 id="mapw-constant-number">@mapw <code>constant</code> <code>number</code></h4>
-<p>Width of the map, in tiles.</p>
+<p>地图宽度，以格为单位。</p>
 <h4 id="maph-constant-number">@maph <code>constant</code> <code>number</code></h4>
-<p>Height of the map, in tiles.</p>
+<p>地图高度，以格为单位。</p>
 
 
 

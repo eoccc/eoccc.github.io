@@ -50046,7 +50046,7 @@
 <td>shootSound</td>
 <td>Sound</td>
 <td>none</td>
-<td>Overrides the shoot sound in turrets if set. Does nothing in units, as they can't have multiple ammo types.</td>
+<td>若设置，会覆盖炮塔中的射击音效。对单位无效，因为它们不能有多种弹药类型。</td>
 </tr>
 <tr>
 <td>hitSound</td>
@@ -50118,13 +50118,13 @@
 <td>killShooter</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to kill the shooter when this is shot. For suicide bombers.</td>
+<td>被射击时是否杀死射击者。用于自杀式炸弹袭击者。</td>
 </tr>
 <tr>
 <td>instantDisappear</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to instantly make the bullet disappear.</td>
+<td>是否让弹药立即消失。</td>
 </tr>
 <tr>
 <td>splashDamage</td>
@@ -50136,7 +50136,7 @@
 <td>scaledSplashDamage</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, splash damage is "correctly" affected by unit hitbox size. Used for projectiles that do not collide / have splash as their main source of damage.</td>
+<td>若为 true，溅射伤害会“正确地”受单位碰撞箱尺寸影响。用于不碰撞、或以溅射为主要伤害来源的弹药。</td>
 </tr>
 <tr>
 <td>knockback</td>
@@ -50166,7 +50166,7 @@
 <td>unitSort</td>
 <td>Sortf</td>
 <td>closest</td>
-<td>Turret only. Function for choosing which unit to target. Overrides turret sorting</td>
+<td>仅用于炮塔。用于选择攻击哪个单位的函数。会覆盖炮塔的排序</td>
 </tr>
 <tr>
 <td>statusChance</td>
@@ -50232,19 +50232,19 @@
 <td>keepVelocity</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether velocity is inherited from the shooter.</td>
+<td>速度是否继承自射击者。</td>
 </tr>
 <tr>
 <td>scaleKeepVelocity</td>
 <td>boolean</td>
 <td>false</td>
-<td>If keepVelocity = true, whether to reduce lifetime proportionally to the added speed, making range consistent.</td>
+<td>若 keepVelocity = true，是否按增加的速度成比例减少存活时间，以保持射程一致。</td>
 </tr>
 <tr>
 <td>scaleLife</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to scale lifetime (not actually velocity!) to disappear at the target position. Used for artillery.</td>
+<td>是否按比例调整存活时间（并非实际速度！）以在目标位置消失。用于火炮。</td>
 </tr>
 <tr>
 <td>hittable</td>
@@ -50262,7 +50262,7 @@
 <td>absorbable</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether this projectile can be absorbed by shields.</td>
+<td>该弹药是否会被护盾吸收。</td>
 </tr>
 <tr>
 <td>ignoreSpawnAngle</td>
@@ -50292,13 +50292,13 @@
 <td>rangeChange</td>
 <td>float</td>
 <td>0.0</td>
-<td>When used in a turret with multiple ammo types, this can be set to a non-zero value to influence range.</td>
+<td>在具有多种弹药类型的炮塔中使用时，可将其设为非零值以影响射程。</td>
 </tr>
 <tr>
 <td>extraRangeMargin</td>
 <td>float</td>
 <td>0.0</td>
-<td>When used in turrets with limitRange() applied, this adds extra range to the bullets that extends past targeting range. Only particularly relevant in vanilla.</td>
+<td>在应用了 limitRange() 的炮塔中使用时，这会为弹药增加超出瞄准射程的额外射程。仅在原版中较有意义。</td>
 </tr>
 <tr>
 <td>range</td>
@@ -50310,7 +50310,7 @@
 <td>minRangeChange</td>
 <td>float</td>
 <td>0.0</td>
-<td>When used in a turret with multiple ammo types, this can be set to a non-zero value to influence minRange</td>
+<td>在具有多种弹药类型的炮塔中使用时，可将其设为非零值以影响 minRange</td>
 </tr>
 <tr>
 <td>healPercent</td>
@@ -50322,13 +50322,13 @@
 <td>healAmount</td>
 <td>float</td>
 <td>0.0</td>
-<td>flat amount of block health healed</td>
+<td>方块生命值的固定治疗量</td>
 </tr>
 <tr>
 <td>healSound</td>
 <td>Sound</td>
 <td>blockHeal</td>
-<td>sound played when a block is healed</td>
+<td>方块被治疗时播放的音效</td>
 </tr>
 <tr>
 <td>healSoundVolume</td>
@@ -50346,7 +50346,7 @@
 <td>makeFire</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to make fire on impact</td>
+<td>命中时是否点燃火焰</td>
 </tr>
 <tr>
 <td>hitUnder</td>
@@ -50358,7 +50358,7 @@
 <td>despawnHit</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to create hit effects on despawn. Forced to true if this bullet has any special effects like splash damage. Disable setDefaults to avoid override</td>
+<td>是否在消失时创建命中效果。若该弹药有任何特殊效果（如溅射伤害）则强制为 true。禁用 setDefaults 以避免覆盖</td>
 </tr>
 <tr>
 <td>fragOnHit</td>
@@ -50388,7 +50388,7 @@
 <td>armorMultiplier</td>
 <td>float</td>
 <td>1.0</td>
-<td>Multiplies the unit/building armor used in damage calculations. Used for armor weakness, armor piercing, and anti-armor.</td>
+<td>在伤害计算中乘以单位/建筑护甲。用于护甲弱点、护甲穿透和反护甲。</td>
 </tr>
 <tr>
 <td>blockArmorMultiplier</td>
@@ -50436,7 +50436,7 @@
 <td>delayFrags</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, frag bullets are delayed to the next frame. Fixes obscure bugs with piercing bullet types spawning frags immediately and screwing up the Damage temporary variables.</td>
+<td>若为 true，碎片弹药会延迟到下一帧。修复了穿透弹药类型立即生成碎片、破坏 Damage 临时变量的隐蔽 bug。</td>
 </tr>
 <tr>
 <td>fragRandomSpread</td>
@@ -50580,7 +50580,7 @@
 <td>showStats</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to display the stats of the spawned bullet.</td>
+<td>是否显示所生成弹药的属性。</td>
 </tr>
 <tr>
 <td>spawnBulletRandomSpread</td>
@@ -50592,13 +50592,13 @@
 <td>spawnUnit</td>
 <td>UnitType</td>
 <td>null</td>
-<td>Unit spawned <em>instead of</em> this bullet. Useful for missiles.</td>
+<td>生成<em>替代</em>该弹药的单位。用于导弹。</td>
 </tr>
 <tr>
 <td>despawnUnit</td>
 <td>UnitType</td>
 <td>null</td>
-<td>Unit spawned when this bullet hits something or despawns due to it hitting the end of its lifetime.</td>
+<td>当该弹药击中某物、或因到达存活时间终点而消失时生成的单位。</td>
 </tr>
 <tr>
 <td>despawnUnitChance</td>
@@ -50622,7 +50622,7 @@
 <td>faceOutwards</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, units spawned when this bullet despawns face away from the bullet instead of the same direction as the bullet.</td>
+<td>若为 true，该弹药消失时生成的单位会背对弹药，而不是与弹药同向。</td>
 </tr>
 <tr>
 <td>parts</td>
@@ -50670,7 +50670,7 @@
 <td>trailParam</td>
 <td>float</td>
 <td>2.0</td>
-<td>Rotation/size parameter that is passed to trail. Usually, this controls size.</td>
+<td>传递给拖尾的旋转/尺寸参数。通常用于控制尺寸。</td>
 </tr>
 <tr>
 <td>trailRotation</td>
@@ -50688,7 +50688,7 @@
 <td>trailLength</td>
 <td>int</td>
 <td>-1</td>
-<td>Length of trail quads. Any value  0</td>
+<td>拖尾四边形的长度。任何值 0</td>
 </tr>
 <tr>
 <td>trailSinMag</td>
@@ -50778,7 +50778,7 @@
 <td>followAimSpeed</td>
 <td>float</td>
 <td>0.0</td>
-<td>Speed at which bullet rotates to follow cursor.  less vibration.</td>
+<td>弹药旋转跟随光标的速度。数值越小震动越小。</td>
 </tr>
 <tr>
 <td>weaveMag</td>
@@ -50826,7 +50826,7 @@
 <td>displayAmmoMultiplier</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether to display the ammo multiplayer for this bullet type in its stats.</td>
+<td>是否在该弹药类型的属性中显示弹药倍率。</td>
 </tr>
 <tr>
 <td>statLiquidConsumed</td>

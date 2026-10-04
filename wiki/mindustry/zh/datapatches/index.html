@@ -49790,38 +49790,38 @@
 <p>数据补丁<strong>可以</strong>做到的事情：</p>
 <ul>
 <li>
-<p>Make a factory use more or less of a resource</p>
+<p>让工厂多消耗或少消耗某种资源</p>
 </li>
 <li>
-<p>Change the resource requirements of a block</p>
+<p>更改方块的资源需求</p>
 </li>
 <li>
-<p>Completely change the weapons and bullets of a unit</p>
+<p>完全更改单位的武器与弹药</p>
 </li>
 <li>
-<p>Change the recipes available to a unit factory</p>
+<p>更改单位工厂可用的配方</p>
 </li>
 <li>
-<p>Change displayed sprites of block or units to other in-game textures</p>
+<p>将方块或单位显示的贴图更改为游戏内的其他纹理</p>
 </li>
 <li>
-<p>Change the build speed, health, armor, etc. of any block or unit</p>
+<p>更改任意方块或单位的建造速度、生命值、护甲等</p>
 </li>
 <li>
-<p>Change the type of a unit (e.g. ground to flying)</p>
+<p>更改单位的类型（例如把地面单位变成飞行单位）</p>
 </li>
 </ul>
 <p>数据补丁<strong>无法</strong>做到的事情：</p>
 <ul>
 <li>
-<p>Introduce new mechanics not present in vanilla</p>
+<p>引入原版中不存在的新机制</p>
 </li>
 <li>
-<p>Change the types of existing blocks (e.g. wall into turret)</p>
+<p>更改现有方块的类型（例如把墙变成炮塔）</p>
 </li>
 </ul>
 <p>平衡性补丁<em>并非</em>模组的替代品，它只能微调现有内容与机制。</p>
-<h1 id="a-note-on-adding-new-content">A Note On Adding New Content</h1>
+<h1 id="_2">关于添加新内容的说明</h1>
 <p>如果你的目标是用 Build 159 引入的系统<em>新增</em>内容，那么该系统与数据<em>补丁</em>略有不同。</p>
 <p>目前还没有完整的指南，但这里简要介绍一下它的工作方式：</p>
 <ul>
@@ -49830,10 +49830,10 @@
 </li>
 <li>
 <p>Unsupported features:
-Planets (not useful in maps/servers)</p>
+星球（在地图/服务器中无用）</p>
 </li>
 <li>
-<p>Sectors, for the same reason</p>
+<p>区块，原因同上</p>
 </li>
 <li>
 <p>Tech tree additions/modifications</p>
@@ -49871,9 +49871,9 @@ name: My Patch
 block.conveyor.health: 50
 </code></pre>
 <h1 id="applying-data-patches">Applying Data Patches</h1>
-<h2 id="_2">在地图上应用补丁</h2>
+<h2 id="_3">在地图上应用补丁</h2>
 <p>在地图编辑器中打开你的地图，然后打开左上角菜单（桌面端可按 ESC）。依次进入 <em>地图信息 → 数据补丁 → 添加</em>，再指定上一步保存的补丁文件。点击 ⚠️ 图标可查看补丁产生的错误，点击 🔁 按钮可重新加载文件。</p>
-<h2 id="_3">在专用服务器上应用补丁</h2>
+<h2 id="_4">在专用服务器上应用补丁</h2>
 <p>打开你的服务器目录（其中应已包含 plugins、maps、saves 等文件夹），找到 <code>patches</code> 目录，把补丁文件放进去即可。补丁文件必须使用 <code>hjson/json/json5</code> 扩展名才会被加载。
 它们会自动应用，且在地图自身已含的其他数据补丁<em>之后</em>生效。</p>
 <p>如果一切操作正确，服务器启动时应会记录已加载的补丁文件数量。任何警告或错误也会打印到控制台。
@@ -49894,12 +49894,12 @@ block.conveyor.health: 50
 <p>另外，如果你只修改单个属性，使用简写语法可能更方便：</p>
 <pre><code>block.conveyor.health: 50
 </code></pre>
-<h2 id="_4">查看内容的全部字段</h2>
+<h2 id="_5">查看内容的全部字段</h2>
 <p>如果你熟悉 Java，可以查看相关内容的源文件，例如方块的 <a href="https://github.com/Anuken/Mindustry/blob/master/core/src/mindustry/world/Block.java">Block.java</a>。</p>
 <p>如果不熟悉，你可以在游戏设置中启用控制台，然后在数据库里针对某个方块、单位或液体点击「查看内容字段」按钮。</p>
 <p>注意，这里只显示<em>该类自身</em>的字段；若想查看父类的字段，请点击该页面上紧跟在 "extends" 之后的链接。</p>
 <p>例如，<a href="https://mindustrygame.github.io/wiki/Modding%20Classes/Conveyor/">传送带</a>页面会显示其全部字段，以及 <a href="https://mindustrygame.github.io/wiki/Modding%20Classes/Block/">Block</a> 父类中的所有内容。</p>
-<h2 id="_5">访问数组/序列</h2>
+<h2 id="_6">访问数组/序列</h2>
 <p>当需要访问数组（T[]）或序列（Seq）时，可以这样写：</p>
 <pre><code>//greatly offsets one of dagger's two weapons
 unit.dagger.weapons.0.x: 100
@@ -49908,7 +49908,7 @@ unit.dagger.weapons.0.x: 100
 <pre><code>//this wall make *both* dagger weapons deal 55 damage
 unit.dagger.weapons.0.bullet.damage: 55
 </code></pre>
-<h2 id="_6">数组/序列的追加与覆写</h2>
+<h2 id="_7">数组/序列的追加与覆写</h2>
 <p>有时可能需要向序列中<em>追加</em>而非覆写，写法如下：</p>
 <pre><code>//adds a ridiculously overpowered laser to flare's weapons, keeping the others intact
 //note the .+ before the field assignment; this adds the element
@@ -49991,7 +49991,7 @@ unit.flare.weapons: [
 </li>
 </ul>
 <h1 id="extra-examples">Extra Examples</h1>
-<h2 id="_7">「双联化」</h2>
+<h2 id="_8">「双联化」</h2>
 <pre><code>//once again, names are optional, but help identify a patchset in the list
 name: Duofication
 
@@ -50083,7 +50083,7 @@ unit: {
   }
 }
 </code></pre>
-<h2 id="_8">修改炮塔弹药</h2>
+<h2 id="_9">修改炮塔弹药</h2>
 <pre><code>block.fuse.ammoTypes: {
   //remove titanium ammo from the ammo map by using the special &quot;-&quot; value
   titanium: &quot;-&quot;
@@ -50100,7 +50100,7 @@ unit: {
   }
 }
 </code></pre>
-<h2 id="_9">添加单位能力</h2>
+<h2 id="_10">添加单位能力</h2>
 <pre><code>//add a new ability to pulsar (note the .+)
 unit.pulsar.abilities.+: [
   {
@@ -50110,7 +50110,7 @@ unit.pulsar.abilities.+: [
   }
 ]
 </code></pre>
-<h2 id="_10">添加单位方案</h2>
+<h2 id="_11">添加单位方案</h2>
 <pre><code>//make the ground factory produce flares
 block.ground-factory.plans.+: {
   unit: flare
@@ -50120,11 +50120,11 @@ block.ground-factory.plans.+: {
   time: 100
 }
 </code></pre>
-<h2 id="_11">修改单位工厂方案</h2>
+<h2 id="_12">修改单位工厂方案</h2>
 <pre><code>//make daggers (the first plan of the ground factory, or index 0) take 60 ticks to build, or 1 second
 block.ground-factory.plans.0.time: 60
 </code></pre>
-<h2 id="_12">修改方块需求</h2>
+<h2 id="_13">修改方块需求</h2>
 <pre><code>//make duo cost 5 titanium and 20 surge alloy
 block.duo.requirements: [titanium/5, surge-alloy/20]
 </code></pre>

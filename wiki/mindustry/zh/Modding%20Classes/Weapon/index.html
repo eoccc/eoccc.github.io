@@ -49888,103 +49888,103 @@
 <td>display</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether weapon should appear in the stats of a unit with this weapon</td>
+<td>该武器是否应出现在持有该武器的单位属性中</td>
 </tr>
 <tr>
 <td>mirror</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to create a flipped copy of this weapon upon initialization. default: true</td>
+<td>是否在初始化时创建该武器的翻转副本。默认：true</td>
 </tr>
 <tr>
 <td>flipSprite</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether to flip the weapon's sprite when rendering. internal use only - do not set!</td>
+<td>渲染时是否翻转武器的贴图。仅供内部使用——请勿设置！</td>
 </tr>
 <tr>
 <td>alternate</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to shoot the weapons in different arms one after another, rather than all at once; only valid when mirror = true</td>
+<td>是否让不同臂上的武器依次发射，而不是同时发射；仅当 mirror = true 时有效</td>
 </tr>
 <tr>
 <td>rotate</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether to rotate toward the target independently of unit</td>
+<td>是否独立于单位朝目标旋转</td>
 </tr>
 <tr>
 <td>showStatSprite</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether to show the sprite of the weapon in the database.</td>
+<td>是否在数据库中显示该武器的贴图。</td>
 </tr>
 <tr>
 <td>baseRotation</td>
 <td>float</td>
 <td>0.0</td>
-<td>rotation at which this weapon starts at.</td>
+<td>该武器起始时的旋转。</td>
 </tr>
 <tr>
 <td>top</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to draw the outline on top.</td>
+<td>是否在上方绘制外描边。</td>
 </tr>
 <tr>
 <td>continuous</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether to hold the bullet in place while firing; it will still require reload.</td>
+<td>射击时是否将弹药固定在原位；它仍需要装填。</td>
 </tr>
 <tr>
 <td>alwaysContinuous</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this weapon uses continuous fire without reloading; implies continuous = true</td>
+<td>该武器是否使用无需装填的连续射击；隐含 continuous = true</td>
 </tr>
 <tr>
 <td>aimChangeSpeed</td>
 <td>float</td>
 <td>Infinity</td>
-<td>Speed at which the turret can change its bullet "aim" distance. This is only used for point laser bullets.</td>
+<td>炮塔改变其弹药“瞄准”距离的速度。仅用于点激光弹药。</td>
 </tr>
 <tr>
 <td>controllable</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether this weapon can be aimed manually by players</td>
+<td>该武器是否可以由玩家手动瞄准</td>
 </tr>
 <tr>
 <td>aiControllable</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether this weapon can be automatically aimed by the unit</td>
+<td>该武器是否可以由单位自动瞄准</td>
 </tr>
 <tr>
 <td>alwaysShooting</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this weapon is always shooting, regardless of targets ore cone</td>
+<td>该武器是否始终射击，无论目标或锥角如何</td>
 </tr>
 <tr>
 <td>autoTarget</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether to automatically target relevant units in update(); only works when controllable = false.</td>
+<td>是否在 update() 中自动瞄准相关单位；仅当 controllable = false 时有效。</td>
 </tr>
 <tr>
 <td>predictTarget</td>
 <td>boolean</td>
 <td>true</td>
-<td>whether to perform target trajectory prediction</td>
+<td>是否进行目标轨迹预测</td>
 </tr>
 <tr>
 <td>useAttackRange</td>
 <td>boolean</td>
 <td>true</td>
-<td>if true, this weapon is used for attack range calculations</td>
+<td>若为 true，该武器用于攻击射程计算</td>
 </tr>
 <tr>
 <td>targetInterval</td>
@@ -50002,7 +50002,7 @@
 <td>rotateSpeed</td>
 <td>float</td>
 <td>20.0</td>
-<td>rotation speed of weapon when rotation is enabled, in degrees/t</td>
+<td>启用旋转时武器的旋转速度，单位为度/刻</td>
 </tr>
 <tr>
 <td>reload</td>
@@ -50014,13 +50014,13 @@
 <td>inaccuracy</td>
 <td>float</td>
 <td>0.0</td>
-<td>inaccuracy of degrees of each shot</td>
+<td>每次射击的角度误差</td>
 </tr>
 <tr>
 <td>shake</td>
 <td>float</td>
 <td>0.0</td>
-<td>intensity and duration of each shot's screen shake</td>
+<td>每次射击屏幕震动的强度与持续时间</td>
 </tr>
 <tr>
 <td>recoil</td>
@@ -50038,7 +50038,7 @@
 <td>recoilTime</td>
 <td>float</td>
 <td>-1.0</td>
-<td>time taken for weapon to return to starting position in ticks. uses reload time by default</td>
+<td>武器回到起始位置所需的刻数。默认使用装填时间。</td>
 </tr>
 <tr>
 <td>recoilPow</td>
@@ -50098,13 +50098,13 @@
 <td>shadow</td>
 <td>float</td>
 <td>-1.0</td>
-<td>radius of shadow drawn under the weapon; &lt;0 to disable</td>
+<td>武器下方绘制阴影的半径；&lt;0 表示禁用</td>
 </tr>
 <tr>
 <td>velocityRnd</td>
 <td>float</td>
 <td>0.0</td>
-<td>fraction of velocity that is random</td>
+<td>速度中随机部分的比例</td>
 </tr>
 <tr>
 <td>extraVelocity</td>
@@ -50140,7 +50140,7 @@
 <td>minWarmup</td>
 <td>float</td>
 <td>0.0</td>
-<td>minimum weapon warmup before firing (this is not linear, do NOT use 1!)</td>
+<td>开火前武器的最小预热（这不是线性的，不要用 1！）</td>
 </tr>
 <tr>
 <td>shootWarmupSpeed</td>
@@ -50176,7 +50176,7 @@
 <td>ignoreRotation</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether shooter rotation is ignored when shooting.</td>
+<td>射击时是否忽略射击者的旋转。</td>
 </tr>
 <tr>
 <td>noAttack</td>
@@ -50188,31 +50188,31 @@
 <td>minShootVelocity</td>
 <td>float</td>
 <td>-1.0</td>
-<td>min velocity required for this weapon to shoot. -1 to disable the limit.</td>
+<td>该武器射击所需的最小速度。-1 表示禁用该限制。</td>
 </tr>
 <tr>
 <td>maxShootVelocity</td>
 <td>float</td>
 <td>-1.0</td>
-<td>max velocity at which this weapon to shoot. -1 to disable the limit.</td>
+<td>该武器射击的最大速度。-1 表示禁用该限制。</td>
 </tr>
 <tr>
 <td>parentizeEffects</td>
 <td>boolean</td>
 <td>false</td>
-<td>should the shoot effects follow the unit (effects need followParent set to true for this to work)</td>
+<td>射击效果是否应跟随单位（效果需将 followParent 设为 true 才能生效）</td>
 </tr>
 <tr>
 <td>otherSide</td>
 <td>int</td>
 <td>-1</td>
-<td>internal value used for alternation - do not change!</td>
+<td>用于交替的内部值——请勿更改！</td>
 </tr>
 <tr>
 <td>layerOffset</td>
 <td>float</td>
 <td>0.0</td>
-<td>draw Z offset relative to the default value</td>
+<td>绘制 Z 偏移，相对于默认值</td>
 </tr>
 <tr>
 <td>activeSound</td>
@@ -50236,19 +50236,19 @@
 <td>shootSoundVolume</td>
 <td>float</td>
 <td>1.0</td>
-<td>volume of the shoot sound</td>
+<td>射击音效的音量</td>
 </tr>
 <tr>
 <td>initialShootSound</td>
 <td>Sound</td>
 <td>none</td>
-<td>sound used when this weapon first fires; for continuous weapons only</td>
+<td>该武器首次开火时使用的音效；仅用于连续型武器</td>
 </tr>
 <tr>
 <td>chargeSound</td>
 <td>Sound</td>
 <td>none</td>
-<td>sound used for weapons that have a delay</td>
+<td>用于有延迟的武器的音效</td>
 </tr>
 <tr>
 <td>region</td>
@@ -50260,19 +50260,19 @@
 <td>heatRegion</td>
 <td>TextureRegion</td>
 <td>null</td>
-<td>heat region, must be same size as region (optional)</td>
+<td>热量区域，必须与 region 尺寸相同（可选）</td>
 </tr>
 <tr>
 <td>cellRegion</td>
 <td>TextureRegion</td>
 <td>null</td>
-<td>cell region, must be same size as region (optional)</td>
+<td>单元格区域，必须与 region 尺寸相同（可选）</td>
 </tr>
 <tr>
 <td>outlineRegion</td>
 <td>TextureRegion</td>
 <td>null</td>
-<td>outline region to display if top is false</td>
+<td>若 top 为 false 时要显示的外描边区域</td>
 </tr>
 <tr>
 <td>heatColor</td>
@@ -50284,31 +50284,31 @@
 <td>shootStatus</td>
 <td>StatusEffect</td>
 <td>none</td>
-<td>status effect applied when shooting</td>
+<td>射击时施加的状态效果</td>
 </tr>
 <tr>
 <td>mountType</td>
 <td>Func of Weapon, WeaponMount</td>
 <td>WeaponMount::new</td>
-<td>type of weapon mount to be used</td>
+<td>要使用的武器挂架类型</td>
 </tr>
 <tr>
 <td>shootStatusDuration</td>
 <td>float</td>
 <td>300.0</td>
-<td>status effect duration when shot</td>
+<td>被射击时的状态效果持续时间</td>
 </tr>
 <tr>
 <td>shootOnDeath</td>
 <td>boolean</td>
 <td>false</td>
-<td>whether this weapon should fire when its owner dies</td>
+<td>该武器是否应在其拥有者死亡时开火</td>
 </tr>
 <tr>
 <td>shootOnDeathEffect</td>
 <td>Effect</td>
 <td>null</td>
-<td>If not null and shootOnDeath == true, overrides the weapon's shoot effect only when its owner dies.</td>
+<td>若不为 null 且 shootOnDeath == true，则仅在其拥有者死亡时覆盖武器的射击效果。</td>
 </tr>
 <tr>
 <td>parts</td>

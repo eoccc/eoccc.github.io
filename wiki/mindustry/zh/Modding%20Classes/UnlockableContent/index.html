@@ -49857,7 +49857,7 @@
 <h1 id="unlockablecontent">UnlockableContent</h1>
 <h2 id="unlockablecontent_1">UnlockableContent</h2>
 <p><em>继承自 MappableContent</em></p>
-<p>Base interface for an unlockable content type.</p>
+<p>可解锁内容类型的基础接口。</p>
 <table>
 <thead>
 <tr>
@@ -49908,13 +49908,13 @@
 <td>inlineDescription</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether to show the description in the research dialog preview.</td>
+<td>是否在研究对话框预览中显示描述。</td>
 </tr>
 <tr>
 <td>hideDetails</td>
 <td>boolean</td>
 <td>true</td>
-<td>Whether details are hidden in custom games if this hasn't been unlocked in campaign mode.</td>
+<td>如果在战役模式中尚未解锁，是否在自定义游戏中隐藏详情。</td>
 </tr>
 <tr>
 <td>hideDatabase</td>
@@ -49950,7 +49950,7 @@
 <td>fullOverride</td>
 <td>String</td>
 <td>""</td>
-<td>Override for the full icon. Useful for mod content with duplicate icons. Overrides any other full icon.</td>
+<td>完整图标的覆盖项。对于图标重复的模组内容很有用。会覆盖任何其他完整图标。</td>
 </tr>
 <tr>
 <td>allDatabaseTabs</td>
@@ -49962,13 +49962,13 @@
 <td>shownPlanets</td>
 <td>ObjectSet of Planet</td>
 <td>[]</td>
-<td>Planets that this content is made for. If empty, a planet is decided based on item requirements. Currently, this is only meaningful for blocks.</td>
+<td>该内容所面向的星球。如果为空，则根据物品需求决定星球。目前仅对方块有意义。</td>
 </tr>
 <tr>
 <td>databaseTabs</td>
 <td>ObjectSet of UnlockableContent</td>
 <td>[]</td>
-<td>Content - usually a planet - that dictates which database tab(s) this content will appear in. If nothing is defined, it will use the values in shownPlanets. If shownPlanets is also empty, it will use Serpulo as the "default" tab.</td>
+<td>决定该内容会出现在哪些数据库标签页中的内容——通常是一个星球。如果未定义，则使用 shownPlanets 中的值。如果 shownPlanets 也为空，则使用 Serpulo 作为“默认”标签页。</td>
 </tr>
 <tr>
 <td>databaseCategory</td>
@@ -49980,13 +49980,13 @@
 <td>databaseTag</td>
 <td>String</td>
 <td>null</td>
-<td>Category tags. Secondary category of content classification in core database. For example, "turret", "wall" under databaseCategory "block", "core-unit", "ground-unit" under databaseCategory "units". Uses "default" as a fallback when the value is null or empty. When using "default", no extra tag label are displayed.</td>
+<td>分类标签。核心数据库中内容分类的次级分类。例如 databaseCategory 为 "block" 下的 "turret"、"wall"，databaseCategory 为 "units" 下的 "core-unit"、"ground-unit"。当值为 null 或空时使用 "default" 作为回退。使用 "default" 时不显示额外的标签。</td>
 </tr>
 <tr>
 <td>techNode</td>
 <td>TechNode</td>
 <td>null</td>
-<td>The tech tree node for this content, if applicable. Null if not part of a tech tree.</td>
+<td>该内容的科技树节点（如果适用）。不属于科技树则为 Null。</td>
 </tr>
 <tr>
 <td>techNodes</td>
