@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="快速上手">
+  <title>快速上手</title>
+  <path fill="none" stroke="#5b8def" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 2.5c3 2 4.5 5 4.5 8.5L14 14H10l-2.5-3c0-3.5 1.5-6.5 4.5-8.5Z"/>
+  <circle cx="12" cy="9" r="1.6" fill="#c76fb8"/>
+  <path fill="none" stroke="#8892a6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="M9.5 14 7 21l3.5-1.6M14.5 14 17 21l-3.5-1.6"/>
+</svg>

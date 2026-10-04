@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="学习路径">
+  <title>学习路径</title>
+  <path fill="none" stroke="#5b8def" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="3 3" d="M6 20V9a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v11"/>
+  <circle cx="6" cy="20" r="1.8" fill="#c76fb8"/>
+  <circle cx="18" cy="20" r="1.8" fill="#7f6fe0"/>
+</svg>

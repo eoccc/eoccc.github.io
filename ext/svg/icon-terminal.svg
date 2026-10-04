@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="快速备忘">
+  <title>快速备忘</title>
+  <rect x="2.5" y="4" width="19" height="16" rx="2.5" fill="none" stroke="#5b8def" stroke-width="1.8"/>
+  <path fill="none" stroke="#c76fb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="m6.5 9.5 2.5 2.5-2.5 2.5M12 15h5.5"/>
+</svg>

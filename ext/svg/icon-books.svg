@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="内容板块">
+  <title>内容板块</title>
+  <g fill="none" stroke="#5b8def" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4.5h5.5v15H4z"/>
+    <path d="M9.5 6.5H15v13H9.5z"/>
+    <path d="M15 8.5h5v11h-5z"/>
+  </g>
+  <path stroke="#c76fb8" stroke-width="1.8" stroke-linecap="round" d="M6 8h1.5M11.5 10H13M17 12h1.5"/>
+</svg>
