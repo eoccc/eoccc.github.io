@@ -1,0 +1,2430 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Everyone Create Community">
+      
+      
+      
+        <link rel="canonical" href="https://docs.git.eocc.top/wiki/mindustry/zh/modding/1-modding/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Modding Introduction - EOCC 文档库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../css/eocc-brand.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modding-introduction" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../.." title="EOCC 文档库" class="md-header__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EOCC 文档库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modding Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../release/" class="md-tabs__link">
+          
+  
+  
+  版本更新日志
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../dev/" class="md-tabs__link">
+          
+  
+  
+  开发者文档
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../faq/" class="md-tabs__link">
+          
+  
+  
+  常见问题
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+  Wiki
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../rules/" class="md-tabs__link">
+          
+  
+  
+  社区公约
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../about/" class="md-tabs__link">
+          
+  
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="EOCC 文档库" class="md-nav__button md-logo" aria-label="EOCC 文档库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EOCC 文档库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本更新日志
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    版本更新日志
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    更新日志总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../release/update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    完整日志列表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发者文档
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    开发者文档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档共建
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文档共建
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/writing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown 写作规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    提交与上线流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/nav-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导航与站点配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/svg-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVG 图标绘制与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/flowchart-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程图开发与创作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dev/github-release-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub 开发与软件包发布流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见问题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    常见问题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全部问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区资源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    服务器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/mods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资源与模组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    账号与权限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    报错与解决
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区活动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../faq/others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wiki
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wiki
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wiki 首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mindustry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mindustry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中文版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社区公约
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    社区公约
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公约正文
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    关于
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于本站
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/site-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    站点信息
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    维护与反馈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    注意事项
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版权归属
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HJSON
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modhjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mod.hjson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sound
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bundles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mod-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mod Releases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modding-introduction">Modding Introduction</h1>
+<p>Mindustry mods are simply directories of assets. There are many ways to use the modding API, depending on exactly what you want to do, and how far you're willing to go to do it.</p>
+<p>You could just resprite existing game content, or create new game content with the simpler Json API (which is the main focus of this documentation). You can add custom sounds (or reuse existing ones), add maps to campaign mode, and add scripts to program special behavior into your mod, like custom effects.</p>
+<p>Sharing your mod is as simple as giving someone your project directory; mods work on any platform that supports them. You'll want to use <a href="#github">GitHub</a> (<em>or a similar service</em>) for hosting your source code.
+To make mods, all you really need is any computer with a text editor.</p>
+<h2 id="editing">Editing</h2>
+<p>If you are using HJSON for your mods, it is recommended to use <a href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a href="https://github.com/Anuken/MindustryHJsonVSCode/releases/latest">Mindustry HJSON</a> extension.</p>
+<p>To install the extension, download <code>mindustry-hjson-x.x.x.vsix</code> from the linked release page. In VSCode, open the Extensions tab, click the three dots in the top right -&gt; "Install From VSIX..." -&gt; select the downloaded VSIX file.</p>
+<p>The extension provides autocomplete, syntax highlighting, and warnings for unknown or invalid fields in content.</p>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>Your project directory should look something like this:</p>
+<pre><code>project
+├── mod.hjson
+├── content
+│   ├── items
+│   ├── blocks
+│   ├── liquids
+│   ├── weather
+│   ├── liquids
+│   └── units
+├── maps
+├── bundles
+├── sounds
+├── schematics
+├── scripts
+├── sprites-override
+└── sprites
+</code></pre>
+<ul>
+<li>
+<p><code>mod.hjson</code> (required) metadata file for your mod,</p>
+</li>
+<li>
+<p><code>content/*</code> directories for game <a href="#content">Content</a>,</p>
+</li>
+<li>
+<p><code>maps/</code> directory for in-game maps,</p>
+</li>
+<li>
+<p><code>bundles/</code> directory for <a href="#bundles">Bundles</a>,</p>
+</li>
+<li>
+<p><code>sounds/</code> directory for <a href="#sound">Sound</a> files,</p>
+</li>
+<li>
+<p><code>schematics/</code> directory for schematic files,</p>
+</li>
+<li>
+<p><code>scripts/</code> directory for Javascript script file,</p>
+</li>
+<li>
+<p><code>sprites-override/</code> <a href="#sprites">Sprites</a> directory for overriding ingame content,</p>
+</li>
+<li>
+<p><code>sprites/</code> <a href="#sprites">Sprites</a> directory for your content,</p>
+</li>
+</ul>
+<p>Every platform has a different user application data directory, and this is where your mods should be placed:</p>
+<ul>
+<li>
+<p>Linux: <code>~/.local/share/Mindustry/mods/</code></p>
+</li>
+<li>
+<p>Steam: <code>steam/steamapps/common/Mindustry/saves/mods/</code></p>
+</li>
+<li>
+<p>Windows: <code>%appdata%/Mindustry/mods/</code></p>
+</li>
+<li>
+<p>MacOS: <code>~/Library/Application Support/Mindustry/mods/</code></p>
+</li>
+</ul>
+<p><em>Note that your filenames should be lowercased and hyphen separated:</em></p>
+<ul>
+<li>
+<p>correct: <code>my-custom-block.json</code></p>
+</li>
+<li>
+<p>incorrect: <code>My Custom Block.json</code></p>
+</li>
+</ul>
+<h2 id="hjson">HJSON</h2>
+<p>Mindustry uses <a href="https://hjson.github.io/">Hjson</a>, which is a superset of the very popular format known as <a href="https://en.wikipedia.org/wiki/JSON">JSON </a>. This means that any valid JSON will work, but you get extra features as well:</p>
+<pre><code># single line comment
+
+// single line comment
+
+/* multiline
+   comment */
+
+key1: &quot;single line string&quot;
+
+key2:
+  '''
+  multiline
+  string
+  '''
+
+key3: [
+  //quotes and commas are optional for strings
+  value1
+  value2
+  value3
+]
+
+key4: {
+  key1: astring
+  key2: 0
+}
+
+//unlike the official HJSON spec, multiple quoteless strings are allowed in the same line in an array
+
+arrayExample: [several, words, that, will, work]
+</code></pre>
+<p>If you don't know any of those words: a serialization language is simply a language which encodes information for a program, and <em>encode</em> means to translate information from one form to another, in this case, to translate text into Java data structures.</p>
+<p>It is worth noting that the 'official' HJSON standard is dead, and contains several serious flaws. The Mindustry HJSON parser uses a slightly modified format that allows quoteless multiline arrays, for example.</p>
+<h2 id="modhjson"><code>mod.hjson</code></h2>
+<p>At the root of your project directory, you must have a <code>mod.hjson</code>, which defines the basic metadata for your project.</p>
+<pre><code>name: &quot;mod-name&quot;
+displayName: &quot;This isn't a mod.&quot;
+author: Yourself
+description: &quot;A short description of your mod.&quot;
+version: &quot;1.0&quot;
+minGameVersion: &quot;160.5&quot;
+dependencies: [ ]
+hidden: false
+</code></pre>
+<ul>
+<li><code>name</code> will be used to reference to your mod, so name it carefully. Should be in kebab-case (no capital letters, spaces are filled with '-') and shouldn't have any color formatting.</li>
+<li><code>displayName</code> this will be used as a display name for the UI, which you can use to add formatting to said name.</li>
+<li><code>description</code> of the mod will be rendered in the ingame mod manager, so keep it short and to the point.</li>
+<li><code>dependencies</code> is optional, if you want to know more about that, go to the <a href="#dependencies">dependencies</a> section.</li>
+<li><code>minGameVersion</code> is the minimum build version of the game. This is <strong>required</strong> to be a number greater than 136.</li>
+<li><code>hidden</code> is whether or not this mod is essential for multiplayer, false by default. Texture packs, JS plugins, etc. should set this to true, so they don't cause version-mismatch conflicts between servers and clients. As a rule of thumb, if your mod creates content it shouldn't be hidden.</li>
+</ul>
+<h2 id="content">Content</h2>
+<p>At the root of your project directory you can have a <code>content/</code> directory. This is where all the JSON/HJSON data goes. Inside of <code>content/</code> you have subdirectories for the various kinds of content; these are the current common ones:</p>
+<ul>
+<li>
+<p><code>content/items/</code> for <a href="#item">items</a>, like <code>copper</code> and <code>surge-alloy</code>;</p>
+</li>
+<li>
+<p><code>content/blocks/</code> for <a href="#block">blocks</a>, like turrets and floors;</p>
+</li>
+<li>
+<p><code>content/liquids/</code> for <a href="#liquid">liquids</a>, like <code>water</code> and <code>slag</code>;</p>
+</li>
+<li>
+<p><code>content/units/</code> for flying or ground <a href="#unittype">units</a>, like <code>eclipse</code> and <code>dagger</code>;</p>
+</li>
+</ul>
+<p>Note that each one of these subdirectories needs a specific content type. The filenames of these files is important, because the stem name of your path <em>(filename without the extension)</em> is used to reference it.</p>
+<p>Furthermore, the files within these <code>content//*</code> directories may be arbitrarily nested into other sub-directories of any name, to help you organize them further, for example:</p>
+<ul>
+<li><code>content/items/metals/iron.hjson</code>, which would respectively create an item named <code>iron</code>.</li>
+</ul>
+<p>The content of these files will tend to look something like this:</p>
+<pre><code>type: TypeOfThing
+name: Name Of Thing
+description: Description of thing.
+# ... more fields here ...
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>Content type of this object.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Displayed name of content.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Displayed description of content.</td>
+</tr>
+</tbody>
+</table>
+<p>Other fields included will be the fields of the type itself.</p>
+<p>As a side note, <code>name</code> and <code>description</code> are not required to be in the json structure. You can define them for any language with <a href="#bundles">Bundles</a>. However, if they are not present in either, the name will default to <code>.-.name</code> and the description will be empty.</p>
+<h2 id="types">Types</h2>
+<p>Types have numerous fields, but the important one is <code>type</code>; this is a special field used by the content parser, that changes which type your object is. <em>A <code>Router</code> type can't be a <code>Turret</code> type</em>, as they're just completely different.</p>
+<p>Types <em>extend</em> each other, so if <code>MissileBulletType</code> extends <code>BasicBulletType</code>, you'll have access to all the fields of <code>BasicBulletType</code> inside of <code>MissileBulletType</code> like <code>damage</code>, <code>lifetime</code> and <code>speed</code>. Fields are case sensitive: <code>hitSize =/= hitsize</code>.</p>
+<p>What you can expect a field to do is up to the specific type; some types do absolutely nothing with their fields, and mostly serve as a base for other types to extend from. One such type is <code>Block</code>.</p>
+<p>In this unit example, the type of the unit is <code>flying</code>. The type of the <code>bullet</code> is <code>BulletType</code>, so you can use <code>MissileBulletType</code>, because <code>MissileBulletType</code> extends <code>BulletType</code>.</p>
+<p>Other unit types include <code>mech</code>, <code>legs</code>, <code>naval</code>, <code>payload</code>, <code>tank</code>, <code>hover</code>, <code>crawl</code>, <code>missile</code> and <code>tether</code>.</p>
+<pre><code>type: flying
+weapons: [
+  {
+    bullet: {
+      type: MissileBulletType
+      damage: 9000
+    }
+  }
+]
+</code></pre>
+<h2 id="tech-tree">Tech Tree</h2>
+<p>Much like <code>type</code>, there exists another field called <code>research</code>, which can go at the root of any content object to place it in the techtree.</p>
+<pre><code>research: duo
+</code></pre>
+<p>This would put your block after <code>duo</code> in the techtree, and to put it after your own mods block you would write your ``, a mod name prefix is only required if you're using the content from another mod.</p>
+<p>Research costs:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>cost</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blocks</td>
+<td><code>60 * researchCostMultiplier + requirements ^ 1.11 * 20 * researchCostMultiplier</code></td>
+<td><code>researchCostMultiplier</code> is a stat that can be set on blocks, default <code>1</code></td>
+</tr>
+<tr>
+<td>units</td>
+<td><code>requirements * researchCostMultiplier</code></td>
+<td><code>researchCostMultiplier</code> defaults to <code>50</code> on <code>UnitType</code></td>
+</tr>
+</tbody>
+</table>
+<p>The cost is then rounded to the nearest 10, 100, 1k, or 100k depending on how large the cost is (rounding isn't always downward).</p>
+<p><code>requirements</code> is the cost of the block or unit. Units use their build cost/upgrade cost for the calculations.</p>
+<p>If you want to set custom research requirements, use this object in place of just a name:</p>
+<pre><code>research: {
+  parent: duo
+  requirements: [
+    copper/100
+  ]
+}
+</code></pre>
+<p>This can be used to override block or unit costs, or make resources need to be researched instead of just having to produce them.</p>
+<h2 id="sprites">Sprites</h2>
+<p>All you need to make sprites, is an image editor that supports transparency <em>(aka: not paint).</em> Block sprites should be <code>32 * size</code>, so a <code>2x2</code> block would require a <code>64x64</code> image. Images must be PNG files with a 32-bit RGBA pixel format.
+<strong>Any other pixel format, such as 16-bit RGBA, may cause Mindustry to crash with a "Pixmap decode error".</strong> You can use the command-line tool <code>file</code> to print information about your sprites:</p>
+<pre><code>file sprites/**.png
+</code></pre>
+<p>If any of them are not 32-bit RGBA formatted, fix them.</p>
+<p>Sprites can simply be dropped in the <code>sprites/</code> subdirectory. The content parser will look through it recursively.
+Images are packed into an "atlas" for efficient for rendering. The first directory in <code>sprites/</code>, e.g. <code>sprites/blocks</code>, determines the page in this atlas that sprites are put in. Putting a block's sprite in the <code>units</code> page is likely to cause lots of lag; thus, you should try to organize things similarly to how the <a href="https://github.com/Anuken/Mindustry/tree/master/core/assets-raw/sprites">vanilla game does</a>.</p>
+<p>Content is going to look for sprites relative to its own name. <code>content/blocks/my-hail.json</code> has the name <code>my-hail</code>, and, similarly <code>sprites/my-hail.png</code> has the name <code>my-hail</code>, so it'll be used by this content.</p>
+<p>Content may look for multiple sprites. <code>my-hail</code> could be a turret, and it could look for the suffix <code>-heat</code> and what this means is it'll look for <code>my-hail-heat</code>.</p>
+<p>You can find all the vanilla sprites here:</p>
+<ul>
+<li><a href="https://github.com/Anuken/Mindustry/tree/master/core/assets-raw/sprites">https://github.com/Anuken/Mindustry/tree/master/core/assets-raw/sprites</a></li>
+</ul>
+<p>Another thing to know about sprites is that some of them are modified by the game. Turrets specifically have a dark gray border added to them, so you must account for that while making your sprites, leaving transparent space around turrets for example: <a href="https://raw.githubusercontent.com/Anuken/Mindustry/master/core/assets-raw/sprites/blocks/turrets/ripple.png">Ripple</a></p>
+<p>To override ingame content sprites, you can simply put them in <code>sprites-override/</code>.
+This removes the <code>-</code> prefix to their id, which allows them to override sprites from vanilla and even other mods.</p>
+<h2 id="sound">Sound</h2>
+<p>Custom sounds can be added through the modding system by dropping them in the <code>sounds/</code> subdirectory. Two formats are supported: <code>ogg</code> and <code>mp3</code>. Note that <code>mp3</code> files cannot loop seamlessly, so try to use <code>ogg</code> whenever possible.</p>
+<p>Just like any other assets, you reference them by the stem of your filenames, so <code>pewpew.ogg</code> and <code>pewpew.mp3</code> can be referenced with <code>pewpew</code> from a field of type <code>Sound</code>.</p>
+<p>Here's a list of built-in sounds:</p>
+<p><code>acceleratorCharge</code> <code>acceleratorConstruct</code> <code>acceleratorLaunch</code> <code>acceleratorLightning1</code> <code>acceleratorLightning2</code> <code>beamHeal</code> <code>beamLustre</code> <code>beamMeltdown</code> <code>beamParallax</code> <code>beamPlasma</code> <code>beamPlasmaSmall</code> <code>blockBreak1</code> <code>blockBreak2</code> <code>blockBreak3</code> <code>blockExplode1</code> <code>blockExplode1Alt</code> <code>blockExplode2</code> <code>blockExplode2Alt</code> <code>blockExplode3</code> <code>blockExplodeElectric</code> <code>blockExplodeElectricBig</code> <code>blockExplodeExplosive</code> <code>blockExplodeExplosiveAlt</code> <code>blockExplodeFlammable</code> <code>blockExplodeWall</code> <code>blockHeal</code> <code>blockPlace1</code> <code>blockPlace2</code> <code>blockPlace3</code> <code>blockRepair</code> <code>blockRotate</code> <code>chargeCorvus</code> <code>chargeLancer</code> <code>chargeVela</code> <code>click</code> <code>coreLand</code> <code>coreLaunch</code> <code>door</code> <code>drillCharge</code> <code>drillImpact</code> <code>explosion</code> <code>explosionAfflict</code> <code>explosionArtillery</code> <code>explosionArtilleryShock</code> <code>explosionArtilleryShockBig</code> <code>explosionCleroi</code> <code>explosionCore</code> <code>explosionCrawler</code> <code>explosionDull</code> <code>explosionMissile</code> <code>explosionNavanax</code> <code>explosionObviate</code> <code>explosionPlasmaSmall</code> <code>explosionQuad</code> <code>explosionReactor</code> <code>explosionReactor2</code> <code>explosionReactorNeoplasm</code> <code>explosionTitan</code> <code>healWave</code> <code>loopBio</code> <code>loopBuild</code> <code>loopCircuit</code> <code>loopCombustion</code> <code>loopConveyor</code> <code>loopCultivator</code> <code>loopCutter</code> <code>loopDifferential</code> <code>loopDrill</code> <code>loopElectricHum</code> <code>loopExtract</code> <code>loopFire</code> <code>loopFlux</code> <code>loopGlow</code> <code>loopGrind</code> <code>loopHover</code> <code>loopHover2</code> <code>loopHum</code> <code>loopMachine</code> <code>loopMachine2</code> <code>loopMachineSpin</code> <code>loopMalign</code> <code>loopMineBeam</code> <code>loopMissileTrail</code> <code>loopPulse</code> <code>loopRegen</code> <code>loopShield</code> <code>loopSmelter</code> <code>loopSpray</code> <code>loopSteam</code> <code>loopTech</code> <code>loopThoriumReactor</code> <code>loopThruster</code> <code>loopUnitBuilding</code> <code>massdriver</code> <code>massdriverReceive</code> <code>mechStep</code> <code>mechStepHeavy</code> <code>mechStepSmall</code> <code>padLand</code> <code>padLaunch</code> <code>payloadDrop1</code> <code>payloadDrop2</code> <code>payloadDrop3</code> <code>payloadPickup</code> <code>plantBreak</code> <code>rain</code> <code>rockBreak</code> <code>shieldBreak</code> <code>shieldBreakSmall</code> <code>shieldHit</code> <code>shieldWave</code> <code>shipMove</code> <code>shipMoveBig</code> <code>shockBullet</code> <code>shockwaveTower</code> <code>shoot</code> <code>shootAfflict</code> <code>shootAlpha</code> <code>shootArc</code> <code>shootArtillery</code> <code>shootArtillerySap</code> <code>shootArtillerySapBig</code> <code>shootArtillerySmall</code> <code>shootAtrax</code> <code>shootAvert</code> <code>shootBeamPlasma</code> <code>shootBeamPlasmaSmall</code> <code>shootBreach</code> <code>shootBreachCarbide</code> <code>shootCleroi</code> <code>shootCollaris</code> <code>shootConquer</code> <code>shootCorvus</code> <code>shootCyclone</code> <code>shootDiffuse</code> <code>shootDisperse</code> <code>shootDuo</code> <code>shootEclipse</code> <code>shootElude</code> <code>shootEnergyField</code> <code>shootFlame</code> <code>shootFlamePlasma</code> <code>shootForeshadow</code> <code>shootFuse</code> <code>shootHorizon</code> <code>shootLancer</code> <code>shootLaser</code> <code>shootLocus</code> <code>shootMalign</code> <code>shootMeltdown</code> <code>shootMerui</code> <code>shootMissile</code> <code>shootMissileLarge</code> <code>shootMissileLong</code> <code>shootMissilePlasma</code> <code>shootMissilePlasmaShort</code> <code>shootMissileShort</code> <code>shootMissileSmall</code> <code>shootNavanax</code> <code>shootOmura</code> <code>shootPayload</code> <code>shootPulsar</code> <code>shootQuad</code> <code>shootReign</code> <code>shootRetusa</code> <code>shootRipple</code> <code>shootSalvo</code> <code>shootSap</code> <code>shootScathe</code> <code>shootScatter</code> <code>shootScepter</code> <code>shootScepterSecondary</code> <code>shootSegment</code> <code>shootSmite</code> <code>shootSpectre</code> <code>shootStell</code> <code>shootSublimate</code> <code>shootTank</code> <code>shootToxopidShotgun</code> <code>stepMud</code> <code>stepWater</code> <code>tankMove</code> <code>tankMoveHeavy</code> <code>tankMoveSmall</code> <code>uiBack</code> <code>uiButton</code> <code>uiChat</code> <code>uiFavorite</code> <code>uiNotify</code> <code>uiUnlock</code> <code>unitCreate</code> <code>unitCreateBig</code> <code>unitExplode1</code> <code>unitExplode2</code> <code>unitExplode3</code> <code>walkerStep</code> <code>walkerStepSmall</code> <code>walkerStepTiny</code> <code>waveSpawn</code> <code>wind</code> <code>wind2</code> <code>wind3</code> <code>windHowl</code> <code>wreckFall</code> <code>wreckFallBig</code> <code>none</code> <code>unset</code></p>
+<h2 id="dependencies">Dependencies</h2>
+<p>You can add dependencies to your mod by simple adding other mods name in your <code>mod.json</code>:</p>
+<pre><code>dependencies: [
+  other-mod-name
+  not-a-mod
+]
+</code></pre>
+<p>The name of dependencies are lower-cased and spaces are replaced with <code>-</code> hyphens, for example <code>Other MOD NamE</code> becomes <code>other-mod-name</code>.</p>
+<p>To reference the other mods assets, you must prefix the asset with the other mods name:</p>
+<ul>
+<li>
+<p><code>other-mod-name-not-copper</code> would reference <code>not-copper</code> in <code>other-mod-name</code></p>
+</li>
+<li>
+<p><code>other-mod-name-angry-dagger</code> would reference <code>angry-dagger</code> in <code>other-mod-name</code></p>
+</li>
+<li>
+<p><code>not-a-mod-angry-dagger</code> would reference <code>angry-dagger</code> in <code>not-a-mod</code></p>
+</li>
+</ul>
+<h2 id="bundles">Bundles</h2>
+<p>An optional addition to your mod is called bundles. The main use of bundles are give translations of your content, but there's no reason you couldn't use them in English. These are plaintext files which go in the <code>bundles/</code> subdirectory, and they should be named something like <code>bundle_ru.properties</code> (for Russian).</p>
+<p>The contents of this file is very simple:</p>
+<pre><code>block.example-mod-silver-wall.name = Серебряная Стена
+block.example-mod-silver-wall.description = Стена из серебра.
+</code></pre>
+<p>If you've read the first few sections of this guide, you'll spot it right away:</p>
+<ul>
+<li>
+<p><code>.-.name</code></p>
+</li>
+<li>
+<p><code>.-.description</code></p>
+</li>
+</ul>
+<p>With your own custom bundle lines for use in scripts you can use whatever key you like:</p>
+<ul>
+<li>
+<p><code>message.egg = Eat your eggs</code></p>
+</li>
+<li>
+<p><code>randomline = Random Line</code></p>
+</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>mod/content names are lowercased and hyphen separated.</li>
+</ul>
+<p>List of content types:</p>
+<p><code>item</code> <code>block</code> <code>bullet</code> <code>liquid</code> <code>status</code> <code>unit</code> <code>weather</code> <code>sector</code> <code>error</code> <code>planet</code> <code>team</code> <code>unitCommand</code> <code>unitStance</code></p>
+<p>List of bundle suffixes relative to languages:</p>
+<p><code>en</code> <code>be</code> <code>bg</code> <code>ca</code> <code>cs</code> <code>da</code> <code>de</code> <code>es</code> <code>et</code> <code>eu</code> <code>fi</code> <code>fil</code> <code>fr</code> <code>hu</code> <code>id_ID</code> <code>it</code> <code>ja</code> <code>ko</code> <code>lt</code> <code>nl</code> <code>nl_BE</code> <code>pl</code> <code>pt_BR</code> <code>pt_PT</code> <code>ro</code> <code>ru</code> <code>sr</code> <code>sv</code> <code>th</code> <code>tk</code> <code>tr</code> <code>uk_UA</code> <code>vi</code> <code>zh_CN</code> <code>zh_TW</code></p>
+<h2 id="github">GitHub</h2>
+<p>Once you have a mod of some kind, you'll want to actually share it, and you may even want to work with other people on it, and to do that you can use <a href="https://github.com/">GitHub</a>. If you don't know what Git (or GitHub) is at all, then you should look into <a href="https://desktop.github.com/">GitHub Desktop</a>, otherwise simply use your favorite command line tool or text editor plugin.</p>
+<p>All you need understand is how to open repositories on GitHub, stage and commit changes in your local repository, and push changes to the GitHub repository. Once your project is on GitHub, there are three ways to share it:</p>
+<ul>
+<li>
+<p>with the endpoint, for example <code>Anuken/MindustryJavaModTemplate</code>, which could then be typed in the ingame GitHub interface, and that would download it;</p>
+</li>
+<li>
+<p>with the zip file, for example <code>https://github.com/Anuken/MindustryJavaModTemplate/archive/master.zip</code>, which would download the repository as a zip file, and put in mod directory (unzipping is not required);</p>
+</li>
+<li>
+<p>add the topic/tag <code>mindustry-mod</code> on your repository, which should add it to the topic search and the <a href="https://github.com/Anuken/MindustryMods">Mod scraper</a>.</p>
+</li>
+</ul>
+<h2 id="mod-releases">Mod Releases</h2>
+<p>Mindustry downloads mods as follows:</p>
+<ul>
+<li>
+<p>If the mod is Java-based, a release with a valid JAR file is required.</p>
+</li>
+<li>
+<p>The most recent Github release matching the game's version is prioritized.</p>
+</li>
+<li>
+<p>Setting the target game version for a release can be done by putting it in the release name in square brackets.</p>
+</li>
+<li>
+<p>For example, putting <code>Frog Mod [v160]</code> will make the release target build 160, and any revision, such as 160.3.</p>
+</li>
+<li>
+<p>Writing <code>[v160.3]</code> (specifying a revision) will make it <strong>only</strong> target that revision; it will not be targeted to 160.1 or 160.4.</p>
+</li>
+<li>
+<p>If there are no releases targeting the game version, the newest release is downloaded.</p>
+</li>
+<li>
+<p>For JS and JSON mods, the latest commit on the main branch is downloaded.</p>
+</li>
+<li>
+<p>This makes it simpler to download and manage these mods for beginners.</p>
+</li>
+<li>
+<p>It is recommended to have a separate branch for active development.</p>
+</li>
+<li>
+<p>For non-Java mods, releases without a matching target game version tag in their title are ignored.</p>
+</li>
+<li>
+<p>For example, if you have a JSON/JS mod, and the user is using Mindustry <code>Build 160</code>, it will only download a release if it has <code>[v160]</code> at the end of its title. Otherwise, it will download the latest commit on the main branch.</p>
+</li>
+</ul>
+<p>Practical example: Let's say I want to have a mod that has both v8 and v9 versions. Here's how I would do it:
+- Create a v8 branch with the code you want to be v8-specific.
+- Make sure <code>minGameVersion: 160</code> is in that branch's <code>mod.hjson</code>.
+- Create a release with the name <code>My Spectacular Mod [v160]</code>, and upload the JAR built from the v8 source, targeting the v8 branch.
+  - Everyone running Mindustry v8 (<code>build 160</code>) will download this release instead of the latest one.
+- For the v9 release, simply create a release as you would normally, with no version tags in the title, and include <code>minGameVersion: 161</code> (or whichever build you are targeting) in your <code>mod.hjson</code>
+  - Anyone who is <em>not</em> on <code>build 160</code> will automatically download this version instead upon installation.</p>
+<p>For updates:</p>
+<ul>
+<li>
+<p>If you have a release that matches the Mindustry version the game is running, it will check for updates based on the <code>version</code> in your <code>mod.hjson</code> in the repository at the release tag.</p>
+</li>
+<li>
+<p>Otherwise, if there are no exact matching releases, it checks based on the <code>version</code> in the <code>mod.hjson</code> <em>at the latest commit of your repository.</em></p>
+</li>
+<li>
+<p>Version strings should be valid <a href="https://semver.org/">semver</a>. Essentially: three numbers separated by periods, e.g. <code>1.3.5</code>. If you write versions in other formats, the update checker might get confused. Whatever you do, do <strong>not</strong> write versions in wacky formats like <code>build-123-1.5.6 beta-3</code>.</p>
+</li>
+<li>
+<p>If you don't update your <code>mod.hjson</code>'s version string when you make a release, the game won't know that an update is an available.</p>
+</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<ul>
+<li>
+<p><code>time</code> in game is calculated through <code>ticks</code>; <code>ticks</code>, <em>sometimes called <code>frames</code>,</em> are 1/60th of a second;</p>
+</li>
+<li>
+<p><code>tilesize</code> is 8 world units internally; most values such as hitbox sizes are measured in these world units;</p>
+</li>
+<li>
+<p>to calculate range out of <code>lifetime</code> and <code>speed</code>, you can do <code>lifetime * speed = range</code>;</p>
+</li>
+<li>
+<p><code>NullPointerException</code> is an error message that indicates a field is null and shouldn't be null, meaning one of the required fields may be missing;</p>
+</li>
+<li>
+<p><em>bleeding-edge</em> is latest the development version of Mindustry; specifically, it refers to the latest commit on the Github master branch. Changes on bleeding-edge usually make it into Mindustry in the next release.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Everyone Create Community（EOCC共创社区）
+    </div>
+  
+    <div class="md-copyright__version">
+      <span class="md-copyright__version-label">文档站版本</span>
+      <span class="md-sidebar-meta__ver-num">v1.0.3</span>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
