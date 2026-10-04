@@ -795,7 +795,46 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#5-net-8-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 安装 .NET 8 SDK（参与项目开发）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 安装 .NET 8 SDK（参与项目开发）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关于版本号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本机环境记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见问题
@@ -49832,6 +49871,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../about/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自愿赞助
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../about/notes/" class="md-nav__link">
         
   
@@ -49976,7 +50043,46 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#5-net-8-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 安装 .NET 8 SDK（参与项目开发）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 安装 .NET 8 SDK（参与项目开发）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关于版本号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本机环境记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见问题
@@ -50047,7 +50153,65 @@ cd eoccc.github.io
 <pre><code class="language-bash">mkdocs serve
 </code></pre>
 <p>看到 <code>Serving on http://127.0.0.1:8000/</code> 即成功，浏览器打开该地址。此后修改任何页面内容并保存，页面自动刷新。</p>
-<h2 id="_2">常见问题</h2>
+<h2 id="5-net-8-sdk">5. 安装 .NET 8 SDK（参与项目开发）</h2>
+<p>参与社区项目开发（后端服务、工具链等）需要 .NET 8 SDK。<strong>仅撰写文档不需要安装</strong>，可跳过本节。</p>
+<p>推荐用微软官方源安装，避免系统自带旧包版本：</p>
+<pre><code class="language-bash"># 导入微软 apt 密钥与软件源（Ubuntu / Debian）
+wget -q https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O /tmp/packages-microsoft-prod.deb
+sudo dpkg -i /tmp/packages-microsoft-prod.deb
+sudo apt-get update
+
+# 只安装 SDK，不升级系统其他软件包
+sudo apt-get install -y --no-install-recommends dotnet-sdk-8.0
+</code></pre>
+<p>验证：</p>
+<pre><code class="language-bash">dotnet --list-sdks
+dotnet --version
+</code></pre>
+<h3 id="_2">关于版本号</h3>
+<p>若机器上同时存在多个 SDK（例如 .NET 9），<code>dotnet --version</code> 返回的是<strong>最高版本</strong>，而不是 8.x——这属于正常行为，.NET 允许多个 SDK 并存。要在项目中固定使用 8.x，在项目根目录放置 <code>global.json</code>：</p>
+<pre><code class="language-json">{
+  &quot;sdk&quot;: { &quot;version&quot;: &quot;8.0.425&quot;, &quot;rollForward&quot;: &quot;latestPatch&quot; }
+}
+</code></pre>
+<p>此时 <code>dotnet --version</code> 输出 <code>8.0.425</code>。</p>
+<h3 id="_3">本机环境记录</h3>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统</td>
+<td>Ubuntu 24.04（amd64）</td>
+</tr>
+<tr>
+<td>软件源</td>
+<td>packages.microsoft.com/debian/12/prod（bookworm）</td>
+</tr>
+<tr>
+<td>安装包</td>
+<td>dotnet-sdk-8.0</td>
+</tr>
+<tr>
+<td>SDK 版本</td>
+<td>8.0.425</td>
+</tr>
+<tr>
+<td>运行时</td>
+<td>Microsoft.NETCore.App 8.0.31、Microsoft.AspNetCore.App 8.0.31</td>
+</tr>
+<tr>
+<td>并存的 SDK</td>
+<td>9.0.315（安装前已存在，本次未改动）</td>
+</tr>
+</tbody>
+</table>
+<p>安装过程只拉取 <code>dotnet-sdk-8.0</code> 及其依赖（runtime、targeting-pack、apphost-pack 等），未升级系统其他软件包。</p>
+<h2 id="_4">常见问题</h2>
 <table>
 <thead>
 <tr>

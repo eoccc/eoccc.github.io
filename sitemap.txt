@@ -4,6 +4,7 @@ https://docs.git.eocc.top/about/feedback/
 https://docs.git.eocc.top/about/license/
 https://docs.git.eocc.top/about/notes/
 https://docs.git.eocc.top/about/site-info/
+https://docs.git.eocc.top/about/support/
 https://docs.git.eocc.top/dev/
 https://docs.git.eocc.top/dev/contribute/
 https://docs.git.eocc.top/dev/flowchart-guide/
