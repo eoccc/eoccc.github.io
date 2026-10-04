@@ -1,0 +1,19 @@
+# <img src="../../../../../../ext/img/mindustry/liquid-cryofluid.png" alt="">冷冻液
+
+*"在反应堆、炮塔与工厂中用作冷却液。"*
+
+| 属性 | 值 |
+|---|---|
+| 爆炸性 | 0 % |
+| 可燃性 | 0 % |
+| 热容量 | 90 % |
+| 黏度 | 50 % |
+| 温度 | 25 % |
+| 内部名称 | `cryofluid` |
+| 颜色 | `6ecdecff` |
+
+##### 产出于
+[<img src="../../../../../../ext/img/mindustry/block-cryofluid-mixer-ui.png" alt="">](/wiki/content/blocks/crafting/189-cryofluid-mixer) [<img src="../../../../../../ext/img/mindustry/block-mechanical-pump-ui.png" alt="">](/wiki/content/blocks/liquid/283-mechanical-pump) [<img src="../../../../../../ext/img/mindustry/block-rotary-pump-ui.png" alt="">](/wiki/content/blocks/liquid/284-rotary-pump) [<img src="../../../../../../ext/img/mindustry/block-impulse-pump-ui.png" alt="">](/wiki/content/blocks/liquid/285-impulse-pump) [<img src="../../../../../../ext/img/mindustry/block-reinforced-pump-ui.png" alt="">](/wiki/content/blocks/liquid/295-reinforced-pump)
+
+##### 用于
+[<img src="../../../../../../ext/img/mindustry/block-force-projector-ui.png" alt="">](/wiki/content/blocks/effect/249-force-projector) [<img src="../../../../../../ext/img/mindustry/block-differential-generator-ui.png" alt="">](/wiki/content/blocks/power/311-differential-generator) [<img src="../../../../../../ext/img/mindustry/block-thorium-reactor-ui.png" alt="">](/wiki/content/blocks/power/315-thorium-reactor) [<img src="../../../../../../ext/img/mindustry/block-impact-reactor-ui.png" alt="">](/wiki/content/blocks/power/316-impact-reactor) [<img src="../../../../../../ext/img/mindustry/block-duo-ui.png" alt="">](/wiki/content/blocks/turret/349-duo) [<img src="../../../../../../ext/img/mindustry/block-scatter-ui.png" alt="">](/wiki/content/blocks/turret/350-scatter) [<img src="../../../../../../ext/img/mindustry/block-scorch-ui.png" alt="">](/wiki/content/blocks/turret/351-scorch) [<img src="../../../../../../ext/img/mindustry/block-hail-ui.png" alt="">](/wiki/content/blocks/turret/352-hail) [<img src="../../../../../../ext/img/mindustry/block-wave-ui.png" alt="">](/wiki/content/blocks/turret/353-wave) [<img src="../../../../../../ext/img/mindustry/block-lancer-ui.png" alt="">](/wiki/content/blocks/turret/354-lancer) [<img src="../../../../../../ext/img/mindustry/block-arc-ui.png" alt="">](/wiki/content/blocks/turret/355-arc) [<img src="../../../../../../ext/img/mindustry/block-swarmer-ui.png" alt="">](/wiki/content/blocks/turret/357-swarmer) [<img src="../../../../../../ext/img/mindustry/block-salvo-ui.png" alt="">](/wiki/content/blocks/turret/358-salvo) [<img src="../../../../../../ext/img/mindustry/block-tsunami-ui.png" alt="">](/wiki/content/blocks/turret/360-tsunami) [<img src="../../../../../../ext/img/mindustry/block-fuse-ui.png" alt="">](/wiki/content/blocks/turret/361-fuse) [<img src="../../../../../../ext/img/mindustry/block-ripple-ui.png" alt="">](/wiki/content/blocks/turret/362-ripple) [<img src="../../../../../../ext/img/mindustry/block-cyclone-ui.png" alt="">](/wiki/content/blocks/turret/363-cyclone) [<img src="../../../../../../ext/img/mindustry/block-foreshadow-ui.png" alt="">](/wiki/content/blocks/turret/364-foreshadow) [<img src="../../../../../../ext/img/mindustry/block-spectre-ui.png" alt="">](/wiki/content/blocks/turret/365-spectre) [<img src="../../../../../../ext/img/mindustry/block-meltdown-ui.png" alt="">](/wiki/content/blocks/turret/366-meltdown) [<img src="../../../../../../ext/img/mindustry/block-exponential-reconstructor-ui.png" alt="">](/wiki/content/blocks/units/382-exponential-reconstructor) [<img src="../../../../../../ext/img/mindustry/block-tetrative-reconstructor-ui.png" alt="">](/wiki/content/blocks/units/383-tetrative-reconstructor) [<img src="../../../../../../ext/img/mindustry/block-repair-turret-ui.png" alt="">](/wiki/content/blocks/units/385-repair-turret) [<img src="../../../../../../ext/img/mindustry/block-hyper-processor-ui.png" alt="">](/wiki/content/blocks/logic/434-hyper-processor)

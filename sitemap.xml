@@ -181,6 +181,36 @@
          <priority>0.8</priority>
     </url>
     <url>
+         <loc>https://docs.git.eocc.top/wiki/langs/</loc>
+         <lastmod>2026-10-05</lastmod>
+         <changefreq>weekly</changefreq>
+         <priority>0.7</priority>
+    </url>
+    <url>
+         <loc>https://docs.git.eocc.top/wiki/langs/VERIFICATION/</loc>
+         <lastmod>2026-10-05</lastmod>
+         <changefreq>monthly</changefreq>
+         <priority>0.6</priority>
+    </url>
+    <url>
+         <loc>https://docs.git.eocc.top/wiki/langs/compare/</loc>
+         <lastmod>2026-10-05</lastmod>
+         <changefreq>monthly</changefreq>
+         <priority>0.6</priority>
+    </url>
+    <url>
+         <loc>https://docs.git.eocc.top/wiki/langs/hjson/</loc>
+         <lastmod>2026-10-05</lastmod>
+         <changefreq>monthly</changefreq>
+         <priority>0.6</priority>
+    </url>
+    <url>
+         <loc>https://docs.git.eocc.top/wiki/langs/json/</loc>
+         <lastmod>2026-10-05</lastmod>
+         <changefreq>monthly</changefreq>
+         <priority>0.6</priority>
+    </url>
+    <url>
          <loc>https://docs.git.eocc.top/wiki/mindustry/CHANGELOG/</loc>
          <lastmod>2026-10-05</lastmod>
          <changefreq>monthly</changefreq>

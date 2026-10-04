@@ -6,6 +6,22 @@
   },
   "releases": [
     {
+      "version": "v1.0.4",
+      "title": "v1.0.4 · 文档站版本发布",
+      "summary": "Mindustry 中文板块汉化补齐（属性表格 4669 处 + 深层文案 650 种）；新增「编程语言」分支（JSON/HJSON 深度讲解 + 3 张 SVG 配图）；迁移上游全部 5180 个图片资源；修复更新日志页正文丢失；新增 sitemap 生成脚本与 Bing 站点验证。",
+      "type": "release",
+      "author": "AtomCode",
+      "publish_time": "2026-10-05 03:30:00",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20261005v104",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/eoccc/eoccc.github.io"
+      }
+    },
+    {
       "version": "v1.24-2247",
       "title": "功能更新",
       "summary": "删除了五个内容\r\n添加了两个内容",
