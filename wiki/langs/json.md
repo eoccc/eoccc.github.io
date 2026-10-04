@@ -8,7 +8,7 @@ Mindustry 的模组内容与数据补丁都以 JSON 为基准格式。
 
 JSON 的顶层是一个**值**，实践中通常是一个对象。对象由若干「键值对」组成，值又可以是对象或数组，如此层层嵌套，构成一棵树。
 
-<img src="assets/json-structure.svg" alt="JSON 结构示意：对象包含键值对，值可以是字符串、数字、布尔、null、对象或数组">
+<img src="/wiki/langs/assets/json-structure.svg" alt="JSON 结构示意：对象包含键值对，值可以是字符串、数字、布尔、null、对象或数组">
 
 ## 两种容器
 

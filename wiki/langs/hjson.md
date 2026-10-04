@@ -10,13 +10,13 @@ JSON 的严格语法适合机器生成，但由人手书写时体验不佳——
 
 HJSON 针对这一点做了取舍：**解析器更宽容，书写者更轻松**，代价是格式本身不再唯一（同一份数据可以有多种写法）。
 
-<img src="assets/hjson-features.svg" alt="HJSON 相对 JSON 放宽的四个主要方面：注释、无引号键名、省略逗号、多行字符串">
+<img src="/wiki/langs/assets/hjson-features.svg" alt="HJSON 相对 JSON 放宽的四个主要方面：注释、无引号键名、省略逗号、多行字符串">
 
 ## 与 JSON 的关系
 
 这是理解 HJSON 的关键：
 
-<img src="assets/json-superset.svg" alt="JSON 与 HJSON 的集合关系：JSON 是 HJSON 的子集，合法 JSON 同时是合法 HJSON">
+<img src="/wiki/langs/assets/json-superset.svg" alt="JSON 与 HJSON 的集合关系：JSON 是 HJSON 的子集，合法 JSON 同时是合法 HJSON">
 
 - **合法 JSON 一定是合法 HJSON**——可以直接交给 HJSON 解析器
 - HJSON 额外允许若干宽松写法（下面详述）
