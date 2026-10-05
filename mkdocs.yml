@@ -6,6 +6,11 @@ copyright: © Everyone Create Community（EOCC共创社区）
 docs_dir: docs
 site_dir: site
 
+# release/update/ 子站的日志源文件由前端 fetch 直接读取仓库中的原始 .md，
+# 无需构建为页面；排除后避免生成无用的同名 HTML 目录（如 md/20261005120000/）。
+exclude_docs: |
+  release/update/md/
+
 theme:
   name: material
   language: zh
@@ -1763,5 +1768,5 @@ nav:
       - 版权归属: about/license.md
 
 extra:
-  site_version: "v1.0.4.1"
+  site_version: "v1.1.0"
   repo_url: "https://github.com/eoccc/eoccc.github.io"

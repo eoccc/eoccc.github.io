@@ -4,8 +4,8 @@
 
 | 项目 | 值 |
 |---|---|
-| 文档站版本 | <span class="md-sidebar-meta__ver-num">v1.0.4.1</span> |
-| 最后更新 | 2026-10-04 |
+| 文档站版本 | <span class="md-sidebar-meta__ver-num">v1.1.0</span> |
+| 最后更新 | 2026-10-05 |
 
 ## 数据来源
 
