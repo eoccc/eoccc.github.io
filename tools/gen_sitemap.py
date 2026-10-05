@@ -42,7 +42,7 @@ DEFAULT_ROOT = "."
 SKIP_DIRS = {
     ".git", ".github", ".atomcode", "node_modules", "assets",
     "search", "css", "js", "img", "ext", "data", "overrides", "docs",
-    "drafts", "draft", "tmp", "temp", "build", "dist", "site",
+    "inbox", "drafts", "draft", "tmp", "temp", "build", "dist", "site",
 }
 
 # 需要跳过的具体文件名

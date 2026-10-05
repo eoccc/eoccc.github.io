@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "id": "template",
+  "title": "投稿标题（会成为页面的 # 一级标题）",
+  "author": "你的昵称",
+  "date": "2026-10-06",
+  "summary": "一句话说明这篇写了什么，建议 40 字以内，会显示在列表与搜索摘要中。",
+  "target": "wiki",
+  "nav": ["Wiki", "社区投稿", "投稿标题"],
+  "tags": ["教程", "入门"],
+  "files": ["index.md"],
+  "assets": [],
+  "license": "CC BY-SA 4.0",
+  "status": "draft",
+  "notes": "给维护者的补充说明，例如排版要求、希望的上线时间；没有可留空字符串。"
+}

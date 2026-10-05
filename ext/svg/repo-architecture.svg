@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" width="960" height="580" role="img"
-     aria-label="EOCC 文档站分层架构：Markdown 内容源经 MkDocs 构建为纯静态 HTML，再由手写资源增强后分发到 GitHub Pages 与自定义域名">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" width="960" height="700" role="img"
+     aria-label="EOCC 文档站分层架构：投稿区的 Markdown 与索引文件进入内容源，经 MkDocs 构建为纯静态 HTML，再由手写资源增强后分发到 GitHub Pages 与自定义域名">
   <title>EOCC 文档站分层架构</title>
-  <desc>架构自上而下分五层：内容源层（docs/ 下 1665 篇 Markdown）、构建层（mkdocs.yml 与 overrides/，MkDocs 1.6.1 加 Material 9.7.7 锁定版本）、产物层（纯静态 HTML、搜索索引与 sitemap）、增强层（css、js、ext、img、data 手写资源）、分发层（GitHub Pages 加 CNAME 指向 docs.66131466.xyz，Cloudflare 提供 CDN 与证书）。</desc>
+  <desc>架构自上而下分六层。投稿层（inbox/）接收无需本地环境的投稿，只需 index.json 与 Markdown；内容源层（docs/）共 1665 篇 Markdown；构建层由 mkdocs.yml 与 overrides/ 驱动，MkDocs 1.6.1 加 Material 9.7.7 锁定版本；产物层输出纯静态 HTML、搜索索引与 sitemap；增强层存放手写的 css、js、ext、img、data 资源；分发层由 GitHub Pages 加 CNAME 指向 docs.66131466.xyz，Cloudflare 提供 CDN 与证书。</desc>
 
   <defs>
     <marker id="archArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
@@ -10,89 +10,110 @@
     </marker>
   </defs>
 
-  <!-- ── 1 内容源层 ─────────────────────────────────────────── -->
-  <circle cx="40" cy="84" r="16" fill="#5b8def"/>
+  <!-- ── 0 投稿层 ──────────────────────────────────────────── -->
+  <circle cx="40" cy="84" r="16" fill="#4a7fe0"/>
   <text x="40" y="89" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#ffffff">1</text>
-  <rect x="72" y="44" width="872" height="80" rx="10" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
+        font-size="14" font-weight="700" fill="#ffffff">0</text>
+  <rect x="72" y="44" width="872" height="80" rx="10" fill="#ffffff" stroke="#4a7fe0" stroke-width="2"/>
   <text x="96" y="74" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#5b8def">内容源层 · Markdown 单一来源</text>
+        font-size="14" font-weight="700" fill="#4a7fe0">投稿层 · 零门槛入口（inbox/）</text>
   <text x="96" y="94" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">docs/ 下 1665 篇 Markdown —— 全站唯一的内容来源，改内容即改站点</text>
+        font-size="11.5" fill="#8892a6">投稿者只需写 Markdown 并填写 index.json 索引，放进 inbox/&lt;投稿 id&gt;/ 即可</text>
   <text x="96" y="112" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">双语 Wiki 1629 页 · 开发者文档 15 页 · 常见问题 10 页 · 关于本站 6 页</text>
-  <rect x="756" y="70" width="164" height="28" rx="14" fill="#5b8def" opacity="0.12"/>
+        font-size="11.5" fill="#8892a6">无需安装 Python、MkDocs，无需懂导航语法与构建命令；网页上传或 PR 均可提交</text>
+  <rect x="756" y="70" width="164" height="28" rx="14" fill="#4a7fe0" opacity="0.12"/>
   <text x="838" y="89" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" font-weight="700" fill="#5b8def">纯文本 · 可 diff</text>
+        font-size="11.5" font-weight="700" fill="#4a7fe0">纯文本交付</text>
 
   <line x1="508" y1="128" x2="508" y2="142" stroke="#8892a6" stroke-width="2" marker-end="url(#archArrow)"/>
 
-  <!-- ── 2 构建层 ──────────────────────────────────────────── -->
-  <circle cx="40" cy="186" r="16" fill="#6f7ae5"/>
+  <!-- ── 1 内容源层 ────────────────────────────────────────── -->
+  <circle cx="40" cy="186" r="16" fill="#5b8def"/>
   <text x="40" y="191" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#ffffff">2</text>
-  <rect x="72" y="146" width="872" height="80" rx="10" fill="#ffffff" stroke="#6f7ae5" stroke-width="2"/>
+        font-size="14" font-weight="700" fill="#ffffff">1</text>
+  <rect x="72" y="146" width="872" height="80" rx="10" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
   <text x="96" y="176" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#6f7ae5">构建层 · 一次构建产出全站</text>
+        font-size="14" font-weight="700" fill="#5b8def">内容源层 · Markdown 单一来源</text>
   <text x="96" y="196" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">mkdocs.yml 声明站点信息、导航树与 Markdown 扩展；overrides/ 定制页眉与版权</text>
+        font-size="11.5" fill="#8892a6">docs/ 下 1665 篇 Markdown —— 全站唯一的内容来源，改内容即改站点</text>
   <text x="96" y="214" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">MkDocs 1.6.1 + Material for MkDocs 9.7.7，版本锁定以保证产物逐字可复现</text>
-  <rect x="756" y="172" width="164" height="28" rx="14" fill="#6f7ae5" opacity="0.12"/>
+        font-size="11.5" fill="#8892a6">双语 Wiki 1629 页 · 开发者文档 15 页 · 常见问题 10 页 · 关于本站 6 页</text>
+  <rect x="756" y="172" width="164" height="28" rx="14" fill="#5b8def" opacity="0.12"/>
   <text x="838" y="191" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" font-weight="700" fill="#6f7ae5">全量构建约 850 秒</text>
+        font-size="11.5" font-weight="700" fill="#5b8def">纯文本 · 可 diff</text>
 
   <line x1="508" y1="230" x2="508" y2="244" stroke="#8892a6" stroke-width="2" marker-end="url(#archArrow)"/>
 
-  <!-- ── 3 产物层 ──────────────────────────────────────────── -->
-  <circle cx="40" cy="288" r="16" fill="#7f6fe0"/>
+  <!-- ── 2 构建层 ──────────────────────────────────────────── -->
+  <circle cx="40" cy="288" r="16" fill="#6f7ae5"/>
   <text x="40" y="293" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#ffffff">3</text>
-  <rect x="72" y="248" width="872" height="80" rx="10" fill="#ffffff" stroke="#7f6fe0" stroke-width="2"/>
+        font-size="14" font-weight="700" fill="#ffffff">2</text>
+  <rect x="72" y="248" width="872" height="80" rx="10" fill="#ffffff" stroke="#6f7ae5" stroke-width="2"/>
   <text x="96" y="278" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#7f6fe0">产物层 · 纯静态 HTML</text>
+        font-size="14" font-weight="700" fill="#6f7ae5">构建层 · 一次构建产出全站</text>
   <text x="96" y="298" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">目录路由页面 + assets/ 主题资源 + search/search_index.json 全站搜索索引</text>
+        font-size="11.5" fill="#8892a6">mkdocs.yml 声明站点信息、导航树与 Markdown 扩展；overrides/ 定制页眉与版权</text>
   <text x="96" y="316" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">tools/gen_sitemap.py 另行生成带 changefreq / priority 的 sitemap.xml</text>
-  <rect x="756" y="274" width="164" height="28" rx="14" fill="#7f6fe0" opacity="0.12"/>
+        font-size="11.5" fill="#8892a6">MkDocs 1.6.1 + Material for MkDocs 9.7.7，版本锁定以保证产物逐字可复现</text>
+  <rect x="756" y="274" width="164" height="28" rx="14" fill="#6f7ae5" opacity="0.12"/>
   <text x="838" y="293" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" font-weight="700" fill="#7f6fe0">零后端 · 零数据库</text>
+        font-size="11.5" font-weight="700" fill="#6f7ae5">全量构建约 850 秒</text>
 
   <line x1="508" y1="332" x2="508" y2="346" stroke="#8892a6" stroke-width="2" marker-end="url(#archArrow)"/>
 
-  <!-- ── 4 增强层 ──────────────────────────────────────────── -->
-  <circle cx="40" cy="390" r="16" fill="#9a6fd0"/>
+  <!-- ── 3 产物层 ──────────────────────────────────────────── -->
+  <circle cx="40" cy="390" r="16" fill="#7f6fe0"/>
   <text x="40" y="395" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#ffffff">4</text>
-  <rect x="72" y="350" width="872" height="80" rx="10" fill="#ffffff" stroke="#9a6fd0" stroke-width="2"/>
+        font-size="14" font-weight="700" fill="#ffffff">3</text>
+  <rect x="72" y="350" width="872" height="80" rx="10" fill="#ffffff" stroke="#7f6fe0" stroke-width="2"/>
   <text x="96" y="380" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#9a6fd0">增强层 · 手写资源随产物落地</text>
+        font-size="14" font-weight="700" fill="#7f6fe0">产物层 · 纯静态 HTML</text>
   <text x="96" y="400" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">css/ 品牌样式与 PC 抽屉导航 · js/ 版本检测与图片放大 · data/site-info.json 站点版本</text>
+        font-size="11.5" fill="#8892a6">目录路由页面 + assets/ 主题资源 + search/search_index.json 全站搜索索引</text>
   <text x="96" y="418" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">ext/svg/ 自绘示意图 · ext/img/ 素材库 · img/user/ 成员头像 · overrides/ 主题模板</text>
-  <rect x="756" y="376" width="164" height="28" rx="14" fill="#9a6fd0" opacity="0.12"/>
+        font-size="11.5" fill="#8892a6">tools/gen_sitemap.py 另行生成带 changefreq / priority 的 sitemap.xml</text>
+  <rect x="756" y="376" width="164" height="28" rx="14" fill="#7f6fe0" opacity="0.12"/>
   <text x="838" y="395" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" font-weight="700" fill="#9a6fd0">手工维护 · 入库</text>
+        font-size="11.5" font-weight="700" fill="#7f6fe0">零后端 · 零数据库</text>
 
   <line x1="508" y1="434" x2="508" y2="448" stroke="#8892a6" stroke-width="2" marker-end="url(#archArrow)"/>
 
-  <!-- ── 5 分发层 ──────────────────────────────────────────── -->
-  <circle cx="40" cy="492" r="16" fill="#c76fb8"/>
+  <!-- ── 4 增强层 ──────────────────────────────────────────── -->
+  <circle cx="40" cy="492" r="16" fill="#9a6fd0"/>
   <text x="40" y="497" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#ffffff">5</text>
-  <rect x="72" y="452" width="872" height="80" rx="10" fill="#ffffff" stroke="#c76fb8" stroke-width="2"/>
+        font-size="14" font-weight="700" fill="#ffffff">4</text>
+  <rect x="72" y="452" width="872" height="80" rx="10" fill="#ffffff" stroke="#9a6fd0" stroke-width="2"/>
   <text x="96" y="482" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="14" font-weight="700" fill="#c76fb8">分发层 · GitHub Pages 与自定义域名</text>
+        font-size="14" font-weight="700" fill="#9a6fd0">增强层 · 手写资源随产物落地</text>
   <text x="96" y="502" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">仓库根目录 CNAME 写入 docs.66131466.xyz，GitHub Pages 据此对外服务社区域名</text>
+        font-size="11.5" fill="#8892a6">css/ 品牌样式与 PC 抽屉导航 · js/ 版本检测与图片放大 · data/site-info.json 站点版本</text>
   <text x="96" y="520" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">Cloudflare 承担 CDN 缓存与 HTTPS 证书，全球就近分发，站点侧无需运维</text>
-  <rect x="756" y="478" width="164" height="28" rx="14" fill="#c76fb8" opacity="0.12"/>
+        font-size="11.5" fill="#8892a6">ext/svg/ 自绘示意图 · ext/img/ 素材库 · img/user/ 成员头像 · overrides/ 主题模板</text>
+  <rect x="756" y="478" width="164" height="28" rx="14" fill="#9a6fd0" opacity="0.12"/>
   <text x="838" y="497" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" font-weight="700" fill="#9a6fd0">手工维护 · 入库</text>
+
+  <line x1="508" y1="536" x2="508" y2="550" stroke="#8892a6" stroke-width="2" marker-end="url(#archArrow)"/>
+
+  <!-- ── 5 分发层 ──────────────────────────────────────────── -->
+  <circle cx="40" cy="594" r="16" fill="#c76fb8"/>
+  <text x="40" y="599" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">5</text>
+  <rect x="72" y="554" width="872" height="80" rx="10" fill="#ffffff" stroke="#c76fb8" stroke-width="2"/>
+  <text x="96" y="584" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#c76fb8">分发层 · GitHub Pages 与自定义域名</text>
+  <text x="96" y="604" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">仓库根目录 CNAME 写入 docs.66131466.xyz，GitHub Pages 据此对外服务社区域名</text>
+  <text x="96" y="622" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">Cloudflare 承担 CDN 缓存与 HTTPS 证书，全球就近分发，站点侧无需运维</text>
+  <rect x="756" y="580" width="164" height="28" rx="14" fill="#c76fb8" opacity="0.12"/>
+  <text x="838" y="599" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
         font-size="11.5" font-weight="700" fill="#c76fb8">HTTPS 自动</text>
 
-  <text x="16" y="566" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
-        font-size="11.5" fill="#8892a6">每一层都可单独替换：内容源换主题不改内容，构建层换主题不改产物结构，分发层换平台不改构建方式。</text>
+  <!-- ── 页脚说明 ──────────────────────────────────────────── -->
+  <line x1="16" y1="650" x2="944" y2="650" stroke="#dde3ee" stroke-width="1.5"/>
+  <text x="16" y="672" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">每一层都可单独替换：投稿层换入口不改内容，构建层换主题不改产物结构，分发层换平台不改构建方式。</text>
+  <text x="16" y="692" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">投稿层与内容源层之间由维护者「顺带装配」衔接：写作与构建解耦，复杂依赖不由投稿者承担。</text>
 </svg>

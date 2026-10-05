@@ -16,6 +16,7 @@
 - [总体思路](#总体思路)
 - [仓库结构与各目录规范](#仓库结构与各目录规范)
 - [内容板块](#内容板块)
+- [零门槛投稿](#零门槛投稿)
 - [工具链与自动化](#工具链与自动化)
 - [参与共建](#参与共建)
 - [约定与注意事项](#约定与注意事项)
@@ -35,6 +36,7 @@
 | **一切改动可追溯、可回滚** | 站点同时入库构建源与产物，每一次内容变更都有 commit、都能 diff、都能 revert。文档站因此天然具备版本管理能力 |
 | **贡献门槛极低** | 贡献者只需要会写 Markdown 和提 Pull Request。不会 Git 也能直接在 GitHub 网页端编辑提交，环境搭建不是必需前置 |
 | **构建与分发解耦** | 构建在本地产出 `site/`，再以文件同步的方式落地到仓库。构建失败不会污染线上，分发平台也可以整体替换 |
+| **写作与构建解耦** | 投稿者只交付 Markdown + `index.json`，放进 `inbox/` 即可，无需任何本地环境；装配与构建由维护者顺带完成 |
 | **检索能力开箱即有** | 基于 MkDocs 内置的 lunr 索引实现全站搜索，纯前端运行，无需 Elasticsearch 之类的搜索服务 |
 | **成本近乎为零** | GitHub Pages 承担托管，Cloudflare 承担 CDN 与 HTTPS 证书，站点侧没有任何需要付费或续期的组件 |
 
@@ -52,15 +54,30 @@
 
 ### 3. 分层清晰，每层可独立替换
 
-如上方架构图所示，站点分为**内容源层、构建层、产物层、增强层、分发层**五层：
+如上方架构图所示，站点分为**投稿层、内容源层、构建层、产物层、增强层、分发层**六层：
 
+- 换投稿入口 → 只动投稿层，内容源与构建不动
 - 换主题 → 只动构建层与增强层，内容源不动
 - 换文档平台 → 只动构建层，产物结构基本不变
 - 换托管平台 → 只动分发层，构建方式不变
 
 每一层都留了替换余地，这是这套架构最重要的长期价值。
 
-### 4. 约定优于配置
+### 4. 写作与构建解耦
+
+这是本站架构上最关键的一条取舍。MkDocs 构建一次全站约 **850 秒**，且必须严格锁定 `mkdocs==1.6.1` + `mkdocs-material==9.7.7`，否则产物的页眉、`meta generator` 与导航结构都会变形。
+
+**这套约束是维护者必须承担的，却没有任何理由转嫁给作者。** 因此本站把「写内容」与「构建上线」彻底拆开：
+
+- 投稿者只交付**纯文本**——一份 Markdown 加一份 `index.json` 索引，放进 [`inbox/`](inbox/README.md) 即可
+- 不需要安装 Python、不需要跑 MkDocs、不需要学 `nav` 语法、不需要懂构建版本锁定
+- 由维护者在**下一次构建时顺带装配**，一次构建服务多份投稿
+
+投稿者交付的 md 与 json 都可 diff、可评审、可回滚，不含任何运行时依赖；装配动作由 [`tools/apply_inbox.py`](tools/apply_inbox.py) 自动化完成校验与落点，把维护者的手工成本压到最低。
+
+> **一句话**：复杂构件与装配依赖，交给有环境、有经验的人；创作者只负责把内容写好。
+
+### 5. 约定优于配置
 
 命名、目录归属、图片存放位置、提交信息格式，全部有成文约定（见 [开发者文档](docs/dev/index.md)）。约定统一之后，协作者不需要每次重新讨论「这个文件该放哪」，评审也只需要看内容本身。
 
@@ -78,6 +95,7 @@
 
 | 路径 | 作用 | 维护规范 |
 |---|---|---|
+| `inbox/` | **投稿区**：无需本地环境的投稿入口，每份投稿为一个文件夹，内含 `index.json` 索引与 Markdown | 投稿者只提交纯文本；由维护者顺带装配到 `docs/`；约定见 [`inbox/README.md`](inbox/README.md) |
 | `mkdocs.yml` | 站点配置：站点信息、导航树（`nav`）、主题特性、Markdown 扩展、自定义 CSS / JS 接线 | **新增页面必须在此登记导航**，否则页面存在但进不去；构建版本锁定 `mkdocs==1.6.1` + `mkdocs-material==9.7.7` |
 | `docs/` | **全部内容源**，1665 篇 Markdown | 只在 `docs/` 里写内容；`docs/` 内与站点路由同构，`docs/dev/start.md` 对应线上 `/dev/start/` |
 | `docs/wiki/mindustry/{zh,en}/` | 双语 Wiki 源（中文 811 页、英文镜像 810 页） | 中英两侧结构对齐；改动一侧时同步另一侧 |
@@ -115,6 +133,7 @@
 | 路径 | 作用 | 维护规范 |
 |---|---|---|
 | `release/update/` | 版本更新日志子站（`releases.json`、详情 `.md`、`js/`、`picture/`） | **独立生成流程，由维护者管理**，普通贡献请勿改动 |
+| `tools/apply_inbox.py` | **投稿校验与装配工具**：校验 `index.json` 必填字段、`id` 与文件夹名一致性、日期格式、`target` 合法性、正文是否含 front matter 或多余一级标题，并把投稿装配到 `docs/` 对应目录 | 用法 `--check`（只校验）/ `--apply`（装配）/ `--dry-run`（预览）；装配后输出待登记的导航片段 |
 | `tools/gen_sitemap.py` | 定制 sitemap 生成器：扫描页面、取 git 提交时间作为 `lastmod`、附 `changefreq` / `priority`，并做线上校验过滤 4xx / `noindex` | 用法 `python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/`；产物 `sitemap.xml` 与 `sitemap.txt`；**不用 MkDocs 自动版**（会自动收录 404 等无关页面） |
 | `sitemap.xml`、`sitemap.txt`、`sitemap.xml.gz` | 搜索引擎提交用的站点地图 | 由上述脚本生成；落地构建产物时须排除 sitemap，避免被自动版覆盖 |
 | `BingSiteAuth.xml` | Bing 站长验证文件 | 勿删除 |
@@ -144,11 +163,60 @@ Wiki 是站点的主体，其内容版图如下：
 
 > Wiki 采用**中英双语并行**结构：`docs/wiki/mindustry/zh/` 与 `en/` 目录层级完全对齐，便于逐条对照与同步维护。
 
+## 零门槛投稿
+
+**不会构建、装不上环境、看不懂导航语法，都没关系。** 本站设有一个投稿区 [`inbox/`](inbox/README.md)，把「写内容」和「构建上线」彻底拆开。
+
+<p align="center">
+  <img src="ext/svg/inbox-flow.svg" alt="投稿区机制：贡献者只需写 Markdown 并填写 index.json 放入 inbox/ 目录，无需本地环境；维护者校验、装配、构建并上线" width="880">
+</p>
+
+### 投稿者只需做两件事
+
+```
+inbox/
+└── my-first-article/        ← 文件夹名就是投稿 id
+    ├── index.json           ← 索引文件（标题、作者、落点、期望导航）
+    └── index.md             ← 你的正文
+```
+
+1. **写 Markdown 正文**，按 [Markdown 写作规范](docs/dev/writing.md) 写，不要写 YAML front matter
+2. **填 `index.json` 索引**，声明标题、作者、`target` 落点、期望的 `nav` 位置，并把 `status` 改为 `ready`
+
+然后通过**网页上传**、**Pull Request** 或 **Issue 附件**任一方式提交即可。
+
+### 投稿者不需要做的事
+
+| 不需要 | 原因 |
+|---|---|
+| 安装 Python / MkDocs | 构建由维护者执行 |
+| 跑 `mkdocs serve` 预览 | 校验由工具自动完成 |
+| 学 `mkdocs.yml` 的 `nav` 语法 | 你只声明期望位置，登记由维护者完成 |
+| 构建 850 秒 | 攒够一批由维护者一次性构建 |
+| 改 `docs/`、`data/site-info.json`、sitemap | 全部属于装配环节，与写作无关 |
+
+> **为什么这样设计**：构建一次全站约 850 秒，且必须锁定 `mkdocs==1.6.1` + `mkdocs-material==9.7.7` 才能保证产物与线上逐字一致——这套依赖对维护者必要，对作者却是纯粹的负担。与其让每位创作者都趟一遍环境，不如由维护者**在下一次创作时顺带构建**。
+
+### 装配由工具保障
+
+投稿区配有校验与装配工具 [`tools/apply_inbox.py`](tools/apply_inbox.py)，投稿者也可以自行运行 `--check` 提前发现问题：
+
+```bash
+python3 tools/apply_inbox.py --check              # 只校验，不改动文件
+python3 tools/apply_inbox.py --apply              # 装配到 docs/ 并回写落点
+python3 tools/apply_inbox.py --apply --dry-run    # 预览将要执行的动作
+```
+
+工具会拦截常见错误：`id` 与文件夹名不一致、日期格式错误、`target` 非法、`files` 未含 `index.md`、正文含 front matter 或多个一级标题、落点与既有栏目冲突。
+
+完整的字段规范、`target` 取值与维护者装配流程，见 [`inbox/README.md`](inbox/README.md) 与[投稿区：零门槛参与共建](docs/dev/inbox.md)。
+
 ## 工具链与自动化
 
 | 环节 | 工具 / 机制 | 说明 |
 |---|---|---|
 | 内容撰写 | Markdown + `attr_list`、`md_in_html` 扩展 | 本站**未启用 admonition 扩展**，`!!!` 会显示为字面文本，提示请用引用块写法 |
+| 零门槛投稿 | `inbox/` + `tools/apply_inbox.py` | 投稿者只交付 Markdown + `index.json`，无需本地环境；维护者用工具校验装配后顺带构建 |
 | 本地预览 | `mkdocs serve` | 保存即刷新，访问 `http://127.0.0.1:8000/` |
 | 站点构建 | `mkdocs build` | 产物输出到 `site/`，再同步落地到仓库；全量构建约 850 秒 |
 | 全站搜索 | MkDocs 内置 lunr 索引 | 纯前端，无搜索服务依赖 |
@@ -172,12 +240,27 @@ python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/
 
 欢迎每一位成员参与共建。本站页面以 **Markdown** 撰写，经 MkDocs 构建为纯静态 HTML，构建产物发布在本仓库。
 
+### 路线一：零门槛投稿（推荐给首次参与者）
+
+**不需要任何本地环境。** 写一份 Markdown、填一份 `index.json`，放进 [`inbox/`](inbox/README.md) 即可，装配与构建由维护者顺带完成。适合不熟悉命令行、装不上环境、或只想专心写内容的成员。
+
+1. 复制 [`inbox/_template/`](inbox/_template/) 到 `inbox/` 下，重命名为你的投稿 id
+2. 写正文、填索引，`status` 改为 `ready`
+3. 在 GitHub 网页端 **Add file → Upload files** 上传，提交时选「新建分支并发起 PR」
+4. 维护者校验装配后，在下一次构建时一并上线
+
+详见 [投稿区：零门槛参与共建](docs/dev/inbox.md)。
+
+### 路线二：完整流程（适合要改站点结构的成员）
+
+需要调整导航、样式或既有页面时，走完整流程：
+
 1. **Fork** 本仓库到你的账户下
 2. 新建分支，按 [Markdown 写作规范](docs/dev/writing.md) 修改内容
 3. 提交 Pull Request，按模板说明改动内容（流程详见 [提交与上线流程](docs/dev/contribute.md)）
 4. 经审核合并后，由维护者构建并发布，站点自动更新
 
-不熟悉命令行的成员可以**完全跳过本地环境**：直接在 GitHub 网页端编辑文件并提交 PR 即可，维护者会在合并后统一构建。
+不熟悉命令行的成员同样可以**完全跳过本地环境**：直接在 GitHub 网页端编辑文件并提交 PR 即可，维护者会在合并后统一构建。
 
 提交前请对照 [PR 模板](.github/PULL_REQUEST_TEMPLATE.md) 自查，重点确认：标题层级与表格渲染正常、图片能显示、链接可跳转、新增页面已在导航中登记、**未改动 `CNAME`**。
 
@@ -189,6 +272,7 @@ python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/
 - **不要手改产物 HTML 的结构**：内容改动一律回到 `docs/` 源文件，否则下次构建会覆盖
 - **新增页面必须登记导航**：在 `mkdocs.yml` 的 `nav` 中补上条目，否则页面无法从站点进入
 - **`release/update/` 子站由维护者管理**：其日志由独立流程生成，普通贡献请勿改动
+- **投稿只提交 `inbox/`**：投稿者不碰 `docs/`、`mkdocs.yml`、`data/site-info.json` 与 sitemap，这些属于装配环节；装配后的投稿文件夹保留作归档，`status` 标记为 `done`
 - **版本信息需同步**：涉及版本变更时按规范更新 `data/site-info.json`
 - **命名与用词统一**：社区全称统一写 **Everyone Create Community（每个人创作社区）**；文件名用英文小写加连字符；中英文之间加一个空格
 - **配图自带配色**：SVG 需同时适配明暗两种主题，不依赖页面 CSS 变量，不引用外部字体与脚本
