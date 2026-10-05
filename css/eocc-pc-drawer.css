@@ -86,10 +86,19 @@
   [dir=ltr] .md-sidebar--primary .md-nav--primary .md-nav--secondary .md-nav .md-nav .md-nav .md-nav__link{padding-left:2.6rem}
   [dir=rtl] .md-sidebar--primary .md-nav--primary .md-nav--secondary .md-nav .md-nav .md-nav .md-nav__link{padding-right:2.6rem}
   .md-sidebar--primary .md-nav--primary .md-nav--secondary{background-color:initial}
-  .md-sidebar--primary .md-nav--primary .md-nav__toggle~.md-nav{display:flex;opacity:0;transform:translateX(100%);transition:transform .25s cubic-bezier(.8,0,.6,1),opacity 125ms 50ms}
-  [dir=rtl] .md-sidebar--primary .md-nav--primary .md-nav__toggle~.md-nav{transform:translateX(-100%)}
-  .md-sidebar--primary .md-nav--primary .md-nav__toggle:checked~.md-nav{opacity:1;transform:translateX(0);transition:transform .25s cubic-bezier(.4,0,.2,1),opacity 125ms 125ms}
-  .md-sidebar--primary .md-nav--primary .md-nav__toggle:checked~.md-nav>.md-nav__list{backface-visibility:hidden}
+  /* 子菜单必须显式声明 visibility：主题在 min-width:76.25em 断点内另有一条
+       .md-nav__toggle~.md-nav{visibility:collapse}
+     若不接管，它会与 opacity 脱节：实测勾选后 opacity 已为 1、visibility 仍是 collapse，
+     而 visibility:collapse 会按零尺寸渲染，表现为「点开箭头没反应」。
+     选择器必须锚定「同一个 li 内、紧跟本子菜单的那个 toggle」（:scope 无法用在
+     后代链里，故写成 .md-nav__item>input+label+nav 的三段相邻兄弟）。
+     不能用 .md-nav--primary .md-nav__toggle~.md-nav 这种后代写法：抽屉里共有 50+ 个
+     toggle 且 .md-nav 可嵌套，后代写法会让「任意某个未勾选的 toggle」命中本子菜单，
+     使折叠规则恒成立并压过 :checked 展开规则 —— 二级菜单打不开（曾反复踩坑）。 */
+  .md-sidebar--primary .md-nav__item>.md-nav__toggle+label+.md-nav{display:flex;opacity:0;transform:translateX(100%);visibility:collapse;transition:transform .25s cubic-bezier(.8,0,.6,1),opacity 125ms 50ms,visibility 0ms .25s}
+  [dir=rtl] .md-sidebar--primary .md-nav__item>.md-nav__toggle+label+.md-nav{transform:translateX(-100%)}
+  .md-sidebar--primary .md-nav__item>.md-nav__toggle:checked+label+.md-nav{opacity:1;transform:translateX(0);visibility:visible;transition:transform .25s cubic-bezier(.4,0,.2,1),opacity 125ms 125ms,visibility 0ms}
+  .md-sidebar--primary .md-nav__item>.md-nav__toggle:checked+label+.md-nav>.md-nav__list{backface-visibility:hidden}
 
   /* --- 4. 解除桌面端「提升导航 / 分组」对内联侧栏的压制 --- */
   /* navigation.tabs 提升后隐藏顶层项与标题，抽屉里需重新显示 */
