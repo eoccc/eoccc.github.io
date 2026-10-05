@@ -48,6 +48,6 @@ Markdown 中，**一个空行**表示一个段落的结束。少了空行，两�
 
 ## 写作前的准备
 
-本站的写作规范（命名、用词、章节组织）另见 [Markdown 写作规范](../writing.md)；本分支只讲**语法与写法**，二者配合阅读。
+本站的写作规范（命名、用词、章节组织）另见 [Markdown 写作规范](../../../dev/writing.md)；本分支只讲**语法与写法**，二者配合阅读。
 
-> 如果你要写的是 Mindustry 相关文档，还需注意代码块内容不翻译等额外规则，见 [Mindustry 汉化规则](../../wiki/mindustry/zh/index.md)。
+> 如果你要写的是 Mindustry 相关文档，还需注意代码块内容不翻译等额外规则，见 [Mindustry 汉化规则](../../mindustry/zh/index.md)。

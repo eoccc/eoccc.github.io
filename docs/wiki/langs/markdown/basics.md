@@ -175,15 +175,16 @@ _snake_case_name_    ← 这样才触发斜体
 指向本站其他页面，用**相对路径**：
 
 ```markdown
-[基础语法](basics.md)           ← 同目录
-[写作规范](../writing.md)        ← 上一级目录
-[首页](../../index.md)           ← 上两级
+[进阶语法](advanced.md)              ← 同目录
+[JSON 基础](../json.md)              ← 上一级目录
+[Wiki 首页](../../index.md)          ← 上两级
+[Markdown 写作规范](../../../dev/writing.md)  ← 上三级
 ```
 
 指向目录时以 `/` 结尾，mkdocs 会自动映射到 `index.md`：
 
 ```markdown
-[编程语言](../../wiki/langs/)    ← 对应 wiki/langs/index.md
+[编程语言与数据格式](../)    ← 对应 wiki/langs/index.md
 ```
 
 > 路径写错的链接**不会报错**，只会变成 404。发布前建议逐个点开确认。
@@ -193,8 +194,8 @@ _snake_case_name_    ← 这样才触发斜体
 跳转到本页或他页的某个标题：
 
 ```markdown
-[回到标题](#标题)                          ← 本页
-[看细节](../../dev/markdown/pitfalls.md#表格)  ← 他页
+[回到标题](#标题)                ← 本页
+[看细节](pitfalls.md#表格)       ← 同目录他页
 ```
 
 锚点由标题生成：**转小写、空格换连字符、去掉标点**。中文标题保留原字：

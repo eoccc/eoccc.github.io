@@ -226,8 +226,9 @@ _前后都有下划线_ 会被斜体              ← 触发斜体
 ### 4.1 站内链接路径写错
 
 ```markdown
-[基础语法](basics.md)          ← 同目录，正确
-[写作规范](writing.md)          ← 少了一级，错误
+[基础语法](basics.md)                      ← 同目录，正确
+[写作规范](writing.md)                     ← 少了几级，错误
+[写作规范](../../../dev/writing.md)         ← 正确
 ```
 
 **现象**：链接**不会报错**，点击后 404。
@@ -236,15 +237,16 @@ _前后都有下划线_ 会被斜体              ← 触发斜体
 
 | 当前文件 | 目标 | 正确写法 |
 |---|---|---|
-| `dev/markdown/basics.md` | `dev/markdown/advanced.md` | `advanced.md` |
-| `dev/markdown/basics.md` | `dev/writing.md` | `../writing.md` |
-| `dev/markdown/basics.md` | `wiki/langs/index.md` | `../../wiki/langs/` |
+| `wiki/langs/markdown/basics.md` | 同目录的 `advanced.md` | `advanced.md` |
+| `wiki/langs/markdown/basics.md` | `wiki/langs/json.md` | `../json.md` |
+| `wiki/langs/markdown/basics.md` | `wiki/langs/index.md` | `../` |
+| `wiki/langs/markdown/basics.md` | `dev/writing.md` | `../../../dev/writing.md` |
 
 ### 4.2 目录链接忘了结尾斜杠
 
 ```markdown
-[编程语言](../../wiki/langs)     ← 可能无法映射到 index.md
-[编程语言](../../wiki/langs/)    ← 正确
+[编程语言](../)     ← 正确：映射到 index.md
+[编程语言](..)      ← 可能无法映射到 index.md
 ```
 
 ### 4.3 图片路径用相对路径

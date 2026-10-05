@@ -60,13 +60,6 @@ nav:
           - 云端 CI 自动构建流水线: dev/ci-build.md
           - 环境搭建: dev/start.md
           - Markdown 写作规范: dev/writing.md
-          - Markdown 语法详解:
-              - 总览: dev/markdown/index.md
-              - 基础语法: dev/markdown/basics.md
-              - 进阶语法: dev/markdown/advanced.md
-              - 本站渲染规则: dev/markdown/extensions.md
-              - 细节与常见错误: dev/markdown/pitfalls.md
-              - 速查表: dev/markdown/cheatsheet.md
           - 提交与上线流程: dev/contribute.md
           - 导航与站点配置: dev/nav-config.md
           - Sitemap 生成与维护: dev/sitemap.md
@@ -89,6 +82,13 @@ nav:
       - Wiki 首页: wiki/index.md
       - 编程语言:
           - 总览: wiki/langs/index.md
+          - Markdown:
+              - Markdown 总览: wiki/langs/markdown/index.md
+              - 基础语法: wiki/langs/markdown/basics.md
+              - 进阶语法: wiki/langs/markdown/advanced.md
+              - 本站渲染规则: wiki/langs/markdown/extensions.md
+              - 细节与常见错误: wiki/langs/markdown/pitfalls.md
+              - 速查表: wiki/langs/markdown/cheatsheet.md
           - JSON:
               - JSON 基础: wiki/langs/json.md
               - HJSON 基础: wiki/langs/hjson.md

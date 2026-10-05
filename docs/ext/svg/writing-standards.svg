@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img"
+     aria-label="写作规范与语法文档的分工：语法层决定页面能否渲染，规范层决定全站是否统一；写作规范约束标题层级、命名用词、资源存放与引用">
+  <title>写作规范与语法文档的分工</title>
+  <desc>左侧为语法层，由 Wiki 的 Markdown 语法详解承载，决定页面能否正确渲染，错了页面会崩。右侧为规范层，由本站写作规范承载，决定全站风格是否统一，错了页面会乱。写作规范约束四件事：标题层级、命名与用词、资源存放、引用写法。</desc>
+
+  <defs>
+    <marker id="stdArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 顶部：两个层次的对照 -->
+  <rect x="32" y="24" width="400" height="96" rx="10" fill="#ffffff" stroke="#7f6fe0" stroke-width="2"/>
+  <text x="56" y="52" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#7f6fe0">语法层 · Wiki 承载</text>
+  <text x="56" y="76" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">「怎么写才能正确渲染」——空行、缩进、表格与代码块</text>
+  <text x="56" y="98" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">写错的结果：页面结构崩坏、内容显示异常</text>
+
+  <rect x="528" y="24" width="400" height="96" rx="10" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
+  <text x="552" y="52" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#5b8def">规范层 · 本站写作规范</text>
+  <text x="552" y="76" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">「怎么写才风格统一」——标题、命名、资源与引用</text>
+  <text x="552" y="98" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">写错的结果：页面能看，但全站风格不一致</text>
+
+  <!-- 中间箭头 -->
+  <line x1="432" y1="72" x2="524" y2="72" stroke="#8892a6" stroke-width="2" marker-end="url(#stdArrow)"/>
+  <text x="478" y="62" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">先会写</text>
+  <text x="478" y="88" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">再统一</text>
+
+  <!-- 下方：规范约束的四件事 -->
+  <line x1="480" y1="120" x2="480" y2="150" stroke="#8892a6" stroke-width="2" marker-end="url(#stdArrow)"/>
+  <text x="480" y="170" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#3a4254">写作规范约束四件事</text>
+
+  <rect x="32" y="190" width="212" height="88" rx="10" fill="#5b8def"/>
+  <text x="138" y="220" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">① 标题层级</text>
+  <text x="138" y="244" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">每页一个 #</text>
+  <text x="138" y="262" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">不跳级，避免层级失真</text>
+
+  <rect x="256" y="190" width="212" height="88" rx="10" fill="#6f7ae5"/>
+  <text x="362" y="220" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">② 命名与用词</text>
+  <text x="362" y="244" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">社区全称统一</text>
+  <text x="362" y="262" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">中英文之间加空格</text>
+
+  <rect x="480" y="190" width="212" height="88" rx="10" fill="#9a6fd0"/>
+  <text x="586" y="220" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">③ 资源存放</text>
+  <text x="586" y="244" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">ext/svg/ · img/user/</text>
+  <text x="586" y="262" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">本地存放，禁止站外图床</text>
+
+  <rect x="704" y="190" width="224" height="88" rx="10" fill="#c76fb8"/>
+  <text x="816" y="220" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">④ 引用写法</text>
+  <text x="816" y="244" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#fdeef8">站内相对路径</text>
+  <text x="816" y="262" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#fdeef8">SVG 用内联 &lt;img&gt;</text>
+
+  <!-- 底部提示 -->
+  <rect x="32" y="298" width="896" height="44" rx="10" fill="#8892a6" opacity="0.10"/>
+  <text x="52" y="326" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">语法错了页面会崩，规范错了页面会乱：前者查 Wiki 的 Markdown 语法详解，后者查本页写作规范，两者配合阅读。</text>
+</svg>

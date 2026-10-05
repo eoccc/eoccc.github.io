@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img"
+     aria-label="开发者文档参与方式选择：轻度贡献走投稿区或云端 CI，需要改站点结构走本地构建，三条路径最终都汇入审核合并与上线">
+  <title>开发者文档参与方式选择</title>
+  <desc>入口按贡献量分流。左侧轻度贡献分两条：投稿区只交付 Markdown 与索引文件，由维护者装配；云端 CI 在网页编辑后提 PR，云端校验。右侧需要改站点结构走本地构建，装好锁定版本环境后预览自检再提 PR。三条路径汇入审核合并，随后构建上线。</desc>
+
+  <defs>
+    <marker id="entryArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 起点 -->
+  <rect x="330" y="16" width="300" height="60" rx="12" fill="#5b8def"/>
+  <text x="480" y="42" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="15" font-weight="700" fill="#ffffff">我想参与文档共建</text>
+  <text x="480" y="63" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#eef2ff">先判断：要改多少、愿意承担多少本地操作</text>
+
+  <line x1="480" y1="76" x2="480" y2="98" stroke="#8892a6" stroke-width="2"/>
+  <line x1="212" y1="98" x2="748" y2="98" stroke="#8892a6" stroke-width="2"/>
+  <line x1="212" y1="98" x2="212" y2="120" stroke="#8892a6" stroke-width="2" marker-end="url(#entryArrow)"/>
+  <line x1="748" y1="98" x2="748" y2="120" stroke="#8892a6" stroke-width="2" marker-end="url(#entryArrow)"/>
+
+  <!-- 左：轻度贡献 -->
+  <rect x="32" y="124" width="360" height="44" rx="10" fill="#7f6fe0" opacity="0.12"/>
+  <text x="212" y="152" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#7f6fe0">轻度贡献 · 不想装任何环境</text>
+
+  <rect x="32" y="180" width="360" height="76" rx="10" fill="#7f6fe0"/>
+  <text x="56" y="206" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">① 投稿区</text>
+  <text x="56" y="228" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">写 Markdown + 填 index.json，放进 inbox/</text>
+  <text x="56" y="246" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">由维护者顺带装配构建</text>
+
+  <line x1="212" y1="256" x2="212" y2="272" stroke="#8892a6" stroke-width="2" marker-end="url(#entryArrow)"/>
+
+  <rect x="32" y="276" width="360" height="76" rx="10" fill="#9a6fd0"/>
+  <text x="56" y="302" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">② 云端 CI 自动构建</text>
+  <text x="56" y="324" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">网页编辑 md / SVG → 提交 PR</text>
+  <text x="56" y="342" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">云端 --strict 校验，PR 上显示红叉或绿勾</text>
+
+  <!-- 右：改站点结构 -->
+  <rect x="568" y="124" width="360" height="44" rx="10" fill="#5b8def" opacity="0.12"/>
+  <text x="748" y="152" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#5b8def">深度参与 · 要改站点结构</text>
+
+  <rect x="568" y="180" width="360" height="76" rx="10" fill="#5b8def"/>
+  <text x="592" y="206" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">③ 环境搭建</text>
+  <text x="592" y="228" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">安装 Python + 锁定版本 MkDocs / Material</text>
+  <text x="592" y="246" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">克隆仓库，跑起本地预览</text>
+
+  <line x1="748" y1="256" x2="748" y2="272" stroke="#8892a6" stroke-width="2" marker-end="url(#entryArrow)"/>
+
+  <rect x="568" y="276" width="360" height="76" rx="10" fill="#6f7ae5"/>
+  <text x="592" y="302" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">④ 本地预览与自检</text>
+  <text x="592" y="324" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">mkdocs serve 实时看效果</text>
+  <text x="592" y="342" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">mkdocs build --strict 提交前确认零告警</text>
+
+  <!-- 汇合 -->
+  <line x1="212" y1="352" x2="212" y2="382" stroke="#8892a6" stroke-width="2"/>
+  <line x1="748" y1="352" x2="748" y2="382" stroke="#8892a6" stroke-width="2"/>
+  <line x1="212" y1="382" x2="748" y2="382" stroke="#8892a6" stroke-width="2"/>
+  <line x1="480" y1="382" x2="480" y2="398" stroke="#8892a6" stroke-width="2" marker-end="url(#entryArrow)"/>
+
+  <rect x="330" y="402" width="300" height="56" rx="10" fill="#c76fb8"/>
+  <text x="480" y="426" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">审核合并 → 构建上线</text>
+  <text x="480" y="446" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#fdeef8">三条路径产出相同，区别只在本地操作量</text>
+</svg>
