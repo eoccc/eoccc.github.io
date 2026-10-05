@@ -9,6 +9,12 @@ https://docs.git.eocc.top/dev/
 https://docs.git.eocc.top/dev/contribute/
 https://docs.git.eocc.top/dev/flowchart-guide/
 https://docs.git.eocc.top/dev/github-release-flow/
+https://docs.git.eocc.top/dev/markdown/
+https://docs.git.eocc.top/dev/markdown/advanced/
+https://docs.git.eocc.top/dev/markdown/basics/
+https://docs.git.eocc.top/dev/markdown/cheatsheet/
+https://docs.git.eocc.top/dev/markdown/extensions/
+https://docs.git.eocc.top/dev/markdown/pitfalls/
 https://docs.git.eocc.top/dev/nav-config/
 https://docs.git.eocc.top/dev/sitemap/
 https://docs.git.eocc.top/dev/start/
@@ -26,6 +32,7 @@ https://docs.git.eocc.top/faq/servers/
 https://docs.git.eocc.top/faq/troubleshooting/
 https://docs.git.eocc.top/release/
 https://docs.git.eocc.top/release/update/
+https://docs.git.eocc.top/release/update/md/20261005120000/
 https://docs.git.eocc.top/rules/
 https://docs.git.eocc.top/wiki/
 https://docs.git.eocc.top/wiki/langs/
@@ -33,6 +40,7 @@ https://docs.git.eocc.top/wiki/langs/VERIFICATION/
 https://docs.git.eocc.top/wiki/langs/compare/
 https://docs.git.eocc.top/wiki/langs/hjson/
 https://docs.git.eocc.top/wiki/langs/json/
+https://docs.git.eocc.top/wiki/langs/json-history/
 https://docs.git.eocc.top/wiki/mindustry/CHANGELOG/
 https://docs.git.eocc.top/wiki/mindustry/en/
 https://docs.git.eocc.top/wiki/mindustry/en/Modding%2520Classes/Ability/

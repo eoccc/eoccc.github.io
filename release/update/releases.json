@@ -6,6 +6,22 @@
   },
   "releases": [
     {
+      "version": "v1.0.4.1",
+      "title": "v1.0.4.1 · Wiki 知识库重构与侧边栏全量汉化",
+      "summary": "Wiki 首页重写并新增内容版图配图；编程语言按语言拆分出 JSON 分组；Mindustry 中文版侧边栏 805 个英文标签全量汉化；新增 Markdown 语法详解 6 页；修复编程语言分支 3 处图片链接 404。本版为预发布版本。",
+      "type": "release",
+      "author": "AtomCode",
+      "publish_time": "2026-10-05 12:00:00",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20261005120000",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/eoccc/eoccc.github.io"
+      }
+    },
+    {
       "version": "v1.0.4",
       "title": "v1.0.4 · 文档站版本发布",
       "summary": "Mindustry 中文板块汉化补齐（属性表格 4669 处 + 深层文案 650 种）；新增「编程语言」分支（JSON/HJSON 深度讲解 + 3 张 SVG 配图）；迁移上游全部 5180 个图片资源；修复更新日志页正文丢失；新增 sitemap 生成脚本与 Bing 站点验证。",
