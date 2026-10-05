@@ -1,0 +1,216 @@
+# ─────────────────────────────────────────────────────────────────────
+# EOCC 文档站 · 云端 CI 构建流水线
+#
+# 【预发布版本 · 系统不稳定】
+#   本流水线属于预发布版本，尚未稳定，仍需长期测试、反复迭代修改与
+#   校验实际输出内容，**不保证输出结果完全无误**。
+#   现阶段依然优先推荐本地构建方式（mkdocs build --strict）。
+#   你可以自行修改、调试本文件中的相关配置用于测试。
+#
+# 两套触发逻辑：
+#   ① pull_request → main：仅执行构建校验，**不部署**。
+#      构建失败会让检查项显示红叉，配合分支保护可阻止合并。
+#   ② push → main：构建校验通过后，自动部署静态站点到 GitHub Pages。
+#
+# 前置条件（一次性，需仓库管理员操作）：
+#   仓库 Settings → Pages → Build and deployment → Source 选择
+#   「GitHub Actions」。若仍为「Deploy from a branch」，本流水线的
+#   部署步骤会失败。
+# ─────────────────────────────────────────────────────────────────────
+
+name: 文档构建与部署
+
+on:
+  # ① PR 提交到 main：只校验，不部署
+  pull_request:
+    branches: [main]
+  # ② push 合并进 main：构建成功后自动部署到 GitHub Pages
+  push:
+    branches: [main]
+
+# 构建源位于仓库根目录（mkdocs.yml + docs/ + overrides/ + data/），
+# 与 MkDocs 默认布局一致，因此无需额外配置 working-directory。
+
+# 构建版本锁定：产物必须与线上逐字一致，禁止浮动版本
+env:
+  MKDOCS_VERSION: "1.6.1"
+  MATERIAL_VERSION: "9.7.7"
+  PYTHON_VERSION: "3.12"
+  SITE_DIR: site
+
+# 部署所需的权限：写入 Pages、读取仓库内容、用 OIDC 校验来源
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# PR 检查按分支取消旧的重复运行；部署不取消进行中的任务，避免半成品上线
+concurrency:
+  group: docs-ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  # ── 构建校验（PR 与 push 都会执行）──────────────────────────────
+  build:
+    name: 构建校验（mkdocs --strict）
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          # gen_sitemap.py 需要 git 提交时间作为 lastmod，保留完整历史
+          fetch-depth: 0
+
+      - name: 安装 Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 安装 MkDocs 与主题（严格锁定版本）
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install \
+            "mkdocs==${MKDOCS_VERSION}" \
+            "mkdocs-material==${MATERIAL_VERSION}"
+
+      - name: 核对构建版本
+        run: |
+          python - <<'PY'
+          import importlib.metadata as md
+          import os
+          import sys
+
+          want = {
+              "mkdocs": os.environ["MKDOCS_VERSION"],
+              "mkdocs-material": os.environ["MATERIAL_VERSION"],
+          }
+          bad = []
+          for pkg, expect in want.items():
+              got = md.version(pkg)
+              mark = "OK " if got == expect else "错误"
+              print(f"{mark} {pkg}=={got}（要求 {expect}）")
+              if got != expect:
+                  bad.append(pkg)
+          if bad:
+              sys.exit("版本不符合要求，产物可能与线上不一致：" + ", ".join(bad))
+          PY
+
+      - name: 构建站点（--strict：任何警告即失败）
+        run: |
+          mkdocs build --strict --site-dir "${SITE_DIR}"
+          test -f "${SITE_DIR}/index.html" || { echo "构建产物缺少 index.html"; exit 1; }
+
+      - name: 统计构建产物
+        run: |
+          pages=$(find "${SITE_DIR}" -name "index.html" | wc -l)
+          echo "生成页面数：${pages}"
+          echo "产物体积：$(du -sh "${SITE_DIR}" | cut -f1)"
+
+      # 站点地图：MkDocs 会自动生成一份缺少 changefreq / priority 的
+      # sitemap.xml，本站约定改用 tools/gen_sitemap.py 的定制版本，
+      # 因此先删除自动版、再落回仓库中已线上校验过的定制版。
+      - name: 使用定制版 sitemap（剔除 MkDocs 自动版）
+        run: |
+          rm -f "${SITE_DIR}/sitemap.xml" "${SITE_DIR}/sitemap.xml.gz"
+          for f in sitemap.xml sitemap.txt; do
+            if [ -f "$f" ]; then
+              cp "$f" "${SITE_DIR}/"
+              echo "已落回定制版：$f"
+            else
+              echo "::warning file=$f::$f 不存在，本次产物将不含站点地图"
+            fi
+          done
+
+      - name: 核对新增页面是否已进入 sitemap（仅提示，不阻断）
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import os
+          import re
+
+          site = os.environ["SITE_DIR"]
+          sm = os.path.join(site, "sitemap.xml")
+          if not os.path.isfile(sm):
+              print("未找到 sitemap.xml，跳过核对")
+              raise SystemExit(0)
+
+          text = open(sm, encoding="utf-8").read()
+          listed = set(re.findall(r"<loc>(.*?)</loc>", text))
+
+          missing = []
+          for dirpath, dirnames, filenames in os.walk(site):
+              if "index.html" not in filenames:
+                  continue
+              rel = os.path.relpath(dirpath, site)
+              if rel == ".":
+                  url = "https://docs.66131466.xyz/"
+              else:
+                  url = "https://docs.66131466.xyz/" + rel.replace(os.sep, "/") + "/"
+              if url not in listed:
+                  missing.append(url)
+
+          if missing:
+              print(f"提示：{len(missing)} 个页面未收录进定制版 sitemap。")
+              print("站点地图需在页面**发布后**用 gen_sitemap.py 重新生成（线上校验需页面可访问）：")
+              print("  python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/")
+              for u in sorted(missing)[:10]:
+                  print("  -", u)
+              if len(missing) > 10:
+                  print(f"  …… 其余 {len(missing) - 10} 条略")
+          else:
+              print("核对通过：全部页面均已在 sitemap 中")
+          PY
+
+      # 叠加仓库独有、构建不会生成的文件，保证部署产物与当前线上一致
+      - name: 叠加仓库独有文件
+        run: |
+          set -e
+          # 自定义域名与搜索引擎验证文件（务必保留，否则自定义域名失效）
+          for f in CNAME BingSiteAuth.xml; do
+            [ -f "$f" ] && cp "$f" "${SITE_DIR}/" && echo "已叠加 $f"
+          done
+          # 站点数据（版本检测脚本运行时 fetch）
+          [ -d data ] && cp -r data "${SITE_DIR}/" && echo "已叠加 data/"
+          # 版本更新日志子站的原始数据与资源（页面本身由 MkDocs 生成）
+          if [ -d release/update ]; then
+            mkdir -p "${SITE_DIR}/release/update"
+            for item in releases.json js md picture; do
+              [ -e "release/update/$item" ] && cp -r "release/update/$item" "${SITE_DIR}/release/update/" && echo "已叠加 release/update/$item"
+            done
+          fi
+          # 用户头像等成员贡献资源（页面以相对路径引用）
+          [ -d img/user ] && mkdir -p "${SITE_DIR}/img/user" && cp -r img/user/. "${SITE_DIR}/img/user/" && echo "已叠加 img/user/"
+
+      # 部署产物只在 push 到 main 时需要；PR 阶段跳过上传以缩短耗时
+      - name: 配置 Pages
+        if: github.event_name == 'push'
+        uses: actions/configure-pages@v5
+
+      - name: 上传 Pages 产物
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.SITE_DIR }}
+
+      # PR 阶段也留一份可下载的产物，便于审核者核对实际输出
+      - name: 上传校验产物（供审核下载）
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-preview-${{ github.event.pull_request.number }}
+          path: ${{ env.SITE_DIR }}
+          retention-days: 7
+
+  # ── 部署（仅在 push 到 main 时执行）──────────────────────────────
+  deploy:
+    name: 部署到 GitHub Pages
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4

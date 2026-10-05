@@ -57,6 +57,7 @@ nav:
       - 总览: dev/index.md
       - 文档共建:
           - 投稿区：零门槛参与共建: dev/inbox.md
+          - 云端 CI 自动构建流水线: dev/ci-build.md
           - 环境搭建: dev/start.md
           - Markdown 写作规范: dev/writing.md
           - Markdown 语法详解:

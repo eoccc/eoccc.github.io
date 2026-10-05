@@ -1,10 +1,26 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "updated_at": "2026-10-05 13:00:00",
+    "updated_at": "2026-10-06 12:00:00",
     "note": "下载按钮统一指向官方下载页；GitHub Releases 入口供依赖包获取"
   },
   "releases": [
+    {
+      "version": "v1.0.4.2",
+      "title": "v1.0.4.2 · 云端 CI 自动构建流水线（重大新增功能）",
+      "summary": "引入 GitHub Actions 云端自动构建流水线：PR 提交到 main 仅执行 mkdocs 构建校验、不部署，构建失败标记红叉可阻止合并；合并进 main 后自动构建并部署静态站点到 GitHub Pages。贡献者可完全不配置本地环境，直接在线提交修改，省去本地安装依赖、节省本地算力、降低新手学习成本。本流水线为预发布版本，系统不稳定，不保证输出完全无误，现阶段仍优先推荐本地构建。",
+      "type": "release",
+      "author": "AtomCode",
+      "publish_time": "2026-10-06 12:00:00",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20261006120000",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/eoccc/eoccc.github.io"
+      }
+    },
     {
       "version": "v1.1.0",
       "title": "v1.1.0 · 构建源入库与站点功能接线",
