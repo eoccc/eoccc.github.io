@@ -5131,6 +5131,12 @@
          <priority>0.7</priority>
     </url>
     <url>
+         <loc>https://docs.git.eocc.top/wiki/mindustry/zh/Modding%2520Classes/</loc>
+         <lastmod>2026-10-05</lastmod>
+         <changefreq>monthly</changefreq>
+         <priority>0.6</priority>
+    </url>
+    <url>
          <loc>https://docs.git.eocc.top/wiki/mindustry/zh/Modding%2520Classes/Ability/</loc>
          <lastmod>2026-10-05</lastmod>
          <changefreq>monthly</changefreq>

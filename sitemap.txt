@@ -853,6 +853,7 @@ https://docs.git.eocc.top/wiki/mindustry/en/modding/8-migrationv8/
 https://docs.git.eocc.top/wiki/mindustry/en/serverUiBuilder/
 https://docs.git.eocc.top/wiki/mindustry/en/servers/
 https://docs.git.eocc.top/wiki/mindustry/zh/
+https://docs.git.eocc.top/wiki/mindustry/zh/Modding%2520Classes/
 https://docs.git.eocc.top/wiki/mindustry/zh/Modding%2520Classes/Ability/
 https://docs.git.eocc.top/wiki/mindustry/zh/Modding%2520Classes/Accelerator/
 https://docs.git.eocc.top/wiki/mindustry/zh/Modding%2520Classes/AirBlock/
