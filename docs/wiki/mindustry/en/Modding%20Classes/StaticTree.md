@@ -1,0 +1,5 @@
+# StaticTree
+
+## StaticTree
+
+*extends StaticWall*

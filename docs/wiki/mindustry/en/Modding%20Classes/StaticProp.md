@@ -1,0 +1,5 @@
+# StaticProp
+
+## StaticProp
+
+*extends Prop*

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="960" height="320" role="img"
+     aria-label="开发者文档学习路径：文档共建路线与项目开发路线">
+  <title>开发者文档学习路径</title>
+  <desc>两条推荐路径：文档共建依次为环境搭建、Markdown 写作规范、提交与上线流程、导航与站点配置；项目开发依次为 GitHub 开发与软件包发布流程，并可按需阅读 SVG 与流程图教程。</desc>
+
+  <defs>
+    <marker id="pathArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 路径一：文档共建 -->
+  <text x="16" y="28" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#5b8def">路径一 · 文档共建（撰写与维护文档）</text>
+
+  <rect x="16" y="46" width="176" height="60" rx="8" fill="#5b8def"/>
+  <text x="104" y="72" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">环境搭建</text>
+  <text x="104" y="92" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">首次参与者</text>
+
+  <line x1="196" y1="76" x2="220" y2="76" stroke="#8892a6" stroke-width="2" marker-end="url(#pathArrow)"/>
+
+  <rect x="224" y="46" width="176" height="60" rx="8" fill="#6f7ae5"/>
+  <text x="312" y="72" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">Markdown 写作规范</text>
+  <text x="312" y="92" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">所有撰稿人</text>
+
+  <line x1="404" y1="76" x2="428" y2="76" stroke="#8892a6" stroke-width="2" marker-end="url(#pathArrow)"/>
+
+  <rect x="432" y="46" width="176" height="60" rx="8" fill="#7f6fe0"/>
+  <text x="520" y="72" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">提交与上线流程</text>
+  <text x="520" y="92" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">所有撰稿人</text>
+
+  <line x1="612" y1="76" x2="636" y2="76" stroke="#8892a6" stroke-width="2" marker-end="url(#pathArrow)"/>
+
+  <rect x="640" y="46" width="176" height="60" rx="8" fill="#9a6fd0"/>
+  <text x="728" y="72" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">导航与站点配置</text>
+  <text x="728" y="92" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">进阶维护者</text>
+
+  <!-- 路径二：项目开发 -->
+  <text x="16" y="152" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#7f6fe0">路径二 · 项目开发（开发并发布软件包）</text>
+
+  <rect x="16" y="170" width="288" height="60" rx="8" fill="#c76fb8"/>
+  <text x="160" y="196" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#ffffff">GitHub 开发与软件包发布流程</text>
+  <text x="160" y="216" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#fdeef8">分支开发 → 评审 → 构建 → 发布</text>
+
+  <!-- 配图技能（可选） -->
+  <text x="352" y="152" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#8892a6">配图技能（按需选读）</text>
+
+  <rect x="352" y="170" width="272" height="60" rx="8" fill="none" stroke="#5b8def" stroke-width="2"/>
+  <text x="488" y="196" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#5b8def">SVG 图标绘制与创作</text>
+  <text x="488" y="216" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">图标、配色与引用约定</text>
+
+  <rect x="648" y="170" width="296" height="60" rx="8" fill="none" stroke="#7f6fe0" stroke-width="2"/>
+  <text x="796" y="196" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" font-weight="700" fill="#7f6fe0">流程图开发与创作</text>
+  <text x="796" y="216" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">流程、分支与布局规范</text>
+
+  <line x1="316" y1="200" x2="340" y2="200" stroke="#8892a6" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="636" y1="200" x2="640" y2="200" stroke="#8892a6" stroke-width="2"/>
+
+  <!-- 底部提示 -->
+  <rect x="16" y="256" width="928" height="48" rx="8" fill="none" stroke="#8892a6"
+        stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="40" y="286" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">两条路径可并行：先走路径一熟悉站点协作，再按需要进入路径二；配图技能服务于两条路径</text>
+</svg>

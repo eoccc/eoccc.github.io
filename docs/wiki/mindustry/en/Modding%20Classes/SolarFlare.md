@@ -1,0 +1,5 @@
+# SolarFlare
+
+## SolarFlare
+
+*extends Weather*

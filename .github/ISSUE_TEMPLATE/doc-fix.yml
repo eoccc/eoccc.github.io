@@ -8,17 +8,17 @@ body:
     attributes:
       value: |
         感谢帮忙修正文档！提交前建议先读
-        [Markdown 写作规范](https://docs.git.eocc.top/dev/writing/)。
+        [Markdown 写作规范](https://docs.66131466.xyz/dev/writing/)。
 
         > 若你想直接动手改，欢迎按
-        > [提交与上线流程](https://docs.git.eocc.top/dev/contribute/) 发起 Pull Request。
+        > [提交与上线流程](https://docs.66131466.xyz/dev/contribute/) 发起 Pull Request。
 
   - type: input
     id: page
     attributes:
       label: 问题页面
       description: 出问题的页面地址或页面标题
-      placeholder: 例如 https://docs.git.eocc.top/dev/start/ 或「环境搭建」
+      placeholder: 例如 https://docs.66131466.xyz/dev/start/ 或「环境搭建」
     validations:
       required: true
 

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" width="960" height="200" role="img"
+     aria-label="文档提交与上线流程：修改内容 → 本地预览 → 提交分支 → Pull Request → 审核合并 → 构建上线">
+  <title>文档提交与上线流程</title>
+  <desc>六个阶段依次为修改内容、本地预览、提交分支、发起 Pull Request、审核合并、构建上线，方向自左向右。</desc>
+
+  <defs>
+    <marker id="contribArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 阶段 1 -->
+  <rect x="16" y="66" width="132" height="68" rx="10" fill="#5b8def"/>
+  <text x="82" y="94" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">1 修改内容</text>
+  <text x="82" y="116" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">编辑或新增页面</text>
+
+  <line x1="152" y1="100" x2="176" y2="100" stroke="#8892a6" stroke-width="2" marker-end="url(#contribArrow)"/>
+
+  <!-- 阶段 2 -->
+  <rect x="180" y="66" width="132" height="68" rx="10" fill="#5b8def"/>
+  <text x="246" y="94" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">2 本地预览</text>
+  <text x="246" y="116" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">mkdocs serve</text>
+
+  <line x1="316" y1="100" x2="340" y2="100" stroke="#8892a6" stroke-width="2" marker-end="url(#contribArrow)"/>
+
+  <!-- 阶段 3 -->
+  <rect x="344" y="66" width="132" height="68" rx="10" fill="#6f7ae5"/>
+  <text x="410" y="94" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">3 提交分支</text>
+  <text x="410" y="116" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">commit 并 push</text>
+
+  <line x1="480" y1="100" x2="504" y2="100" stroke="#8892a6" stroke-width="2" marker-end="url(#contribArrow)"/>
+
+  <!-- 阶段 4 -->
+  <rect x="508" y="66" width="132" height="68" rx="10" fill="#7f6fe0"/>
+  <text x="574" y="94" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">4 发起 PR</text>
+  <text x="574" y="116" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">说明改动内容</text>
+
+  <line x1="644" y1="100" x2="668" y2="100" stroke="#8892a6" stroke-width="2" marker-end="url(#contribArrow)"/>
+
+  <!-- 阶段 5 -->
+  <rect x="672" y="66" width="132" height="68" rx="10" fill="#9a6fd0"/>
+  <text x="738" y="94" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">5 审核合并</text>
+  <text x="738" y="116" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">并入 main</text>
+
+  <line x1="808" y1="100" x2="832" y2="100" stroke="#8892a6" stroke-width="2" marker-end="url(#contribArrow)"/>
+
+  <!-- 阶段 6 -->
+  <rect x="836" y="66" width="108" height="68" rx="10" fill="#c76fb8"/>
+  <text x="890" y="94" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#ffffff">6 构建上线</text>
+  <text x="890" y="116" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#eef2ff">约 1 分钟生效</text>
+
+  <!-- 说明 -->
+  <text x="16" y="32" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#8892a6">前置：本地环境就绪（见「环境搭建」）；第 4 步前须更新 data/site-info.json</text>
+</svg>

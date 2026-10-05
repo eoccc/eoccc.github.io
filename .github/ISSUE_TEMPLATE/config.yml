@@ -2,11 +2,11 @@ blank_issues_enabled: false
 
 contact_links:
   - name: 先读开发者文档
-    url: https://docs.git.eocc.top/dev/
+    url: https://docs.66131466.xyz/dev/
     about: 环境搭建、Markdown 写作规范、提交与上线流程、导航与站点配置都在这里。
 
   - name: 想直接改文档
-    url: https://docs.git.eocc.top/dev/contribute/
+    url: https://docs.66131466.xyz/dev/contribute/
     about: 小改动可不必开 Issue，按该流程直接发起 Pull Request 更快。
 
   - name: 社区主站

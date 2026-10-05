@@ -1,0 +1,5 @@
+# MineWeapon
+
+## MineWeapon
+
+*extends Weapon*

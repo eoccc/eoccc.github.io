@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="960" height="320" role="img"
+     aria-label="GitHub 开发与软件包发布流程：开发 → 评审 → 构建 → 发布">
+  <title>GitHub 开发与软件包发布流程</title>
+  <desc>四个阶段依次为本地开发、Pull Request 评审、构建制品、发布上线，底部为贯穿全流程的版本与日志要素。</desc>
+
+  <defs>
+    <linearGradient id="flowStage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b8def"/>
+      <stop offset="100%" stop-color="#7f6fe0"/>
+    </linearGradient>
+    <marker id="flowArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 阶段一：开发 -->
+  <rect x="40" y="60" width="190" height="140" rx="10" fill="url(#flowStage)"/>
+  <text x="135" y="100" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#ffffff">1 · 开发</text>
+  <text x="135" y="132" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">功能分支 dev / feature</text>
+  <text x="135" y="156" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">本地实现与自测</text>
+  <text x="135" y="180" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">遵循提交信息规范</text>
+
+  <line x1="234" y1="130" x2="266" y2="130" stroke="#8892a6" stroke-width="2" marker-end="url(#flowArrow)"/>
+
+  <!-- 阶段二：评审 -->
+  <rect x="270" y="60" width="190" height="140" rx="10" fill="url(#flowStage)"/>
+  <text x="365" y="100" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#ffffff">2 · 评审</text>
+  <text x="365" y="132" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">提交 Pull Request</text>
+  <text x="365" y="156" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">代码审查与讨论</text>
+  <text x="365" y="180" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">合并入 main</text>
+
+  <line x1="464" y1="130" x2="496" y2="130" stroke="#8892a6" stroke-width="2" marker-end="url(#flowArrow)"/>
+
+  <!-- 阶段三：构建 -->
+  <rect x="500" y="60" width="190" height="140" rx="10" fill="url(#flowStage)"/>
+  <text x="595" y="100" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#ffffff">3 · 构建</text>
+  <text x="595" y="132" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">打包可发布制品</text>
+  <text x="595" y="156" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">生成校验信息</text>
+  <text x="595" y="180" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">归档到 releases</text>
+
+  <line x1="694" y1="130" x2="726" y2="130" stroke="#8892a6" stroke-width="2" marker-end="url(#flowArrow)"/>
+
+  <!-- 阶段四：发布 -->
+  <rect x="730" y="60" width="190" height="140" rx="10" fill="url(#flowStage)"/>
+  <text x="825" y="100" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#ffffff">4 · 发布</text>
+  <text x="825" y="132" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">打 Tag 标记版本</text>
+  <text x="825" y="156" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">发布 GitHub Release</text>
+  <text x="825" y="180" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">同步更新日志</text>
+
+  <!-- 贯穿要素 -->
+  <rect x="40" y="228" width="880" height="56" rx="10" fill="none" stroke="#8892a6"
+        stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="64" y="262" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="13" fill="#8892a6">贯穿全流程：版本号规范 · CHANGELOG 更新日志 · 下载入口 · 许可证与署名</text>
+</svg>

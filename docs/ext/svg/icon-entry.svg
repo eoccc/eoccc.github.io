@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="社区入口">
+  <title>社区入口</title>
+  <path fill="none" stroke="#5b8def" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="M3 21h18M5 21V5a1 1 0 0 1 1-1h7v17"/>
+  <path fill="none" stroke="#c76fb8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        d="M14 12h7m0 0-3-3m3 3-3 3"/>
+</svg>

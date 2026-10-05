@@ -1,0 +1,5 @@
+# EmptyDataAbility
+
+## EmptyDataAbility
+
+*extends Ability*

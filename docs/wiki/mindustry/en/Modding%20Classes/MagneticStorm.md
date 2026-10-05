@@ -1,0 +1,5 @@
+# MagneticStorm
+
+## MagneticStorm
+
+*extends Weather*

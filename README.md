@@ -1,6 +1,6 @@
 # eoccc.github.io
 
-**Everyone Create Community（每个人创作社区）** 的官方文档站，托管于 GitHub Pages，通过自定义域名 [docs.git.eocc.top](https://docs.git.eocc.top) 访问。
+**Everyone Create Community（每个人创作社区）** 的官方文档站，托管于 GitHub Pages，通过自定义域名 [docs.66131466.xyz](https://docs.66131466.xyz) 访问。
 
 ## 站点方向与功能
 

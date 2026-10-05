@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.git.eocc.top/dev/sitemap/">
+        <link rel="canonical" href="https://docs.66131466.xyz/dev/sitemap/">
       
       
         <link rel="prev" href="../nav-config/">
@@ -50651,10 +50651,10 @@
 <h2 id="_1">生成方式</h2>
 <p>sitemap 由脚本 <code>tools/gen_sitemap.py</code> 扫描站点页面生成，<strong>不使用</strong> MkDocs 的自动 sitemap（自动版本缺少 <code>changefreq</code> 与 <code>priority</code>，且会把 404 页一并收录）。</p>
 <pre><code class="language-bash"># 在仓库根目录执行：扫描 + 线上校验 + 写出 sitemap.xml / sitemap.txt
-python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/
+python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/
 
 # 仅本地生成、跳过线上校验（离线可用）
-python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/ --no-online
+python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/ --no-online
 </code></pre>
 <h3 id="_2">处理流程</h3>
 <ol>
@@ -50725,7 +50725,7 @@ python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/ --no-onl
 <li>回到仓库根目录，重新生成 sitemap：</li>
 </ol>
 <p><code>bash
-   python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/</code></p>
+   python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/</code></p>
 <ol>
 <li>确认输出中的条目数增加、新页面已包含：</li>
 </ol>
@@ -50789,7 +50789,7 @@ python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/ --no-onl
   
     <div class="md-copyright__version">
       <span class="md-copyright__version-label">文档站版本</span>
-      <span class="md-sidebar-meta__ver-num">v1.0.4.1</span>
+      <span class="md-sidebar-meta__ver-num">v1.1.0</span>
     </div>
   
   
@@ -50817,6 +50817,10 @@ python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/ --no-onl
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../js/eocc-version-check.js"></script>
+      
+        <script src="../../js/eocc-image-zoom.js"></script>
       
     
   </body>

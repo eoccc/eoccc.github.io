@@ -1,0 +1,5 @@
+# SolarGenerator
+
+## SolarGenerator
+
+*extends PowerGenerator*

@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         欢迎提出改进建议。若你的建议涉及站点结构或导航，
-        可先阅读[导航与站点配置](https://docs.git.eocc.top/dev/nav-config/)了解现有组织方式。
+        可先阅读[导航与站点配置](https://docs.66131466.xyz/dev/nav-config/)了解现有组织方式。
 
   - type: dropdown
     id: kind

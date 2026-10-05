@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img"
+     aria-label="Wiki 内容版图：Mindustry 内容体系 1621 页，编程语言与数据格式 5 页">
+  <title>Wiki 内容版图</title>
+  <desc>Wiki 共 1627 个页面，主体为 Mindustry 内容体系（中文版与 English 各 810 页，含游戏内容 530 页、模组类文档 262 页、模组开发 9 页、逻辑 4 页等分支）；另有编程语言与数据格式分支，讲解 JSON 与 HJSON。</desc>
+
+  <defs>
+    <linearGradient id="wikiHub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5b8def"/>
+      <stop offset="50%" stop-color="#7f6fe0"/>
+      <stop offset="100%" stop-color="#c76fb8"/>
+    </linearGradient>
+    <marker id="wikiArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8892a6"/>
+    </marker>
+  </defs>
+
+  <!-- 中心：Wiki 总量 -->
+  <rect x="330" y="16" width="300" height="66" rx="12" fill="url(#wikiHub)"/>
+  <text x="480" y="45" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="17" font-weight="700" fill="#ffffff">Wiki 知识库</text>
+  <text x="480" y="67" text-anchor="middle" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="12" fill="#eef2ff">社区共建 · 共 1627 个页面</text>
+
+  <!-- 连接线 -->
+  <line x1="480" y1="82" x2="480" y2="104" stroke="#8892a6" stroke-width="2"/>
+  <line x1="250" y1="104" x2="710" y2="104" stroke="#8892a6" stroke-width="2"/>
+  <line x1="250" y1="104" x2="250" y2="124" stroke="#8892a6" stroke-width="2" marker-end="url(#wikiArrow)"/>
+  <line x1="710" y1="104" x2="710" y2="124" stroke="#8892a6" stroke-width="2" marker-end="url(#wikiArrow)"/>
+
+  <!-- 左：Mindustry 内容体系 -->
+  <rect x="40" y="130" width="420" height="272" rx="12" fill="#ffffff" stroke="#5b8def" stroke-width="2"/>
+  <text x="64" y="161" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="15" font-weight="700" fill="#5b8def">Mindustry 内容体系</text>
+  <text x="64" y="183" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">1621 页 · 全站主体</text>
+  <line x1="64" y1="197" x2="436" y2="197" stroke="#dde3ee" stroke-width="1.5"/>
+
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#3a4254">
+    <circle cx="72" cy="222" r="4" fill="#5b8def"/>
+    <text x="88" y="226">游戏内容 — 530 页</text>
+
+    <circle cx="72" cy="254" r="4" fill="#6f7ae5"/>
+    <text x="88" y="258">模组类文档 — 262 页</text>
+
+    <circle cx="72" cy="286" r="4" fill="#7f6fe0"/>
+    <text x="88" y="290">模组开发 — 9 页</text>
+
+    <circle cx="72" cy="318" r="4" fill="#9a6fd0"/>
+    <text x="88" y="322">逻辑 — 4 页</text>
+
+    <circle cx="72" cy="350" r="4" fill="#b06fc8"/>
+    <text x="88" y="354">数据补丁 · 服务器 · 常见问题</text>
+
+    <circle cx="72" cy="382" r="4" fill="#c76fb8"/>
+    <text x="88" y="386">English 镜像 — 810 页</text>
+  </g>
+
+  <!-- 右：编程语言与数据格式 -->
+  <rect x="500" y="130" width="420" height="272" rx="12" fill="#ffffff" stroke="#7f6fe0" stroke-width="2"/>
+  <text x="524" y="161" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="15" font-weight="700" fill="#7f6fe0">编程语言与数据格式</text>
+  <text x="524" y="183" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11.5" fill="#8892a6">5 页 · 独立于游戏内容</text>
+  <line x1="524" y1="197" x2="896" y2="197" stroke="#dde3ee" stroke-width="1.5"/>
+
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#3a4254">
+    <circle cx="532" cy="222" r="4" fill="#7f6fe0"/>
+    <text x="548" y="226">总览 — 分支定位与阅读建议</text>
+
+    <circle cx="532" cy="254" r="4" fill="#8a6fe4"/>
+    <text x="548" y="258">JSON 基础 — 语法、类型与书写规则</text>
+
+    <circle cx="532" cy="286" r="4" fill="#9a6fd0"/>
+    <text x="548" y="290">HJSON 基础 — 宽松语法与注释支持</text>
+
+    <circle cx="532" cy="318" r="4" fill="#b06fc8"/>
+    <text x="548" y="322">JSON 与 HJSON 对比 — 差异速查</text>
+
+    <circle cx="532" cy="350" r="4" fill="#c76fb8"/>
+    <text x="548" y="354">发展历程与现代前景 — 标准演进</text>
+  </g>
+
+  <!-- 底部提示 -->
+  <rect x="524" y="366" width="372" height="24" rx="6" fill="none" stroke="#8892a6"
+        stroke-width="1.2" stroke-dasharray="6 5"/>
+  <text x="540" y="383" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">两个分支相互独立，可按需分别查阅</text>
+</svg>

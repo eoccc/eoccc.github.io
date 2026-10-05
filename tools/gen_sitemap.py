@@ -5,7 +5,7 @@
 用法:
     python3 tools/gen_sitemap.py                     # 扫描 + 线上校验 + 写出
     python3 tools/gen_sitemap.py --no-online         # 跳过线上校验(离线)
-    python3 tools/gen_sitemap.py --root . --base https://docs.git.eocc.top/
+    python3 tools/gen_sitemap.py --root . --base https://docs.66131466.xyz/
 
 行为:
   1. 扫描内容根目录下所有 index.html(站点路由为目录形式)与根级 .html。
@@ -33,13 +33,15 @@ from xml.sax.saxutils import escape
 
 # ---------------------------------------------------------------- 配置
 
-DEFAULT_BASE = "https://docs.git.eocc.top/"
+DEFAULT_BASE = "https://docs.66131466.xyz/"
 DEFAULT_ROOT = "."
 
 # 需要整体跳过的目录(相对内容根)
+# 注: docs/ 为 MkDocs 构建源(仓库同时存放源与产物), 不含 index.html,
+#     显式跳过以免将来源目录内出现同名文件被误收录。
 SKIP_DIRS = {
     ".git", ".github", ".atomcode", "node_modules", "assets",
-    "search", "css", "js", "img", "ext", "data", "overrides",
+    "search", "css", "js", "img", "ext", "data", "overrides", "docs",
     "drafts", "draft", "tmp", "temp", "build", "dist", "site",
 }
 
@@ -197,7 +199,7 @@ def sniff_url(url, retries=CHECK_RETRIES):
         req = urllib.request.Request(
             url,
             headers={
-                "User-Agent": "eocc-sitemap-validator/1.0 (+https://docs.git.eocc.top/)",
+                "User-Agent": "eocc-sitemap-validator/1.0 (+https://docs.66131466.xyz/)",
                 "Accept": "text/html,application/xhtml+xml",
                 "Range": "bytes=0-%d" % (SNIFF_BYTES - 1),
             },

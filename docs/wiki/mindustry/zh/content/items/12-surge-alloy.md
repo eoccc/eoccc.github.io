@@ -1,0 +1,24 @@
+# <img src="../../../../../../ext/img/mindustry/item-surge-alloy.png" alt="">巨浪合金
+
+*"用于高级武器与反应防御建筑。"*
+
+| 属性 | 值 |
+|---|---|
+| 爆炸性 | 0 % |
+| 可燃性 | 0 % |
+| 放射性 | 0 % |
+| 充能 | 75 % |
+| 内部名称 | `surge-alloy` |
+| 颜色 | `f3e979` |
+| 自然生成 | 否 |
+| 建造成本 | 120% |
+| 硬度 | 0 |
+
+##### 产出于
+[<img src="../../../../../../ext/img/mindustry/block-surge-smelter-ui.png" alt="">](/wiki/content/blocks/crafting/188-surge-smelter) [<img src="../../../../../../ext/img/mindustry/block-surge-crucible-ui.png" alt="">](/wiki/content/blocks/crafting/212-surge-crucible)
+
+##### 用于
+[<img src="../../../../../../ext/img/mindustry/block-swarmer-ui.png" alt="">](/wiki/content/blocks/turret/357-swarmer) [<img src="../../../../../../ext/img/mindustry/block-cyclone-ui.png" alt="">](/wiki/content/blocks/turret/363-cyclone) [<img src="../../../../../../ext/img/mindustry/block-foreshadow-ui.png" alt="">](/wiki/content/blocks/turret/364-foreshadow) [<img src="../../../../../../ext/img/mindustry/block-disperse-ui.png" alt="">](/wiki/content/blocks/turret/371-disperse) [<img src="../../../../../../ext/img/mindustry/block-scathe-ui.png" alt="">](/wiki/content/blocks/turret/374-scathe) [<img src="../../../../../../ext/img/mindustry/block-smite-ui.png" alt="">](/wiki/content/blocks/turret/375-smite) [<img src="../../../../../../ext/img/mindustry/block-tetrative-reconstructor-ui.png" alt="">](/wiki/content/blocks/units/383-tetrative-reconstructor)
+
+##### 用于建造
+[<img src="../../../../../../ext/img/mindustry/block-small-heat-redirector-ui.png" alt="">](/wiki/content/blocks/crafting/207-small-heat-redirector) [<img src="../../../../../../ext/img/mindustry/block-surge-wall-ui.png" alt="">](/wiki/content/blocks/defense/226-surge-wall) [<img src="../../../../../../ext/img/mindustry/block-surge-wall-large-ui.png" alt="">](/wiki/content/blocks/defense/227-surge-wall-large) [<img src="../../../../../../ext/img/mindustry/block-reinforced-surge-wall-ui.png" alt="">](/wiki/content/blocks/defense/240-reinforced-surge-wall) [<img src="../../../../../../ext/img/mindustry/block-reinforced-surge-wall-large-ui.png" alt="">](/wiki/content/blocks/defense/241-reinforced-surge-wall-large) [<img src="../../../../../../ext/img/mindustry/block-shielded-wall-ui.png" alt="">](/wiki/content/blocks/defense/244-shielded-wall) [<img src="../../../../../../ext/img/mindustry/block-overdrive-dome-ui.png" alt="">](/wiki/content/blocks/effect/248-overdrive-dome) [<img src="../../../../../../ext/img/mindustry/block-shockwave-tower-ui.png" alt="">](/wiki/content/blocks/effect/254-shockwave-tower) [<img src="../../../../../../ext/img/mindustry/block-surge-conveyor-ui.png" alt="">](/wiki/content/blocks/distribution/279-surge-conveyor) [<img src="../../../../../../ext/img/mindustry/block-surge-router-ui.png" alt="">](/wiki/content/blocks/distribution/280-surge-router) [<img src="../../../../../../ext/img/mindustry/block-unit-cargo-loader-ui.png" alt="">](/wiki/content/blocks/distribution/281-unit-cargo-loader) [<img src="../../../../../../ext/img/mindustry/block-surge-tower-ui.png" alt="">](/wiki/content/blocks/power/304-surge-tower) [<img src="../../../../../../ext/img/mindustry/block-impact-reactor-ui.png" alt="">](/wiki/content/blocks/power/316-impact-reactor) [<img src="../../../../../../ext/img/mindustry/block-beam-link-ui.png" alt="">](/wiki/content/blocks/power/319-beam-link) [<img src="../../../../../../ext/img/mindustry/block-flux-reactor-ui.png" alt="">](/wiki/content/blocks/power/323-flux-reactor) [<img src="../../../../../../ext/img/mindustry/block-neoplasia-reactor-ui.png" alt="">](/wiki/content/blocks/power/324-neoplasia-reactor) [<img src="../../../../../../ext/img/mindustry/block-large-cliff-crusher-ui.png" alt="">](/wiki/content/blocks/production/334-large-cliff-crusher) [<img src="../../../../../../ext/img/mindustry/block-foreshadow-ui.png" alt="">](/wiki/content/blocks/turret/364-foreshadow) [<img src="../../../../../../ext/img/mindustry/block-spectre-ui.png" alt="">](/wiki/content/blocks/turret/365-spectre) [<img src="../../../../../../ext/img/mindustry/block-meltdown-ui.png" alt="">](/wiki/content/blocks/turret/366-meltdown) [<img src="../../../../../../ext/img/mindustry/block-afflict-ui.png" alt="">](/wiki/content/blocks/turret/372-afflict) [<img src="../../../../../../ext/img/mindustry/block-smite-ui.png" alt="">](/wiki/content/blocks/turret/375-smite) [<img src="../../../../../../ext/img/mindustry/block-tetrative-reconstructor-ui.png" alt="">](/wiki/content/blocks/units/383-tetrative-reconstructor) [<img src="../../../../../../ext/img/mindustry/block-interplanetary-accelerator-ui.png" alt="">](/wiki/content/blocks/effect/429-interplanetary-accelerator) [<img src="../../../../../../ext/img/mindustry/block-hyper-processor-ui.png" alt="">](/wiki/content/blocks/logic/434-hyper-processor) [<img src="../../../../../../ext/img/mindustry/block-large-canvas-ui.png" alt="">](/wiki/content/blocks/logic/441-large-canvas)

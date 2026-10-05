@@ -17,7 +17,7 @@ body:
     id: url
     attributes:
       label: 问题页面地址
-      placeholder: https://docs.git.eocc.top/...
+      placeholder: https://docs.66131466.xyz/...
     validations:
       required: true
 

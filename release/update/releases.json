@@ -1,10 +1,26 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "updated_at": "2026-10-03 21:18:56",
+    "updated_at": "2026-10-05 13:00:00",
     "note": "下载按钮统一指向官方下载页；GitHub Releases 入口供依赖包获取"
   },
   "releases": [
+    {
+      "version": "v1.1.0",
+      "title": "v1.1.0 · 构建源入库与站点功能接线",
+      "summary": "仓库纳入 MkDocs 构建源（mkdocs.yml + docs/ + overrides/）作为开发者模板；接通版本提醒条与图片放大两个脚本并补齐样式；全站自定义域统一为 docs.66131466.xyz；新增 .gitignore；排除 release/update/md/ 避免生成冗余页面。",
+      "type": "release",
+      "author": "AtomCode",
+      "publish_time": "2026-10-05 13:00:00",
+      "pin": 0,
+      "hot": 0,
+      "md_file": "20261005130000",
+      "links": {
+        "download_page": "https://66131466.xyz/zh/download/index.html",
+        "app_page": "https://66131466.xyz/zh/download/ext/app/index.html",
+        "github": "https://github.com/eoccc/eoccc.github.io"
+      }
+    },
     {
       "version": "v1.0.4.1",
       "title": "v1.0.4.1 · Wiki 知识库重构与侧边栏全量汉化",

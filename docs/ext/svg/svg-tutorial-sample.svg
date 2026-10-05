@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120" role="img" aria-label="渐变圆角卡片示例">
+  <title>渐变圆角卡片示例</title>
+  <desc>示例 SVG 图标：带品牌渐变的圆角卡片，居中标注「SVG 示例卡片」。</desc>
+  <defs>
+    <linearGradient id="svgTutorialCardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5b8def"/>
+      <stop offset="100%" stop-color="#7f6fe0"/>
+    </linearGradient>
+  </defs>
+  <!-- 卡片主体 -->
+  <rect x="16" y="24" width="288" height="72" rx="12" fill="url(#svgTutorialCardGrad)"/>
+  <!-- 标题文字（自带字体族，不依赖外部字体文件） -->
+  <text x="160" y="66" text-anchor="middle" dominant-baseline="middle"
+        font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="16" font-weight="700" fill="#ffffff" letter-spacing="0.5">SVG 示例卡片</text>
+</svg>

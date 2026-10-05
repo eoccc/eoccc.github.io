@@ -1,0 +1,25 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {#- 页脚版本号：与侧边栏同源（config.extra.site_version），
+      由 js/eocc-version-check.js 依据 data/site-info.json 回填，
+      此处的静态值仅作无 JS 时的兜底。 -#}
+  {% if config.extra.site_version %}
+    <div class="md-copyright__version">
+      <span class="md-copyright__version-label">文档站版本</span>
+      <span class="md-sidebar-meta__ver-num">{{ config.extra.site_version }}</span>
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

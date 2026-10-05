@@ -1,7 +1,7 @@
 <!--
   提交前请通读：
-  - Markdown 写作规范  https://docs.git.eocc.top/dev/writing/
-  - 提交与上线流程      https://docs.git.eocc.top/dev/contribute/
+  - Markdown 写作规范  https://docs.66131466.xyz/dev/writing/
+  - 提交与上线流程      https://docs.66131466.xyz/dev/contribute/
   标题建议以 docs: / fix: / feat: 开头，一句话说明改了什么。
 -->
 

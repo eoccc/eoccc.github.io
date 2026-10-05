@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="960" height="260" role="img"
+     aria-label="Markdown 标题层级对照：正确写法从 # 逐级到 ###，错误写法跳级或缺失一级标题">
+  <title>Markdown 标题层级对照</title>
+  <desc>左侧为推荐写法，一级标题唯一、层级不跳级；右侧为常见错误，包括缺失一级标题与从一级直接跳到三级。</desc>
+
+  <!-- 正确 -->
+  <rect x="16" y="52" width="440" height="192" rx="10" fill="none" stroke="#2e7d52" stroke-width="2"/>
+  <text x="40" y="82" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#2e7d52">正确：逐级使用，不跳级</text>
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif">
+    <text x="40" y="116" font-size="19" font-weight="700" fill="#5b8def"># 页面主题</text>
+    <text x="40" y="150" font-size="16" font-weight="700" fill="#7f6fe0">## 第一章节</text>
+    <text x="40" y="180" font-size="14" font-weight="700" fill="#c76fb8">### 小节</text>
+  </g>
+  <text x="40" y="214" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">每页只有一个 #；章节用 ##，小节用 ###</text>
+
+  <!-- 错误 -->
+  <rect x="504" y="52" width="440" height="192" rx="10" fill="none" stroke="#c62828" stroke-width="2"/>
+  <text x="528" y="82" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="700" fill="#c62828">错误：跳级或缺少一级标题</text>
+  <g font-family="Roboto, 'Segoe UI', Arial, sans-serif">
+    <text x="528" y="116" font-size="16" font-weight="700" fill="#c62828">## 直接从章节开始</text>
+    <text x="528" y="150" font-size="14" font-weight="700" fill="#c62828">### 小节</text>
+  </g>
+  <text x="528" y="182" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#c62828">✗ 页面没有 # ，目录与搜索索引会失真</text>
+  <text x="528" y="206" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#c62828">✗ # 后直接跳 ###，层级断裂</text>
+  <text x="528" y="230" font-family="Roboto, 'Segoe UI', Arial, sans-serif"
+        font-size="11" fill="#8892a6">标题文字应简短明确，避免「一些说明」这类模糊表述</text>
+
+  <!-- 中央分隔 -->
+  <line x1="480" y1="52" x2="480" y2="244" stroke="#8892a6" stroke-width="1" stroke-dasharray="6 5"/>
+</svg>
