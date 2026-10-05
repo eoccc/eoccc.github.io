@@ -37,6 +37,8 @@ theme:
 
 extra_css:
   - css/eocc-brand.css
+  # PC 端汉堡菜单：把移动端的抽屉侧栏行为复用到桌面断点
+  - css/eocc-pc-drawer.css
 
 extra_javascript:
   - js/eocc-version-check.js
