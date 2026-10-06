@@ -9,6 +9,7 @@
   var zoomImg = null;
   var caption = null;
   var lastFocus = null;
+  var lastScrollY = 0;
 
   function buildMask() {
     mask = document.createElement("div");
@@ -34,21 +35,42 @@
     document.body.appendChild(mask);
   }
 
+  function lockScroll() {
+    // iOS Safari 不响应 body{overflow:hidden}，用 position:fixed 冻结滚动位置；
+    // 补偿 padding 使滚动条消失/出现时不引起内容宽度跳变
+    var y = window.scrollY || 0;
+    var sw = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.position = "fixed";
+    document.body.style.top = (-y) + "px";
+    document.body.style.width = "100%";
+    if (sw > 0) document.body.style.paddingRight = sw + "px";
+    document.body.classList.add("md-zoom-locked");
+    return y;
+  }
+  function unlockScroll(y) {
+    document.body.classList.remove("md-zoom-locked");
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    document.body.style.paddingRight = "";
+    if (y) window.scrollTo(0, y);
+  }
+
   function open(src, alt) {
     if (!mask) buildMask();
     zoomImg.src = src;
     zoomImg.alt = alt || "";
     caption.textContent = alt || "";
     mask.classList.add("is-open");
-    document.body.classList.add("md-zoom-locked");
     lastFocus = document.activeElement;
+    lockScroll();
     zoomImg.focus();
   }
 
   function close() {
     if (!mask) return;
     mask.classList.remove("is-open");
-    document.body.classList.remove("md-zoom-locked");
+    unlockScroll(lastScrollY);
     zoomImg.src = "";
     if (lastFocus && lastFocus.focus) lastFocus.focus();
     lastFocus = null;

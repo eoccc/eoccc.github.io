@@ -52,12 +52,12 @@
   .md-sidebar--primary .md-nav--primary .md-nav{background-color:var(--md-default-bg-color);display:flex;flex-direction:column;height:100%;left:0;position:absolute;right:0;top:0;z-index:1}
   .md-sidebar--primary .md-nav--primary .md-nav__item,
   .md-sidebar--primary .md-nav--primary .md-nav__title{font-size:.8rem;line-height:1.5}
-  .md-sidebar--primary .md-nav--primary .md-nav__title{background-color:var(--md-default-fg-color--lightest);color:var(--md-default-fg-color--light);cursor:pointer;height:5.6rem;line-height:2.4rem;padding:3rem .8rem .2rem;position:relative;white-space:nowrap;box-shadow:none}
+  .md-sidebar--primary .md-nav--primary .md-nav__title{background-color:var(--md-default-fg-color--lightest);color:var(--md-default-fg-color--light);cursor:pointer;height:5.6rem;line-height:2.4rem;padding:3rem .8rem .2rem;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:none}
   [dir=ltr] .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon{left:.4rem}
   [dir=rtl] .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon{right:.4rem}
   .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon{display:block;height:1.2rem;margin:.2rem;position:absolute;top:.4rem;width:1.2rem}
   .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon:after{background-color:currentcolor;content:"";display:block;height:100%;-webkit-mask-image:var(--md-nav-icon--prev);mask-image:var(--md-nav-icon--prev);-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain;width:100%}
-  .md-sidebar--primary .md-nav--primary .md-nav__title~.md-nav__list{background-color:var(--md-default-bg-color);box-shadow:0 .05rem 0 var(--md-default-fg-color--lightest) inset;overflow-y:auto;scroll-snap-type:y mandatory;touch-action:pan-y}
+  .md-sidebar--primary .md-nav--primary .md-nav__title~.md-nav__list{background-color:var(--md-default-bg-color);box-shadow:0 .05rem 0 var(--md-default-fg-color--lightest) inset;overflow-y:auto;scroll-snap-type:y proximity;touch-action:pan-y}
   .md-sidebar--primary .md-nav--primary .md-nav__title~.md-nav__list>:first-child{border-top:0}
   .md-sidebar--primary .md-nav--primary .md-nav__title[for=__drawer]{background-color:var(--md-primary-fg-color);color:var(--md-primary-bg-color);font-weight:700}
   .md-sidebar--primary .md-nav--primary .md-nav__title .md-logo{display:block;left:.2rem;margin:.2rem;padding:.4rem;position:absolute;right:.2rem;top:.2rem}
@@ -128,4 +128,11 @@
   /* --- 5. 遮罩层：展开抽屉时覆盖正文，点击可关闭（等价移动端规则） --- */
   .md-overlay{background-color:#0000008a;height:0;opacity:0;position:fixed;top:0;transition:width 0ms .25s,height 0ms .25s,opacity .25s;width:0;z-index:5}
   [data-md-toggle=drawer]:checked~.md-overlay{height:100%;opacity:1;transition:width 0ms,height 0ms,opacity .25s;width:100%}
+}
+
+/* 减少动态效果：抽屉滑入/子菜单动画改为瞬时（无障碍） */
+@media (prefers-reduced-motion: reduce){
+  .md-header~.md-container .md-sidebar--primary,
+  .md-sidebar--primary .md-nav__item>.md-nav__toggle+label+.md-nav,
+  .md-sidebar--primary .md-nav__item>.md-nav__toggle:checked+label+.md-nav{transition:none}
 }

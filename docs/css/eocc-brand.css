@@ -1,11 +1,16 @@
 /* 社区名称渐变文字 —— 仅作用于 .eocc-brand，不影响其他样式 */
 .eocc-brand {
-  background: linear-gradient(120deg, #5b8def 0%, #7f6fe0 45%, #c76fb8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #5b8def; /* 不支持 background-clip:text 时的回退色 */
-  font-weight: 700;
+  color: #5b8def; /* 回退色：不支持渐变裁切时仍可见 */
+}
+/* 支持 background-clip:text 的浏览器才启用渐变文字，避免极老内核文字透明不可见 */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .eocc-brand {
+    background: linear-gradient(120deg, #5b8def 0%, #7f6fe0 45%, #c76fb8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
 }
 
 /* ===== 版本更新日志页（/release/update/）组件样式 =====
@@ -62,13 +67,14 @@
    用法：<img class="md-zoomable" src="..." alt="...">，交互由 js/eocc-image-zoom.js 提供 */
 .md-typeset .md-zoomable{cursor:zoom-in}
 .md-zoom-mask{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
-  padding:3vmin;background:var(--md-default-fg-color--lightest);box-sizing:border-box}
-.md-zoom-mask.is-open{display:flex}
+  padding:3vmin;background:var(--md-default-fg-color--lightest);box-sizing:border-box;
+  opacity:0;transition:opacity .2s}
+.md-zoom-mask.is-open{display:flex;opacity:1}
 .md-zoom-mask img{max-width:96vw;max-height:92vh;width:auto;height:auto;
   background:var(--md-default-bg-color);border:1px solid var(--md-default-fg-color--lightest);
   border-radius:.4rem;box-shadow:0 .6rem 2rem rgba(0,0,0,.28);cursor:zoom-out}
 .md-zoom-caption{position:absolute;left:0;right:0;bottom:1.2rem;text-align:center;
-  font-size:.72rem;color:var(--md-default-fg-color--light);padding:0 1rem}
+  font-size:.72rem;color:var(--md-default-fg-color--light);padding:0 1rem;pointer-events:none}
 .md-zoom-hint{position:fixed;right:1.2rem;bottom:1.2rem;z-index:101;
   font-size:.68rem;color:var(--md-default-fg-color--light)}
 body.md-zoom-locked{overflow:hidden}
@@ -97,4 +103,9 @@ body.md-zoom-locked{overflow:hidden}
   border-color:var(--md-accent-fg-color)}
 @media screen and (max-width:44.9375em){
   .md-version-banner{right:.5rem;left:.5rem;bottom:.5rem;max-width:none}
+}
+
+/* 减少动态效果：遮罩淡入改为瞬时（无障碍） */
+@media (prefers-reduced-motion: reduce){
+  .md-zoom-mask{transition:none}
 }
