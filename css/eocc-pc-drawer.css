@@ -58,6 +58,9 @@
   .md-sidebar--primary .md-nav--primary .md-nav__item,
   .md-sidebar--primary .md-nav--primary .md-nav__title{font-size:.8rem;line-height:1.5}
   .md-sidebar--primary .md-nav--primary .md-nav__title{background-color:var(--md-default-fg-color--lightest);color:var(--md-default-fg-color--light);cursor:pointer;height:5.6rem;line-height:2.4rem;padding:3rem .8rem .2rem;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:none}
+  /* 主题桌面规则把子面板标题 display:none（PC 内联侧栏不需要返回标签），
+     抽屉模式下必须恢复显示——否则点进子分支后顶部没有「返回」入口 */
+  .md-sidebar--primary .md-nav--primary .md-nav .md-nav__title{display:block}
   [dir=ltr] .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon{left:.4rem}
   [dir=rtl] .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon{right:.4rem}
   .md-sidebar--primary .md-nav--primary .md-nav__title .md-nav__icon{display:block;height:1.2rem;margin:.2rem;position:absolute;top:.4rem;width:1.2rem}
